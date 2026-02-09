@@ -1693,6 +1693,11 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   color: var(--primary);
 }
 
+/* --- Horizontal Scroll Utility --- */
+.mobile-scroll {
+  /* Applied via JS or stays as grid on desktop */
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
   .trust-grid,
@@ -1738,30 +1743,158 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
     display: flex;
   }
 
+  /* --- Hero Mobile Fixes --- */
   .hero {
     min-height: 100svh;
   }
 
   .hero__content {
-    padding-top: calc(var(--header-height) + var(--space-xl));
+    padding-top: calc(var(--header-height) + var(--space-3xl));
   }
 
+  .hero__title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+    line-height: 1.15;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+  }
+
+  /* Hero stats stay horizontal on mobile */
   .hero__stats {
-    gap: var(--space-xl);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-lg);
+    margin-top: var(--space-2xl);
   }
 
   .hero__stat-value {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .hero__stat-label {
+    font-size: 0.7rem;
+  }
+
+  /* --- Horizontal Scroll: Features --- */
+  .features-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    scrollbar-width: none;
+  }
+
+  .features-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .features-grid .feature-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+  }
+
+  /* --- Horizontal Scroll: Steps --- */
+  .steps {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    scrollbar-width: none;
+  }
+
+  .steps::-webkit-scrollbar {
+    display: none;
   }
 
   .steps::before {
     display: none;
   }
 
-  .categories-grid {
-    grid-template-columns: 1fr 1fr;
+  .steps .step {
+    flex: 0 0 220px;
+    scroll-snap-align: start;
   }
 
+  /* --- Horizontal Scroll: Categories --- */
+  .categories-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    scrollbar-width: none;
+  }
+
+  .categories-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .categories-grid .category-card {
+    flex: 0 0 160px;
+    scroll-snap-align: start;
+    aspect-ratio: 1;
+  }
+
+  /* --- Horizontal Scroll: Testimonials --- */
+  .testimonials-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    scrollbar-width: none;
+  }
+
+  .testimonials-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonials-grid .testimonial-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+  }
+
+  /* --- Stats Bar: Horizontal on Mobile --- */
+  .stats-bar {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-lg);
+    padding-bottom: var(--space-md);
+    scrollbar-width: none;
+  }
+
+  .stats-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stats-bar .stat-item {
+    flex: 0 0 auto;
+    min-width: 140px;
+    scroll-snap-align: start;
+  }
+
+  /* --- Trust / Image-Text Rows Mobile --- */
+  .trust-image img {
+    height: 260px;
+  }
+
+  .trust-features {
+    gap: var(--space-md);
+  }
+
+  /* --- Footer Mobile --- */
   .footer__grid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
@@ -1773,14 +1906,27 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
     text-align: center;
   }
 
-  .trust-image img {
-    height: 300px;
+  /* --- Reduce section padding on mobile --- */
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-2xl);
   }
 }
 
 @media (max-width: 480px) {
   .container {
     padding: 0 var(--space-md);
+  }
+
+  .hero__content {
+    padding-top: calc(var(--header-height) + var(--space-2xl));
+  }
+
+  .hero__title {
+    font-size: clamp(1.4rem, 6.5vw, 2rem);
   }
 
   .hero__actions {
@@ -1791,17 +1937,44 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
     width: 100%;
   }
 
+  /* Stats ALWAYS horizontal — compact on small screens */
   .hero__stats {
-    flex-direction: column;
-    gap: var(--space-lg);
+    flex-direction: row;
+    gap: var(--space-md);
+    justify-content: space-between;
   }
 
-  .categories-grid {
-    grid-template-columns: 1fr;
+  .hero__stat-value {
+    font-size: 1.1rem;
   }
 
-  .stats-bar {
-    grid-template-columns: 1fr;
+  .hero__stat-label {
+    font-size: 0.65rem;
+  }
+
+  /* Scroll containers: slightly smaller cards */
+  .features-grid .feature-card {
+    flex: 0 0 250px;
+    padding: var(--space-xl);
+  }
+
+  .steps .step {
+    flex: 0 0 200px;
+  }
+
+  .step__number {
+    width: 56px;
+    height: 56px;
+    font-size: 1.2rem;
+  }
+
+  .categories-grid .category-card {
+    flex: 0 0 140px;
+  }
+
+  .testimonials-grid .testimonial-card {
+    flex: 0 0 270px;
+    padding: var(--space-xl);
   }
 
   .btn-group {
@@ -1815,6 +1988,45 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   .cta-stores {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* Image showcase mobile */
+  .image-showcase img {
+    min-height: 240px;
+  }
+
+  .trust-image img {
+    height: 220px;
+  }
+}
+
+/* --- Mobile Scroll Indicators --- */
+.scroll-hint {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .scroll-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    animation: scrollHintPulse 2s ease infinite;
+  }
+
+  .scroll-hint i,
+  .scroll-hint svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  @keyframes scrollHintPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
   }
 }
 
