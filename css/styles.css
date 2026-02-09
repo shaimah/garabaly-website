@@ -1839,9 +1839,27 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   }
 
   .categories-grid .category-card {
-    flex: 0 0 160px;
+    flex: 0 0 150px;
     scroll-snap-align: start;
-    aspect-ratio: 1;
+    aspect-ratio: auto;
+    min-height: 160px;
+  }
+
+  .categories-grid .category-card .category-card__content {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .categories-grid .category-card .category-card__icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .categories-grid .category-card .category-card__name {
+    font-size: 0.95rem;
+  }
+
+  .categories-grid .category-card .category-card__count {
+    font-size: 0.75rem;
   }
 
   /* --- Horizontal Scroll: Testimonials --- */
@@ -1969,7 +1987,8 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   }
 
   .categories-grid .category-card {
-    flex: 0 0 140px;
+    flex: 0 0 130px;
+    min-height: 145px;
   }
 
   .testimonials-grid .testimonial-card {
