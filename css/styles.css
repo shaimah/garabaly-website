@@ -923,7 +923,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 /* --- Categories --- */
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--space-lg);
 }
 
@@ -999,6 +999,10 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 .category-card:nth-child(4) .category-card__bg {
   background: linear-gradient(135deg, #2C1810, #6B5444);
+}
+
+.category-card:nth-child(5) .category-card__bg {
+  background: linear-gradient(135deg, #B8860B, #D4A843);
 }
 
 /* --- Testimonials --- */
