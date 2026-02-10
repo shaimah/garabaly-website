@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initSmoothScroll();
   initCountUp();
+  initCardGlow();
 });
 
 /* --- Sticky Header --- */
@@ -185,4 +186,23 @@ function initCountUp() {
   );
 
   statValues.forEach(el => observer.observe(el));
+}
+
+/* --- Card Glow Effect (mouse-tracking radial highlight) --- */
+function initCardGlow() {
+  const cards = document.querySelectorAll('.feature-card');
+  if (!cards.length) return;
+
+  // Only on non-touch / desktop
+  if (window.matchMedia('(hover: hover)').matches) {
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty('--mouse-x', x + '%');
+        card.style.setProperty('--mouse-y', y + '%');
+      });
+    });
+  }
 }
