@@ -919,18 +919,67 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   color: var(--text-secondary);
 }
 
-/* --- Categories --- */
+/* --- Categories Carousel --- */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(200, 121, 65, 0.3);
+  background: rgba(26, 18, 11, 0.7);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.carousel-arrow:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 20px rgba(200, 121, 65, 0.4);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
 .categories-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
   gap: var(--space-lg);
+  scrollbar-width: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.categories-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .category-card {
   position: relative;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  aspect-ratio: 1;
+  flex: 0 0 calc((100% - 4 * var(--space-lg)) / 5);
+  min-height: 180px;
+  scroll-snap-align: start;
   cursor: pointer;
   transition: all var(--transition-base);
 }
@@ -1824,8 +1873,8 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
     direction: ltr;
   }
 
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .categories-grid .category-card {
+    flex: 0 0 calc((100% - 2 * var(--space-lg)) / 3);
   }
 
   .stats-bar {
@@ -1936,25 +1985,27 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
     scroll-snap-align: start;
   }
 
-  /* --- Horizontal Scroll: Categories --- */
-  .categories-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: var(--space-md);
-    padding-bottom: var(--space-md);
-    scrollbar-width: none;
+  /* --- Carousel: Categories (Mobile) --- */
+  .carousel-wrapper {
+    gap: var(--space-sm);
   }
 
-  .categories-grid::-webkit-scrollbar {
-    display: none;
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .categories-grid {
+    gap: var(--space-md);
   }
 
   .categories-grid .category-card {
     flex: 0 0 150px;
-    scroll-snap-align: start;
-    aspect-ratio: auto;
     min-height: 160px;
   }
 
@@ -2100,8 +2151,18 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   }
 
   .categories-grid .category-card {
-    flex: 0 0 130px;
+    flex: 0 0 135px;
     min-height: 145px;
+  }
+
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .carousel-arrow svg {
+    width: 16px;
+    height: 16px;
   }
 
   .testimonials-grid .testimonial-card {

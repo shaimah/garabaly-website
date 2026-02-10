@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initCountUp();
   initCardGlow();
+  initCategoryCarousel();
 });
 
 /* --- Sticky Header --- */
@@ -205,4 +206,44 @@ function initCardGlow() {
       });
     });
   }
+}
+
+/* --- Category Carousel (left/right arrow scrolling) --- */
+function initCategoryCarousel() {
+  const wrapper = document.querySelector('.carousel-wrapper');
+  if (!wrapper) return;
+
+  const grid = wrapper.querySelector('.categories-grid');
+  const leftBtn = wrapper.querySelector('.carousel-arrow--left');
+  const rightBtn = wrapper.querySelector('.carousel-arrow--right');
+  if (!grid || !leftBtn || !rightBtn) return;
+
+  function getScrollAmount() {
+    // Scroll by roughly one card width + gap
+    const card = grid.querySelector('.category-card');
+    if (!card) return 200;
+    const style = getComputedStyle(grid);
+    const gap = parseFloat(style.gap) || 16;
+    return card.offsetWidth + gap;
+  }
+
+  function updateArrows() {
+    const maxScroll = grid.scrollWidth - grid.clientWidth;
+    leftBtn.disabled = grid.scrollLeft <= 2;
+    rightBtn.disabled = grid.scrollLeft >= maxScroll - 2;
+  }
+
+  leftBtn.addEventListener('click', () => {
+    grid.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    grid.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  });
+
+  grid.addEventListener('scroll', updateArrows);
+  window.addEventListener('resize', updateArrows);
+
+  // Initial state
+  updateArrows();
 }
