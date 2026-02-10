@@ -683,7 +683,6 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 .hero__stats {
   display: flex;
-  justify-content: center;
   gap: var(--space-3xl);
   margin-top: var(--space-3xl);
   animation: fadeInUp 0.6s ease 0.6s forwards;
@@ -691,7 +690,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 }
 
 .hero__stat {
-  text-align: center;
+  text-align: left;
 }
 
 .hero__stat-value {
