@@ -2222,31 +2222,37 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 }
 
 /* --- Made with Replit Subscript (navbar) --- */
+.header__logo-text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
 .made-with-replit-sub {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 3px;
   font-size: 0.5rem;
   font-weight: 600;
   letter-spacing: 0.3px;
-  opacity: 0.6;
+  opacity: 0.55;
   line-height: 1;
-  margin-top: 1px;
+  margin-top: 0px;
   white-space: nowrap;
 }
 
 .made-with-replit-sub svg {
-  width: 10px;
-  height: 10px;
-  vertical-align: -1px;
+  width: 10px !important;
+  height: 10px !important;
+  max-width: 10px;
+  max-height: 10px;
+  flex-shrink: 0;
   display: inline-block;
-}
-
-.header__logo-text {
-  display: flex;
-  flex-direction: column;
+  vertical-align: middle;
 }
 
 .header__logo:hover .made-with-replit-sub {
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 /* --- Glow overlay for hero --- */
