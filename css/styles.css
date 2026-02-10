@@ -711,7 +711,8 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: var(--space-2xl);
+  width: fit-content;
+  margin: var(--space-2xl) auto 0;
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.75rem;
   letter-spacing: 2px;
