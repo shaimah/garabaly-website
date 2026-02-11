@@ -1022,13 +1022,13 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   width: 64px;
   height: 64px;
   /* Duotone: camel amber (#C87941) + chicken-comb red (#DD2E44) */
-  filter: grayscale(1) sepia(1) saturate(3) hue-rotate(345deg) brightness(1.05) contrast(1.1) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  filter: grayscale(1) sepia(1) saturate(2.5) hue-rotate(335deg) brightness(0.88) contrast(1.25) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
   transition: all 0.4s ease;
   object-fit: contain;
 }
 
 .category-card:hover .category-card__icon img {
-  filter: grayscale(1) sepia(1) saturate(3.5) hue-rotate(345deg) brightness(1.1) contrast(1.15) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
+  filter: grayscale(1) sepia(1) saturate(3) hue-rotate(335deg) brightness(0.92) contrast(1.3) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
   transform: scale(1.15);
 }
 
@@ -2463,18 +2463,7 @@ html:not(.js-ready) .reveal {
   text-align: right;
 }
 
-/* Header */
-[dir="rtl"] .header__inner {
-  flex-direction: row-reverse;
-}
-
-[dir="rtl"] .header__nav-links {
-  flex-direction: row-reverse;
-}
-
-[dir="rtl"] .header__actions {
-  flex-direction: row-reverse;
-}
+/* Header — direction:rtl already reverses flex layout; no row-reverse needed */
 
 /* Hero */
 [dir="rtl"] .hero__content {
@@ -2507,9 +2496,8 @@ html:not(.js-ready) .reveal {
   text-align: center;
 }
 
-/* Trust features — icon on right of text */
+/* Trust features — direction:rtl already puts icon on right of text */
 [dir="rtl"] .trust-feature {
-  flex-direction: row-reverse;
   text-align: right;
 }
 
@@ -2544,13 +2532,10 @@ html:not(.js-ready) .reveal {
   direction: rtl;
 }
 
-[dir="rtl"] .footer__bottom {
-  flex-direction: row-reverse;
-}
+/* footer__bottom — direction:rtl already reverses layout */
 
-/* Contact page — icon on right of text */
+/* Contact page — direction:rtl already puts icon on right of text */
 [dir="rtl"] .contact-info__item {
-  flex-direction: row-reverse;
   text-align: right;
 }
 
@@ -2574,19 +2559,15 @@ html:not(.js-ready) .reveal {
   text-align: right;
 }
 
-[dir="rtl"] .page-header__breadcrumb {
-  flex-direction: row-reverse;
-}
+/* page-header__breadcrumb — direction:rtl already reverses layout */
 
-/* Timeline — marker on right of content */
+/* Timeline — direction:rtl already puts marker on right */
 [dir="rtl"] .timeline-item {
-  flex-direction: row-reverse;
   text-align: right;
 }
 
-/* FAQ — chevron on left, text on right */
+/* FAQ — direction:rtl already puts chevron on left and text on right */
 [dir="rtl"] .faq-item__question {
-  flex-direction: row-reverse;
   text-align: right;
 }
 
@@ -2609,9 +2590,7 @@ html:not(.js-ready) .reveal {
   text-align: right;
 }
 
-[dir="rtl"] .testimonial-card__author {
-  flex-direction: row-reverse;
-}
+/* testimonial-card__author — direction:rtl already reverses layout */
 
 /* Value cards stay centered; read-more aligns right */
 [dir="rtl"] .value-card__read-more {
@@ -2638,10 +2617,7 @@ html:not(.js-ready) .reveal {
   justify-content: flex-start;
 }
 
-/* Scroll hint direction */
-[dir="rtl"] .scroll-hint {
-  flex-direction: row-reverse;
-}
+/* Scroll hint — direction:rtl already reverses layout */
 
 /* Mobile menu — uses full-screen overlay with opacity, no direction changes needed */
 [dir="rtl"] .mobile-menu {
