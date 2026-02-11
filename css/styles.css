@@ -621,6 +621,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   max-width: 1600px;
   padding-top: var(--header-height);
   padding-bottom: var(--space-xl);
+  text-align: center;
 }
 
 .hero__badge {
@@ -669,6 +670,8 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: var(--space-2xl);
   max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
   animation: fadeInUp 0.6s ease 0.3s forwards;
   opacity: 0;
 }
@@ -677,6 +680,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   display: flex;
   gap: var(--space-md);
   flex-wrap: wrap;
+  justify-content: center;
   animation: fadeInUp 0.6s ease 0.45s forwards;
   opacity: 0;
 }
@@ -685,6 +689,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   display: flex;
   gap: var(--space-3xl);
   margin-top: var(--space-3xl);
+  justify-content: center;
   animation: fadeInUp 0.6s ease 0.6s forwards;
   opacity: 0;
 }
@@ -2485,15 +2490,15 @@ html:not(.js-ready) .reveal {
 
 /* Hero */
 [dir="rtl"] .hero__content {
-  text-align: right;
+  text-align: center;
 }
 
 [dir="rtl"] .hero__actions {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 [dir="rtl"] .hero__stat {
-  text-align: right;
+  text-align: center;
 }
 
 [dir="rtl"] .hero__stat-value {
