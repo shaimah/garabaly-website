@@ -104,6 +104,9 @@
             <p>
               This is what makes Garabaly different. Start a conversation with the seller — ask about the animal, request more photos or videos, and negotiate the price. In West Africa, price is a conversation, not a label. Garabaly respects that. Reach consensus, then move to payment.
             </p>
+            <p style="margin-top: var(--space-md); font-weight: 700; font-style: italic; color: var(--primary);">
+              "Price is a conversation, not a label. That's not friction — that's culture."
+            </p>
           </div>
         </div>
 
@@ -134,6 +137,9 @@
             <p>
               When you've agreed on a price, tap "Buy with Escrow." Your payment is securely held by Garabaly — the seller does not receive the money yet. Pay via Orange Money, Wave, MTN MoMo, Moov Money, bank transfer, or international card. Multi-currency support means diaspora buyers can pay in EUR, USD, GBP, or any of 50+ supported currencies.
             </p>
+            <p style="margin-top: var(--space-md); font-weight: 700; font-style: italic; color: var(--primary);">
+              "Your money is safe until the cow is in your compound. Period."
+            </p>
           </div>
         </div>
 
@@ -162,7 +168,10 @@
           <div class="timeline-item__content">
             <h3>Confirm with Your Unique Code</h3>
             <p>
-              Every order comes with a unique 6-character confirmation code that only you, the buyer, can see. Share this code with the seller or delivery driver upon receipt to release the escrow funds instantly to all parties. If there's a problem, you can open a dispute and your money stays protected.
+              Every order generates a unique 6-character alphanumeric code — that's 2 billion possible combinations. The code is bcrypt-hashed (cost factor 10) in our database. Case-insensitive entry. Maximum 3 attempts before 30-minute lockout. Failed attempts logged with device fingerprint. Your confirmation code is your key — share it only after inspecting your livestock.
+            </p>
+            <p style="margin-top: var(--space-md); font-weight: 700; font-style: italic; color: var(--primary);">
+              "One code. Six characters. Instant release. Trust delivered."
             </p>
           </div>
         </div>
@@ -264,7 +273,7 @@
                 <i data-feather="dollar-sign"></i>
               </div>
               <div class="trust-feature__text">
-                <h4>1. Funds Held in Escrow</h4>
+                <h4>1. Funded — "Fonds sécurisés"</h4>
                 <p>When you tap "Buy with Escrow," your payment is securely locked — the seller never receives money directly. Your wallet shows the hold in real time.</p>
               </div>
             </div>
@@ -273,8 +282,8 @@
                 <i data-feather="clock"></i>
               </div>
               <div class="trust-feature__text">
-                <h4>2. Seller Confirms (24h Window)</h4>
-                <p>The seller must confirm the order within 24 hours. If they don't, the escrow is automatically cancelled and your funds are returned — no action needed.</p>
+                <h4>2. Confirmed — "Vendeur a confirmé"</h4>
+                <p>The seller must confirm the order within 24 hours. If they don't, the escrow is automatically cancelled and your funds are returned — 24h timeout auto-refund.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -282,8 +291,8 @@
                 <i data-feather="truck"></i>
               </div>
               <div class="trust-feature__text">
-                <h4>3. Preparation & Delivery</h4>
-                <p>Track progress in real time — from preparation to delivery. Service providers (butcher, transport) are activated only when the livestock stage is complete.</p>
+                <h4>3. Releasing — "Libération en cours"</h4>
+                <p>24h countdown after buyer confirms receipt. Track progress in real time — from preparation to delivery. Service providers are activated only when the livestock stage is complete.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -291,8 +300,8 @@
                 <i data-feather="key"></i>
               </div>
               <div class="trust-feature__text">
-                <h4>4. Confirmation Code Verification</h4>
-                <p>You receive a unique 6-character code. Share it with the seller or delivery driver upon receipt to cryptographically verify delivery and release funds.</p>
+                <h4>4. Released — "Fonds libérés"</h4>
+                <p>Money sent to seller's wallet. You receive a unique 6-character code. Share it with the seller or delivery driver upon receipt to cryptographically verify delivery and release funds instantly.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -300,8 +309,8 @@
                 <i data-feather="alert-circle"></i>
               </div>
               <div class="trust-feature__text">
-                <h4>5. Release or Dispute</h4>
-                <p>Funds release instantly to all parties. If there's an issue, open a dispute — your money stays protected. Garabaly mediates with dual-admin approval for fairness.</p>
+                <h4>5. Disputed — "Contesté"</h4>
+                <p>If there's an issue, open a dispute — funds frozen, dual-admin mediation. Your money stays protected. Garabaly mediates with dual-admin approval for fairness.</p>
               </div>
             </div>
           </div>
@@ -449,7 +458,7 @@
             <img src="assets/images/logo.png" alt="Garabaly Logo" style="filter: brightness(0) invert(1);">
             <span class="header__logo-text">Garabaly</span>
           </a>
-          <p>West Africa's trusted livestock marketplace with escrow protection. Connecting sellers with buyers — and the diaspora with home.</p>
+          <p>The livestock trade hasn't changed in 100 years. We're changing it. Sahel → West Africa → Diaspora. Trust isn't built with a checkout button.</p>
           <div class="social-links" style="margin-top: 20px;">
             <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter / X"><i data-feather="twitter"></i></a>
             <a href="#" class="social-link" aria-label="Facebook"><i data-feather="facebook"></i></a>

@@ -1810,16 +1810,25 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   100% { transform: translateY(-100vh) translateX(40px) scale(0.3); opacity: 0; }
 }
 
-/* Scroll reveal */
+/* Scroll reveal — with no-JS fallback */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Fallback: if JS hasn't run after 3 s, show everything */
+@keyframes revealFallback {
+  to { opacity: 1; transform: none; }
+}
+
+html:not(.js-ready) .reveal {
+  animation: revealFallback 0s 3s forwards;
 }
 
 /* --- Mobile Menu Overlay --- */
