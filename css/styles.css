@@ -985,19 +985,19 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 }
 
 .category-card {
-  box-shadow: 0 0 12px rgba(200, 121, 65, 0.08);
+  box-shadow: 0 2px 10px rgba(61, 43, 31, 0.08);
 }
 
 .category-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(200, 121, 65, 0.3), 0 0 50px rgba(200, 121, 65, 0.12), 0 8px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(61, 43, 31, 0.15), 0 8px 30px rgba(200, 121, 65, 0.1);
 }
 
 .category-card__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #1A120B, #2A1C12);
-  opacity: 0.94;
+  background: linear-gradient(135deg, #F5EDE4, #EDE0D4);
+  opacity: 1;
 }
 
 .category-card__content {
@@ -1008,7 +1008,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: var(--text-primary);
   text-align: center;
   padding: var(--space-lg);
 }
@@ -1021,14 +1021,14 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .category-card__icon img {
   width: 64px;
   height: 64px;
-  /* Duotone via SVG filter: shadows=#DD2E44 (comb red), highlights=#C87941 (camel amber) */
-  filter: url(#duotone-livestock) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  /* Duotone via SVG filter: shadows=#3D2B1F (dark brown), highlights=#C87941 (camel amber) */
+  filter: url(#duotone-livestock) drop-shadow(0 2px 8px rgba(61,43,31,0.2));
   transition: all 0.4s ease;
   object-fit: contain;
 }
 
 .category-card:hover .category-card__icon img {
-  filter: url(#duotone-livestock) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
+  filter: url(#duotone-livestock) drop-shadow(0 4px 12px rgba(61,43,31,0.3)) drop-shadow(0 0 18px rgba(200,121,65,0.25));
   transform: scale(1.15);
 }
 
@@ -1045,7 +1045,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 /* Subtle gradient variation per card */
 .category-card:nth-child(even) .category-card__bg {
-  background: linear-gradient(135deg, #241810, #342618);
+  background: linear-gradient(135deg, #EDE0D4, #E6D5C5);
 }
 
 /* Camel icon (5th card) — pure amber, no red */
@@ -1054,7 +1054,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 }
 
 .category-card:nth-child(5):hover .category-card__icon img {
-  filter: url(#duotone-camel) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
+  filter: url(#duotone-camel) drop-shadow(0 4px 12px rgba(61,43,31,0.3)) drop-shadow(0 0 18px rgba(200,121,65,0.25));
 }
 
 /* --- Testimonials --- */
