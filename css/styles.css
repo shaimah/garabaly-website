@@ -996,8 +996,8 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .category-card__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #6B4A35, #8C6B52);
-  opacity: 0.92;
+  background: linear-gradient(135deg, #1A120B, #2A1C12);
+  opacity: 0.94;
 }
 
 .category-card__content {
@@ -1045,7 +1045,16 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 /* Subtle gradient variation per card */
 .category-card:nth-child(even) .category-card__bg {
-  background: linear-gradient(135deg, #7A5840, #9B7A60);
+  background: linear-gradient(135deg, #241810, #342618);
+}
+
+/* Camel icon (5th card) — pure amber, no red */
+.category-card:nth-child(5) .category-card__icon img {
+  filter: url(#duotone-camel) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+}
+
+.category-card:nth-child(5):hover .category-card__icon img {
+  filter: url(#duotone-camel) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
 }
 
 /* --- Testimonials --- */

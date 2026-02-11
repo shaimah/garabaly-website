@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <!-- Duotone SVG filter: shadows=#DD2E44 (comb red), highlights=#C87941 (camel amber) -->
+  <!-- Duotone SVG filters for livestock icons -->
   <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0">
     <filter id="duotone-livestock">
       <feColorMatrix type="saturate" values="0"/>
@@ -23,6 +23,14 @@
         <feFuncR type="table" tableValues="0.867 0.784"/>
         <feFuncG type="table" tableValues="0.180 0.475"/>
         <feFuncB type="table" tableValues="0.267 0.255"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="duotone-camel">
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer color-interpolation-filters="sRGB">
+        <feFuncR type="table" tableValues="0.545 0.784"/>
+        <feFuncG type="table" tableValues="0.353 0.475"/>
+        <feFuncB type="table" tableValues="0.169 0.255"/>
       </feComponentTransfer>
     </filter>
   </svg>
