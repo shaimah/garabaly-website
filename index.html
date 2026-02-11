@@ -36,6 +36,15 @@
         <feFuncB type="table" tableValues="0.122 0.255"/>
       </feComponentTransfer>
     </filter>
+    <!-- Sheep: mid-tones pushed to dark brown so horns match eyes -->
+    <filter id="duotone-sheep">
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer color-interpolation-filters="sRGB">
+        <feFuncR type="table" tableValues="0.239 0.239 0.239 0.784"/>
+        <feFuncG type="table" tableValues="0.169 0.169 0.169 0.475"/>
+        <feFuncB type="table" tableValues="0.122 0.122 0.122 0.255"/>
+      </feComponentTransfer>
+    </filter>
     <!-- Camel only: pure amber tones — shadows=#8B5A2B, highlights=#C87941 -->
     <filter id="duotone-camel">
       <feColorMatrix type="saturate" values="0"/>

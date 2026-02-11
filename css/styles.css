@@ -1048,9 +1048,18 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   background: linear-gradient(135deg, #EDE0D4, #E6D5C5);
 }
 
+/* Sheep icon (2nd card) — mid-tones pushed to dark brown so horns are brown */
+.category-card:nth-child(2) .category-card__icon img {
+  filter: url(#duotone-sheep) drop-shadow(0 2px 8px rgba(61,43,31,0.2));
+}
+
+.category-card:nth-child(2):hover .category-card__icon img {
+  filter: url(#duotone-sheep) drop-shadow(0 4px 12px rgba(61,43,31,0.3)) drop-shadow(0 0 18px rgba(200,121,65,0.25));
+}
+
 /* Camel icon (5th card) — pure amber, no red */
 .category-card:nth-child(5) .category-card__icon img {
-  filter: url(#duotone-camel) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  filter: url(#duotone-camel) drop-shadow(0 2px 8px rgba(61,43,31,0.2));
 }
 
 .category-card:nth-child(5):hover .category-card__icon img {
