@@ -1021,14 +1021,14 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .category-card__icon img {
   width: 64px;
   height: 64px;
-  /* Duotone: camel amber (#C87941) + chicken-comb red (#DD2E44) */
-  filter: grayscale(1) sepia(1) saturate(2.5) hue-rotate(335deg) brightness(0.88) contrast(1.25) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  /* Duotone via SVG filter: shadows=#DD2E44 (comb red), highlights=#C87941 (camel amber) */
+  filter: url(#duotone-livestock) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
   transition: all 0.4s ease;
   object-fit: contain;
 }
 
 .category-card:hover .category-card__icon img {
-  filter: grayscale(1) sepia(1) saturate(3) hue-rotate(335deg) brightness(0.92) contrast(1.3) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
+  filter: url(#duotone-livestock) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
   transform: scale(1.15);
 }
 
@@ -2587,6 +2587,27 @@ html:not(.js-ready) .reveal {
 [dir="rtl"] .feature-card,
 [dir="rtl"] .step,
 [dir="rtl"] .testimonial-card {
+  text-align: right;
+}
+
+/* Steps — push description block to the right edge */
+[dir="rtl"] .step__desc {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Feature card description — push to right */
+[dir="rtl"] .feature-card__desc {
+  text-align: right;
+}
+
+/* Timeline content — ensure right-aligned */
+[dir="rtl"] .timeline-item__content {
+  text-align: right;
+}
+
+[dir="rtl"] .timeline-item__content h3,
+[dir="rtl"] .timeline-item__content p {
   text-align: right;
 }
 

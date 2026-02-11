@@ -25,6 +25,18 @@
 </head>
 <body>
 
+  <!-- Duotone SVG filter: shadows=#DD2E44 (comb red), highlights=#C87941 (camel amber) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0">
+    <filter id="duotone-livestock">
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer color-interpolation-filters="sRGB">
+        <feFuncR type="table" tableValues="0.867 0.784"/>
+        <feFuncG type="table" tableValues="0.180 0.475"/>
+        <feFuncB type="table" tableValues="0.267 0.255"/>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+
   <!-- ===== HEADER ===== -->
   <header class="header header--transparent" id="header">
     <div class="container header__inner">
