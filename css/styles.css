@@ -230,7 +230,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .section-subtitle {
   font: var(--font-body-lg);
   color: var(--text-secondary);
-  max-width: 800px;
+  max-width: 960px;
 }
 
 .section-header {
@@ -618,6 +618,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .hero__content {
   position: relative;
   z-index: 2;
+  max-width: 1600px;
   padding-top: var(--header-height);
   padding-bottom: var(--space-xl);
 }
@@ -650,8 +651,8 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   margin-bottom: var(--space-lg);
   animation: fadeInUp 0.6s ease 0.15s forwards;
   opacity: 0;
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
-  line-height: 1.1;
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.15;
 }
 
 .hero__title span {
@@ -663,11 +664,11 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 .hero__subtitle {
   font: var(--font-body-lg);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: var(--space-2xl);
-  max-width: 90%;
+  max-width: 100%;
   animation: fadeInUp 0.6s ease 0.3s forwards;
   opacity: 0;
 }
@@ -1020,13 +1021,13 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .category-card__icon img {
   width: 64px;
   height: 64px;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  filter: sepia(1) saturate(2.5) hue-rotate(350deg) brightness(1.05) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
   transition: all 0.4s ease;
   object-fit: contain;
 }
 
 .category-card:hover .category-card__icon img {
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(255,255,255,0.3));
+  filter: sepia(1) saturate(3) hue-rotate(350deg) brightness(1.1) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
   transform: scale(1.15);
 }
 
@@ -1947,8 +1948,8 @@ html:not(.js-ready) .reveal {
   }
 
   .hero__title {
-    font-size: clamp(1.6rem, 6.5vw, 2.4rem);
-    line-height: 1.12;
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    line-height: 1.15;
   }
 
   .hero__subtitle {
@@ -2036,8 +2037,8 @@ html:not(.js-ready) .reveal {
   }
 
   .categories-grid .category-card .category-card__icon img {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
   }
 
   .categories-grid .category-card .category-card__name {
@@ -2130,7 +2131,7 @@ html:not(.js-ready) .reveal {
   }
 
   .hero__title {
-    font-size: clamp(1.4rem, 6vw, 2rem);
+    font-size: clamp(1.1rem, 4.5vw, 1.5rem);
   }
 
   .hero__actions {
