@@ -651,8 +651,8 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   margin-bottom: var(--space-lg);
   animation: fadeInUp 0.6s ease 0.15s forwards;
   opacity: 0;
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
-  line-height: 1.08;
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  line-height: 1.15;
 }
 
 .hero__title span {
@@ -996,7 +996,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .category-card__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #2C1810, #4A3025);
+  background: linear-gradient(135deg, #6B4A35, #8C6B52);
   opacity: 0.92;
 }
 
@@ -1045,7 +1045,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 /* Subtle gradient variation per card */
 .category-card:nth-child(even) .category-card__bg {
-  background: linear-gradient(135deg, #3D2518, #5A3A28);
+  background: linear-gradient(135deg, #7A5840, #9B7A60);
 }
 
 /* --- Testimonials --- */
@@ -1949,8 +1949,8 @@ html:not(.js-ready) .reveal {
   }
 
   .hero__title {
-    font-size: clamp(1.6rem, 7vw, 2.4rem);
-    line-height: 1.15;
+    font-size: clamp(1.4rem, 5.5vw, 2rem);
+    line-height: 1.18;
   }
 
   .hero__subtitle {
@@ -2132,7 +2132,7 @@ html:not(.js-ready) .reveal {
   }
 
   .hero__title {
-    font-size: clamp(1.4rem, 6.5vw, 2rem);
+    font-size: clamp(1.2rem, 5vw, 1.7rem);
   }
 
   .hero__actions {
