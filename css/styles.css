@@ -1001,8 +1001,9 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .category-card__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #8C6B52, #A68A72);
-  opacity: 0.92;
+  background: var(--surface);
+  border: 1px solid rgba(200, 121, 65, 0.12);
+  opacity: 1;
 }
 
 .category-card__content {
@@ -1013,7 +1014,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: var(--text-primary);
   text-align: center;
   padding: var(--space-lg);
 }
@@ -1050,7 +1051,8 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 /* Subtle gradient variation per card */
 .category-card:nth-child(even) .category-card__bg {
-  background: linear-gradient(135deg, #9B7A60, #B09480);
+  background: var(--bg);
+  border: 1px solid rgba(200, 121, 65, 0.10);
 }
 
 /* Sheep icon (2nd card) — mid-tones pushed to dark brown so horns are brown */
