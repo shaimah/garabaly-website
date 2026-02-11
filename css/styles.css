@@ -2462,6 +2462,7 @@ html:not(.js-ready) .reveal {
   text-align: right;
 }
 
+/* Header */
 [dir="rtl"] .header__inner {
   flex-direction: row-reverse;
 }
@@ -2474,22 +2475,38 @@ html:not(.js-ready) .reveal {
   flex-direction: row-reverse;
 }
 
+/* Hero */
 [dir="rtl"] .hero__content {
   text-align: right;
 }
 
 [dir="rtl"] .hero__actions {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
-[dir="rtl"] .hero__stats {
+[dir="rtl"] .hero__stat {
+  text-align: right;
+}
+
+[dir="rtl"] .hero__stat-value {
   direction: ltr;
+  unicode-bidi: isolate;
 }
 
+/* Sections */
 [dir="rtl"] .section-header.text-center {
   text-align: center;
 }
 
+[dir="rtl"] .section-eyebrow {
+  text-align: right;
+}
+
+[dir="rtl"] .section-header.text-center .section-eyebrow {
+  text-align: center;
+}
+
+/* Trust features — icon on right of text */
 [dir="rtl"] .trust-feature {
   flex-direction: row-reverse;
   text-align: right;
@@ -2499,6 +2516,16 @@ html:not(.js-ready) .reveal {
   text-align: right;
 }
 
+/* Trust grid — image on right, text on left */
+[dir="rtl"] .trust-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .trust-content {
+  text-align: right;
+}
+
+/* Image-text rows */
 [dir="rtl"] .image-text-row {
   direction: rtl;
 }
@@ -2511,12 +2538,38 @@ html:not(.js-ready) .reveal {
   direction: rtl;
 }
 
+/* Footer */
 [dir="rtl"] .footer__grid {
   direction: rtl;
 }
 
+[dir="rtl"] .footer__bottom {
+  flex-direction: row-reverse;
+}
+
+/* Contact page — icon on right of text */
 [dir="rtl"] .contact-info__item {
   flex-direction: row-reverse;
+  text-align: right;
+}
+
+[dir="rtl"] .contact-grid {
+  direction: rtl;
+}
+
+/* Form elements right-aligned */
+[dir="rtl"] .form-group label {
+  text-align: right;
+}
+
+[dir="rtl"] .form-group input,
+[dir="rtl"] .form-group textarea,
+[dir="rtl"] .form-group select {
+  text-align: right;
+}
+
+/* Page headers */
+[dir="rtl"] .page-header__content {
   text-align: right;
 }
 
@@ -2524,38 +2577,77 @@ html:not(.js-ready) .reveal {
   flex-direction: row-reverse;
 }
 
+/* Timeline — marker on right of content */
 [dir="rtl"] .timeline-item {
   flex-direction: row-reverse;
   text-align: right;
 }
 
+/* FAQ — chevron on left, text on right */
 [dir="rtl"] .faq-item__question {
   flex-direction: row-reverse;
   text-align: right;
 }
 
+[dir="rtl"] .faq-item__question i {
+  margin-left: 0;
+  margin-right: var(--space-md);
+}
+
+/* Buttons — icons handled by gap, no extra margins needed */
 [dir="rtl"] .btn i,
 [dir="rtl"] .btn svg {
-  margin-left: 8px;
+  margin-left: 0;
   margin-right: 0;
 }
 
+/* Cards */
 [dir="rtl"] .feature-card,
 [dir="rtl"] .step,
 [dir="rtl"] .testimonial-card {
   text-align: right;
 }
 
+[dir="rtl"] .testimonial-card__author {
+  flex-direction: row-reverse;
+}
+
+/* Value cards stay centered; read-more aligns right */
+[dir="rtl"] .value-card__read-more {
+  text-align: right;
+}
+
+/* Button groups — flow from right */
+[dir="rtl"] .btn-group {
+  justify-content: flex-start;
+}
+
+/* Store buttons — icon on right, text on left */
+[dir="rtl"] .store-btn__text {
+  text-align: right;
+}
+
+/* CTA section */
+[dir="rtl"] .cta-content {
+  text-align: center;
+}
+
+/* Social links */
+[dir="rtl"] .social-links {
+  justify-content: flex-start;
+}
+
+/* Scroll hint direction */
+[dir="rtl"] .scroll-hint {
+  flex-direction: row-reverse;
+}
+
+/* Mobile menu — uses full-screen overlay with opacity, no direction changes needed */
 [dir="rtl"] .mobile-menu {
-  left: 0;
-  right: auto;
-  transform: translateX(-100%);
+  text-align: center;
 }
 
-[dir="rtl"] .mobile-menu.active {
-  transform: translateX(0);
-}
-
+/* Language switcher */
 [dir="rtl"] .lang-switcher {
   margin-left: 0;
   margin-right: var(--space-md);
