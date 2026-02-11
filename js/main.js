@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountUp();
   initCardGlow();
   initCategoryCarousel();
+  initValueCards();
+  initLangSwitcher();
 });
 
 /* --- Sticky Header --- */
@@ -247,4 +249,49 @@ function initCategoryCarousel() {
 
   // Initial state
   updateArrows();
+}
+
+/* --- Value Cards: show "Read more" only if text is truncated --- */
+function initValueCards() {
+  const descs = document.querySelectorAll('.value-card__desc');
+  if (!descs.length) return;
+
+  descs.forEach(desc => {
+    const btn = desc.parentElement.querySelector('.value-card__read-more');
+    if (!btn) return;
+    // Show button only if content overflows
+    if (desc.scrollHeight > desc.clientHeight + 2) {
+      btn.classList.add('visible');
+    }
+  });
+}
+
+/* --- Toggle value card expansion (global for onclick) --- */
+/* --- Language Switcher Dropdown --- */
+function initLangSwitcher() {
+  const switcher = document.getElementById('langSwitcher');
+  if (!switcher) return;
+
+  const btn = switcher.querySelector('.lang-switcher__btn');
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    switcher.classList.toggle('open');
+  });
+
+  document.addEventListener('click', () => {
+    switcher.classList.remove('open');
+  });
+
+  switcher.querySelector('.lang-switcher__dropdown').addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+}
+
+function toggleValueCard(btn) {
+  const desc = btn.parentElement.querySelector('.value-card__desc');
+  if (!desc) return;
+
+  const isExpanded = desc.classList.contains('expanded');
+  desc.classList.toggle('expanded');
+  btn.textContent = isExpanded ? 'Read more' : 'Show less';
 }

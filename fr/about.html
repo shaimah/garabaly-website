@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos — Garabaly</title>
+  <meta name="description" content="Découvrez la mission de Garabaly : moderniser le commerce de bétail en Afrique de l'Ouest avec confiance, transparence et technologie.">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="../assets/images/logo.png" alt="Logo Garabaly">
+        <span class="header__logo-text">Garabaly<span class="made-with-replit-sub">Made with <svg width="10" height="10" viewBox="0 0 32 32" fill="none"><path d="M7 5.5C7 4.67 7.67 4 8.5 4H15.5C16.33 4 17 4.67 17 5.5V12H8.5C7.67 12 7 11.33 7 10.5V5.5Z" fill="#F26207"/><path d="M17 12H25.5C26.33 12 27 12.67 27 13.5V18.5C27 19.33 26.33 20 25.5 20H17V12Z" fill="#F26207"/><path d="M7 21.5C7 20.67 7.67 20 8.5 20H17V28H8.5C7.67 28 7 27.33 7 26.5V21.5Z" fill="#F26207"/></svg> Replit</span></span>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-links">
+          <li><a href="index.html" class="header__nav-link">Accueil</a></li>
+          <li><a href="about.html" class="header__nav-link active">À propos</a></li>
+          <li><a href="how-it-works.html" class="header__nav-link">Comment ça marche</a></li>
+          <li><a href="faq.html" class="header__nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="header__nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Langue">
+            <i data-feather="globe"></i> <span>FR</span>
+          </button>
+          <div class="lang-switcher__dropdown">
+            <a href="../about.html" class="lang-switcher__option">English</a>
+            <a href="about.html" class="lang-switcher__option active">Français</a>
+            <a href="../ar/about.html" class="lang-switcher__option">العربية</a>
+          </div>
+        </div>
+        <button class="theme-toggle" aria-label="Mode sombre">
+          <i data-feather="moon" class="icon-moon"></i>
+          <i data-feather="sun" class="icon-sun"></i>
+        </button>
+        <a href="index.html#download" class="btn btn--primary header__cta">Télécharger</a>
+        <button class="mobile-toggle" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="how-it-works.html">Comment ça marche</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html#download" class="btn btn--primary">Télécharger</a>
+  </div>
+
+  <section class="page-header">
+    <div class="container page-header__content">
+      <div class="page-header__breadcrumb">
+        <a href="index.html">Accueil</a>
+        <i data-feather="chevron-right" style="width:14px;height:14px;"></i>
+        <span>À propos</span>
+      </div>
+      <h1>Notre histoire</h1>
+      <p>Tout le monde disait que numériser le commerce de bétail en Afrique de l'Ouest était impossible. Les marchés sont trop informels. Les éleveurs n'utilisent pas d'applis. La confiance ne peut être reproduite. Ils avaient tort.</p>
+    </div>
+  </section>
+
+  <!-- ===== MISSION ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="image-text-row">
+        <div class="image-showcase reveal">
+          <img src="../assets/images/marketplace.png" alt="Acheteur et vendeur négociant sur un marché de bétail en Afrique de l'Ouest">
+        </div>
+        <div class="reveal">
+          <span class="section-eyebrow">Notre mission</span>
+          <h2 class="section-title">Rendre le commerce de bétail<br>sûr et accessible</h2>
+          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
+            Le bétail est l'épine dorsale de l'économie et de la culture ouest-africaine. Des millions de familles en dépendent pour leur subsistance, et des millions d'autres en ont besoin pour les célébrations comme la Tabaski.
+          </p>
+          <p class="section-subtitle">
+            Pourtant, l'industrie est en proie à la fraude, au manque de transparence et à la difficulté de commercer sur de longues distances. Garabaly est né pour résoudre ces problèmes — en créant une marketplace où la confiance est intégrée dans chaque transaction grâce à notre système de protection par séquestre, et où la négociation se fait comme elle l'a toujours été : comme une conversation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LE PROBLÈME ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="image-text-row image-text-row--reverse">
+        <div class="image-showcase reveal">
+          <img src="../assets/images/delivery.png" alt="Livraison de bétail en Afrique de l'Ouest">
+        </div>
+        <div class="reveal">
+          <span class="section-eyebrow">Le problème</span>
+          <h2 class="section-title">Pourquoi le commerce traditionnel<br>du bétail ne suffit plus</h2>
+          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
+            Dans le commerce de bétail en Afrique de l'Ouest, les acheteurs doivent souvent voyager des centaines de kilomètres pour inspecter les animaux. Les transactions en espèces ne protègent pas contre la fraude. Les intermédiaires ajoutent des coûts sans ajouter de valeur. Et il n'y a aucun moyen fiable de vérifier la santé d'un animal avant l'achat.
+          </p>
+          <p class="section-subtitle">
+            Pendant ce temps, la diaspora — des millions d'Ouest-Africains vivant à l'étranger — n'a aucun moyen d'acheter du bétail pour sa famille restée au pays lors des célébrations. Ces inefficacités coûtent aux éleveurs leurs moyens de subsistance et aux acheteurs leur argent durement gagné. Garabaly existe pour changer cela.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPROCHE ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="image-text-row">
+        <div class="image-showcase reveal">
+          <img src="../assets/images/herder-portrait.png" alt="Éleveur peul avec du bétail au Sahel">
+        </div>
+        <div class="reveal">
+          <span class="section-eyebrow">Notre approche</span>
+          <h2 class="section-title">« Ajouter au panier » n'existe pas<br>dans un marché sahélien</h2>
+          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
+            Chaque transaction en Afrique de l'Ouest est une relation. Vous saluez. Vous demandez des nouvelles de la famille. Vous inspectez. Vous proposez. Ils contre-offrent. Vous vous mettez d'accord. Ce n'est pas de la friction — c'est la culture.
+          </p>
+          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
+            Garabaly ne saute pas la négociation. Nous l'avons numérisée. Car on ne peut pas numériser un marché sans respecter comment il fonctionne réellement. La confiance ne se construit pas avec un bouton d'achat.
+          </p>
+          <p class="section-subtitle">
+            En Afrique de l'Ouest, environ deux tiers du bétail traverse au moins une frontière avant d'atteindre son acheteur final. Ce n'est pas du e-commerce. Ce sont des relations qui s'étendent sur des milliers de kilomètres. Nous avons construit pour cette réalité.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALEURS ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Ce qui nous anime</span>
+        <h2 class="section-title">Nos valeurs fondamentales</h2>
+        <p class="section-subtitle">
+          Chaque décision que nous prenons est guidée par ces principes.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-card__icon" style="color: var(--primary);">
+            <i data-feather="users" style="width:40px;height:40px;"></i>
+          </div>
+          <h3 class="value-card__title">La confiance d'abord</h3>
+          <p class="value-card__desc">
+            Chaque fonctionnalité que nous créons commence par la question : « Est-ce que cela rend la transaction plus fiable ? » Notre système de séquestre en est la fondation.
+          </p>
+          <button class="value-card__read-more" onclick="toggleValueCard(this)">Lire plus</button>
+        </div>
+
+        <div class="value-card reveal">
+          <div class="value-card__icon" style="color: var(--primary);">
+            <i data-feather="globe" style="width:40px;height:40px;"></i>
+          </div>
+          <h3 class="value-card__title">Enracinés localement, connectés globalement</h3>
+          <p class="value-card__desc">
+            Interface complète en français, anglais et arabe avec support natif droite-à-gauche. Vocabulaire spécialisé du bétail : Bovin, Ovin, Caprin. Termes de paiement en contexte local : « Paiement sécurisé (Escrow) ». Descriptions vocales en bambara, mooré, haoussa, fulfulde, wolof — toute langue. Bientôt : bambara, mooré, haoussa, fulfulde et wolof comme langues complètes.
+          </p>
+          <button class="value-card__read-more" onclick="toggleValueCard(this)">Lire plus</button>
+        </div>
+
+        <div class="value-card reveal">
+          <div class="value-card__icon" style="color: var(--primary);">
+            <i data-feather="shield" style="width:40px;height:40px;"></i>
+          </div>
+          <h3 class="value-card__title">Sécurité de classe mondiale</h3>
+          <p class="value-card__desc">
+            Cycle de séquestre en cinq étapes avec transactions atomiques. Sommes de contrôle SHA-256 pour chaque transaction. PINs hashés bcrypt (facteur 12). Double approbation admin pour les litiges. Limites de vélocité : 5 transactions/heure pour les nouveaux utilisateurs. Verrouillage de 30 minutes après 3 tentatives échouées. Ce n'est pas du marketing — c'est notre rapport d'audit.
+          </p>
+          <button class="value-card__read-more" onclick="toggleValueCard(this)">Lire plus</button>
+        </div>
+
+        <div class="value-card reveal">
+          <div class="value-card__icon" style="color: var(--primary);">
+            <i data-feather="smartphone" style="width:40px;height:40px;"></i>
+          </div>
+          <h3 class="value-card__title">Conçu pour le mobile</h3>
+          <p class="value-card__desc">
+            La plupart de nos utilisateurs accèdent à Garabaly depuis leur smartphone. Nous concevons d'abord pour le mobile, avec une faible consommation de bande passante et des interfaces intuitives.
+          </p>
+          <button class="value-card__read-more" onclick="toggleValueCard(this)">Lire plus</button>
+        </div>
+
+        <div class="value-card reveal">
+          <div class="value-card__icon" style="color: var(--primary);">
+            <i data-feather="activity" style="width:40px;height:40px;"></i>
+          </div>
+          <h3 class="value-card__title">Bien-être animal</h3>
+          <p class="value-card__desc">
+            Nous collaborons avec des vétérinaires pour encourager la certification sanitaire. Un bétail en bonne santé profite à tous dans la chaîne d'approvisionnement.
+          </p>
+          <button class="value-card__read-more" onclick="toggleValueCard(this)">Lire plus</button>
+        </div>
+
+        <div class="value-card reveal">
+          <div class="value-card__icon" style="color: var(--primary);">
+            <i data-feather="dollar-sign" style="width:40px;height:40px;"></i>
+          </div>
+          <h3 class="value-card__title">Inclusion financière</h3>
+          <p class="value-card__desc">
+            Un portefeuille numérique complet avec comptabilité en partie double, soldes de séquestre et retraits instantanés via Orange Money, Wave, MTN MoMo, et plus. Intégrer des millions de commerçants dans l'économie numérique.
+          </p>
+          <button class="value-card__read-more" onclick="toggleValueCard(this)">Lire plus</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHIFFRES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">En chiffres</span>
+        <h2 class="section-title">En pleine croissance en Afrique de l'Ouest</h2>
+      </div>
+      <div class="stats-bar reveal">
+        <div class="stat-item">
+          <div class="stat-item__value" data-count="85" data-suffix="%">0</div>
+          <div class="stat-item__label">Commerce informel du bétail</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value" data-count="54" data-suffix="">0</div>
+          <div class="stat-item__label">Devises africaines supportées</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value" data-count="3" data-suffix="">0</div>
+          <div class="stat-item__label">Langues : français, anglais, arabe (RTL)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value" data-count="0" data-suffix="%">0%</div>
+          <div class="stat-item__label">Taux de fraude avec protection séquestre</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIASPORA ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="image-text-row image-text-row--reverse">
+        <div class="image-showcase reveal">
+          <img src="../assets/images/diaspora.png" alt="Utilisateur de la diaspora achetant du bétail via téléphone">
+        </div>
+        <div class="reveal">
+          <span class="section-eyebrow">Pour la diaspora</span>
+          <h2 class="section-title">La distance disparaît.<br>L'amour arrive.</h2>
+          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
+            Des millions d'Ouest-Africains vivent à l'étranger, à Paris, New York, Abidjan et au-delà. Ils veulent envoyer du bétail chez eux pour la Tabaski, les célébrations, ou simplement pour prendre soin de leur famille.
+          </p>
+          <p class="section-subtitle">
+            Garabaly rend cela possible — parcourez du bétail vérifié depuis n'importe où dans le monde, négociez avec les vendeurs locaux, payez dans votre devise (EUR, USD, GBP, ou 50+ autres) avec protection séquestre, et faites-le livrer directement dans la concession de votre famille. Le suivi en temps réel vous permet de savoir exactement quand la joie arrive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECHNOLOGIE ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Construit pour grandir</span>
+        <h2 class="section-title">Une technologie qui inspire confiance</h2>
+        <p class="section-subtitle">
+          Derrière l'interface simple de Garabaly se cache une infrastructure de classe mondiale construite pour la sécurité, la vitesse et la scalabilité.
+        </p>
+      </div>
+      <div class="features-grid" style="max-width: 1200px; margin: 0 auto;">
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><i data-feather="lock"></i></div>
+          <h3 class="feature-card__title">Moteur de séquestre chiffré</h3>
+          <p class="feature-card__desc">
+            Cycle en cinq étapes avec transactions atomiques, sommes de contrôle SHA-256 et comptabilité en partie double. Chaque franc CFA est comptabilisé avec une précision mathématique.
+          </p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><i data-feather="zap"></i></div>
+          <h3 class="feature-card__title">Communication en temps réel</h3>
+          <p class="feature-card__desc">
+            Chat alimenté par Socket.io avec file d'attente hors ligne, accusés de lecture, indicateurs de saisie, messages vocaux et partage d'annonces. La communication fonctionne même avec une faible bande passante.
+          </p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><i data-feather="bell"></i></div>
+          <h3 class="feature-card__title">Notifications intelligentes</h3>
+          <p class="feature-card__desc">
+            Système double avec notifications push et alertes in-app. Le deep linking vous amène directement aux commandes, chats ou portefeuille — ne manquez jamais une mise à jour importante.
+          </p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon"><i data-feather="shield"></i></div>
+          <h3 class="feature-card__title">Prévention de la fraude</h3>
+          <p class="feature-card__desc">
+            Limites de vélocité, empreinte digitale de l'appareil, PINs hashés bcrypt, vérification SMS OTP et journalisation complète des événements de sécurité. Protection à chaque niveau.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISION ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="image-text-row">
+        <div class="image-showcase reveal">
+          <img src="../assets/images/hero-herder.png" alt="Éleveur avec du bétail au coucher du soleil au Sahel">
+        </div>
+        <div class="reveal">
+          <span class="section-eyebrow">L'avenir</span>
+          <h2 class="section-title">Notre vision pour l'avenir</h2>
+          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
+            Nous envisageons une Afrique de l'Ouest où tout éleveur, agriculteur ou commerçant de bétail — quel que soit son emplacement ou son accès aux services financiers traditionnels — peut participer à un marché équitable et transparent.
+          </p>
+          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
+            À mesure que nous grandissons, nous prévoyons de nous étendre à travers tout le Sahel et au-delà — Sénégal, Burkina Faso, Niger, et plus encore. Notre feuille de route inclut l'ajout du bambara, mooré, haoussa, fulfulde et wolof comme langues complètes de l'application, l'approfondissement de l'intégration mobile money avec les API d'Orange Money, Wave et MTN MoMo, et la construction d'un tableau de bord administrateur avec double approbation pour une transparence totale.
+          </p>
+          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
+            Notre objectif est de devenir la plateforme de référence pour le commerce de bétail en Afrique tout en préservant les traditions culturelles qui rendent ce commerce unique.
+          </p>
+          <a href="contact.html" class="btn btn--primary">
+            <i data-feather="message-circle"></i>
+            Contactez-nous
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section cta-section" id="download">
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2 class="section-title" style="color: #FFF; font-size: clamp(1.8rem, 4vw, 2.8rem);">Rejoignez le mouvement</h2>
+        <p>Faites partie de la révolution du commerce de bétail en Afrique de l'Ouest. Téléchargez Garabaly et commencez à négocier en toute confiance.</p>
+        <div class="cta-stores">
+          <a href="#" class="store-btn" aria-label="Télécharger sur l'App Store">
+            <svg class="store-btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div class="store-btn__text"><span class="store-btn__label">Télécharger sur</span><span class="store-btn__name">App Store</span></div>
+          </a>
+          <a href="#" class="store-btn" aria-label="Télécharger sur Google Play">
+            <svg class="store-btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+            <div class="store-btn__text"><span class="store-btn__label">Télécharger sur</span><span class="store-btn__name">Google Play</span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo">
+            <img src="../assets/images/logo.png" alt="Logo Garabaly" style="filter: brightness(0) invert(1);">
+            <span class="header__logo-text">Garabaly</span>
+          </a>
+          <p>Le commerce du bétail n'a pas changé depuis 100 ans. Nous le changeons. Sahel → Afrique de l'Ouest → Diaspora.</p>
+          <div class="social-links" style="margin-top: 20px;">
+            <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter / X"><i data-feather="twitter"></i></a>
+            <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4>Marketplace</h4>
+          <a href="#">Bovins</a><a href="#">Ovins</a><a href="#">Caprins</a><a href="#">Volaille</a><a href="#">Chameaux</a>
+        </div>
+        <div class="footer__column">
+          <h4>Entreprise</h4>
+          <a href="about.html">À propos</a><a href="how-it-works.html">Comment ça marche</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__column">
+          <h4>Support</h4>
+          <a href="faq.html">Centre d'aide</a><a href="../policies.html#privacy">Confidentialité</a><a href="../policies.html#terms">Conditions</a><a href="../policies.html#escrow">Séquestre</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Garabaly. Tous droits réservés.</p>
+        <div class="footer__bottom-links">
+          <a href="../policies.html#privacy">Confidentialité</a>
+          <a href="../policies.html#terms">Conditions</a>
+          <a href="../policies.html#escrow">Séquestre</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>

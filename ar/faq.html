@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأسئلة الشائعة — غرابالي</title>
+  <meta name="description" content="أسئلة شائعة حول سوق غرابالي للماشية وحماية الضمان والتفاوض وكيفية الشراء أو البيع.">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="../assets/images/logo.png" alt="شعار غرابالي">
+        <span class="header__logo-text">Garabaly<span class="made-with-replit-sub">Made with <svg width="10" height="10" viewBox="0 0 32 32" fill="none"><path d="M7 5.5C7 4.67 7.67 4 8.5 4H15.5C16.33 4 17 4.67 17 5.5V12H8.5C7.67 12 7 11.33 7 10.5V5.5Z" fill="#F26207"/><path d="M17 12H25.5C26.33 12 27 12.67 27 13.5V18.5C27 19.33 26.33 20 25.5 20H17V12Z" fill="#F26207"/><path d="M7 21.5C7 20.67 7.67 20 8.5 20H17V28H8.5C7.67 28 7 27.33 7 26.5V21.5Z" fill="#F26207"/></svg> Replit</span></span>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-links">
+          <li><a href="index.html" class="header__nav-link">الرئيسية</a></li>
+          <li><a href="about.html" class="header__nav-link">من نحن</a></li>
+          <li><a href="how-it-works.html" class="header__nav-link">كيف يعمل</a></li>
+          <li><a href="faq.html" class="header__nav-link active">الأسئلة الشائعة</a></li>
+          <li><a href="contact.html" class="header__nav-link">اتصل بنا</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="اللغة">
+            <i data-feather="globe"></i> <span>AR</span>
+          </button>
+          <div class="lang-switcher__dropdown">
+            <a href="../faq.html" class="lang-switcher__option">English</a>
+            <a href="../fr/faq.html" class="lang-switcher__option">Français</a>
+            <a href="faq.html" class="lang-switcher__option active">العربية</a>
+          </div>
+        </div>
+        <button class="theme-toggle" aria-label="الوضع الداكن"><i data-feather="moon" class="icon-moon"></i><i data-feather="sun" class="icon-sun"></i></button>
+        <a href="index.html#download" class="btn btn--primary header__cta">تحميل التطبيق</a>
+        <button class="mobile-toggle" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="how-it-works.html">كيف يعمل</a>
+    <a href="faq.html">الأسئلة الشائعة</a>
+    <a href="contact.html">اتصل بنا</a>
+    <a href="index.html#download" class="btn btn--primary">تحميل التطبيق</a>
+  </div>
+
+  <section class="page-header">
+    <div class="container page-header__content">
+      <div class="page-header__breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        <i data-feather="chevron-left" style="width:14px;height:14px;"></i>
+        <span>الأسئلة الشائعة</span>
+      </div>
+      <h1>الأسئلة الشائعة</h1>
+      <p>كل ما تحتاج معرفته عن استخدام غرابالي لشراء وبيع الماشية.</p>
+    </div>
+  </section>
+
+  <!-- ===== عام ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">عام</span>
+        <h2 class="section-title">عن غرابالي</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-item__question">ما هو غرابالي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>غرابالي هو سوق الماشية الموثوق في غرب أفريقيا. إنه تطبيق موبايل يربط بائعي الماشية بالمشترين — والمهجر بالوطن — مع حماية ضمان مدمجة وتفاوض حقيقي لكل معاملة. يمكنك تصفح الأبقار والأغنام والماعز والدواجن — الكل معتمد بصور وملفات بائعين وشهادات صحية.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">أين يتوفر غرابالي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>غرابالي متوفر عبر غرب أفريقيا ويتوسع بسرعة في منطقة الساحل. نخدم المشترين والبائعين في عدة دول، مع خطط للتوسع في السنغال وبوركينا فاسو والنيجر والمزيد. يمكن للمهجر استخدام غرابالي من أي مكان في العالم — باريس ونيويورك وأبيدجان وأبعد.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">هل التطبيق مجاني للتحميل؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>نعم! غرابالي مجاني تماماً للتحميل والاستخدام للمشترين والبائعين. نتقاضى رسوم خدمة صغيرة على المعاملات المكتملة للحفاظ على حماية الضمان وعمليات المنصة.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">ما اللغات التي يدعمها غرابالي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>واجهة كاملة بالفرنسية والإنجليزية والعربية مع دعم أصلي للكتابة من اليمين لليسار (RTL) — العربية ليست فكرة ثانوية بل تجربة من الدرجة الأولى. الأوصاف الصوتية والمراجعات يمكن تسجيلها بأي لغة: البمبارا والمُورِي والهاوسا والفلفلدي والولوف والسنغاي والمزيد. نضيف البمبارا والمُورِي والهاوسا والفلفلدي والولوف كلغات واجهة كاملة حسب طلب المستخدمين. المجموع المقدر: أكثر من 1,300 سلسلة نصية قابلة للترجمة، كلها مراجعة بشرياً — وليست ترجمة آلية.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">كيف يختلف غرابالي عن الأسواق الأخرى؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>غرابالي مصمم خصيصاً لتجارة الماشية في غرب أفريقيا. على عكس الأسواق العامة، لدينا حماية ضمان على كل معاملة، وميزة تفاوض مخصصة (لأن "أضف للسلة" لا يوجد في سوق ساحلي)، وشهادات صحية بيطرية، وأوصاف صوتية باللغات المحلية، ودعم خاص للمهجر لشراء الماشية لعائلاتهم في الوطن.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الشراء والتفاوض ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">الشراء والتفاوض</span>
+        <h2 class="section-title">للمشترين</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-item__question">كيف يعمل التفاوض على غرابالي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>غرابالي لديه ميزة تفاوض مدمجة. يمكنك التحدث مباشرة مع البائعين، وطلب صور أو فيديوهات إضافية، والتفاوض على السعر، والتوصل لاتفاق — تماماً كما في السوق الفعلي. بمجرد الاتفاق مع البائع على السعر، تنتقل للدفع مع حماية الضمان. نؤمن أن السعر محادثة وليس ملصقاً.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">كيف تعمل حماية الضمان؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>يستخدم غرابالي دورة ضمان من خمس مراحل. عندما تضغط "اشترِ بالضمان"، تُحتجز دفعتك بأمان لدى منصتنا — لا تُرسل مباشرة للبائع. البائع لديه 24 ساعة لتأكيد الطلب (وإلا تُسترد أموالك تلقائياً). بمجرد التأكيد، يمكنك تتبع طلبك في الوقت الفعلي عبر التحضير والتوصيل والاستلام. عند التوصيل، تشارك كود التأكيد الفريد من 6 أحرف لتحرير الأموال. إذا كانت هناك مشكلة، يمكنك فتح نزاع وأموالك تبقى محمية حتى الحل.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">ماذا لو لم تطابق الماشية الإعلان؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>إذا لم تطابق الماشية الوصف أو الصور أو الشهادة الصحية المقدمة في الإعلان، يمكنك فتح نزاع قبل تأكيد المعاملة. غرابالي سيتوسط في الموقف. إذا حُل النزاع لصالحك، ستحصل على استرداد كامل من الضمان.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">هل يمكنني شراء ماشية لعائلتي من الخارج؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>بالتأكيد! غرابالي مصمم للمهجر. سواء كنت في باريس أو نيويورك أو أبيدجان أو أي مكان آخر، يمكنك تصفح الماشية والتفاوض مع البائعين المحليين والدفع بحماية الضمان وتوصيل الحيوان لبيت عائلتك. مثالي للتباسكي والاحتفالات أو ببساطة رعاية أحبائك عن بعد.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">كيف أدفع ثمن الماشية؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>غرابالي يدعم أكثر من 50 عملة وطرق دفع متعددة. في غرب أفريقيا، ادفع عبر Orange Money أو Wave أو MTN MoMo أو Moov Money أو Airtel Money. مشتري المهجر يمكنهم استخدام Visa أو Mastercard أو التحويلات البنكية أو بوابات الدفع الدولية بالـ EUR وUSD وGBP وCAD والمزيد — مدعوم بـ Stripe لأمان عالمي. عندما تضغط "اشترِ بالضمان"، ستختار طريقتك المفضلة وتكمل المعاملة بأمان داخل التطبيق.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">كم من الوقت لدي لفحص الماشية؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>بمجرد توصيل الماشية، لديك فترة فحص معقولة للتحقق من مطابقتها للإعلان. الإطار الزمني المحدد يظهر في تفاصيل الضمان داخل التطبيق. إذا لم تؤكد أو تعترض خلال الفترة المحددة، يُحرر الضمان تلقائياً للبائع.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">متى يجب أن أطلب للتباسكي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>ننصح بالطلب قبل أسبوعين على الأقل من العيد لضمان التوصيل. خلال موسم التباسكي الذروة، بائعونا المعتمدون لديهم مخزون متزايد. يمكنك تتبع طلبك في الوقت الفعلي ومكالمة فيديو مع عائلتك عند وصوله.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">هل يمكنني إجراء مكالمة فيديو عند وصول هديتي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>بالتأكيد. كثير من مشتري المهجر ينسقون توقيت التوصيل ليكونوا على مكالمة فيديو عندما تستلم عائلتهم الماشية. أصبحت واحدة من أكثر اللحظات العاطفية في استخدام غرابالي — رؤية فرحة أمك من آلاف الكيلومترات.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== البيع ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">البيع</span>
+        <h2 class="section-title">للبائعين</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-item__question">كيف أحصل على التحقق كبائع؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>لتصبح بائعاً معتمداً، حمّل التطبيق وأنشئ حساباً. ثم أكمل عملية التحقق بتقديم هوية صالحة وتأكيد موقعك. البائعون المعتمدون يحصلون على شارة في ملفهم الشخصي، مما يبني الثقة مع المشترين ويزيد ظهور إعلاناتهم.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">متى أستلم الدفع؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>يُحرر الدفع لمحفظة غرابالي فور مشاركة المشتري لكود التأكيد من 6 أحرف — تأكيداً للاستلام والرضا. الأموال تظهر فوراً في محفظتك ومتاحة للسحب إلى Orange Money أو Wave أو MTN MoMo أو Moov Money أو تحويل بنكي. بدون تأخير، بدون فترات انتظار.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">كيف أسحب أرباحي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>من محفظة غرابالي، اضغط "سحب" واختر وجهتك المفضلة — Orange Money أو Wave أو MTN MoMo أو Moov Money أو Airtel Money أو تحويل بنكي. أدخل المبلغ، أكّد بـ PIN المحفظة الآمن (الذي أعددته أثناء التسجيل)، وسيتم تحويل الأموال. محفظتك تستخدم محاسبة القيد المزدوج وتشفير SHA-256 لضمان دقة كل معاملة.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">ما الرسوم التي يتقاضاها غرابالي من البائعين؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>يتقاضى غرابالي رسوم خدمة صغيرة على المعاملات المكتملة. تغطي هذه الرسوم حماية الضمان ومعالجة الدفع وصيانة المنصة. النسبة الدقيقة معروضة بشفافية قبل الإعلان وأثناء كل معاملة. لا توجد تكاليف خفية.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">هل يمكنني إعلان ماشية بدون شهادة صحية؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>نعم، الشهادة الصحية اختيارية لكنها موصى بها بشدة. الإعلانات ذات الشهادات الصحية المعتمدة تحصل على اهتمام أكبر من المشترين وتميل للبيع أسرع. نشجع جميع البائعين على التعاون مع الأطباء البيطريين المحليين للحصول على شهادات لماشيتهم.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الأمان والثقة ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">الأمان والثقة</span>
+        <h2 class="section-title">السلامة والأمان</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-item__question">هل أموالي آمنة مع غرابالي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>بالتأكيد. كل أموال الضمان محتجزة في حسابات آمنة ومنظمة مع معاملات قاعدة بيانات ذرية — دفعتك لا تختلط أبداً بأموال تشغيل غرابالي. نستخدم تشفير بنكي المستوى وPINs مشفرة بـ bcrypt وتشفير SHA-256 لسلامة البيانات وتسجيل شامل لأحداث الأمان. بنية الدفع لدينا اجتازت تدقيقاً أمنياً عالمي المستوى.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">ما هو كود التأكيد وكيف يعمل؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>كل طلب في غرابالي يولّد كود تأكيد فريداً من 6 أحرف وأرقام يظهر فقط للمشتري. عند توصيل الماشية (أو الخدمة)، يشارك المشتري هذا الكود مع البائع أو سائق التوصيل. يُدخل الكود في التطبيق للتحقق المشفر من التوصيل وتحرير أموال الضمان فوراً. هذا النظام يمنع الاحتيال ويضمن حماية الطرفين.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">ماذا يحدث إذا لم يؤكد البائع طلبي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>البائعون لديهم فترة 24 ساعة لتأكيد طلبك بعد الدفع بالضمان. إذا لم يؤكد البائع خلال تلك الفترة، يُلغى الطلب تلقائياً وتُعاد دفعتك الكاملة لمحفظتك فوراً. هذه الحماية التلقائية تعمل على جدول خادمنا — لا حاجة لأي إجراء منك.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">ماذا يحدث إذا كان هناك نزاع؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>إذا لم يتفق المشتري والبائع، يمكن لأي طرف فتح نزاع عبر التطبيق. فريق دعم غرابالي يراجع الأدلة (الصور والرسائل وتفاصيل الإعلان وسجل المحادثة). النزاعات تتطلب موافقة مسؤولين اثنين للحل — أي لا يمكن لشخص واحد اتخاذ قرار أحادي. أثناء النزاع، تبقى الأموال في الضمان. نهدف لحل جميع النزاعات بسرعة وعدالة.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">كيف تُؤمّن محفظتي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>محفظة غرابالي محمية بـ PIN خاص تحدده أثناء التسجيل. الـ PIN مشفر بـ bcrypt (لا يُخزن كنص صريح أبداً) ومطلوب لجميع العمليات الحساسة كالسحب. لأمان إضافي، نستخدم تحقق OTP عبر SMS للمعاملات عالية القيمة، وحدود سرعة لمنع النشاط المشبوه السريع، وبصمات الجهاز لكشف الوصول غير المصرح به.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">كيف أبلّغ عن إعلان أو مستخدم مشبوه؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>يمكنك الإبلاغ عن أي إعلان أو مستخدم مباشرة في التطبيق بالضغط على زر الإبلاغ. يمكنك أيضاً التواصل مع فريق الدعم عبر صفحة اتصل بنا أو قنوات التواصل الاجتماعي. نأخذ جميع البلاغات بجدية ونحقق فوراً. نظام كشف الاحتيال لدينا يتضمن حدود سرعة وتسجيل شامل للأحداث للحفاظ على نزاهة السوق.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">ما مدى أمان نظام الضمان فعلاً؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>نظام الضمان لدينا اجتاز تدقيقاً أمنياً شاملاً بنسبة امتثال 95%. التفاصيل التقنية: معاملات ذرية مع قفل صفوف PostgreSQL، وتشفير SHA-256 لكل معاملة، وأكواد تأكيد مشفرة بـ bcrypt (عامل تكلفة 10)، وموافقة مسؤولين مزدوجة لحل النزاعات، وحدود سرعة لمنع الاحتيال. هذا ليس وعداً — إنها هندستنا.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الخدمات والطلبات ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">الخدمات والطلبات</span>
+        <h2 class="section-title">مقدمو الخدمات وأنواع الطلبات</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-item__question">ما مقدمو الخدمات المتوفرون على غرابالي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>غرابالي يدعم ثلاثة أنواع من مقدمي الخدمات: سائقو توصيل لنقل الماشية، وجزارون محترفون لتحضير اللحم، وأطباء بيطريون للفحوصات الصحية والشهادات. كل مقدم خدمة معتمد ومقيّم ومراجع من عملاء سابقين. كل مقدمي الخدمات يُدفع لهم عبر نفس نظام الضمان، فالجميع محمي.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">ما أنواع الطلبات المختلفة؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>غرابالي يدعم ثلاثة أنواع من الطلبات: طلبات <strong>بائع فقط</strong> (شراء ماشية من بائع فقط)، وطلبات <strong>خدمة فقط</strong> (حجز جزار أو توصيل أو طبيب بيطري بشكل مستقل)، وطلبات <strong>مشتركة متعددة الأطراف</strong> (شراء ماشية وإضافة خدمات كالتوصيل والذبح في معاملة واحدة). في الطلبات المشتركة، مقدمو الخدمات يُفعّلون بالتتابع — مثلاً، الجزار يُفعّل فقط بعد تأكيد معاملة الماشية.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">كيف يعمل تتبع الطلبات؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>كل طلب لديه متتبع تقدم في الوقت الفعلي داخل التطبيق. سترى كل مرحلة — من تقديم الطلب، لتأكيد البائع، التحضير، في الطريق، مُسلّم، ومكتمل. إشعارات فورية وتنبيهات داخل التطبيق تبقيك على اطلاع في كل مرحلة. للطلبات متعددة الأطراف، سترى تقدم كل طرف (بائع، توصيل، جزار) بشكل مستقل.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">هل يمكنني حجز جزار بدون شراء ماشية من التطبيق؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>نعم! يمكنك إنشاء طلب خدمة فقط لحجز جزار أو سائق توصيل أو طبيب بيطري بشكل مستقل. هذا مفيد إذا اشتريت ماشيتك من مكان آخر لكنك تحتاج خدمة احترافية. مقدم الخدمة يُدفع له عبر ضمان غرابالي لحمايتك.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">ما العملات التي يدعمها غرابالي؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>غرابالي يدعم أكثر من 50 عملة بما فيها فرنك غرب أفريقيا (XOF) وفرنك وسط أفريقيا (XAF) والنيرا النيجيرية (NGN) والسيدي الغاني (GHS) والشلن الكيني (KES) واليورو (EUR) والدولار الأمريكي (USD) والجنيه الإسترليني (GBP) والدولار الكندي (CAD) والمزيد. تُطبق أسعار صرف فورية تلقائياً، وكل الأسعار يمكن عرضها بعملتك المفضلة.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__question">هل يمكنني التحدث مع البائعين برسائل صوتية؟<i data-feather="chevron-down"></i></button>
+          <div class="faq-item__answer">
+            <p>نعم! محادثة غرابالي تدعم الرسائل النصية والتسجيلات الصوتية والصور والفيديو. يمكنك أيضاً مشاركة تفاصيل الإعلان مباشرة في المحادثة. الرسائل الصوتية شائعة جداً — تتيح للبائعين وصف ماشيتهم بأي لغة وللمشترين طرح أسئلة تفصيلية بشكل طبيعي. تُوصّل الرسائل في الوقت الفعلي عبر بنية Socket.io مع طابور للرسائل أثناء عدم الاتصال حتى لا يضيع شيء.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== لا يزال لديك أسئلة؟ ===== -->
+  <section class="section">
+    <div class="container text-center reveal">
+      <h2 class="section-title">لا يزال لديك أسئلة؟</h2>
+      <p class="section-subtitle" style="margin: 0 auto var(--space-xl);">فريقنا هنا لمساعدتك. تواصل معنا وسنرد عليك في أقرب وقت ممكن.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="contact.html" class="btn btn--primary"><i data-feather="message-circle"></i> اتصل بنا</a>
+        <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="btn btn--secondary"><i data-feather="twitter"></i> تابع @GarabalyApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo"><img src="../assets/images/logo.png" alt="شعار غرابالي" style="filter: brightness(0) invert(1);"><span class="header__logo-text">Garabaly</span></a>
+          <p>تجارة الماشية لم تتغير منذ 100 عام. نحن نغيّرها. الساحل ← غرب أفريقيا ← المهجر.</p>
+          <div class="social-links" style="margin-top: 20px;">
+            <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter / X"><i data-feather="twitter"></i></a>
+            <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__column"><h4>السوق</h4><a href="#">أبقار</a><a href="#">أغنام</a><a href="#">ماعز</a><a href="#">دواجن</a><a href="#">إبل</a></div>
+        <div class="footer__column"><h4>الشركة</h4><a href="about.html">من نحن</a><a href="how-it-works.html">كيف يعمل</a><a href="faq.html">الأسئلة الشائعة</a><a href="contact.html">اتصل بنا</a></div>
+        <div class="footer__column"><h4>الدعم</h4><a href="faq.html">مركز المساعدة</a><a href="../policies.html#privacy">الخصوصية</a><a href="../policies.html#terms">الشروط</a><a href="../policies.html#escrow">سياسة الضمان</a></div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 غرابالي. جميع الحقوق محفوظة.</p>
+        <div class="footer__bottom-links"><a href="../policies.html#privacy">الخصوصية</a><a href="../policies.html#terms">الشروط</a><a href="../policies.html#escrow">الضمان</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
