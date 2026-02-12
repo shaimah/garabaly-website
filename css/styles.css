@@ -1055,6 +1055,21 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   border: 1px solid rgba(200, 121, 65, 0.10);
 }
 
+/* Dark mode: darken category cards */
+[data-theme="dark"] .category-card__bg {
+  background: #2C2420;
+  border-color: rgba(200, 121, 65, 0.15);
+}
+
+[data-theme="dark"] .category-card:nth-child(even) .category-card__bg {
+  background: #362E28;
+  border-color: rgba(200, 121, 65, 0.12);
+}
+
+[data-theme="dark"] .category-card__content {
+  color: var(--text-primary);
+}
+
 /* Sheep icon (2nd card) — mid-tones pushed to dark brown so horns are brown */
 .category-card:nth-child(2) .category-card__icon img {
   filter: url(#duotone-sheep) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
