@@ -1001,7 +1001,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .category-card__bg {
   position: absolute;
   inset: 0;
-  background: var(--surface);
+  background: var(--bg-alt);
   border: 1px solid rgba(200, 121, 65, 0.12);
   opacity: 1;
 }
@@ -1051,7 +1051,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 /* Subtle gradient variation per card */
 .category-card:nth-child(even) .category-card__bg {
-  background: var(--bg);
+  background: #E8DDD0;
   border: 1px solid rgba(200, 121, 65, 0.10);
 }
 
@@ -2488,7 +2488,22 @@ html:not(.js-ready) .reveal {
   text-align: right;
 }
 
-/* Header — direction:rtl already reverses flex layout; no row-reverse needed */
+/* Header — keep LTR layout in Arabic (same as English) */
+[dir="rtl"] .header__inner {
+  direction: ltr;
+}
+
+[dir="rtl"] .header__nav-links {
+  direction: ltr;
+}
+
+[dir="rtl"] .header__actions {
+  direction: ltr;
+}
+
+[dir="rtl"] .mobile-menu {
+  direction: ltr;
+}
 
 /* Hero */
 [dir="rtl"] .hero__content {
@@ -2670,11 +2685,7 @@ html:not(.js-ready) .reveal {
   text-align: center;
 }
 
-/* Language switcher */
-[dir="rtl"] .lang-switcher {
-  margin-left: 0;
-  margin-right: var(--space-md);
-}
+/* Language switcher — keep same position as English */
 
 [dir="rtl"] .lang-switcher__dropdown {
   left: 0;
