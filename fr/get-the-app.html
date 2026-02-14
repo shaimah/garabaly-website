@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Télécharger l'application — Garabaly</title>
+  <meta name="description" content="Téléchargez et prévisualisez l'application Garabaly via Expo Go. Disponible sur iOS et Android.">
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="../assets/images/logo.png" alt="Logo Garabaly">
+        <span class="header__logo-text">Garabaly<span class="made-with-replit-sub">Made with <svg width="10" height="10" viewBox="0 0 32 32" fill="none"><path d="M7 5.5C7 4.67 7.67 4 8.5 4H15.5C16.33 4 17 4.67 17 5.5V12H8.5C7.67 12 7 11.33 7 10.5V5.5Z" fill="#F26207"/><path d="M17 12H25.5C26.33 12 27 12.67 27 13.5V18.5C27 19.33 26.33 20 25.5 20H17V12Z" fill="#F26207"/><path d="M7 21.5C7 20.67 7.67 20 8.5 20H17V28H8.5C7.67 28 7 27.33 7 26.5V21.5Z" fill="#F26207"/></svg> Replit</span></span>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-links">
+          <li><a href="index.html" class="header__nav-link">Accueil</a></li>
+          <li><a href="about.html" class="header__nav-link">À propos</a></li>
+          <li><a href="how-it-works.html" class="header__nav-link">Comment ça marche</a></li>
+          <li><a href="faq.html" class="header__nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="header__nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-switcher__btn" aria-label="Langue">
+            <i data-feather="globe"></i> <span>FR</span>
+          </button>
+          <div class="lang-switcher__dropdown">
+            <a href="../get-the-app.html" class="lang-switcher__option">English</a>
+            <a href="get-the-app.html" class="lang-switcher__option active">Français</a>
+            <a href="../ar/get-the-app.html" class="lang-switcher__option">العربية</a>
+          </div>
+        </div>
+        <button class="theme-toggle" aria-label="Mode sombre">
+          <i data-feather="moon" class="icon-moon"></i>
+          <i data-feather="sun" class="icon-sun"></i>
+        </button>
+        <a href="get-the-app.html" class="btn btn--primary header__cta">Télécharger</a>
+        <button class="mobile-toggle" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="how-it-works.html">Comment ça marche</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="get-the-app.html" class="btn btn--primary">Télécharger</a>
+  </div>
+
+  <!-- ===== EN-TÊTE DE PAGE ===== -->
+  <section class="page-header">
+    <div class="container page-header__content">
+      <div class="page-header__breadcrumb">
+        <a href="index.html">Accueil</a>
+        <i data-feather="chevron-right" style="width:14px;height:14px;"></i>
+        <span>Télécharger</span>
+      </div>
+      <h1>Prévisualisez l'application Garabaly</h1>
+      <p>Garabaly est actuellement en version préliminaire. Suivez ces deux étapes simples pour essayer l'application sur votre téléphone via Expo Go.</p>
+    </div>
+  </section>
+
+  <!-- ===== ÉTAPE 1 : TÉLÉCHARGER EXPO GO ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Étape 1</span>
+        <h2 class="section-title">Téléchargez Expo Go</h2>
+        <p class="section-subtitle">
+          Expo Go est une application gratuite qui vous permet de prévisualiser des applications mobiles avant leur publication sur l'App Store ou Google Play. Téléchargez-la d'abord sur votre appareil.
+        </p>
+      </div>
+
+      <div class="app-download-cards">
+        <a href="https://apps.apple.com/app/expo-go/id982107779" target="_blank" rel="noopener noreferrer" class="app-download-card reveal">
+          <div class="app-download-card__icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          </div>
+          <h3 class="app-download-card__title">App Store</h3>
+          <p class="app-download-card__desc">Téléchargez Expo Go pour iPhone et iPad</p>
+          <span class="app-download-card__link">
+            Ouvrir l'App Store <i data-feather="external-link"></i>
+          </span>
+        </a>
+
+        <a href="https://play.google.com/store/apps/details?id=host.exp.exponent" target="_blank" rel="noopener noreferrer" class="app-download-card reveal">
+          <div class="app-download-card__icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+          </div>
+          <h3 class="app-download-card__title">Google Play</h3>
+          <p class="app-download-card__desc">Téléchargez Expo Go pour Android</p>
+          <span class="app-download-card__link">
+            Ouvrir Google Play <i data-feather="external-link"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ÉTAPE 2 : SCANNER LE QR CODE ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Étape 2</span>
+        <h2 class="section-title">Scannez le QR Code</h2>
+        <p class="section-subtitle">
+          Une fois Expo Go installé, utilisez l'appareil photo de votre téléphone pour scanner le QR code ci-dessous. Cela ouvrira l'application Garabaly directement dans Expo Go.
+        </p>
+      </div>
+
+      <div class="qr-showcase reveal">
+        <div class="qr-showcase__card">
+          <img src="../assets/images/qr-garabaly.png" alt="QR code pour ouvrir Garabaly dans Expo Go" class="qr-showcase__image">
+          <p class="qr-showcase__caption">Scannez avec votre appareil photo ou l'application Expo Go</p>
+        </div>
+        <div class="qr-showcase__instructions">
+          <div class="qr-instruction">
+            <div class="qr-instruction__icon">
+              <i data-feather="camera"></i>
+            </div>
+            <div>
+              <h4>Sur iPhone</h4>
+              <p>Ouvrez l'application Appareil photo et pointez-la vers le QR code. Appuyez sur la notification qui apparaît pour ouvrir l'application dans Expo Go.</p>
+            </div>
+          </div>
+          <div class="qr-instruction">
+            <div class="qr-instruction__icon">
+              <i data-feather="smartphone"></i>
+            </div>
+            <div>
+              <h4>Sur Android</h4>
+              <p>Ouvrez l'application Expo Go, appuyez sur « Scanner le QR Code », et pointez votre appareil photo vers le code. L'application Garabaly se chargera automatiquement.</p>
+            </div>
+          </div>
+          <div class="qr-instruction">
+            <div class="qr-instruction__icon">
+              <i data-feather="monitor"></i>
+            </div>
+            <div>
+              <h4>Sur ordinateur</h4>
+              <p>Visitez <a href="https://garabaly.replit.app" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 700;">garabaly.replit.app</a> directement dans votre navigateur pour prévisualiser la version web.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOTE ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Bientôt disponible</span>
+        <h2 class="section-title">Application native bientôt sur les stores</h2>
+        <p class="section-subtitle">
+          Garabaly est actuellement en prévisualisation via Expo Go. L'application native complète pour iOS et Android sera bientôt disponible sur l'App Store et Google Play. Restez à l'écoute !
+        </p>
+      </div>
+
+      <div class="features-grid" style="max-width: 900px; margin: 0 auto;">
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <i data-feather="zap"></i>
+          </div>
+          <h3 class="feature-card__title">Aperçu complet</h3>
+          <p class="feature-card__desc">
+            Parcourez les annonces, discutez avec les vendeurs, négociez les prix et explorez le système de séquestre — tout est disponible dès maintenant dans l'aperçu.
+          </p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <i data-feather="bell"></i>
+          </div>
+          <h3 class="feature-card__title">Soyez notifié au lancement</h3>
+          <p class="feature-card__desc">
+            Vous voulez savoir quand l'application native sera disponible ? <a href="contact.html" style="color: var(--primary); font-weight: 700;">Contactez-nous</a> pour rejoindre la liste d'accès anticipé.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="header__logo">
+            <img src="../assets/images/logo.png" alt="Logo Garabaly" style="filter: brightness(0) invert(1);">
+            <span class="header__logo-text">Garabaly</span>
+          </a>
+          <p>Le commerce du bétail n'a pas changé depuis 100 ans. Nous le changeons. Sahel → Afrique de l'Ouest → Diaspora. La confiance ne se construit pas avec un bouton d'achat.</p>
+          <div class="social-links" style="margin-top: 20px;">
+            <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter / X"><i data-feather="twitter"></i></a>
+            <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4>Marché</h4>
+          <a href="#">Bovins</a><a href="#">Moutons</a><a href="#">Chèvres</a><a href="#">Volaille</a><a href="#">Chameaux</a>
+        </div>
+        <div class="footer__column">
+          <h4>Entreprise</h4>
+          <a href="about.html">À propos</a><a href="how-it-works.html">Comment ça marche</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__column">
+          <h4>Support</h4>
+          <a href="faq.html">Centre d'aide</a><a href="../policies.html#privacy">Confidentialité</a><a href="../policies.html#terms">Conditions</a><a href="../policies.html#escrow">Politique de séquestre</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Garabaly. Tous droits réservés.</p>
+        <div class="footer__bottom-links">
+          <a href="../policies.html#privacy">Confidentialité</a><a href="../policies.html#terms">Conditions</a><a href="../policies.html#escrow">Séquestre</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
