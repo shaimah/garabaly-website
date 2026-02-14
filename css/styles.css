@@ -2757,7 +2757,15 @@ html:not(.js-ready) .reveal {
 .app-download-card__desc {
   font-size: var(--font-body);
   color: var(--text-secondary);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.app-download-card__qr {
+  width: 180px;
+  height: 180px;
+  border-radius: var(--radius-lg);
+  margin: 0 auto var(--space-md);
+  display: block;
 }
 
 .app-download-card__link {
@@ -2767,6 +2775,7 @@ html:not(.js-ready) .reveal {
   font-weight: 700;
   color: var(--primary);
   font-size: var(--font-body);
+  text-decoration: none;
 }
 
 .app-download-card__link svg {
