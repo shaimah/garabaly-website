@@ -2708,6 +2708,55 @@ html:not(.js-ready) .reveal {
 }
 
 /* --- Get the App Page --- */
+
+/* Animated mesh gradient behind QR sections */
+@keyframes mesh-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+.section--qr-glass {
+  position: relative;
+  overflow: hidden;
+}
+
+.section--qr-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(200, 121, 65, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(232, 184, 84, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(200, 121, 65, 0.05) 0%, transparent 50%);
+  background-size: 200% 200%;
+  animation: mesh-shift 12s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="dark"] .section--qr-glass::before {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(200, 121, 65, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(232, 184, 84, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(200, 121, 65, 0.06) 0%, transparent 50%);
+  background-size: 200% 200%;
+}
+
+.section--qr-glass > .container {
+  position: relative;
+  z-index: 1;
+}
+
 .app-download-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2716,24 +2765,90 @@ html:not(.js-ready) .reveal {
   margin: var(--space-2xl) auto 0;
 }
 
+/* ── Glassmorphism Animations ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 4px 24px rgba(200, 121, 65, 0.10), 0 0 0 0 rgba(200, 121, 65, 0); }
+  50% { box-shadow: 0 8px 40px rgba(200, 121, 65, 0.18), 0 0 20px 2px rgba(200, 121, 65, 0.08); }
+}
+
+@keyframes gradient-border {
+  0% { --border-angle: 0deg; }
+  100% { --border-angle: 360deg; }
+}
+
 .app-download-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: var(--space-2xl) var(--space-xl);
-  background: var(--surface);
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
   border-radius: var(--radius-xl);
-  border: 2px solid var(--border);
+  border: 1.5px solid rgba(200, 121, 65, 0.15);
   text-decoration: none;
   color: var(--text-primary);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Shimmer sweep overlay */
+.app-download-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: skewX(-15deg);
+  animation: shimmer 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .app-download-card:hover {
-  border-color: var(--primary);
-  box-shadow: 0 8px 32px rgba(200, 121, 65, 0.15);
-  transform: translateY(-4px);
+  border-color: rgba(200, 121, 65, 0.4);
+  box-shadow: 0 12px 48px rgba(200, 121, 65, 0.22), 0 0 24px rgba(200, 121, 65, 0.08);
+  transform: translateY(-6px) scale(1.02);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Dark mode glass */
+[data-theme="dark"] .app-download-card {
+  background: rgba(54, 46, 40, 0.55);
+  border-color: rgba(200, 121, 65, 0.2);
+}
+[data-theme="dark"] .app-download-card::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(200, 121, 65, 0.08),
+    transparent
+  );
+}
+[data-theme="dark"] .app-download-card:hover {
+  background: rgba(54, 46, 40, 0.75);
+  border-color: rgba(200, 121, 65, 0.45);
 }
 
 .app-download-card__icon {
@@ -2742,22 +2857,33 @@ html:not(.js-ready) .reveal {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-alt);
+  background: rgba(200, 121, 65, 0.1);
   border-radius: var(--radius-lg);
   margin-bottom: var(--space-lg);
   color: var(--text-primary);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.app-download-card:hover .app-download-card__icon {
+  transform: scale(1.1) rotate(-3deg);
 }
 
 .app-download-card__title {
   font-size: var(--font-heading-sm);
   font-weight: 800;
   margin-bottom: var(--space-sm);
+  position: relative;
+  z-index: 2;
 }
 
 .app-download-card__desc {
   font-size: var(--font-body);
   color: var(--text-secondary);
   margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 2;
 }
 
 .app-download-card__qr {
@@ -2766,6 +2892,13 @@ html:not(.js-ready) .reveal {
   border-radius: var(--radius-lg);
   margin: 0 auto var(--space-md);
   display: block;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.app-download-card:hover .app-download-card__qr {
+  transform: scale(1.05);
 }
 
 .app-download-card__link {
@@ -2776,11 +2909,23 @@ html:not(.js-ready) .reveal {
   color: var(--primary);
   font-size: var(--font-body);
   text-decoration: none;
+  position: relative;
+  z-index: 2;
+  transition: gap 0.3s ease;
+}
+
+.app-download-card:hover .app-download-card__link {
+  gap: var(--space-sm);
 }
 
 .app-download-card__link svg {
   width: 16px;
   height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.app-download-card:hover .app-download-card__link svg {
+  transform: translateX(3px);
 }
 
 /* QR Code Showcase */
@@ -2795,17 +2940,75 @@ html:not(.js-ready) .reveal {
 
 .qr-showcase__card {
   text-align: center;
-  background: var(--surface);
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
   border-radius: var(--radius-xl);
   padding: var(--space-xl);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  border: 2px solid var(--border);
+  box-shadow:
+    0 8px 32px rgba(200, 121, 65, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1.5px solid rgba(200, 121, 65, 0.15);
+  position: relative;
+  overflow: hidden;
+  animation: float 6s ease-in-out infinite, pulse-glow 5s ease-in-out infinite;
+}
+
+/* Shimmer sweep on showcase card */
+.qr-showcase__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: skewX(-15deg);
+  animation: shimmer 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.qr-showcase__card:hover {
+  box-shadow:
+    0 16px 56px rgba(200, 121, 65, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border-color: rgba(200, 121, 65, 0.35);
+}
+
+/* Dark mode glass for showcase */
+[data-theme="dark"] .qr-showcase__card {
+  background: rgba(54, 46, 40, 0.5);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-color: rgba(200, 121, 65, 0.2);
+}
+[data-theme="dark"] .qr-showcase__card::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(200, 121, 65, 0.06),
+    transparent
+  );
 }
 
 .qr-showcase__image {
   width: 280px;
   height: 280px;
   border-radius: var(--radius-lg);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.qr-showcase__card:hover .qr-showcase__image {
+  transform: scale(1.04);
 }
 
 .qr-showcase__caption {
@@ -2813,6 +3016,8 @@ html:not(.js-ready) .reveal {
   font-size: var(--font-body-sm);
   color: var(--text-secondary);
   font-weight: 600;
+  position: relative;
+  z-index: 1;
 }
 
 .qr-showcase__instructions {
@@ -2825,6 +3030,28 @@ html:not(.js-ready) .reveal {
   display: flex;
   gap: var(--space-lg);
   align-items: flex-start;
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(200, 121, 65, 0.08);
+  transition: all 0.3s ease;
+}
+
+.qr-instruction:hover {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(200, 121, 65, 0.15);
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .qr-instruction {
+  background: rgba(54, 46, 40, 0.35);
+  border-color: rgba(200, 121, 65, 0.1);
+}
+
+[data-theme="dark"] .qr-instruction:hover {
+  background: rgba(54, 46, 40, 0.55);
 }
 
 .qr-instruction__icon {
@@ -2837,6 +3064,11 @@ html:not(.js-ready) .reveal {
   background: var(--primary);
   color: #FFF;
   border-radius: var(--radius-md);
+  transition: transform 0.3s ease;
+}
+
+.qr-instruction:hover .qr-instruction__icon {
+  transform: scale(1.1);
 }
 
 .qr-instruction__icon svg {
@@ -2881,6 +3113,9 @@ html:not(.js-ready) .reveal {
 /* RTL: Get the App */
 [dir="rtl"] .qr-instruction {
   text-align: right;
+}
+[dir="rtl"] .qr-instruction:hover {
+  transform: translateX(-4px);
 }
 
 /* --- Print Styles --- */
