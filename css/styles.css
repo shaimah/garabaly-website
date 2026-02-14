@@ -2709,53 +2709,6 @@ html:not(.js-ready) .reveal {
 
 /* --- Get the App Page --- */
 
-/* Animated mesh gradient behind QR sections */
-@keyframes mesh-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 100% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
-  }
-}
-
-.section--qr-glass {
-  position: relative;
-  overflow: hidden;
-}
-
-.section--qr-glass::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(200, 121, 65, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(232, 184, 84, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(200, 121, 65, 0.05) 0%, transparent 50%);
-  background-size: 200% 200%;
-  animation: mesh-shift 12s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-
-[data-theme="dark"] .section--qr-glass::before {
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(200, 121, 65, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(232, 184, 84, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(200, 121, 65, 0.06) 0%, transparent 50%);
-  background-size: 200% 200%;
-}
-
-.section--qr-glass > .container {
-  position: relative;
-  z-index: 1;
-}
 
 .app-download-cards {
   display: grid;
