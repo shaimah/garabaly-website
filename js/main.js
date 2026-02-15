@@ -154,75 +154,92 @@ function initCountUp() {
   const statValues = document.querySelectorAll('[data-count]');
   if (!statValues.length) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseFloat(el.getAttribute('data-count'));
-          const suffix = el.getAttribute('data-suffix') || '';
-          const prefix = el.getAttribute('data-prefix') || '';
-          const decimals = (el.getAttribute('data-count').split('.')[1] || '').length;
-          const duration = 2000;
-          const startTime = performance.now();
+  function animateCount(el) {
+    const target = parseFloat(el.getAttribute('data-count'));
+    const suffix = el.getAttribute('data-suffix') || '';
+    const prefix = el.getAttribute('data-prefix') || '';
+    const decimals = (el.getAttribute('data-count').split('.')[1] || '').length;
+    const duration = 2000;
 
-          // For target 0, just display immediately with a subtle fade
-          if (target === 0) {
-            el.textContent = prefix + '0' + suffix;
-            observer.unobserve(el);
-            return;
-          }
+    // For target 0, just display immediately
+    if (target === 0) {
+      el.textContent = prefix + '0' + suffix;
+      return;
+    }
 
-          // Show zero first
+    // Show zero first
+    if (decimals > 0) {
+      el.textContent = prefix + (0).toFixed(decimals) + suffix;
+    } else {
+      el.textContent = prefix + '0' + suffix;
+    }
+
+    // Use a multiplied range for small targets so the animation is smooth
+    const multiplier = target <= 10 ? 100 : target <= 100 ? 10 : 1;
+    const scaledTarget = target * multiplier;
+
+    // Brief pause on "0" then count up
+    setTimeout(() => {
+      const animStart = performance.now();
+
+      function updateCount(currentTime) {
+        const elapsed = currentTime - animStart;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const scaledCurrent = easeOut * scaledTarget;
+        const current = scaledCurrent / multiplier;
+
+        if (decimals > 0) {
+          el.textContent = prefix + current.toFixed(decimals) + suffix;
+        } else {
+          el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCount);
+        } else {
           if (decimals > 0) {
-            el.textContent = prefix + (0).toFixed(decimals) + suffix;
+            el.textContent = prefix + target.toFixed(decimals) + suffix;
           } else {
-            el.textContent = prefix + '0' + suffix;
+            el.textContent = prefix + target.toLocaleString() + suffix;
           }
+        }
+      }
 
-          // Use a multiplied range for small targets so the animation is smooth
-          const multiplier = target <= 10 ? 100 : target <= 100 ? 10 : 1;
-          const scaledTarget = target * multiplier;
+      requestAnimationFrame(updateCount);
+    }, 200);
+  }
 
-          // Small delay so "0" is visible before counting starts
-          setTimeout(() => {
-            const animStart = performance.now();
+  statValues.forEach(el => {
+    // Check if element is inside a .reveal container
+    const revealParent = el.closest('.reveal');
 
-            function updateCount(currentTime) {
-              const elapsed = currentTime - animStart;
-              const progress = Math.min(elapsed / duration, 1);
-              // Ease out cubic
-              const easeOut = 1 - Math.pow(1 - progress, 3);
-              const scaledCurrent = easeOut * scaledTarget;
-              const current = scaledCurrent / multiplier;
-
-              if (decimals > 0) {
-                el.textContent = prefix + current.toFixed(decimals) + suffix;
-              } else {
-                el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
-              }
-
-              if (progress < 1) {
-                requestAnimationFrame(updateCount);
-              } else {
-                if (decimals > 0) {
-                  el.textContent = prefix + target.toFixed(decimals) + suffix;
-                } else {
-                  el.textContent = prefix + target.toLocaleString() + suffix;
-                }
-              }
-            }
-
-            requestAnimationFrame(updateCount);
-          }, 200);
-          observer.unobserve(el);
+    if (revealParent) {
+      // Wait for the reveal to become visible, then start counting
+      const revealObserver = new MutationObserver(() => {
+        if (revealParent.classList.contains('visible')) {
+          // Wait for the fade-in transition to mostly finish
+          setTimeout(() => animateCount(el), 400);
+          revealObserver.disconnect();
         }
       });
-    },
-    { threshold: 0.15 }
-  );
-
-  statValues.forEach(el => observer.observe(el));
+      revealObserver.observe(revealParent, { attributes: true, attributeFilter: ['class'] });
+    } else {
+      // No reveal parent — use IntersectionObserver directly
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCount(el);
+              observer.unobserve(el);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      observer.observe(el);
+    }
+  });
 }
 
 /* --- Card Glow Effect (mouse-tracking radial highlight) --- */
