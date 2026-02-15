@@ -695,7 +695,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 }
 
 .hero__stat {
-  text-align: left;
+  text-align: center;
 }
 
 .hero__stat-value {
