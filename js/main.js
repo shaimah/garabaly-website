@@ -159,25 +159,48 @@ function initCountUp() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const el = entry.target;
-          const target = parseInt(el.getAttribute('data-count'), 10);
+          const target = parseFloat(el.getAttribute('data-count'));
           const suffix = el.getAttribute('data-suffix') || '';
           const prefix = el.getAttribute('data-prefix') || '';
+          const decimals = (el.getAttribute('data-count').split('.')[1] || '').length;
           const duration = 2000;
-          const start = 0;
           const startTime = performance.now();
+
+          // For target 0, just display immediately with a subtle fade
+          if (target === 0) {
+            el.textContent = prefix + '0' + suffix;
+            observer.unobserve(el);
+            return;
+          }
+
+          // Use a multiplied range for small targets so the animation is smooth
+          // e.g. target=4 → count through 0..400 then divide by 100
+          const multiplier = target <= 10 ? 100 : target <= 100 ? 10 : 1;
+          const scaledTarget = target * multiplier;
 
           function updateCount(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             // Ease out cubic
             const easeOut = 1 - Math.pow(1 - progress, 3);
-            const current = Math.floor(easeOut * (target - start) + start);
-            el.textContent = prefix + current.toLocaleString() + suffix;
+            const scaledCurrent = easeOut * scaledTarget;
+            const current = scaledCurrent / multiplier;
+
+            if (decimals > 0) {
+              el.textContent = prefix + current.toFixed(decimals) + suffix;
+            } else {
+              el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+            }
 
             if (progress < 1) {
               requestAnimationFrame(updateCount);
             } else {
-              el.textContent = prefix + target.toLocaleString() + suffix;
+              // Final value — exact
+              if (decimals > 0) {
+                el.textContent = prefix + target.toFixed(decimals) + suffix;
+              } else {
+                el.textContent = prefix + target.toLocaleString() + suffix;
+              }
             }
           }
 
@@ -186,7 +209,7 @@ function initCountUp() {
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.15 }
   );
 
   statValues.forEach(el => observer.observe(el));
