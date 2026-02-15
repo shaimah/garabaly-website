@@ -154,15 +154,31 @@ function initCountUp() {
   const statValues = document.querySelectorAll('[data-count]');
   if (!statValues.length) return;
 
+  // Format a number with K / M / B contractions
+  function formatNumber(n) {
+    if (n >= 1e9) {
+      var v = n / 1e9;
+      return (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, '')) + 'B';
+    }
+    if (n >= 1e6) {
+      var v = n / 1e6;
+      return (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, '')) + 'M';
+    }
+    if (n >= 1e3) {
+      var v = n / 1e3;
+      return (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, '')) + 'K';
+    }
+    return Math.floor(n).toLocaleString();
+  }
+
   function animateCount(el) {
-    if (el.dataset.counted) return; // prevent double-counting
+    if (el.dataset.counted) return;
     el.dataset.counted = 'true';
 
-    const target = parseFloat(el.getAttribute('data-count'));
-    const suffix = el.getAttribute('data-suffix') || '';
-    const prefix = el.getAttribute('data-prefix') || '';
-    const decimals = (el.getAttribute('data-count').split('.')[1] || '').length;
-    const duration = 2000;
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    var prefix = el.getAttribute('data-prefix') || '';
+    var duration = 2500;
 
     // For target 0, just display immediately
     if (target === 0) {
@@ -171,41 +187,26 @@ function initCountUp() {
     }
 
     // Show zero first
-    if (decimals > 0) {
-      el.textContent = prefix + (0).toFixed(decimals) + suffix;
-    } else {
-      el.textContent = prefix + '0' + suffix;
-    }
+    el.textContent = prefix + '0' + suffix;
 
-    // Use a multiplied range for small targets so the animation is smooth
-    const multiplier = target <= 10 ? 100 : target <= 100 ? 10 : 1;
-    const scaledTarget = target * multiplier;
-
-    // Brief pause on "0" then count up
-    setTimeout(() => {
-      const animStart = performance.now();
+    // Brief pause so "0" is visible
+    setTimeout(function() {
+      var animStart = performance.now();
 
       function updateCount(currentTime) {
-        const elapsed = currentTime - animStart;
-        const progress = Math.min(elapsed / duration, 1);
-        const easeOut = 1 - Math.pow(1 - progress, 3);
-        const scaledCurrent = easeOut * scaledTarget;
-        const current = scaledCurrent / multiplier;
+        var elapsed = currentTime - animStart;
+        var progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic for smooth deceleration
+        var easeOut = 1 - Math.pow(1 - progress, 3);
+        var current = easeOut * target;
 
-        if (decimals > 0) {
-          el.textContent = prefix + current.toFixed(decimals) + suffix;
-        } else {
-          el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
-        }
+        el.textContent = prefix + formatNumber(current) + suffix;
 
         if (progress < 1) {
           requestAnimationFrame(updateCount);
         } else {
-          if (decimals > 0) {
-            el.textContent = prefix + target.toFixed(decimals) + suffix;
-          } else {
-            el.textContent = prefix + target.toLocaleString() + suffix;
-          }
+          // Final exact value
+          el.textContent = prefix + formatNumber(target) + suffix;
         }
       }
 
@@ -214,23 +215,21 @@ function initCountUp() {
   }
 
   // Single IntersectionObserver for all stat values
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
+  var observer = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          const el = entry.target;
-          const revealParent = el.closest('.reveal');
+          var el = entry.target;
+          var revealParent = el.closest('.reveal');
 
           if (revealParent && !revealParent.classList.contains('visible')) {
-            // Parent hasn't revealed yet — wait for the reveal transition
-            const check = setInterval(() => {
+            var check = setInterval(function() {
               if (revealParent.classList.contains('visible')) {
                 clearInterval(check);
-                setTimeout(() => animateCount(el), 500);
+                setTimeout(function() { animateCount(el); }, 500);
               }
             }, 50);
           } else {
-            // No reveal parent, or already visible — animate now
             animateCount(el);
           }
 
@@ -241,7 +240,7 @@ function initCountUp() {
     { threshold: 0.1 }
   );
 
-  statValues.forEach(el => observer.observe(el));
+  statValues.forEach(function(el) { observer.observe(el); });
 }
 
 /* --- Card Glow Effect (mouse-tracking radial highlight) --- */
