@@ -173,38 +173,48 @@ function initCountUp() {
             return;
           }
 
+          // Show zero first
+          if (decimals > 0) {
+            el.textContent = prefix + (0).toFixed(decimals) + suffix;
+          } else {
+            el.textContent = prefix + '0' + suffix;
+          }
+
           // Use a multiplied range for small targets so the animation is smooth
-          // e.g. target=4 → count through 0..400 then divide by 100
           const multiplier = target <= 10 ? 100 : target <= 100 ? 10 : 1;
           const scaledTarget = target * multiplier;
 
-          function updateCount(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            // Ease out cubic
-            const easeOut = 1 - Math.pow(1 - progress, 3);
-            const scaledCurrent = easeOut * scaledTarget;
-            const current = scaledCurrent / multiplier;
+          // Small delay so "0" is visible before counting starts
+          setTimeout(() => {
+            const animStart = performance.now();
 
-            if (decimals > 0) {
-              el.textContent = prefix + current.toFixed(decimals) + suffix;
-            } else {
-              el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
-            }
+            function updateCount(currentTime) {
+              const elapsed = currentTime - animStart;
+              const progress = Math.min(elapsed / duration, 1);
+              // Ease out cubic
+              const easeOut = 1 - Math.pow(1 - progress, 3);
+              const scaledCurrent = easeOut * scaledTarget;
+              const current = scaledCurrent / multiplier;
 
-            if (progress < 1) {
-              requestAnimationFrame(updateCount);
-            } else {
-              // Final value — exact
               if (decimals > 0) {
-                el.textContent = prefix + target.toFixed(decimals) + suffix;
+                el.textContent = prefix + current.toFixed(decimals) + suffix;
               } else {
-                el.textContent = prefix + target.toLocaleString() + suffix;
+                el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+              }
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCount);
+              } else {
+                if (decimals > 0) {
+                  el.textContent = prefix + target.toFixed(decimals) + suffix;
+                } else {
+                  el.textContent = prefix + target.toLocaleString() + suffix;
+                }
               }
             }
-          }
 
-          requestAnimationFrame(updateCount);
+            requestAnimationFrame(updateCount);
+          }, 200);
           observer.unobserve(el);
         }
       });
