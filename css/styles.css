@@ -706,9 +706,10 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 }
 
 .hero__stat-label {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 2px;
+  white-space: nowrap;
 }
 
 /* Scroll indicator */
@@ -1243,9 +1244,9 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 /* --- Stats Bar --- */
 .stats-bar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-lg);
   padding: var(--space-2xl) 0;
 }
 
@@ -1267,6 +1268,8 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   font: var(--font-caption);
   color: var(--text-secondary);
   margin-top: 4px;
+  white-space: nowrap;
+  font-size: 0.75rem;
 }
 
 /* --- FAQ Accordion --- */
