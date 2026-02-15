@@ -155,6 +155,9 @@ function initCountUp() {
   if (!statValues.length) return;
 
   function animateCount(el) {
+    if (el.dataset.counted) return; // prevent double-counting
+    el.dataset.counted = 'true';
+
     const target = parseFloat(el.getAttribute('data-count'));
     const suffix = el.getAttribute('data-suffix') || '';
     const prefix = el.getAttribute('data-prefix') || '';
@@ -207,39 +210,38 @@ function initCountUp() {
       }
 
       requestAnimationFrame(updateCount);
-    }, 200);
+    }, 300);
   }
 
-  statValues.forEach(el => {
-    // Check if element is inside a .reveal container
-    const revealParent = el.closest('.reveal');
+  // Single IntersectionObserver for all stat values
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const revealParent = el.closest('.reveal');
 
-    if (revealParent) {
-      // Wait for the reveal to become visible, then start counting
-      const revealObserver = new MutationObserver(() => {
-        if (revealParent.classList.contains('visible')) {
-          // Wait for the fade-in transition to mostly finish
-          setTimeout(() => animateCount(el), 400);
-          revealObserver.disconnect();
+          if (revealParent && !revealParent.classList.contains('visible')) {
+            // Parent hasn't revealed yet — wait for the reveal transition
+            const check = setInterval(() => {
+              if (revealParent.classList.contains('visible')) {
+                clearInterval(check);
+                setTimeout(() => animateCount(el), 500);
+              }
+            }, 50);
+          } else {
+            // No reveal parent, or already visible — animate now
+            animateCount(el);
+          }
+
+          observer.unobserve(el);
         }
       });
-      revealObserver.observe(revealParent, { attributes: true, attributeFilter: ['class'] });
-    } else {
-      // No reveal parent — use IntersectionObserver directly
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              animateCount(el);
-              observer.unobserve(el);
-            }
-          });
-        },
-        { threshold: 0.15 }
-      );
-      observer.observe(el);
-    }
-  });
+    },
+    { threshold: 0.1 }
+  );
+
+  statValues.forEach(el => observer.observe(el));
 }
 
 /* --- Card Glow Effect (mouse-tracking radial highlight) --- */
