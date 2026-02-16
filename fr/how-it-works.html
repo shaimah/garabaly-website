@@ -143,7 +143,7 @@
           <div class="timeline-item__marker">7</div>
           <div class="timeline-item__content">
             <h3>Suivre votre commande en temps réel</h3>
-            <p>Une fois que le vendeur confirme (il a 24 heures pour le faire, sinon vous êtes automatiquement remboursé), suivez votre commande à chaque étape : confirmée, en préparation, en transit et livrée. Les notifications push et les mises à jour in-app vous tiennent informé à chaque moment.</p>
+            <p>Une fois la commande pré-approuvée par le vendeur et les prestataires et après votre paiement, suivez votre commande à chaque étape : en préparation, en transit et livrée. Les notifications push et les mises à jour in-app vous tiennent informé à chaque moment.</p>
           </div>
         </div>
 
@@ -208,8 +208,8 @@
         <div class="timeline-item reveal">
           <div class="timeline-item__marker">4</div>
           <div class="timeline-item__content">
-            <h3>Confirmer les commandes sous 24 heures</h3>
-            <p>Quand un acheteur achète votre bétail avec séquestre, vous recevez une notification push. Confirmez la commande dans les 24 heures pour sécuriser la vente — sinon la transaction est automatiquement annulée et l'acheteur est remboursé. Cela protège les deux parties.</p>
+            <h3>Pré-approuver avant le paiement</h3>
+            <p>Quand un acheteur crée une commande avec votre bétail (et éventuellement des prestataires), vous et les prestataires examinez et acceptez la commande avant que l'acheteur ne paie. L'acheteur ne paie que lorsque tout le monde a confirmé. Cela sécurise la vente et protège tout le monde.</p>
           </div>
         </div>
 
@@ -224,8 +224,8 @@
         <div class="timeline-item reveal">
           <div class="timeline-item__marker">6</div>
           <div class="timeline-item__content">
-            <h3>Être payé instantanément via code de confirmation</h3>
-            <p>L'acheteur partage son code de confirmation unique de 6 caractères à la réception. Saisissez le code et les fonds sont libérés dans votre portefeuille Garabaly instantanément. Retirez vers Orange Money, Wave, MTN MoMo, Moov Money, ou banque quand vous le souhaitez — c'est votre argent.</p>
+            <h3>Être payé après confirmation par l'acheteur</h3>
+            <p>L'acheteur saisit son code de confirmation unique de 6 caractères à la réception (le code est masqué au vendeur et aux prestataires jusqu'à ce moment). Une fois la confirmation enregistrée, les prestataires sont payés immédiatement. Votre part en tant que vendeur est libérée mais retenue pendant 24 heures (fenêtre de protection acheteur) ; après ce délai, les fonds sont dans votre portefeuille Garabaly. Retirez vers Orange Money, Wave, MTN MoMo, Moov Money ou banque quand vous le souhaitez.</p>
           </div>
         </div>
       </div>
@@ -241,44 +241,37 @@
         </div>
         <div class="reveal">
           <span class="section-eyebrow">Le cœur de Garabaly</span>
-          <h2 class="section-title">Cycle de séquestre<br>en cinq étapes</h2>
+          <h2 class="section-title">Séquestre par étapes<br>avec allocation par partie</h2>
           <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            Le séquestre de Garabaly est un système financier de classe mondiale qui conserve le paiement en toute sécurité à travers cinq étapes — du moment où vous payez au moment où le vendeur reçoit les fonds. Chaque transaction est chiffrée, auditée et protégée par la détection de fraude.
+            Le séquestre de Garabaly conserve le paiement en toute sécurité avec un seul blocage et une allocation par partie — chaque prestataire est payé dès que son étape est terminée. Le paiement du vendeur est retenu 24h après confirmation de réception (fenêtre de protection acheteur). Chaque transaction est chiffrée, auditée et protégée par la détection de fraude.
           </p>
           <div class="trust-features">
             <div class="trust-feature">
               <div class="trust-feature__icon"><i data-feather="dollar-sign"></i></div>
               <div class="trust-feature__text">
                 <h4>1. Financé — « Fonds sécurisés »</h4>
-                <p>Quand vous appuyez sur « Acheter avec séquestre », votre paiement est verrouillé en toute sécurité — le vendeur ne reçoit jamais l'argent directement.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="clock"></i></div>
-              <div class="trust-feature__text">
-                <h4>2. Confirmé — « Vendeur a confirmé »</h4>
-                <p>Le vendeur doit confirmer la commande dans les 24 heures. S'il ne le fait pas, le séquestre est automatiquement annulé et vos fonds vous sont restitués.</p>
+                <p>Quand vous payez après pré-approbation, votre paiement est verrouillé en toute sécurité — un seul paiement, allocation par partie. Personne ne touche l'argent avant la confirmation de la livraison par l'acheteur.</p>
               </div>
             </div>
             <div class="trust-feature">
               <div class="trust-feature__icon"><i data-feather="truck"></i></div>
               <div class="trust-feature__text">
-                <h4>3. En libération — « Libération en cours »</h4>
-                <p>Compte à rebours de 24h après confirmation de réception par l'acheteur. Suivez en temps réel — de la préparation à la livraison.</p>
+                <h4>2. En libération — « Libération en cours »</h4>
+                <p>Préparation, transit, livraison. Chaque prestataire (boucher, vétérinaire, livreur) agit dans l'ordre et est payé dès qu'il termine son travail. Suivez en temps réel.</p>
               </div>
             </div>
             <div class="trust-feature">
               <div class="trust-feature__icon"><i data-feather="key"></i></div>
               <div class="trust-feature__text">
-                <h4>4. Libéré — « Fonds libérés »</h4>
-                <p>Argent envoyé au portefeuille du vendeur. Vous recevez un code unique de 6 caractères. Partagez-le pour vérifier la livraison et libérer les fonds instantanément.</p>
+                <h4>3. Libéré — « Fonds libérés »</h4>
+                <p>L'acheteur utilise son code unique de 6 caractères pour confirmer la réception. Les prestataires sont payés immédiatement. Le paiement du vendeur est retenu pendant une fenêtre de protection acheteur de 24 heures.</p>
               </div>
             </div>
             <div class="trust-feature">
               <div class="trust-feature__icon"><i data-feather="alert-circle"></i></div>
               <div class="trust-feature__text">
-                <h4>5. Contesté — « Contesté »</h4>
-                <p>En cas de problème, ouvrez un litige — fonds gelés, médiation à double approbation admin. Votre argent reste protégé.</p>
+                <h4>4. Contesté — « Contesté »</h4>
+                <p>En cas de problème pendant la fenêtre de 24h, l'acheteur peut ouvrir un litige — fonds du vendeur gelés, médiation à double approbation admin. Votre argent reste protégé.</p>
               </div>
             </div>
           </div>

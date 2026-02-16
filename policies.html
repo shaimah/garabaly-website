@@ -269,9 +269,9 @@
             Buyers and sellers may negotiate prices through the in-app chat. A transaction is only binding once the buyer confirms the purchase and payment is submitted to escrow.
           </p>
 
-          <h4>5.3 Seller Confirmation</h4>
+          <h4>5.3 Seller Pre-Approval</h4>
           <p>
-            Once a buyer places an order, the seller must confirm within <strong>24 hours</strong>. Failure to confirm within this window results in automatic cancellation and a full refund to the buyer.
+            Sellers pre-approve the sale before checkout. The buyer can complete payment only after the seller has accepted the deal. There is no post-payment seller confirmation step — the order is active as soon as payment is submitted to escrow.
           </p>
 
           <h4>5.4 Confirmation Codes</h4>
@@ -375,47 +375,41 @@
         </div>
 
         <div class="policy-block">
-          <h3>2. The Five-Stage Escrow Lifecycle</h3>
-          <p>Every Garabaly transaction follows a structured five-stage escrow process:</p>
+          <h3>2. The Per-Party Staged Escrow Lifecycle</h3>
+          <p>
+            Every Garabaly transaction follows a per-party staged escrow process. Sellers pre-approve before checkout, so payment is only possible once the deal is accepted. After delivery, the buyer has a <strong>24-hour dispute window</strong> to raise issues before the seller's share is released; service providers are paid immediately upon completion of their part of the order.
+          </p>
 
           <div class="escrow-stages">
             <div class="escrow-stage">
               <div class="escrow-stage__number">1</div>
               <div class="escrow-stage__content">
-                <h4>Initiated</h4>
-                <p>The buyer places an order and submits payment. Funds are moved from the buyer's wallet or payment method into the Garabaly escrow account. The transaction is now active.</p>
+                <h4>Funded</h4>
+                <p>The buyer places an order (after seller pre-approval) and submits payment. Funds are moved from the buyer's wallet or payment method into the Garabaly escrow account. The transaction is active and delivery can proceed.</p>
               </div>
             </div>
 
             <div class="escrow-stage">
               <div class="escrow-stage__number">2</div>
               <div class="escrow-stage__content">
-                <h4>Seller Confirmation</h4>
-                <p>The seller receives a notification and must confirm the order within <strong>24 hours</strong>. If the seller does not confirm, the transaction is automatically cancelled and funds are returned to the buyer.</p>
+                <h4>Releasing</h4>
+                <p>Delivery is in progress or completed. Service providers (if booked) are paid immediately upon completion of their services. The seller's share remains in escrow during the <strong>24-hour buyer dispute window</strong> after delivery. The buyer may enter their confirmation code to confirm satisfaction or file a dispute within 24 hours.</p>
               </div>
             </div>
 
             <div class="escrow-stage">
               <div class="escrow-stage__number">3</div>
               <div class="escrow-stage__content">
-                <h4>In Progress</h4>
-                <p>Once confirmed, the seller arranges delivery. Service providers (if booked) are activated. Both parties can track order progress in real time. Funds remain locked in escrow.</p>
+                <h4>Released</h4>
+                <p>The buyer has entered their <strong>6-character confirmation code</strong> (or the 24-hour dispute window has passed with no dispute). The seller's share is released from escrow. The transaction is complete.</p>
               </div>
             </div>
 
             <div class="escrow-stage">
               <div class="escrow-stage__number">4</div>
               <div class="escrow-stage__content">
-                <h4>Delivery & Verification</h4>
-                <p>The buyer receives the livestock and/or services. The buyer inspects the animal and verifies it matches the listing description, photos, and agreed terms.</p>
-              </div>
-            </div>
-
-            <div class="escrow-stage">
-              <div class="escrow-stage__number">5</div>
-              <div class="escrow-stage__content">
-                <h4>Confirmation & Release</h4>
-                <p>The buyer enters their unique <strong>6-character confirmation code</strong> in the app, confirming satisfaction. This triggers the release of escrowed funds to the seller (and service providers, if applicable). The transaction is complete.</p>
+                <h4>Disputed</h4>
+                <p>The buyer has filed a dispute within the 24-hour window. Escrowed funds remain locked until Garabaly resolves the dispute. Outcomes may include <strong>Refunded</strong> (full or partial refund to buyer) or release to the seller once the dispute is resolved in the seller's favor.</p>
               </div>
             </div>
           </div>
@@ -432,14 +426,15 @@
         </div>
 
         <div class="policy-block">
-          <h3>4. Automatic Cancellation</h3>
+          <h3>4. Buyer Dispute Window</h3>
           <p>
-            To protect buyers from unresponsive sellers, Garabaly enforces a <strong>24-hour confirmation window</strong>:
+            After delivery, the buyer has a <strong>24-hour dispute window</strong> to inspect the livestock or service and either confirm satisfaction (by entering the confirmation code) or file a dispute:
           </p>
           <ul>
-            <li>If a seller does not confirm an order within 24 hours of placement, the order is automatically cancelled.</li>
-            <li>Escrowed funds are returned to the buyer's wallet immediately and in full.</li>
-            <li>Repeated failures to confirm orders may result in seller account restrictions.</li>
+            <li>The seller's share of escrowed funds is held for this 24-hour period. Service providers are paid immediately upon completion of their part of the order.</li>
+            <li>If the buyer enters the confirmation code, the seller's share is released immediately.</li>
+            <li>If the buyer files a dispute within 24 hours, funds remain locked until the dispute is resolved.</li>
+            <li>If 24 hours pass with no dispute and no confirmation code entered, Garabaly may release the seller's share according to platform rules.</li>
           </ul>
         </div>
 

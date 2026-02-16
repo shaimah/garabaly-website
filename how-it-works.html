@@ -133,9 +133,9 @@
         <div class="timeline-item reveal">
           <div class="timeline-item__marker">5</div>
           <div class="timeline-item__content">
-            <h3>Add Optional Services</h3>
+            <h3>Add Optional Services & Build Your Bundle</h3>
             <p>
-              Need a butcher, delivery driver, or vet inspection? Add verified service providers to your order directly in the app. Each service provider has ratings, reviews, and is paid through the same escrow system — so you're protected on every part of the order.
+              Need a butcher, delivery driver, or vet inspection? Add verified service providers to your order directly in the app. Bundle 1 listing with up to 3 services (1 butcher + 1 vet + 1 delivery max). Drag-to-reorder your fulfillment sequence. Each provider confirms availability before you can checkout — and gets paid immediately when their step is complete. Per-party escrow protection on every part of the order.
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@
           <div class="timeline-item__content">
             <h3>Pay with Escrow Protection</h3>
             <p>
-              When you've agreed on a price, tap "Buy with Escrow." Your payment is securely held by Garabaly — the seller does not receive the money yet. Pay via Orange Money, Wave, MTN MoMo, Moov Money, bank transfer, or international card. Multi-currency support means diaspora buyers can pay in EUR, USD, GBP, or any of 50+ supported currencies.
+              Once the seller and all service providers have pre-approved your order, tap "Buy with Escrow." Your payment is securely held by Garabaly — one escrow hold, per-party allocation. Pay via Orange Money, Wave, MTN MoMo, Moov Money, bank transfer, or international card. Multi-currency support means diaspora buyers can pay in EUR, USD, GBP, or any of 50+ supported currencies.
             </p>
             <p style="margin-top: var(--space-md); font-weight: 700; font-style: italic; color: var(--primary);">
               "Your money is safe until the cow is in your compound. Period."
@@ -158,7 +158,7 @@
           <div class="timeline-item__content">
             <h3>Track Your Order in Real Time</h3>
             <p>
-              Once the seller confirms (they have 24 hours to do so, or you're automatically refunded), track your order through every stage: confirmed, preparing, in transit, and delivered. Push notifications and in-app updates keep you informed at every step.
+              Since the seller and all service providers have already pre-approved before checkout, your order begins processing immediately. Track it through every stage: confirmed, preparing, in transit, and delivered. Push notifications and in-app updates keep you informed at every step.
             </p>
           </div>
         </div>
@@ -178,7 +178,7 @@
           <div class="timeline-item__content">
             <h3>Confirm with Your Unique Code</h3>
             <p>
-              Every order generates a unique 6-character alphanumeric code — that's 2 billion possible combinations. The code is bcrypt-hashed (cost factor 10) in our database. Case-insensitive entry. Maximum 3 attempts before 30-minute lockout. Failed attempts logged with device fingerprint. Your confirmation code is your key — share it only after inspecting your livestock.
+              Every order generates a unique 6-character alphanumeric code — one code per order, even multiparty bundles with seller + butcher + delivery. The code is bcrypt-hashed (cost factor 10) in our database. Case-insensitive entry. Maximum 3 attempts before 30-minute lockout. For escrow orders, the code is hidden from seller and providers until you confirm receipt. For cash orders, the code is visible to all parties after checkout. One confirmation, one code — completes both the order and all service bookings simultaneously.
             </p>
             <p style="margin-top: var(--space-md); font-weight: 700; font-style: italic; color: var(--primary);">
               "One code. Six characters. Instant release. Trust delivered."
@@ -234,9 +234,9 @@
         <div class="timeline-item reveal">
           <div class="timeline-item__marker">4</div>
           <div class="timeline-item__content">
-            <h3>Confirm Orders Within 24 Hours</h3>
+            <h3>Pre-Approved Before Checkout</h3>
             <p>
-              When a buyer purchases your livestock with escrow, you'll receive a push notification. Confirm the order within 24 hours to lock in the sale — otherwise the transaction is automatically cancelled and the buyer is refunded. This protects both sides.
+              When a buyer adds your listing to their cart, you'll receive a request to review and accept the order. The buyer can only proceed to payment once you've confirmed. This protects both sides — buyers know the order will be fulfilled, and you know the buyer is committed. No post-checkout acceptance step is needed.
             </p>
           </div>
         </div>
@@ -273,9 +273,9 @@
         </div>
         <div class="reveal">
           <span class="section-eyebrow">The Heart of Garabaly</span>
-          <h2 class="section-title">Five-Stage Escrow<br>Lifecycle</h2>
+          <h2 class="section-title">Per-Party Staged<br>Escrow Lifecycle</h2>
           <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            Garabaly's escrow is a world-class financial system that holds payment securely through five stages — from the moment you pay to the moment the seller receives funds. Every transaction is encrypted, audited, and protected by fraud detection.
+            Garabaly's escrow is a world-class financial system with per-party staged release. One escrow hold per order, per-party allocation. Sellers and service providers pre-approve before checkout — no post-checkout confirmation needed. Every transaction is encrypted, audited, and protected by fraud detection.
           </p>
           <div class="trust-features">
             <div class="trust-feature">
@@ -284,16 +284,7 @@
               </div>
               <div class="trust-feature__text">
                 <h4>1. Funded — "Fonds sécurisés"</h4>
-                <p>When you tap "Buy with Escrow," your payment is securely locked — the seller never receives money directly. Your wallet shows the hold in real time.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="clock"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>2. Confirmed — "Vendeur a confirmé"</h4>
-                <p>The seller must confirm the order within 24 hours. If they don't, the escrow is automatically cancelled and your funds are returned — 24h timeout auto-refund.</p>
+                <p>Buyer pays at checkout. Funds are held in escrow — neither party can touch the money. One payment covers the seller and all service providers, each share tracked separately.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -301,8 +292,8 @@
                 <i data-feather="truck"></i>
               </div>
               <div class="trust-feature__text">
-                <h4>3. Releasing — "Libération en cours"</h4>
-                <p>24h countdown after buyer confirms receipt. Track progress in real time — from preparation to delivery. Service providers are activated only when the livestock stage is complete.</p>
+                <h4>2. Releasing — "Libération en cours"</h4>
+                <p>Buyer confirmed receipt with their 6-character code. Seller's share enters a 24-hour countdown (dispute window). Service providers (butcher, vet, delivery) receive immediate release — no waiting.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -310,8 +301,8 @@
                 <i data-feather="key"></i>
               </div>
               <div class="trust-feature__text">
-                <h4>4. Released — "Fonds libérés"</h4>
-                <p>Money sent to seller's wallet. You receive a unique 6-character code. Share it with the seller or delivery driver upon receipt to cryptographically verify delivery and release funds instantly.</p>
+                <h4>3. Released — "Fonds libérés"</h4>
+                <p>24-hour countdown expired with no dispute, or service confirmed. Funds credited to the seller's wallet. Each provider was already paid at their step — per-party staged release means no one waits for the entire chain.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -319,8 +310,8 @@
                 <i data-feather="alert-circle"></i>
               </div>
               <div class="trust-feature__text">
-                <h4>5. Disputed — "Contesté"</h4>
-                <p>If there's an issue, open a dispute — funds frozen, dual-admin mediation. Your money stays protected. Garabaly mediates with dual-admin approval for fairness.</p>
+                <h4>4. Disputed — "Litige"</h4>
+                <p>Buyer opened a dispute during the 24-hour window. All unreleased shares are frozen — already-released service provider shares are unaffected. Dual-admin review required. If resolved in buyer's favor, funds are refunded.</p>
               </div>
             </div>
           </div>
@@ -391,7 +382,7 @@
         <span class="section-eyebrow">Complete Ecosystem</span>
         <h2 class="section-title">More Than a Marketplace — An Ecosystem</h2>
         <p class="section-subtitle">
-          Garabaly supports three types of orders: Seller-Only, Service-Only, and Combined multiparty orders. Add verified service providers to any transaction — all protected by escrow.
+          Garabaly supports three types of orders: Seller-Only, Service-Only, and Combined multiparty bundles. Bundle 1 listing with up to 3 services (1 butcher + 1 vet + 1 delivery). You control the fulfillment sequence with drag-to-reorder. One bundle = one order ID = one confirmation code. Each provider gets paid as their step is completed — per-party escrow, total protection.
         </p>
       </div>
 

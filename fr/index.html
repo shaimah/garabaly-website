@@ -163,7 +163,7 @@
           <div class="feature-card__icon"><i data-feather="shield"></i></div>
           <h3 class="feature-card__title">Protection par séquestre</h3>
           <p class="feature-card__desc">
-            Votre argent reste bloqué jusqu'à ce que l'animal soit dans votre enclos. Point final. Cycle de séquestre en cinq étapes. Sommes de contrôle SHA-256. Codes de confirmation hashés. Sécurité de niveau mondial.
+            Votre argent reste bloqué jusqu'à ce que l'animal soit dans votre enclos. Point final. Séquestre par étapes avec allocation par partie. Sommes de contrôle SHA-256. Codes de confirmation hashés. Le paiement du vendeur est retenu pendant une fenêtre de contestation de 24 heures — les prestataires sont payés immédiatement. Sécurité de niveau mondial.
           </p>
         </div>
 
@@ -274,7 +274,7 @@
         <span class="section-eyebrow">Simple et sécurisé</span>
         <h2 class="section-title">Comment fonctionne Garabaly</h2>
         <p class="section-subtitle">
-          Cinq étapes pour acheter ou vendre du bétail en toute sérénité.
+          Six étapes pour acheter ou vendre du bétail en toute sérénité. Chaque commande est pré-approuvée avant le paiement.
         </p>
       </div>
 
@@ -296,18 +296,23 @@
         </div>
         <div class="step reveal">
           <div class="step__number">3</div>
-          <h3 class="step__title">Payer avec séquestre</h3>
-          <p class="step__desc">Payez via mobile money, banque ou carte. Vos fonds sont en séquestre — le vendeur a 24h pour confirmer, sinon remboursement automatique.</p>
+          <h3 class="step__title">Pré-approuvé pour votre protection</h3>
+          <p class="step__desc">Le vendeur et les prestataires (boucher, vétérinaire, livreur) examinent et acceptent votre commande avant le paiement. Vous ne payez que lorsque tout le monde a confirmé.</p>
         </div>
         <div class="step reveal">
           <div class="step__number">4</div>
-          <h3 class="step__title">Suivre et recevoir</h3>
-          <p class="step__desc">Suivez votre commande en temps réel — confirmation, préparation, livraison. Ajoutez des services optionnels comme l'abattage ou l'inspection vétérinaire.</p>
+          <h3 class="step__title">Payer avec séquestre</h3>
+          <p class="step__desc">Payez via mobile money, banque ou carte. Vos fonds sont en séquestre — un seul paiement, allocation par partie. Personne ne touche l'argent avant la confirmation de la livraison.</p>
         </div>
         <div class="step reveal">
           <div class="step__number">5</div>
+          <h3 class="step__title">Suivre et recevoir</h3>
+          <p class="step__desc">Suivez votre commande en temps réel — préparation, transit, livraison. Ajoutez des services optionnels comme l'abattage ou l'inspection vétérinaire. Chaque prestataire agit dans l'ordre.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__number">6</div>
           <h3 class="step__title">Confirmer avec le code</h3>
-          <p class="step__desc">Utilisez votre code unique de 6 caractères pour vérifier la livraison. Les fonds sont libérés instantanément — simple et définitif.</p>
+          <p class="step__desc">Utilisez votre code unique de 6 caractères pour vérifier la livraison. Les prestataires sont payés immédiatement. Le paiement du vendeur est retenu pendant une fenêtre de protection acheteur de 24 heures.</p>
         </div>
       </div>
 
@@ -331,21 +336,21 @@
           <span class="section-eyebrow">Votre argent est en sécurité</span>
           <h2 class="section-title">Protection par séquestre<br>pour chaque transaction</h2>
           <p class="section-subtitle">
-            Dans le commerce traditionnel du bétail, envoyer de l'argent à un inconnu est un acte de foi. Garabaly élimine ce risque grâce à un cycle de séquestre en cinq étapes, des transactions chiffrées et la détection de fraude.
+            Dans le commerce traditionnel du bétail, envoyer de l'argent à un inconnu est un acte de foi. Garabaly élimine ce risque grâce à un séquestre par étapes avec allocation par partie, des transactions chiffrées et la détection de fraude. Un seul blocage en séquestre, allocation par partie — chaque prestataire est payé dès que son étape est terminée.
           </p>
           <div class="trust-features">
             <div class="trust-feature">
               <div class="trust-feature__icon"><i data-feather="lock"></i></div>
               <div class="trust-feature__text">
                 <h4>Système de code de confirmation</h4>
-                <p>Chaque livraison est vérifiée avec un code unique de 6 caractères. Seul l'acheteur peut libérer les fonds.</p>
+                <p>Un code de 6 caractères par commande — même les commandes groupées multi-parties. Hashé avec bcrypt (facteur 10). 3 tentatives, puis blocage de 30 minutes. Pour les commandes en séquestre, le code est masqué au vendeur et aux prestataires jusqu'à confirmation de réception. Une confirmation complète la commande et toutes les réservations simultanément.</p>
               </div>
             </div>
             <div class="trust-feature">
               <div class="trust-feature__icon"><i data-feather="clock"></i></div>
               <div class="trust-feature__text">
-                <h4>Protection compte à rebours 24h</h4>
-                <p>Le vendeur doit confirmer dans les 24 heures, sinon la transaction est annulée et vos fonds sont restitués instantanément.</p>
+                <h4>Fenêtre de protection acheteur 24h</h4>
+                <p>Après réception du bétail et confirmation avec votre code, le paiement du vendeur est retenu pendant 24 heures. Pendant cette fenêtre, vous pouvez ouvrir un litige. Les prestataires (boucher, vétérinaire, livreur) sont payés immédiatement — la fenêtre de 24h s'applique uniquement à la part du vendeur.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -359,7 +364,7 @@
               <div class="trust-feature__icon"><i data-feather="eye"></i></div>
               <div class="trust-feature__text">
                 <h4>Transparence totale</h4>
-                <p>Suivez chaque étape de la transaction en temps réel — du blocage en séquestre à la libération des fonds.</p>
+                <p>Suivi du séquestre par partie visible par tous — acheteur, vendeur et prestataires. Mises à jour en temps réel via Socket.io. Compteur de la fenêtre de contestation de 24h visible. Labels adaptés au mode de paiement (espèces vs séquestre). Comptabilité en partie double avec SHA-256 — chaque franc CFA est comptabilisé.</p>
               </div>
             </div>
           </div>
@@ -588,7 +593,7 @@
           <span class="section-eyebrow">Service de bout en bout</span>
           <h2 class="section-title">Des fermes rurales<br>aux foyers urbains</h2>
           <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            Garabaly ne connecte pas seulement acheteurs et vendeurs — il alimente toute la chaîne d'approvisionnement. Réservez des livreurs, bouchers et vétérinaires vérifiés directement dans l'application.
+            Garabaly ne connecte pas seulement acheteurs et vendeurs — il alimente toute la chaîne d'approvisionnement. Achetez une vache à Bamako. Ajoutez un vétérinaire pour l'inspecter. Ajoutez un boucher pour préparer la viande. Ajoutez un livreur pour l'amener à votre famille. Une commande. Un code. Chaque prestataire est payé dès qu'il termine son travail. Le paiement du vendeur est retenu 24h en cas de litige. Réorganisez l'ordre d'exécution. Séquestre par partie — protection totale.
           </p>
           <div class="trust-features" style="margin-bottom: var(--space-xl);">
             <div class="trust-feature">
