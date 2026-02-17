@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Policies — Garabaly</title>
   <meta name="description" content="Garabaly's Privacy Policy, Terms of Service, and Escrow Policy. Understand how we protect your data, govern platform usage, and safeguard your transactions.">
+  <link rel="canonical" href="https://garabaly.com/policies.html">
+  <link rel="alternate" hreflang="en" href="https://garabaly.com/policies.html">
+  <link rel="alternate" hreflang="fr" href="https://garabaly.com/policies.html">
+  <link rel="alternate" hreflang="ar" href="https://garabaly.com/policies.html">
+  <link rel="alternate" hreflang="x-default" href="https://garabaly.com/policies.html">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +24,7 @@
     <div class="container header__inner">
       <a href="index.html" class="header__logo">
         <img src="assets/images/logo.png" alt="Garabaly Logo">
-        <span class="header__logo-text">Garabaly<span class="made-with-replit-sub">Made with <svg width="10" height="10" viewBox="0 0 32 32" fill="none"><path d="M7 5.5C7 4.67 7.67 4 8.5 4H15.5C16.33 4 17 4.67 17 5.5V12H8.5C7.67 12 7 11.33 7 10.5V5.5Z" fill="#F26207"/><path d="M17 12H25.5C26.33 12 27 12.67 27 13.5V18.5C27 19.33 26.33 20 25.5 20H17V12Z" fill="#F26207"/><path d="M7 21.5C7 20.67 7.67 20 8.5 20H17V28H8.5C7.67 28 7 27.33 7 26.5V21.5Z" fill="#F26207"/></svg> Replit</span></span>
+        <span class="header__logo-text">Garabaly</span>
       </a>
       <nav class="header__nav">
         <ul class="header__nav-links">
@@ -256,25 +261,38 @@
 
         <div class="policy-block">
           <h3>5. Transactions & Orders</h3>
-          <h4>5.1 Order Types</h4>
-          <p>Garabaly supports three order types:</p>
+          <h4>5.1 Four Order Pathways</h4>
+          <p>Garabaly supports four order pathways:</p>
           <ul>
-            <li><strong>Seller-Only Orders:</strong> Direct purchase of livestock from a seller.</li>
-            <li><strong>Service-Only Orders:</strong> Independent booking of a service provider (delivery, butchering, or veterinary).</li>
-            <li><strong>Combined Orders:</strong> Livestock purchase with added services in a single transaction.</li>
+            <li><strong>Independent Orders (Default):</strong> Every item in the cart is its own independent order with its own escrow, confirmation code, and tracking.</li>
+            <li><strong>Seller-Only Orders:</strong> Buyer purchases livestock directly with no service providers.</li>
+            <li><strong>Service-Only Orders:</strong> Buyer books a service provider without a livestock purchase. Funds are released <strong>immediately</strong> upon completion — no 24-hour countdown.</li>
+            <li><strong>Multiparty Bundle Orders:</strong> Buyer explicitly bundles 1 listing + up to 3 services. Fulfillment sequence can be drag-to-reordered.</li>
           </ul>
 
-          <h4>5.2 Negotiation</h4>
+          <h4>5.2 Order Flow</h4>
+          <p>Orders follow these steps:</p>
+          <ol>
+            <li><strong>Browse & Select</strong> — All items are independent by default.</li>
+            <li><strong>Bundle (optional)</strong> — Buyer may bundle 1 listing + up to 3 services and drag to reorder fulfillment.</li>
+            <li><strong>Pre-Checkout Approval</strong> — All parties (seller and any service providers) must approve before checkout.</li>
+            <li><strong>Checkout & Escrow</strong> — One hold, per-party allocation. Funds are captured only after approval.</li>
+            <li><strong>Fulfillment</strong> — Stages: confirmed → preparing → ready_for_pickup → in_transit → delivered.</li>
+            <li><strong>Confirmation</strong> — Buyer enters the 6-character code upon satisfactory receipt.</li>
+            <li><strong>Payment Release</strong> — Seller: 24-hour dispute window; service providers: immediate release.</li>
+          </ol>
+
+          <h4>5.3 Negotiation</h4>
           <p>
             Buyers and sellers may negotiate prices through the in-app chat. A transaction is only binding once the buyer confirms the purchase and payment is submitted to escrow.
           </p>
 
-          <h4>5.3 Seller Pre-Approval</h4>
+          <h4>5.4 Seller Pre-Approval</h4>
           <p>
             Sellers pre-approve the sale before checkout. The buyer can complete payment only after the seller has accepted the deal. There is no post-payment seller confirmation step — the order is active as soon as payment is submitted to escrow.
           </p>
 
-          <h4>5.4 Confirmation Codes</h4>
+          <h4>5.5 Confirmation Codes</h4>
           <p>
             Each order generates a unique 6-character confirmation code. The buyer must enter this code in the app upon satisfactory receipt of the livestock or service. Entering the code releases escrowed funds to the seller or service provider. <strong>Never share your confirmation code until you are satisfied with the transaction.</strong>
           </p>
@@ -302,7 +320,7 @@
           <ul>
             <li>Service providers (delivery drivers, butchers, veterinarians) must complete verification before offering services on the platform.</li>
             <li>Service providers are independent contractors and are not employed by Garabaly.</li>
-            <li>Service provider fees are agreed upon before booking and protected by escrow.</li>
+            <li>Service provider fees (the provider's service costs, not Garabaly platform fees) are agreed upon before booking and protected by escrow.</li>
             <li>Users may rate and review service providers after each transaction.</li>
           </ul>
         </div>
@@ -463,10 +481,13 @@
         </div>
 
         <div class="policy-block">
-          <h3>7. Disputes & Refunds</h3>
+          <h3>7. Refund & Dispute Policy</h3>
+          <p>
+            <strong>Buyer dispute window:</strong> Buyers have a 24-hour window after delivery to dispute the <strong>seller portion only</strong>. Service provider payments are released <strong>immediately</strong> upon completion and are <strong>not</strong> subject to the 24-hour window. If the seller or any service provider does not confirm pre-checkout, no funds are captured. Escrow stages: <strong>Funded</strong> → <strong>Releasing</strong> → <strong>Released</strong> → <strong>Disputed/Refunded</strong>.
+          </p>
           <h4>7.1 Filing a Dispute</h4>
           <p>
-            If you receive livestock that does not match the listing description, is unhealthy, or if any other issue arises, you may file a dispute <strong>before</strong> entering your confirmation code. Contact Garabaly support through the app or at <strong>info@garabaly.com</strong>.
+            If you receive livestock that does not match the listing description, is unhealthy, or if any other issue arises, you may file a dispute <strong>before</strong> entering your confirmation code (within the 24-hour window for seller-related disputes). Contact Garabaly support through the app or at <strong>info@garabaly.com</strong>.
           </p>
 
           <h4>7.2 Dispute Resolution Process</h4>
@@ -488,20 +509,20 @@
         <div class="policy-block">
           <h3>8. Fees</h3>
           <p>
-            Garabaly charges a service fee on completed transactions. This fee is transparently displayed before the buyer confirms the purchase. Escrow holding and release does not incur additional charges. Specific fee percentages are displayed in the app at the time of transaction.
+            Garabaly is <strong>free for buyers</strong> — no platform fees, no commissions, no hidden charges. A small platform fee is charged to sellers and service providers upon successful completion of a transaction. Fee percentages are transparently displayed in the app. Escrow holding and release does not incur additional charges.
           </p>
         </div>
 
         <div class="policy-block">
-          <h3>9. Supported Payment Methods</h3>
-          <p>Funds can enter and exit escrow through the following channels:</p>
+          <h3>9. Payment Methods</h3>
+          <p>Garabaly supports four payment types. Escrow protection depends on the method chosen:</p>
           <ul>
-            <li><strong>Mobile money:</strong> Orange Money, Moov Money, Wave, MTN MoMo, Airtel Money</li>
-            <li><strong>International cards:</strong> Visa, Mastercard (powered by Stripe)</li>
-            <li><strong>Bank transfers:</strong> Supported in select regions</li>
-            <li><strong>Garabaly wallet:</strong> Internal wallet-to-wallet transfers for instant transactions</li>
+            <li><strong>Cash:</strong> Limited protection — no escrow hold. Use at your own risk.</li>
+            <li><strong>Card:</strong> Full escrow via Stripe (Visa, Mastercard).</li>
+            <li><strong>Mobile Money:</strong> Full escrow — Orange Money, Wave, MTN MoMo, Moov Money.</li>
+            <li><strong>Garabaly Wallet:</strong> Full escrow with PIN verification.</li>
           </ul>
-          <p>50+ currencies are supported for international transactions, with automatic conversion at competitive rates.</p>
+          <p><strong>Warning:</strong> Cash orders have <strong>limited protection</strong>. For full buyer and seller protection, use card, mobile money, or Garabaly wallet. 50+ currencies are supported for international transactions, with automatic conversion at competitive rates.</p>
         </div>
 
         <div class="policy-block">
@@ -550,6 +571,25 @@
           <a href="faq.html">Help Center</a><a href="policies.html#privacy">Privacy Policy</a><a href="policies.html#terms">Terms of Service</a><a href="policies.html#escrow">Escrow Policy</a>
         </div>
       </div>
+      <div class="security-badges">
+        <div class="security-badge" title="All data transmitted over 256-bit SSL encryption">
+          <div class="security-badge__icon"><i data-feather="lock"></i></div>
+          <span class="security-badge__label">SSL Secured</span>
+        </div>
+        <div class="security-badge" title="Payments by Stripe — PCI-DSS Certified">
+          <div class="security-badge__icon"><i data-feather="credit-card"></i></div>
+          <span class="security-badge__label">PCI-DSS Compliant</span>
+        </div>
+        <div class="security-badge" title="Sensitive data protected with bcrypt + SHA-256 encryption">
+          <div class="security-badge__icon"><i data-feather="key"></i></div>
+          <span class="security-badge__label">Data Encrypted</span>
+        </div>
+        <div class="security-badge" title="No platform fees, no commissions for buyers">
+          <div class="security-badge__icon"><i data-feather="check-circle"></i></div>
+          <span class="security-badge__label">Free for Buyers</span>
+        </div>
+      </div>
+
       <div class="footer__bottom">
         <p>&copy; 2026 Garabaly. All rights reserved.</p>
         <div class="footer__bottom-links">

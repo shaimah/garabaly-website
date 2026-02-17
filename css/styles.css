@@ -2350,33 +2350,6 @@ html:not(.js-ready) .reveal {
   background: rgba(200, 121, 65, 0.08);
 }
 
-/* --- Made with Replit Subscript (navbar) --- */
-.made-with-replit-sub {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 0.5rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  opacity: 0.55;
-  line-height: 1;
-  margin-top: 0px;
-  white-space: nowrap;
-}
-
-.made-with-replit-sub svg {
-  width: 10px !important;
-  height: 10px !important;
-  max-width: 10px;
-  max-height: 10px;
-  flex-shrink: 0;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.header__logo:hover .made-with-replit-sub {
-  opacity: 0.85;
-}
 
 /* --- Glow overlay for hero --- */
 .hero__glow {
@@ -3031,5 +3004,57 @@ html:not(.js-ready) .reveal {
   body {
     color: #000;
     background: #FFF;
+  }
+}
+
+/* --- Security Trust Badges --- */
+.security-badges {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 20px;
+}
+
+.security-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  cursor: default;
+}
+
+.security-badge__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(200, 121, 65, 0.15);
+  color: #C87941;
+  flex-shrink: 0;
+}
+
+.security-badge__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.security-badge__label {
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 600px) {
+  .security-badges {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 }
