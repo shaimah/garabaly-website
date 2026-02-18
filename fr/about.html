@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -217,7 +217,7 @@
           </div>
           <h3 class="value-card__title">Inclusion financière</h3>
           <p class="value-card__desc">
-            Un portefeuille numérique complet avec comptabilité en partie double, soldes de séquestre et retraits instantanés via Orange Money, Wave, MTN MoMo, et plus. Intégrer des millions de commerçants dans l'économie numérique.
+            Un portefeuille numérique complet avec comptabilité en partie double, soldes de séquestre, dépôts par carte et transferts de portefeuille à portefeuille. Les retraits via mobile money (Moov Money, Orange Money, Wave) et virement bancaire arrivent bientôt. Intégrer des millions de commerçants dans l'économie numérique.
           </p>
           <button class="value-card__read-more" onclick="toggleValueCard(this)">Lire plus</button>
         </div>
@@ -264,10 +264,10 @@
           <span class="section-eyebrow">Pour la diaspora</span>
           <h2 class="section-title">La distance disparaît.<br>L'amour arrive.</h2>
           <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
-            Des millions d'Ouest-Africains vivent à l'étranger, à Paris, Londres, New York, Bruxelles et Montréal. Ils veulent envoyer du bétail chez eux pour la Tabaski, les célébrations, ou simplement pour prendre soin de leur famille.
+            Des millions d'Ouest-Africains vivent à l'étranger, à Paris, Londres, New York, Washington DC, Bruxelles et Montréal. Ils veulent envoyer du bétail chez eux pour la Tabaski, les célébrations, ou simplement pour prendre soin de leur famille.
           </p>
           <p class="section-subtitle">
-            Garabaly rend cela possible — parcourez du bétail vérifié depuis n'importe où dans le monde, négociez avec les vendeurs locaux, payez dans votre devise (EUR, USD, GBP, ou 50+ autres) avec protection séquestre, et faites-le livrer directement dans la concession de votre famille. Le suivi en temps réel vous permet de savoir exactement quand la joie arrive.
+            Garabaly rend cela possible — parcourez du bétail vérifié depuis n'importe où dans le monde, négociez avec les vendeurs locaux, payez dans votre devise (EUR, USD, GBP, ou 135+ autres via Stripe) avec protection séquestre, et faites-le livrer directement dans la concession de votre famille. Le suivi en temps réel vous permet de savoir exactement quand la joie arrive.
           </p>
         </div>
       </div>
@@ -331,7 +331,7 @@
             Nous envisageons une Afrique de l'Ouest où tout éleveur, agriculteur ou commerçant de bétail — quel que soit son emplacement ou son accès aux services financiers traditionnels — peut participer à un marché équitable et transparent.
           </p>
           <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
-            À mesure que nous grandissons, nous prévoyons de nous étendre à travers tout le Sahel et au-delà — Sénégal, Burkina Faso, Niger, et plus encore. Notre feuille de route inclut l'ajout du bambara, mooré, haoussa, fulfulde et wolof comme langues complètes de l'application, l'approfondissement de l'intégration mobile money avec les API d'Orange Money, Wave et MTN MoMo, et la construction d'un tableau de bord administrateur avec double approbation pour une transparence totale.
+            À mesure que nous grandissons, nous prévoyons de nous étendre à travers tout le Sahel et au-delà — Sénégal, Burkina Faso, Niger, et plus encore. Notre feuille de route inclut l'ajout du bambara, mooré, haoussa, fulfulde et wolof comme langues complètes de l'application, l'approfondissement de l'intégration mobile money avec les API de Moov Money, Orange Money et Wave, et la construction d'un tableau de bord administrateur avec double approbation pour une transparence totale.
           </p>
           <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
             Notre objectif est de devenir la plateforme de référence pour le commerce de bétail en Afrique tout en préservant les traditions culturelles qui rendent ce commerce unique.
@@ -418,6 +418,6 @@
   </footer>
 
   <script src="../js/main.js?v=2"></script>
-  <script>feather.replace();</script>
+  <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

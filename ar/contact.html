@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -79,7 +79,7 @@
       <div class="contact-grid">
         <div class="contact-form reveal">
           <h3 style="margin-bottom: var(--space-lg);">أرسل لنا رسالة</h3>
-          <form id="contactForm" onsubmit="handleSubmit(event)">
+          <form id="contactForm" action="https://formspree.io/f/info@garabaly.com" method="POST">
             <div class="form-group">
               <label for="name">الاسم الكامل</label>
               <input type="text" id="name" name="name" placeholder="اسمك الكامل" required>
@@ -179,7 +179,6 @@
             <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter / X"><i data-feather="twitter"></i></a>
             <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i data-feather="facebook"></i></a>
             <a href="https://x.com/GarabalyApp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
-            <a href="#" class="social-link" aria-label="يوتيوب"><i data-feather="youtube"></i></a>
           </div>
         </div>
       </div>
@@ -269,26 +268,47 @@
 
   <script src="../js/main.js?v=2"></script>
   <script>
-    feather.replace();
+    if(typeof feather!=="undefined")feather.replace();
 
-    function handleSubmit(e) {
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async function(e) {
       e.preventDefault();
-      const form = e.target;
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
-
-      btn.innerHTML = '<span>&#10003; تم إرسال الرسالة!</span>';
-      btn.style.background = 'var(--success)';
       btn.disabled = true;
+      btn.innerHTML = '<span>جاري الإرسال...</span>';
 
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
-        form.reset();
-        feather.replace();
-      }, 3000);
-    }
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          btn.innerHTML = '<span>&#10003; تم إرسال الرسالة!</span>';
+          btn.style.background = 'var(--success)';
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+            form.reset();
+            if(typeof feather!=="undefined")feather.replace();
+          }, 3000);
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (error) {
+        btn.innerHTML = '<span>&#10007; فشل الإرسال. يرجى المحاولة مرة أخرى.</span>';
+        btn.style.background = '#e74c3c';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+          if(typeof feather!=="undefined")feather.replace();
+        }, 3000);
+      }
+    });
   </script>
 </body>
 </html>

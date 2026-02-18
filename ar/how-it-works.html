@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -132,7 +132,7 @@
           <div class="timeline-item__marker">6</div>
           <div class="timeline-item__content">
             <h3>ادفع بحماية الضمان</h3>
-            <p>عندما يكون الطلب معتمداً مسبقاً من البائع ومقدمي الخدمات، اضغط "اشترِ بالضمان". دفعتك محتجزة بأمان لدى غرابالي — تخصيص منفصل لكل طرف، لا أحد يستلم المال حتى تأكيد الاستلام بالرمز. ادفع عبر Orange Money أو Wave أو MTN MoMo أو Moov Money أو تحويل بنكي أو بطاقة دولية. دعم العملات المتعددة يعني أن مشتري المهجر يمكنهم الدفع بالـ EUR أو USD أو GBP أو أي من 50+ عملة مدعومة.</p>
+            <p>عندما يكون الطلب معتمداً مسبقاً من البائع ومقدمي الخدمات، اضغط "اشترِ بالضمان". دفعتك محتجزة بأمان لدى غرابالي — حجز ضمان واحد، تخصيص لكل طرف. ادفع بالبطاقة (Visa، Mastercard، Apple Pay، Google Pay) عبر Stripe. دعم العملات المتعددة يعني أن مشتري المهجر يمكنهم الدفع بالـ EUR أو USD أو GBP أو أي من 135+ عملة مدعومة من Stripe. Mobile money (Moov Money، Orange Money، Wave) والتحويل البنكي قادم قريباً.</p>
             <p style="margin-top: var(--space-md); font-weight: 700; font-style: italic; color: var(--primary);">
               "أموالك آمنة حتى تصل البقرة لبيتك. نقطة."
             </p>
@@ -225,7 +225,7 @@
           <div class="timeline-item__marker">6</div>
           <div class="timeline-item__content">
             <h3>احصل على أموالك فوراً عبر كود التأكيد</h3>
-            <p>يشارك المشتري كود التأكيد الفريد من 6 أحرف عند الاستلام. أدخل الكود: مقدمو الخدمات (جزار، طبيب بيطري، توصيل) يُدفع لهم فوراً. حصتك كبائع تُحتجز لمدة 24 ساعة كنافذة حماية للمشتري — بعدها تُحرّر لمحفظتك. اسحب إلى Orange Money أو Wave أو MTN MoMo أو Moov Money أو البنك متى شئت.</p>
+            <p>يشارك المشتري كود التأكيد الفريد من 6 أحرف عند الاستلام. أدخل الكود ويدخل دفعتك في نافذة حماية المشتري لمدة 24 ساعة. إذا لم يُرفع نزاع، تُحرر الأموال تلقائياً إلى محفظة غرابالي. مقدمو الخدمات يُدفع لهم فوراً — نافذة الـ 24 ساعة تنطبق فقط على البائعين. الأموال في محفظتك يمكن تحويلها لمستخدمين آخرين. السحب الخارجي عبر mobile money والتحويل البنكي قادم قريباً.</p>
           </div>
         </div>
       </div>
@@ -287,7 +287,7 @@
         <span class="section-eyebrow">خيارات الدفع</span>
         <h2 class="section-title">طرق متعددة للدفع والاستلام</h2>
         <p class="section-subtitle">
-          دعم أكثر من 50 عملة عبر أفريقيا ودولياً — مع تكامل الأموال المحمولة والبطاقات الدولية ومحفظة كاملة الميزات.
+          دعم أكثر من 135 عملة عبر Stripe — مع تكامل البطاقات الدولية ومحفظة كاملة الميزات؛ تكامل mobile money قادم قريباً.
         </p>
       </div>
 
@@ -295,13 +295,13 @@
         <div class="feature-card reveal">
           <div class="feature-card__icon"><i data-feather="smartphone"></i></div>
           <h3 class="feature-card__title">الأموال المحمولة</h3>
-          <p class="feature-card__desc">ادفع واستلم عبر Orange Money وWave وMTN MoMo وMoov Money وAirtel Money وM-Pesa. إيداعات وسحوبات فورية عبر غرب ووسط أفريقيا.</p>
+          <p class="feature-card__desc">تكامل mobile money قادم قريباً — بدءاً بـ Moov Money وOrange Money وWave. بمجرد الإطلاق، ادفع واستلم الأموال فوراً عبر غرب أفريقيا.</p>
         </div>
 
         <div class="feature-card reveal">
           <div class="feature-card__icon"><i data-feather="credit-card"></i></div>
           <h3 class="feature-card__title">بطاقات وبنوك دولية</h3>
-          <p class="feature-card__desc">مشتري المهجر يمكنهم الدفع بـ Visa وMastercard أو تحويل بنكي بالـ EUR وUSD وGBP وCAD والمزيد. مدعوم بـ Stripe لأمان دفع عالمي.</p>
+          <p class="feature-card__desc">ادفع بـ Visa أو Mastercard أو Apple Pay أو Google Pay بالـ EUR وUSD وGBP وCAD و135+ عملة. مدعوم بـ Stripe لأمان دفع عالمي. التحويل البنكي قادم قريباً.</p>
         </div>
 
         <div class="feature-card reveal">
@@ -313,7 +313,7 @@
         <div class="feature-card reveal">
           <div class="feature-card__icon"><i data-feather="globe"></i></div>
           <h3 class="feature-card__title">دعم العملات المتعددة</h3>
-          <p class="feature-card__desc">أكثر من 50 عملة مدعومة — XOF وXAF وNGN وGHS وKES وEUR وUSD وGBP والمزيد. أسعار صرف فورية مع تحويل تلقائي. تداول بالعملة التي تعرفها.</p>
+          <p class="feature-card__desc">أكثر من 135 عملة مدعومة عبر Stripe — XOF وXAF وNGN وGHS وEUR وUSD وGBP والمزيد. أسعار صرف فورية مع تحويل تلقائي. تداول بالعملة التي تعرفها.</p>
         </div>
       </div>
     </div>
@@ -326,7 +326,7 @@
         <span class="section-eyebrow">نظام متكامل</span>
         <h2 class="section-title">أكثر من سوق — نظام بيئي متكامل</h2>
         <p class="section-subtitle">
-          غرابالي يدعم ثلاثة أنواع من الطلبات: بائع فقط، خدمة فقط، وطلبات مشتركة متعددة الأطراف. أضف مقدمي خدمات معتمدين لأي معاملة — الكل محمي بالضمان.
+          غرابالي يدعم أربعة مسارات للطلب: طلبات مستقلة (افتراضي — جميع عناصر السلة منفصلة)، بائع-فقط، خدمة-فقط، وطلبات مجمّعة متعددة الأطراف.
         </p>
       </div>
 
@@ -409,6 +409,6 @@
   </footer>
 
   <script src="../js/main.js?v=2"></script>
-  <script>feather.replace();</script>
+  <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

@@ -45,7 +45,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Feather Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -233,7 +233,7 @@
           </div>
           <h3 class="feature-card__title">Multi-Currency & Diaspora</h3>
           <p class="feature-card__desc">
-            Pay from Paris in euros. Pay from New York in dollars. Your family in Bamako receives the ram in CFA. 54 African currencies. Fixed XOF-EUR rate (655.957). Real-time conversion for everything else.
+            Pay from Paris in euros. Pay from New York in dollars. Your family in Bamako receives the ram in CFA. 135+ currencies via Stripe. Fixed XOF-EUR rate (655.957). Real-time conversion across all Stripe-supported currencies.
           </p>
         </div>
 
@@ -263,7 +263,7 @@
           </div>
           <h3 class="feature-card__title">Digital Wallet & Mobile Money</h3>
           <p class="feature-card__desc">
-            A full-featured wallet with secure PIN protection, transaction history, and instant withdrawals. Pay and get paid via Orange Money, Wave, MTN MoMo, Moov Money, or bank transfer.
+            A full-featured wallet with secure PIN protection, transaction history, and wallet-to-wallet transfers. Deposit funds via card. Mobile money integration (Moov Money, Orange Money, Wave) and bank transfer coming soon.
           </p>
         </div>
 
@@ -866,6 +866,6 @@
 
   <!-- Scripts -->
   <script src="js/main.js?v=2"></script>
-  <script>feather.replace();</script>
+  <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

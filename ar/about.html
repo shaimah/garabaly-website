@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -178,7 +178,7 @@
         <div class="value-card reveal">
           <div class="value-card__icon" style="color: var(--primary);"><i data-feather="dollar-sign" style="width:40px;height:40px;"></i></div>
           <h3 class="value-card__title">الشمول المالي</h3>
-          <p class="value-card__desc">محفظة رقمية كاملة مع محاسبة مزدوجة وأرصدة ضمان وسحب فوري عبر Orange Money وWave وMTN MoMo والمزيد. إدخال ملايين التجار للاقتصاد الرقمي.</p>
+          <p class="value-card__desc">محفظة رقمية كاملة مع محاسبة مزدوجة وأرصدة ضمان وإيداعات بالبطاقة وتحويلات من محفظة لمحفظة. سحب عبر mobile money (Moov Money، Orange Money، Wave) والتحويل البنكي قادم قريباً. إدخال ملايين التجار للاقتصاد الرقمي.</p>
           <button class="value-card__read-more" onclick="toggleValueCard(this)">اقرأ المزيد</button>
         </div>
       </div>
@@ -292,6 +292,6 @@
   </footer>
 
   <script src="../js/main.js?v=2"></script>
-  <script>feather.replace();</script>
+  <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

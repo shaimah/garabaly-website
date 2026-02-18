@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -196,7 +196,7 @@
           <div class="feature-card__icon"><i data-feather="globe"></i></div>
           <h3 class="feature-card__title">Multi-devises et diaspora</h3>
           <p class="feature-card__desc">
-            Payez de Paris en euros. De New York en dollars. Votre famille à Bamako reçoit le bélier en CFA. 54 devises africaines. Taux fixe XOF-EUR (655,957). Conversion en temps réel pour le reste.
+            Payez de Paris en euros. De New York en dollars. Votre famille à Bamako reçoit le bélier en CFA. Plus de 135 devises via Stripe. Taux fixe XOF-EUR (655,957). Conversion en temps réel pour le reste.
           </p>
         </div>
 
@@ -220,7 +220,7 @@
           <div class="feature-card__icon"><i data-feather="credit-card"></i></div>
           <h3 class="feature-card__title">Portefeuille numérique et mobile money</h3>
           <p class="feature-card__desc">
-            Un portefeuille complet avec code PIN sécurisé, historique des transactions et retraits instantanés. Payez et soyez payé via Orange Money, Wave, MTN MoMo, Moov Money ou virement bancaire.
+            Un portefeuille complet avec code PIN sécurisé, historique des transactions et transferts de portefeuille à portefeuille. Déposez des fonds par carte. L'intégration mobile money (Moov Money, Orange Money, Wave) et le virement bancaire arrivent bientôt.
           </p>
         </div>
 
@@ -742,6 +742,6 @@
   </footer>
 
   <script src="../js/main.js?v=2"></script>
-  <script>feather.replace();</script>
+  <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

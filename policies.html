@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -132,7 +132,7 @@
           <p>We use your information to:</p>
           <ul>
             <li>Facilitate livestock transactions between buyers, sellers, and service providers.</li>
-            <li>Process payments through our escrow system and mobile money integrations (Orange Money, Moov Money, Wave, MTN MoMo, Airtel Money).</li>
+            <li>Process payments through our escrow system via Stripe (card payments) and Garabaly Wallet. Mobile money integration (Moov Money, Orange Money, Wave) coming soon.</li>
             <li>Provide real-time order tracking and delivery updates via Socket.io.</li>
             <li>Send transaction confirmations, security alerts, and service notifications through SMS and in-app channels.</li>
             <li>Detect and prevent fraud using device fingerprinting, velocity limits, and behavioral analysis.</li>
@@ -302,8 +302,8 @@
           <h3>6. Payments</h3>
           <ul>
             <li>All payments are processed through Garabaly's secure payment system, powered by Stripe and mobile money integrations.</li>
-            <li>Supported payment methods include mobile money (Orange Money, Moov Money, Wave, MTN MoMo, Airtel Money), bank transfers, and international cards.</li>
-            <li>Garabaly supports 50+ currencies for international transactions.</li>
+            <li>Supported payment methods include card payments (Visa, Mastercard, Apple Pay, Google Pay via Stripe) and Garabaly Wallet. Mobile money (Moov Money, Orange Money, Wave) and bank transfers coming soon.</li>
+            <li>Garabaly supports 135+ currencies via Stripe for international transactions.</li>
             <li>Funds are held in escrow until the transaction is confirmed. See our <a href="#escrow">Escrow Policy</a> for details.</li>
           </ul>
         </div>
@@ -519,10 +519,10 @@
           <ul>
             <li><strong>Cash:</strong> Limited protection — no escrow hold. Use at your own risk.</li>
             <li><strong>Card:</strong> Full escrow via Stripe (Visa, Mastercard).</li>
-            <li><strong>Mobile Money:</strong> Full escrow — Orange Money, Wave, MTN MoMo, Moov Money.</li>
+            <li><strong>Mobile Money:</strong> Full escrow — Moov Money, Orange Money, Wave (coming soon).</li>
             <li><strong>Garabaly Wallet:</strong> Full escrow with PIN verification.</li>
           </ul>
-          <p><strong>Warning:</strong> Cash orders have <strong>limited protection</strong>. For full buyer and seller protection, use card, mobile money, or Garabaly wallet. 50+ currencies are supported for international transactions, with automatic conversion at competitive rates.</p>
+          <p><strong>Warning:</strong> Cash orders have <strong>limited protection</strong>. For full buyer and seller protection, use card, mobile money, or Garabaly wallet. 135+ currencies are supported via Stripe for international transactions, with automatic conversion at competitive rates.</p>
         </div>
 
         <div class="policy-block">
@@ -600,6 +600,6 @@
   </footer>
 
   <script src="js/main.js?v=2"></script>
-  <script>feather.replace();</script>
+  <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

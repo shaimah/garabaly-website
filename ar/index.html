@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -196,7 +196,7 @@
           <div class="feature-card__icon"><i data-feather="globe"></i></div>
           <h3 class="feature-card__title">عملات متعددة والمهجر</h3>
           <p class="feature-card__desc">
-            ادفع من باريس باليورو. من نيويورك بالدولار. عائلتك في باماكو تستلم الكبش بالفرنك. 54 عملة أفريقية. سعر ثابت XOF-EUR (655.957). تحويل فوري للباقي.
+            ادفع من باريس باليورو. من نيويورك بالدولار. من واشنطن العاصمة بالدولار. عائلتك في باماكو تستلم الكبش بالفرنك. 135+ عملة عبر Stripe. سعر ثابت XOF-EUR (655.957). تحويل فوري للباقي.
           </p>
         </div>
 
@@ -220,7 +220,7 @@
           <div class="feature-card__icon"><i data-feather="credit-card"></i></div>
           <h3 class="feature-card__title">محفظة رقمية وأموال الهاتف</h3>
           <p class="feature-card__desc">
-            محفظة كاملة بكود PIN آمن وسجل معاملات وسحب فوري. ادفع واستلم عبر Orange Money وWave وMTN MoMo وMoov Money أو التحويل البنكي.
+            محفظة كاملة بكود PIN آمن وسجل معاملات وتحويلات من محفظة لمحفظة. أودع الأموال بالبطاقة. تكامل mobile money (Moov Money، Orange Money، Wave) والتحويل البنكي قادم قريباً.
           </p>
         </div>
 
@@ -471,9 +471,9 @@
         </div>
         <div class="reveal">
           <span class="section-eyebrow">للمغتربين</span>
-          <h2 class="section-title">من باريس إلى موبتي.<br>من نيويورك إلى باماكو.</h2>
+          <h2 class="section-title">من باريس إلى موبتي.<br>من نيويورك وواشنطن العاصمة إلى باماكو.</h2>
           <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            ملايين من سكان غرب أفريقيا يعيشون في الخارج. كل تباسكي، يريدون أن يكونوا في الوطن. لا يستطيعون — لكن هديتهم تستطيع. تصفح من باريس. فاوض مباشرة. ادفع باليورو. أمك تستلم الكبش. اتصل بالفيديو عند وصوله. المسافة تختفي.
+            ملايين من سكان غرب أفريقيا يعيشون في الخارج. كل تباسكي، يريدون أن يكونوا في الوطن. لا يستطيعون — لكن هديتهم تستطيع. تصفح من باريس أو نيويورك أو واشنطن العاصمة. فاوض مباشرة. ادفع باليورو أو الدولار. أمك تستلم الكبش. اتصل بالفيديو عند وصوله. المسافة تختفي.
           </p>
           <div class="trust-features">
             <div class="trust-feature">
@@ -742,6 +742,6 @@
   </footer>
 
   <script src="../js/main.js?v=2"></script>
-  <script>feather.replace();</script>
+  <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>
