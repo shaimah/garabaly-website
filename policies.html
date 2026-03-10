@@ -132,8 +132,8 @@
           <p>We use your information to:</p>
           <ul>
             <li>Facilitate livestock transactions between buyers, sellers, and service providers.</li>
-            <li>Process payments through our escrow system via Stripe (card payments) and Garabaly Wallet. Mobile money integration (Moov Money, Orange Money, Wave) coming soon.</li>
-            <li>Provide real-time order tracking and delivery updates via Socket.io.</li>
+            <li>Process payments through our escrow system via Stripe (card payments) and Garabaly Wallet. Mobile money is LIVE via Orange Money, Moov Money, Wave among several others.</li>
+            <li>Provide real-time order tracking and delivery updates.</li>
             <li>Send transaction confirmations, security alerts, and service notifications through SMS and in-app channels.</li>
             <li>Detect and prevent fraud using device fingerprinting, velocity limits, and behavioral analysis.</li>
             <li>Improve our platform through anonymized usage analytics.</li>
@@ -147,8 +147,8 @@
             We implement robust security measures to protect your data:
           </p>
           <ul>
-            <li><strong>Encryption:</strong> All sensitive data is encrypted in transit and at rest. Wallet PINs are secured with bcrypt hashing.</li>
-            <li><strong>Transaction integrity:</strong> Atomic database transactions and SHA-256 checksums ensure financial data accuracy.</li>
+            <li><strong>Encryption:</strong> All sensitive data is encrypted in transit and at rest. Wallet PINs are protected with industry-leading encryption standards.</li>
+            <li><strong>Transaction integrity:</strong> Bank-grade transaction security and military-grade integrity verification ensure financial data accuracy.</li>
             <li><strong>Access control:</strong> Dual admin approval is required for sensitive operations such as escrow fund releases.</li>
             <li><strong>Fraud detection:</strong> Automated velocity limits and device fingerprinting detect suspicious activity.</li>
             <li><strong>Database security:</strong> All data is stored in secured PostgreSQL databases with regular backups and access logging.</li>
@@ -302,7 +302,7 @@
           <h3>6. Payments</h3>
           <ul>
             <li>All payments are processed through Garabaly's secure payment system, powered by Stripe and mobile money integrations.</li>
-            <li>Supported payment methods include card payments (Visa, Mastercard, Apple Pay, Google Pay via Stripe) and Garabaly Wallet. Mobile money (Moov Money, Orange Money, Wave) and bank transfers coming soon.</li>
+            <li>Supported payment methods include card payments (Visa, Mastercard, Apple Pay, Google Pay via Stripe), Garabaly Wallet, and mobile money via Orange Money, Moov Money, Wave among several others. Bank transfers are coming soon.</li>
             <li>Garabaly supports 135+ currencies via Stripe for international transactions.</li>
             <li>Funds are held in escrow until the transaction is confirmed. See our <a href="#escrow">Escrow Policy</a> for details.</li>
           </ul>
@@ -311,7 +311,7 @@
         <div class="policy-block">
           <h3>7. Wallet</h3>
           <p>
-            Each user has a Garabaly wallet for receiving payments and making purchases. Wallet operations are secured by a personal PIN, enforced with bcrypt hashing and velocity limits. Wallet balances are maintained with double-entry bookkeeping and verified with SHA-256 checksums for accuracy.
+            Each user has a Garabaly wallet for receiving payments and making purchases. Wallet operations are secured by a personal PIN with built-in fraud prevention. Wallet balances are maintained with auditable financial records and military-grade integrity verification for accuracy.
           </p>
         </div>
 
@@ -472,9 +472,9 @@
           <h3>6. Escrow Security</h3>
           <p>Our escrow system is built on institutional-grade security:</p>
           <ul>
-            <li><strong>Atomic transactions:</strong> All fund movements are processed as atomic database operations — either the entire transaction succeeds, or nothing changes. No partial transfers.</li>
-            <li><strong>SHA-256 checksums:</strong> Every wallet balance change is verified with cryptographic checksums to detect and prevent any unauthorized modifications.</li>
-            <li><strong>Double-entry bookkeeping:</strong> Every debit has a corresponding credit. Our ledger system ensures funds are always accounted for.</li>
+            <li><strong>Transaction security:</strong> All fund movements are processed with bank-grade transaction security. Either the full operation succeeds or nothing changes. No partial transfers.</li>
+            <li><strong>Integrity verification:</strong> Every wallet balance change is protected with military-grade integrity verification to detect and prevent unauthorized modifications.</li>
+            <li><strong>Auditable records:</strong> Every debit has a corresponding credit. Our ledger system ensures funds are always accounted for.</li>
             <li><strong>Dual admin approval:</strong> Any manual escrow intervention (e.g., dispute resolution fund release) requires approval from two independent administrators.</li>
             <li><strong>Fraud detection:</strong> Automated systems monitor for suspicious patterns including unusual transaction amounts, velocity spikes, and device anomalies.</li>
           </ul>
@@ -519,7 +519,7 @@
           <ul>
             <li><strong>Cash:</strong> Limited protection — no escrow hold. Use at your own risk.</li>
             <li><strong>Card:</strong> Full escrow via Stripe (Visa, Mastercard).</li>
-            <li><strong>Mobile Money:</strong> Full escrow — Moov Money, Orange Money, Wave (coming soon).</li>
+            <li><strong>Mobile Money:</strong> Full escrow — Orange Money, Moov Money, Wave among several others (LIVE).</li>
             <li><strong>Garabaly Wallet:</strong> Full escrow with PIN verification.</li>
           </ul>
           <p><strong>Warning:</strong> Cash orders have <strong>limited protection</strong>. For full buyer and seller protection, use card, mobile money, or Garabaly wallet. 135+ currencies are supported via Stripe for international transactions, with automatic conversion at competitive rates.</p>
@@ -580,7 +580,7 @@
           <div class="security-badge__icon"><i data-feather="credit-card"></i></div>
           <span class="security-badge__label">PCI-DSS Compliant</span>
         </div>
-        <div class="security-badge" title="Sensitive data protected with bcrypt + SHA-256 encryption">
+        <div class="security-badge" title="Sensitive data protected with bank-grade encryption">
           <div class="security-badge__icon"><i data-feather="key"></i></div>
           <span class="security-badge__label">Data Encrypted</span>
         </div>

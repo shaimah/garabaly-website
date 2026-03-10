@@ -805,6 +805,89 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   line-height: 1.7;
 }
 
+.status-pill {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.status-pill--live {
+  background: rgba(45, 122, 74, 0.15);
+  color: var(--success);
+}
+
+.status-pill--soon {
+  background: rgba(232, 184, 84, 0.2);
+  color: #9b6b00;
+}
+
+.provider-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.provider-logos img,
+.provider-logo-placeholder {
+  width: 110px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: var(--border-radius-sm);
+  background: var(--surface);
+  border: 1px solid rgba(200, 121, 65, 0.18);
+  padding: 8px;
+}
+
+.provider-logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.payment-table {
+  border: 1px solid rgba(200, 121, 65, 0.16);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.payment-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr 2fr;
+  gap: var(--space-md);
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid rgba(200, 121, 65, 0.12);
+}
+
+.payment-row:last-child {
+  border-bottom: 0;
+}
+
+.inline-faq-link {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.floating-download-cta {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 16px;
+  z-index: 1200;
+  display: none;
+  box-shadow: var(--shadow-lg);
+}
+
 /* --- How It Works --- */
 .steps {
   display: grid;
@@ -2165,6 +2248,16 @@ html:not(.js-ready) .reveal {
 
   .section-header {
     margin-bottom: var(--space-2xl);
+  }
+
+  .payment-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    text-align: left;
+  }
+
+  .floating-download-cta.visible {
+    display: inline-flex;
   }
 }
 

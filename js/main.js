@@ -3,6 +3,7 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initLocaleRouting();
   document.documentElement.classList.add('js-ready');
   initHeader();
   initThemeToggle();
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCategoryCarousel();
   initValueCards();
   initLangSwitcher();
+  initFloatingMobileCta();
 });
 
 /* --- Sticky Header --- */
@@ -336,6 +338,70 @@ function initLangSwitcher() {
   switcher.querySelector('.lang-switcher__dropdown').addEventListener('click', (e) => {
     e.stopPropagation();
   });
+
+  const options = switcher.querySelectorAll('.lang-switcher__option');
+  options.forEach((option) => {
+    option.addEventListener('click', () => {
+      const href = option.getAttribute('href') || '';
+      let locale = 'en';
+      if (href.includes('/fr/')) locale = 'fr';
+      if (href.includes('/ar/')) locale = 'ar';
+      localStorage.setItem('garabaly-locale', locale);
+    });
+  });
+}
+
+function initLocaleRouting() {
+  const path = window.location.pathname;
+  const savedLocale = localStorage.getItem('garabaly-locale');
+  const isRootHome = path === '/' || path.endsWith('/index.html');
+  const isFrenchHome = path.includes('/fr/index.html');
+  const isArabicHome = path.includes('/ar/index.html');
+
+  if (isFrenchHome) localStorage.setItem('garabaly-locale', 'fr');
+  if (isArabicHome) localStorage.setItem('garabaly-locale', 'ar');
+
+  if (!isRootHome) return;
+
+  const target = savedLocale || 'fr';
+  if (target === 'fr') {
+    window.location.replace('fr/index.html');
+  } else if (target === 'ar') {
+    window.location.replace('ar/index.html');
+  }
+}
+
+function initFloatingMobileCta() {
+  if (window.matchMedia('(min-width: 769px)').matches) return;
+  const hero = document.querySelector('.hero');
+  const cta = document.createElement('a');
+  cta.className = 'btn btn--primary floating-download-cta';
+  cta.textContent = 'Download App';
+
+  const path = window.location.pathname;
+  if (path.includes('/fr/')) {
+    cta.textContent = 'Telecharger';
+    cta.href = 'get-the-app.html';
+  } else if (path.includes('/ar/')) {
+    cta.textContent = 'تحميل التطبيق';
+    cta.href = 'get-the-app.html';
+  } else {
+    cta.href = 'get-the-app.html';
+  }
+
+  document.body.appendChild(cta);
+
+  function onScroll() {
+    const threshold = hero ? hero.offsetHeight * 0.35 : 200;
+    if (window.scrollY > threshold) {
+      cta.classList.add('visible');
+    } else {
+      cta.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 }
 
 function toggleValueCard(btn) {

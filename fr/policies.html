@@ -132,8 +132,8 @@
           <p>Nous utilisons vos informations pour :</p>
           <ul>
             <li>Faciliter les transactions de bétail entre acheteurs, vendeurs et prestataires de services.</li>
-            <li>Traiter les paiements via notre système de séquestre avec Stripe (paiements par carte) et le portefeuille Garabaly. Intégration mobile money (Moov Money, Orange Money, Wave) bientôt disponible.</li>
-            <li>Fournir un suivi de commande en temps réel et des mises à jour de livraison via Socket.io.</li>
+            <li>Traiter les paiements via notre système de séquestre avec Stripe (paiements par carte) et le portefeuille Garabaly. Mobile money est LIVE via Orange Money, Moov Money, Wave parmi plusieurs autres.</li>
+            <li>Fournir un suivi de commande en temps réel et des mises à jour de livraison.</li>
             <li>Envoyer les confirmations de transaction, alertes de sécurité et notifications de service par SMS et canaux intégrés.</li>
             <li>Détecter et prévenir la fraude grâce à l'empreinte d'appareil, aux limites de vélocité et à l'analyse comportementale.</li>
             <li>Améliorer notre plateforme grâce à des analyses d'utilisation anonymisées.</li>
@@ -147,8 +147,8 @@
             Nous mettons en œuvre des mesures de sécurité robustes pour protéger vos données :
           </p>
           <ul>
-            <li><strong>Chiffrement :</strong> Toutes les données sensibles sont chiffrées en transit et au repos. Les codes PIN du portefeuille sont sécurisés par hachage bcrypt.</li>
-            <li><strong>Intégrité des transactions :</strong> Les transactions atomiques en base de données et les sommes de contrôle SHA-256 garantissent l'exactitude des données financières.</li>
+            <li><strong>Chiffrement :</strong> Toutes les données sensibles sont chiffrées en transit et au repos. Les codes PIN du portefeuille sont protégés par des standards de chiffrement avancés.</li>
+            <li><strong>Intégrité des transactions :</strong> La sécurité transactionnelle de niveau bancaire et la vérification d'intégrité de niveau militaire garantissent l'exactitude des données financières.</li>
             <li><strong>Contrôle d'accès :</strong> Une double validation administrative est requise pour les opérations sensibles telles que la libération des fonds en séquestre.</li>
             <li><strong>Détection de la fraude :</strong> Les limites de vélocité automatiques et l'empreinte d'appareil détectent les activités suspectes.</li>
             <li><strong>Sécurité de la base de données :</strong> Toutes les données sont stockées dans des bases PostgreSQL sécurisées avec sauvegardes régulières et journalisation des accès.</li>
@@ -302,7 +302,7 @@
           <h3>6. Paiements</h3>
           <ul>
             <li>Tous les paiements sont traités via le système de paiement sécurisé de Garabaly, alimenté par Stripe et les intégrations mobile money.</li>
-            <li>Les moyens de paiement pris en charge incluent les cartes (Visa, Mastercard, Apple Pay, Google Pay via Stripe) et le portefeuille Garabaly. Mobile money (Moov Money, Orange Money, Wave) et virements bancaires bientôt disponibles.</li>
+            <li>Les moyens de paiement pris en charge incluent les cartes (Visa, Mastercard, Apple Pay, Google Pay via Stripe), le portefeuille Garabaly, et mobile money via Orange Money, Moov Money, Wave parmi plusieurs autres. Virements bancaires bientôt disponibles.</li>
             <li>Garabaly prend en charge plus de 135 devises via Stripe pour les transactions internationales.</li>
             <li>Les fonds sont détenus en séquestre jusqu'à confirmation de la transaction. Voir notre <a href="#escrow">Politique de séquestre</a> pour les détails.</li>
           </ul>
@@ -311,7 +311,7 @@
         <div class="policy-block">
           <h3>7. Portefeuille</h3>
           <p>
-            Chaque utilisateur dispose d'un portefeuille Garabaly pour recevoir les paiements et effectuer des achats. Les opérations du portefeuille sont sécurisées par un code PIN personnel, appliqué avec hachage bcrypt et limites de vélocité. Les soldes du portefeuille sont gérés en comptabilité en partie double et vérifiés par des sommes de contrôle SHA-256 pour garantir l'exactitude.
+            Chaque utilisateur dispose d'un portefeuille Garabaly pour recevoir les paiements et effectuer des achats. Les opérations du portefeuille sont sécurisées par un code PIN personnel avec prévention de fraude intégrée. Les soldes du portefeuille sont gérés via des registres financiers auditables et une vérification d'intégrité de niveau militaire pour garantir l'exactitude.
           </p>
         </div>
 
@@ -472,9 +472,9 @@
           <h3>6. Sécurité du séquestre</h3>
           <p>Notre système de séquestre repose sur une sécurité de niveau institutionnel :</p>
           <ul>
-            <li><strong>Transactions atomiques :</strong> Tous les mouvements de fonds sont traités comme des opérations atomiques en base de données — soit la transaction entière réussit, soit rien ne change. Pas de transferts partiels.</li>
-            <li><strong>Sommes de contrôle SHA-256 :</strong> Chaque modification de solde du portefeuille est vérifiée par des sommes de contrôle cryptographiques pour détecter et empêcher toute modification non autorisée.</li>
-            <li><strong>Comptabilité en partie double :</strong> Chaque débit a un crédit correspondant. Notre système de grand livre garantit que les fonds sont toujours comptabilisés.</li>
+            <li><strong>Sécurité transactionnelle :</strong> Tous les mouvements de fonds sont traités avec une sécurité transactionnelle de niveau bancaire — soit l'opération entière réussit, soit rien ne change. Pas de transferts partiels.</li>
+            <li><strong>Vérification d'intégrité :</strong> Chaque modification de solde du portefeuille est protégée par une vérification d'intégrité de niveau militaire pour détecter et empêcher toute modification non autorisée.</li>
+            <li><strong>Registres auditables :</strong> Chaque débit a un crédit correspondant. Notre système de grand livre garantit que les fonds sont toujours comptabilisés.</li>
             <li><strong>Double approbation admin :</strong> Toute intervention manuelle sur le séquestre (ex. : libération de fonds après résolution d'un litige) nécessite l'approbation de deux administrateurs indépendants.</li>
             <li><strong>Détection de la fraude :</strong> Des systèmes automatisés surveillent les schémas suspects, notamment les montants inhabituels, les pics de vélocité et les anomalies d'appareil.</li>
           </ul>
@@ -519,7 +519,7 @@
           <ul>
             <li><strong>Espèces :</strong> Protection limitée — pas de blocage en séquestre. Utilisez à vos risques.</li>
             <li><strong>Carte :</strong> Séquestre complet via Stripe (Visa, Mastercard).</li>
-            <li><strong>Mobile Money :</strong> Séquestre complet — Moov Money, Orange Money, Wave (bientôt disponible).</li>
+            <li><strong>Mobile Money :</strong> Séquestre complet — Orange Money, Moov Money, Wave parmi plusieurs autres (LIVE).</li>
             <li><strong>Portefeuille Garabaly :</strong> Séquestre complet avec vérification par code PIN.</li>
           </ul>
           <p><strong>Avertissement :</strong> Les commandes en espèces offrent une <strong>protection limitée</strong>. Pour une protection complète acheteur et vendeur, utilisez la carte, le mobile money ou le portefeuille Garabaly. Plus de 135 devises sont prises en charge via Stripe pour les transactions internationales, avec conversion automatique à des taux compétitifs.</p>
@@ -580,7 +580,7 @@
           <div class="security-badge__icon"><i data-feather="credit-card"></i></div>
           <span class="security-badge__label">Conforme PCI-DSS</span>
         </div>
-        <div class="security-badge" title="Données sensibles protégées par bcrypt et SHA-256">
+        <div class="security-badge" title="Données sensibles protégées par chiffrement de niveau bancaire">
           <div class="security-badge__icon"><i data-feather="key"></i></div>
           <span class="security-badge__label">Données chiffrées</span>
         </div>
