@@ -341,15 +341,22 @@ function initScenariosMarquee() {
     return;
   }
 
-  const setDuration = () => {
+  const updateMarqueeDuration = () => {
     const half = track.scrollWidth / 2;
     if (half <= 0) return;
     const pxPerSecond = 42;
-    track.style.animationDuration = `${half / pxPerSecond}s`;
+    root.style.setProperty('--scenarios-marquee-duration', `${half / pxPerSecond}s`);
   };
 
-  setDuration();
-  window.addEventListener('resize', setDuration);
+  const scheduleDuration = () => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(updateMarqueeDuration);
+    });
+  };
+
+  scheduleDuration();
+  window.addEventListener('resize', updateMarqueeDuration);
+  window.addEventListener('load', scheduleDuration, { once: true });
 }
 
 /* --- Value Cards: show "Read more" only if text is truncated --- */

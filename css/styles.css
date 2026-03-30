@@ -1199,14 +1199,68 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   scroll-snap-align: start;
 }
 
-.scenarios-carousel--marquee .scroll-hint {
-  display: none;
+.scenarios-carousel__note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin: 0 auto var(--space-lg);
+  max-width: 36rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+[dir="rtl"] .scenarios-carousel__note {
+  flex-direction: row-reverse;
+}
+
+.scenarios-carousel__note .scenarios-carousel__note-icon {
+  flex-shrink: 0;
+  color: var(--primary);
+  opacity: 0.85;
+  animation: scenarios-note-nudge 2.2s ease-in-out infinite;
+}
+
+@keyframes scenarios-note-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
 }
 
 .scenarios-carousel__marquee {
+  position: relative;
   overflow: hidden;
   width: 100%;
   direction: ltr;
+  /* Edge fades signal more content beyond the viewport */
+  --scenarios-fade: var(--bg-alt);
+}
+
+.scenarios-carousel__marquee::before,
+.scenarios-carousel__marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: min(56px, 12vw);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scenarios-carousel__marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--scenarios-fade) 0%, transparent 100%);
+}
+
+.scenarios-carousel__marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--scenarios-fade) 0%, transparent 100%);
 }
 
 .scenarios-carousel__track {
@@ -1214,10 +1268,16 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   gap: var(--space-lg);
   width: max-content;
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.scenarios-carousel--marquee {
+  --scenarios-marquee-duration: 75s;
 }
 
 .scenarios-carousel--marquee:not(.scenarios-carousel--reduced-motion) .scenarios-carousel__track {
-  animation: scenarios-marquee linear infinite;
+  animation: scenarios-marquee var(--scenarios-marquee-duration, 75s) linear infinite;
 }
 
 .scenarios-carousel--marquee:not(.scenarios-carousel--reduced-motion):hover .scenarios-carousel__track {
@@ -1226,10 +1286,10 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 @keyframes scenarios-marquee {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -1251,6 +1311,10 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   }
 
   .scenarios-carousel--marquee .scenarios-carousel__track {
+    animation: none;
+  }
+
+  .scenarios-carousel__note-icon {
     animation: none;
   }
 }
