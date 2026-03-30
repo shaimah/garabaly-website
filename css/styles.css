@@ -1257,22 +1257,20 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   }
 }
 
-/* Match legacy testimonial card look (softer shadow, more padding, backdrop) */
+/* Scenario cards — same visual spec as when this section shipped (pre-marquee-tweak) */
 .scenario-card {
   flex: 0 0 clamp(260px, 28vw, 400px);
   background: var(--surface);
   border-radius: var(--border-radius-lg);
-  padding: var(--space-2xl);
-  box-shadow: var(--shadow-sm);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
   border: 1px solid rgba(200, 121, 65, 0.08);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .scenarios-carousel--marquee .scenarios-carousel__track .scenario-card:hover {
-  box-shadow: 0 8px 30px rgba(200, 121, 65, 0.1), 0 0 40px rgba(200, 121, 65, 0.04);
   transform: translateY(-4px);
-  border-color: rgba(200, 121, 65, 0.15);
+  box-shadow: var(--shadow-lg);
 }
 
 .scenario-card__persona {
@@ -1283,7 +1281,6 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 }
 
 .scenario-card__quote {
-  font: var(--font-body);
   font-style: italic;
   line-height: 1.7;
   color: var(--text-secondary);
