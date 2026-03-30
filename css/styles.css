@@ -1175,71 +1175,61 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   filter: url(#duotone-camel) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
 }
 
-/* --- Testimonials --- */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-xl);
+/* --- Scenario cards carousel (homepage) --- */
+.scenarios-carousel {
+  display: flex;
+  gap: var(--space-lg);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--space-md) 0;
+  scrollbar-width: none;
 }
 
-.testimonial-card {
+.scenarios-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.scenario-card {
+  flex: 0 0 calc(33.333% - var(--space-lg));
+  scroll-snap-align: start;
   background: var(--surface);
   border-radius: var(--border-radius-lg);
-  padding: var(--space-2xl);
-  box-shadow: var(--shadow-sm);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
   border: 1px solid rgba(200, 121, 65, 0.08);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial-card:hover {
-  box-shadow: 0 8px 30px rgba(200, 121, 65, 0.1), 0 0 40px rgba(200, 121, 65, 0.04);
+.scenario-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(200, 121, 65, 0.15);
+  box-shadow: var(--shadow-lg);
 }
 
-.testimonial-card__stars {
-  color: var(--secondary);
-  margin-bottom: var(--space-md);
+.scenario-card__persona {
+  font-weight: 700;
   font-size: 1.1rem;
-  letter-spacing: 2px;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
 }
 
-.testimonial-card__quote {
-  font: var(--font-body);
-  color: var(--text-secondary);
-  margin-bottom: var(--space-lg);
+.scenario-card__quote {
   font-style: italic;
   line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
 }
 
-.testimonial-card__author {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
+@media (max-width: 768px) {
+  .scenario-card {
+    flex: 0 0 85%;
+  }
 }
 
-.testimonial-card__avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--border-radius-full);
-  background: var(--gradient-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.testimonial-card__name {
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.testimonial-card__role {
-  font: var(--font-caption);
-  color: var(--text-tertiary);
+@media (min-width: 769px) and (max-width: 1024px) {
+  .scenario-card {
+    flex: 0 0 calc(50% - var(--space-lg));
+  }
 }
 
 /* --- CTA Section --- */
@@ -2179,23 +2169,14 @@ html:not(.js-ready) .reveal {
     font-size: 0.75rem;
   }
 
-  /* --- Horizontal Scroll: Testimonials --- */
-  .testimonials-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+  /* --- Horizontal scroll: scenario carousel (mobile) --- */
+  .scenarios-carousel {
     gap: var(--space-md);
     padding-bottom: var(--space-md);
-    scrollbar-width: none;
   }
 
-  .testimonials-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .testimonials-grid .testimonial-card {
-    flex: 0 0 300px;
+  .scenarios-carousel .scenario-card {
+    flex: 0 0 min(300px, 85%);
     scroll-snap-align: start;
   }
 
@@ -2318,8 +2299,8 @@ html:not(.js-ready) .reveal {
     min-height: 145px;
   }
 
-  .testimonials-grid .testimonial-card {
-    flex: 0 0 270px;
+  .scenarios-carousel .scenario-card {
+    flex: 0 0 min(270px, 88%);
     padding: var(--space-xl);
   }
 
@@ -2713,7 +2694,7 @@ html:not(.js-ready) .reveal {
 /* Cards */
 [dir="rtl"] .feature-card,
 [dir="rtl"] .step,
-[dir="rtl"] .testimonial-card {
+[dir="rtl"] .scenario-card {
   text-align: right;
 }
 
@@ -2737,8 +2718,6 @@ html:not(.js-ready) .reveal {
 [dir="rtl"] .timeline-item__content p {
   text-align: right;
 }
-
-/* testimonial-card__author — direction:rtl already reverses layout */
 
 /* Value cards stay centered; read-more aligns right */
 [dir="rtl"] .value-card__read-more {
