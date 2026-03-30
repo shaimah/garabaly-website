@@ -1175,24 +1175,88 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   filter: url(#duotone-camel) drop-shadow(0 4px 14px rgba(0,0,0,0.4)) drop-shadow(0 0 20px rgba(200,121,65,0.4));
 }
 
-/* --- Scenario cards carousel (homepage) --- */
+/* --- Scenario cards: infinite marquee (enhanced by JS: .scenarios-carousel--marquee) --- */
 .scenarios-carousel {
+  padding: var(--space-md) 0;
+}
+
+/* No-JS / before JS: horizontal scroll */
+.scenarios-carousel:not(.scenarios-carousel--marquee) {
   display: flex;
   gap: var(--space-lg);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: var(--space-md) 0;
   scrollbar-width: none;
 }
 
-.scenarios-carousel::-webkit-scrollbar {
+.scenarios-carousel:not(.scenarios-carousel--marquee)::-webkit-scrollbar {
   display: none;
 }
 
-.scenario-card {
-  flex: 0 0 calc(33.333% - var(--space-lg));
+.scenarios-carousel:not(.scenarios-carousel--marquee) > .scenario-card {
+  flex: 0 0 clamp(260px, 28vw, 400px);
   scroll-snap-align: start;
+}
+
+.scenarios-carousel--marquee .scroll-hint {
+  display: none;
+}
+
+.scenarios-carousel__marquee {
+  overflow: hidden;
+  width: 100%;
+  direction: ltr;
+}
+
+.scenarios-carousel__track {
+  display: flex;
+  gap: var(--space-lg);
+  width: max-content;
+  will-change: transform;
+}
+
+.scenarios-carousel--marquee:not(.scenarios-carousel--reduced-motion) .scenarios-carousel__track {
+  animation: scenarios-marquee linear infinite;
+}
+
+.scenarios-carousel--marquee:not(.scenarios-carousel--reduced-motion):hover .scenarios-carousel__track {
+  animation-play-state: paused;
+}
+
+@keyframes scenarios-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scenarios-carousel--reduced-motion .scenarios-carousel__marquee {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.scenarios-carousel--reduced-motion .scenarios-carousel__track {
+  animation: none;
+  flex-wrap: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scenarios-carousel--marquee .scenarios-carousel__marquee {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scenarios-carousel--marquee .scenarios-carousel__track {
+    animation: none;
+  }
+}
+
+.scenario-card {
+  flex: 0 0 clamp(260px, 28vw, 400px);
   background: var(--surface);
   border-radius: var(--border-radius-lg);
   padding: var(--space-xl);
@@ -1201,7 +1265,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.scenario-card:hover {
+.scenarios-carousel--marquee .scenarios-carousel__track .scenario-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
@@ -1221,14 +1285,14 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 }
 
 @media (max-width: 768px) {
-  .scenario-card {
-    flex: 0 0 85%;
+  .scenarios-carousel__track .scenario-card {
+    flex: 0 0 min(300px, 85vw);
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .scenario-card {
-    flex: 0 0 calc(50% - var(--space-lg));
+  .scenarios-carousel__track .scenario-card {
+    flex: 0 0 clamp(260px, 40vw, 360px);
   }
 }
 
@@ -2169,15 +2233,9 @@ html:not(.js-ready) .reveal {
     font-size: 0.75rem;
   }
 
-  /* --- Horizontal scroll: scenario carousel (mobile) --- */
-  .scenarios-carousel {
-    gap: var(--space-md);
-    padding-bottom: var(--space-md);
-  }
-
-  .scenarios-carousel .scenario-card {
-    flex: 0 0 min(300px, 85%);
-    scroll-snap-align: start;
+  /* --- Scenario marquee (mobile): tighter cards --- */
+  .scenarios-carousel:not(.scenarios-carousel--marquee) > .scenario-card {
+    flex: 0 0 min(300px, 85vw);
   }
 
   /* --- Stats Bar: Horizontal on Mobile --- */
@@ -2297,11 +2355,6 @@ html:not(.js-ready) .reveal {
   .categories-grid .category-card {
     flex: 0 0 135px;
     min-height: 145px;
-  }
-
-  .scenarios-carousel .scenario-card {
-    flex: 0 0 min(270px, 88%);
-    padding: var(--space-xl);
   }
 
   .btn-group {

@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initThemeToggle();
   initMobileMenu();
+  initScenariosMarquee();
   initScrollReveal();
   initFaqAccordion();
   initSmoothScroll();
@@ -302,6 +303,53 @@ function initCategoryCarousel() {
 
   // Initial state
   updateArrows();
+}
+
+/* --- Homepage: infinite auto-scrolling scenario marquee --- */
+function initScenariosMarquee() {
+  const root = document.querySelector('.scenarios-carousel');
+  if (!root || root.dataset.marqueeReady === 'true') return;
+
+  const cards = Array.from(root.querySelectorAll(':scope > .scenario-card'));
+  if (cards.length < 2) return;
+
+  root.dataset.marqueeReady = 'true';
+
+  const marquee = document.createElement('div');
+  marquee.className = 'scenarios-carousel__marquee';
+  const track = document.createElement('div');
+  track.className = 'scenarios-carousel__track';
+
+  cards.forEach((c) => track.appendChild(c));
+
+  const firstSet = Array.from(track.children);
+  firstSet.forEach((card) => {
+    const copy = card.cloneNode(true);
+    copy.classList.remove('reveal');
+    copy.classList.add('visible');
+    copy.setAttribute('aria-hidden', 'true');
+    track.appendChild(copy);
+  });
+
+  marquee.appendChild(track);
+  root.appendChild(marquee);
+  root.classList.add('scenarios-carousel--marquee');
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reducedMotion) {
+    root.classList.add('scenarios-carousel--reduced-motion');
+    return;
+  }
+
+  const setDuration = () => {
+    const half = track.scrollWidth / 2;
+    if (half <= 0) return;
+    const pxPerSecond = 42;
+    track.style.animationDuration = `${half / pxPerSecond}s`;
+  };
+
+  setDuration();
+  window.addEventListener('resize', setDuration);
 }
 
 /* --- Value Cards: show "Read more" only if text is truncated --- */
