@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://garabaly.com/sitemap.xml
+Sitemap: https://www.garabaly.com/sitemap.xml
