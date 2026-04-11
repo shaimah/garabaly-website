@@ -3186,3 +3186,42 @@ html:not(.js-ready) .reveal {
     gap: 12px;
   }
 }
+
+/* --- Brand motto (Garabaly_Motto_Integration_Instructions) --- */
+.hero__motto,
+.footer__motto,
+.section-motto {
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.hero__motto {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--secondary);
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer__motto {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.section-motto {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.cta-section .footer__motto {
+  font-size: 1.2rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.page-header .section-motto {
+  margin-top: 0.5rem;
+  color: var(--secondary);
+}
