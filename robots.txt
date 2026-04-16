@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+# Cloudflare Email Address Obfuscation and other /cdn-cgi/* helpers — not real site pages
+Disallow: /cdn-cgi/
 
 Sitemap: https://www.garabaly.com/sitemap.xml
