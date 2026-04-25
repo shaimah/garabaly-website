@@ -2958,7 +2958,7 @@ html:not(.js-ready) .reveal {
 /* QR Code Showcase */
 .qr-showcase {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 360px 1fr;
   gap: var(--space-3xl);
   align-items: center;
   max-width: 1040px;
@@ -2972,7 +2972,7 @@ html:not(.js-ready) .reveal {
   backdrop-filter: blur(20px) saturate(1.5);
   -webkit-backdrop-filter: blur(20px) saturate(1.5);
   border-radius: var(--radius-xl);
-  padding: var(--space-xl);
+  padding: var(--space-lg);
   box-shadow:
     0 8px 32px rgba(200, 121, 65, 0.10),
     inset 0 1px 0 rgba(255, 255, 255, 0.6);
@@ -3000,8 +3000,9 @@ html:not(.js-ready) .reveal {
 }
 
 .qr-showcase__image {
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  height: auto;
+  max-width: 320px;
   border-radius: var(--radius-lg);
   position: relative;
   z-index: 1;
@@ -3032,7 +3033,7 @@ html:not(.js-ready) .reveal {
   margin: 0 0 var(--space-md);
   color: var(--text-secondary);
   line-height: 1.7;
-  max-width: 54ch;
+  max-width: 60ch;
 }
 
 .qr-showcase__bullets {
@@ -3041,17 +3042,17 @@ html:not(.js-ready) .reveal {
   margin: 0 0 var(--space-lg);
   padding: 0;
   list-style: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .qr-showcase__bullets li {
   display: flex;
   align-items: flex-start;
   gap: var(--space-sm);
-  padding: 10px 12px;
+  padding: 14px 14px;
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.35);
   border: 1px solid rgba(200, 121, 65, 0.08);
-  max-width: 62ch;
 }
 
 [data-theme="dark"] .qr-showcase__bullets li {
@@ -3072,6 +3073,12 @@ html:not(.js-ready) .reveal {
   gap: var(--space-sm);
   flex-wrap: wrap;
   align-items: center;
+}
+
+@media (max-width: 980px) {
+  .qr-showcase__bullets {
+    grid-template-columns: 1fr;
+  }
 }
 
 .qr-showcase__instructions {
@@ -3155,8 +3162,7 @@ html:not(.js-ready) .reveal {
   }
 
   .qr-showcase__image {
-    width: 200px;
-    height: 200px;
+    max-width: 320px;
   }
 
   .qr-instruction {
