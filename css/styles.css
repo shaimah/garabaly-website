@@ -2961,7 +2961,7 @@ html:not(.js-ready) .reveal {
   grid-template-columns: auto 1fr;
   gap: var(--space-3xl);
   align-items: center;
-  max-width: 900px;
+  max-width: 1040px;
   margin: var(--space-2xl) auto 0;
 }
 
@@ -3032,6 +3032,7 @@ html:not(.js-ready) .reveal {
   margin: 0 0 var(--space-md);
   color: var(--text-secondary);
   line-height: 1.7;
+  max-width: 54ch;
 }
 
 .qr-showcase__bullets {
@@ -3050,6 +3051,7 @@ html:not(.js-ready) .reveal {
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.35);
   border: 1px solid rgba(200, 121, 65, 0.08);
+  max-width: 62ch;
 }
 
 [data-theme="dark"] .qr-showcase__bullets li {
