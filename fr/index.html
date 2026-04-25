@@ -286,7 +286,7 @@
       </div>
       <div class="payment-table reveal">
         <div class="payment-row"><strong>Mobile Money</strong><span class="status-pill status-pill--live">LIVE</span><span>Orange Money, Moov Money, Wave parmi plusieurs autres</span></div>
-        <div class="payment-row"><strong>Paiement par carte</strong><span class="status-pill status-pill--live">LIVE</span><span>Visa, Mastercard, Apple Pay, Google Pay (135+ devises)</span></div>
+        <div class="payment-row"><strong>Paiement par carte</strong><span class="status-pill status-pill--live">LIVE</span><span>Visa, Mastercard (135+ devises via Stripe)</span></div>
         <div class="payment-row"><strong>Portefeuille Garabaly</strong><span class="status-pill status-pill--live">LIVE</span><span>Recharge par carte ou mobile money, transferts instantanes</span></div>
         <div class="payment-row"><strong>Virement bancaire</strong><span class="status-pill status-pill--soon">Bientot</span><span>Comptes bancaires XOF UEMOA</span></div>
       </div>
@@ -354,7 +354,7 @@
         <div class="step reveal">
           <div class="step__number">1</div>
           <h3 class="step__title">Parcourir et découvrir</h3>
-          <p class="step__desc">Explorez des annonces vérifiées avec photos, certificats sanitaires et descriptions vocales en langues locales.</p>
+          <p class="step__desc">Explorez des annonces avec photos, profils vendeurs vérifiés, descriptions vocales en langues locales, et certificats sanitaires optionnels.</p>
         </div>
         <div class="step reveal">
           <div class="step__number">2</div>
@@ -566,16 +566,16 @@
         </div>
         <div class="reveal">
           <span class="section-eyebrow">Assurance qualité</span>
-          <h2 class="section-title">Bétail vérifié<br>par un vétérinaire</h2>
+          <h2 class="section-title">Vendeurs vérifiés,<br>historique transparent</h2>
           <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            Chaque animal sur Garabaly peut porter un certificat sanitaire d'un vétérinaire vérifié. Vous voyez l'état de l'animal avant d'acheter — pas après.
+            Les vendeurs peuvent ajouter des certificats sanitaires vétérinaires à leurs annonces, et les acheteurs peuvent demander des inspections vétérinaires via notre réseau de prestataires. Vous voyez l'état de l'animal avant d'acheter — pas après.
           </p>
           <div class="trust-features">
             <div class="trust-feature">
               <div class="trust-feature__icon"><i data-feather="clipboard"></i></div>
               <div class="trust-feature__text">
                 <h4>Certificats sanitaires</h4>
-                <p>État de santé documenté par des vétérinaires agréés.</p>
+                <p>Les vendeurs peuvent téléverser des documents de santé délivrés par des vétérinaires agréés.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -591,6 +591,18 @@
                 <h4>Descriptions vocales</h4>
                 <p>Les vendeurs enregistrent des notes vocales en langues locales décrivant leur bétail.</p>
               </div>
+            </div>
+          </div>
+          <div class="qr-showcase" style="margin-top: var(--space-xl); display: flex; align-items: center; gap: var(--space-xl); flex-wrap: wrap;">
+            <div class="qr-showcase__card" style="flex-shrink: 0;">
+              <img src="assets/images/qr-amadou-profile.png" alt="QR code pour voir un vrai profil vendeur sur Garabaly" class="qr-showcase__image" style="max-width: 160px;">
+            </div>
+            <div>
+              <h4 style="margin-bottom: var(--space-xs);">Voir un vrai profil vendeur</h4>
+              <p style="margin-bottom: var(--space-sm);">Chaque vendeur sur Garabaly construit un historique public — transactions, avis des acheteurs, litiges resolus. Ne nous croyez pas sur parole.</p>
+              <a href="https://garabaly.replit.app/profile/test-seller-amadou" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                Voir le profil <i data-feather="external-link" style="width:14px;height:14px;margin-left:4px;"></i>
+              </a>
             </div>
           </div>
         </div>
