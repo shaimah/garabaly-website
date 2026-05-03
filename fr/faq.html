@@ -275,17 +275,24 @@
           <button class="faq-item__question">Quels sont les plafonds de retrait du portefeuille ?<i data-feather="chevron-down"></i></button>
           <div class="faq-item__answer">
             <p>Les plafonds dépendent du statut de ton compte. Plus ton compte est vérifié et plus ton historique est propre, plus tes plafonds sont élevés.</p>
-            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
-            <table style="width:100%;border-collapse:collapse;margin-top:var(--space-md);font-size:0.92rem;min-width:520px;">
+            <div class="faq-withdrawal-scroll" role="region" aria-label="Plafonds de retrait par statut de compte">
+            <table class="faq-withdrawal-table">
               <thead>
-                <tr><th style="text-align:left;padding:6px;">Statut</th><th style="text-align:left;padding:6px;">Comment l'obtenir</th><th style="text-align:right;padding:6px;">Par retrait</th><th style="text-align:right;padding:6px;">Par jour</th><th style="text-align:right;padding:6px;">Par semaine</th><th style="text-align:right;padding:6px;">Par mois</th></tr>
+                <tr>
+                  <th scope="col" class="faq-withdrawal-table__col-text">Statut</th>
+                  <th scope="col" class="faq-withdrawal-table__col-text">Comment l'obtenir</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">Par retrait</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">Par jour</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">Par semaine</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">Par mois</th>
+                </tr>
               </thead>
               <tbody>
-                <tr><td style="padding:6px;"><strong>Période de démarrage</strong></td><td style="padding:6px;">Premières 24 h après création</td><td style="text-align:right;padding:6px;">bloqué</td><td style="text-align:right;padding:6px;">bloqué</td><td style="text-align:right;padding:6px;">bloqué</td><td style="text-align:right;padding:6px;">bloqué</td></tr>
-                <tr><td style="padding:6px;"><strong>Non vérifié</strong></td><td style="padding:6px;">Compte créé, vérification non faite</td><td style="text-align:right;padding:6px;">100 000</td><td style="text-align:right;padding:6px;">200 000</td><td style="text-align:right;padding:6px;">600 000</td><td style="text-align:right;padding:6px;">2 000 000</td></tr>
-                <tr><td style="padding:6px;"><strong>Vérifié</strong></td><td style="padding:6px;">Pièce d'identité + selfie validés</td><td style="text-align:right;padding:6px;">2 000 000</td><td style="text-align:right;padding:6px;">5 000 000</td><td style="text-align:right;padding:6px;">20 000 000</td><td style="text-align:right;padding:6px;">60 000 000</td></tr>
-                <tr><td style="padding:6px;"><strong>Trusted</strong></td><td style="padding:6px;">Vérifié + 90 jours d'historique propre</td><td style="text-align:right;padding:6px;">3 000 000</td><td style="text-align:right;padding:6px;">8 000 000</td><td style="text-align:right;padding:6px;">35 000 000</td><td style="text-align:right;padding:6px;">120 000 000</td></tr>
-                <tr><td style="padding:6px;"><strong>Bâtisseur du Marché</strong></td><td style="padding:6px;">Badge Market Builder (15 parrainages) ou statut partenaire</td><td style="text-align:right;padding:6px;">5 000 000</td><td style="text-align:right;padding:6px;">15 000 000</td><td style="text-align:right;padding:6px;">60 000 000</td><td style="text-align:right;padding:6px;">200 000 000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Période de démarrage</strong></td><td class="faq-withdrawal-table__col-text">Premières 24 h après création</td><td class="faq-withdrawal-table__amount">bloqué</td><td class="faq-withdrawal-table__amount">bloqué</td><td class="faq-withdrawal-table__amount">bloqué</td><td class="faq-withdrawal-table__amount">bloqué</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Non vérifié</strong></td><td class="faq-withdrawal-table__col-text">Compte créé, vérification non faite</td><td class="faq-withdrawal-table__amount">100 000</td><td class="faq-withdrawal-table__amount">200 000</td><td class="faq-withdrawal-table__amount">600 000</td><td class="faq-withdrawal-table__amount">2 000 000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Vérifié</strong></td><td class="faq-withdrawal-table__col-text">Pièce d'identité + selfie validés</td><td class="faq-withdrawal-table__amount">2 000 000</td><td class="faq-withdrawal-table__amount">5 000 000</td><td class="faq-withdrawal-table__amount">20 000 000</td><td class="faq-withdrawal-table__amount">60 000 000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Trusted</strong></td><td class="faq-withdrawal-table__col-text">Vérifié + 90 jours d'historique propre</td><td class="faq-withdrawal-table__amount">3 000 000</td><td class="faq-withdrawal-table__amount">8 000 000</td><td class="faq-withdrawal-table__amount">35 000 000</td><td class="faq-withdrawal-table__amount">120 000 000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Bâtisseur du Marché</strong></td><td class="faq-withdrawal-table__col-text">Badge Market Builder (15 parrainages) ou statut partenaire</td><td class="faq-withdrawal-table__amount">5 000 000</td><td class="faq-withdrawal-table__amount">15 000 000</td><td class="faq-withdrawal-table__amount">60 000 000</td><td class="faq-withdrawal-table__amount">200 000 000</td></tr>
               </tbody>
             </table>
             </div>

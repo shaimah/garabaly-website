@@ -369,17 +369,24 @@
           <button class="faq-item__question">What are the wallet withdrawal limits?<i data-feather="chevron-down"></i></button>
           <div class="faq-item__answer">
             <p>Limits depend on your account status. The more verified your account and the cleaner your trading history, the higher your limits.</p>
-            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
-            <table style="width:100%;border-collapse:collapse;margin-top:var(--space-md);font-size:0.92rem;min-width:520px;">
+            <div class="faq-withdrawal-scroll" role="region" aria-label="Withdrawal limits by account tier">
+            <table class="faq-withdrawal-table">
               <thead>
-                <tr><th style="text-align:left;padding:6px;">Status</th><th style="text-align:left;padding:6px;">How to reach it</th><th style="text-align:right;padding:6px;">Per-tx</th><th style="text-align:right;padding:6px;">Daily</th><th style="text-align:right;padding:6px;">Weekly</th><th style="text-align:right;padding:6px;">Monthly</th></tr>
+                <tr>
+                  <th scope="col" class="faq-withdrawal-table__col-text">Status</th>
+                  <th scope="col" class="faq-withdrawal-table__col-text">How to reach it</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">Per-tx</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">Daily</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">Weekly</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">Monthly</th>
+                </tr>
               </thead>
               <tbody>
-                <tr><td style="padding:6px;"><strong>Cooling-off</strong></td><td style="padding:6px;">First 24h after account creation</td><td style="text-align:right;padding:6px;">blocked</td><td style="text-align:right;padding:6px;">blocked</td><td style="text-align:right;padding:6px;">blocked</td><td style="text-align:right;padding:6px;">blocked</td></tr>
-                <tr><td style="padding:6px;"><strong>Unverified</strong></td><td style="padding:6px;">Account created, not yet verified</td><td style="text-align:right;padding:6px;">100 000</td><td style="text-align:right;padding:6px;">200 000</td><td style="text-align:right;padding:6px;">600 000</td><td style="text-align:right;padding:6px;">2 000 000</td></tr>
-                <tr><td style="padding:6px;"><strong>Verified</strong></td><td style="padding:6px;">ID + selfie validated</td><td style="text-align:right;padding:6px;">2 000 000</td><td style="text-align:right;padding:6px;">5 000 000</td><td style="text-align:right;padding:6px;">20 000 000</td><td style="text-align:right;padding:6px;">60 000 000</td></tr>
-                <tr><td style="padding:6px;"><strong>Trusted</strong></td><td style="padding:6px;">Verified + 90 days of clean history</td><td style="text-align:right;padding:6px;">3 000 000</td><td style="text-align:right;padding:6px;">8 000 000</td><td style="text-align:right;padding:6px;">35 000 000</td><td style="text-align:right;padding:6px;">120 000 000</td></tr>
-                <tr><td style="padding:6px;"><strong>Market Builder</strong></td><td style="padding:6px;">Market Builder badge (15 same-role referrals) or partner status</td><td style="text-align:right;padding:6px;">5 000 000</td><td style="text-align:right;padding:6px;">15 000 000</td><td style="text-align:right;padding:6px;">60 000 000</td><td style="text-align:right;padding:6px;">200 000 000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Cooling-off</strong></td><td class="faq-withdrawal-table__col-text">First 24h after account creation</td><td class="faq-withdrawal-table__amount">blocked</td><td class="faq-withdrawal-table__amount">blocked</td><td class="faq-withdrawal-table__amount">blocked</td><td class="faq-withdrawal-table__amount">blocked</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Unverified</strong></td><td class="faq-withdrawal-table__col-text">Account created, not yet verified</td><td class="faq-withdrawal-table__amount">100 000</td><td class="faq-withdrawal-table__amount">200 000</td><td class="faq-withdrawal-table__amount">600 000</td><td class="faq-withdrawal-table__amount">2 000 000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Verified</strong></td><td class="faq-withdrawal-table__col-text">ID + selfie validated</td><td class="faq-withdrawal-table__amount">2 000 000</td><td class="faq-withdrawal-table__amount">5 000 000</td><td class="faq-withdrawal-table__amount">20 000 000</td><td class="faq-withdrawal-table__amount">60 000 000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Trusted</strong></td><td class="faq-withdrawal-table__col-text">Verified + 90 days of clean history</td><td class="faq-withdrawal-table__amount">3 000 000</td><td class="faq-withdrawal-table__amount">8 000 000</td><td class="faq-withdrawal-table__amount">35 000 000</td><td class="faq-withdrawal-table__amount">120 000 000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Market Builder</strong></td><td class="faq-withdrawal-table__col-text">Market Builder badge (15 same-role referrals) or partner status</td><td class="faq-withdrawal-table__amount">5 000 000</td><td class="faq-withdrawal-table__amount">15 000 000</td><td class="faq-withdrawal-table__amount">60 000 000</td><td class="faq-withdrawal-table__amount">200 000 000</td></tr>
               </tbody>
             </table>
             </div>

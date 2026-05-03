@@ -295,17 +295,24 @@
           <button class="faq-item__question">ما حدود السحب من المحفظة؟<i data-feather="chevron-down"></i></button>
           <div class="faq-item__answer">
             <p>تعتمد الحدود على حالة حسابك. كلما كان حسابك موثَّقاً أكثر وسجلّك أنظف، كانت حدودك أعلى.</p>
-            <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
-            <table style="width:100%;border-collapse:collapse;margin-top:var(--space-md);font-size:0.92rem;direction:rtl;min-width:520px;">
+            <div class="faq-withdrawal-scroll" role="region" aria-label="حدود السحب حسب حالة الحساب">
+            <table class="faq-withdrawal-table">
               <thead>
-                <tr><th style="text-align:right;padding:6px;">الحالة</th><th style="text-align:right;padding:6px;">كيفية الوصول</th><th style="text-align:left;padding:6px;">لكل عملية</th><th style="text-align:left;padding:6px;">يومياً</th><th style="text-align:left;padding:6px;">أسبوعياً</th><th style="text-align:left;padding:6px;">شهرياً</th></tr>
+                <tr>
+                  <th scope="col" class="faq-withdrawal-table__col-text">الحالة</th>
+                  <th scope="col" class="faq-withdrawal-table__col-text">كيفية الوصول</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">لكل عملية</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">يومياً</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">أسبوعياً</th>
+                  <th scope="col" class="faq-withdrawal-table__amount">شهرياً</th>
+                </tr>
               </thead>
               <tbody>
-                <tr><td style="padding:6px;"><strong>فترة الانتظار</strong></td><td style="padding:6px;">أول 24 ساعة بعد إنشاء الحساب</td><td style="text-align:left;padding:6px;">محجوب</td><td style="text-align:left;padding:6px;">محجوب</td><td style="text-align:left;padding:6px;">محجوب</td><td style="text-align:left;padding:6px;">محجوب</td></tr>
-                <tr><td style="padding:6px;"><strong>غير موثَّق</strong></td><td style="padding:6px;">حساب مُنشأ، التوثيق لم يتم</td><td style="text-align:left;padding:6px;">100,000</td><td style="text-align:left;padding:6px;">200,000</td><td style="text-align:left;padding:6px;">600,000</td><td style="text-align:left;padding:6px;">2,000,000</td></tr>
-                <tr><td style="padding:6px;"><strong>موثَّق</strong></td><td style="padding:6px;">الهوية والصورة الذاتية مُتحقَّق منها</td><td style="text-align:left;padding:6px;">2,000,000</td><td style="text-align:left;padding:6px;">5,000,000</td><td style="text-align:left;padding:6px;">20,000,000</td><td style="text-align:left;padding:6px;">60,000,000</td></tr>
-                <tr><td style="padding:6px;"><strong>Trusted</strong></td><td style="padding:6px;">موثَّق + 90 يوماً من السجل النظيف</td><td style="text-align:left;padding:6px;">3,000,000</td><td style="text-align:left;padding:6px;">8,000,000</td><td style="text-align:left;padding:6px;">35,000,000</td><td style="text-align:left;padding:6px;">120,000,000</td></tr>
-                <tr><td style="padding:6px;"><strong>Market Builder</strong></td><td style="padding:6px;">شارة Market Builder (15 إحالة) أو حالة شريك</td><td style="text-align:left;padding:6px;">5,000,000</td><td style="text-align:left;padding:6px;">15,000,000</td><td style="text-align:left;padding:6px;">60,000,000</td><td style="text-align:left;padding:6px;">200,000,000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>فترة الانتظار</strong></td><td class="faq-withdrawal-table__col-text">أول 24 ساعة بعد إنشاء الحساب</td><td class="faq-withdrawal-table__amount">محجوب</td><td class="faq-withdrawal-table__amount">محجوب</td><td class="faq-withdrawal-table__amount">محجوب</td><td class="faq-withdrawal-table__amount">محجوب</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>غير موثَّق</strong></td><td class="faq-withdrawal-table__col-text">حساب مُنشأ، التوثيق لم يتم</td><td class="faq-withdrawal-table__amount">100,000</td><td class="faq-withdrawal-table__amount">200,000</td><td class="faq-withdrawal-table__amount">600,000</td><td class="faq-withdrawal-table__amount">2,000,000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>موثَّق</strong></td><td class="faq-withdrawal-table__col-text">الهوية والصورة الذاتية مُتحقَّق منها</td><td class="faq-withdrawal-table__amount">2,000,000</td><td class="faq-withdrawal-table__amount">5,000,000</td><td class="faq-withdrawal-table__amount">20,000,000</td><td class="faq-withdrawal-table__amount">60,000,000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Trusted</strong></td><td class="faq-withdrawal-table__col-text">موثَّق + 90 يوماً من السجل النظيف</td><td class="faq-withdrawal-table__amount">3,000,000</td><td class="faq-withdrawal-table__amount">8,000,000</td><td class="faq-withdrawal-table__amount">35,000,000</td><td class="faq-withdrawal-table__amount">120,000,000</td></tr>
+                <tr><td class="faq-withdrawal-table__col-text"><strong>Market Builder</strong></td><td class="faq-withdrawal-table__col-text">شارة Market Builder (15 إحالة) أو حالة شريك</td><td class="faq-withdrawal-table__amount">5,000,000</td><td class="faq-withdrawal-table__amount">15,000,000</td><td class="faq-withdrawal-table__amount">60,000,000</td><td class="faq-withdrawal-table__amount">200,000,000</td></tr>
               </tbody>
             </table>
             </div>

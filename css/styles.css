@@ -1471,7 +1471,69 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   line-height: 1.8;
 }
 
-/* --- Contact Form --- */
+/* FAQ: wallet withdrawal tier table — wide layout + horizontal scroll, no broken amounts */
+.faq-withdrawal-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: var(--space-md);
+  border-radius: var(--border-radius-sm);
+  box-shadow: inset 0 0 0 1px rgba(200, 121, 65, 0.18);
+}
+
+[data-theme="dark"] .faq-withdrawal-scroll {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.faq-withdrawal-table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: var(--surface);
+}
+
+.faq-withdrawal-table thead th {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  border-bottom: 2px solid rgba(200, 121, 65, 0.22);
+  padding: 10px 12px;
+  vertical-align: bottom;
+}
+
+.faq-withdrawal-table tbody td {
+  border-bottom: 1px solid rgba(200, 121, 65, 0.12);
+  color: var(--text-secondary);
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+[data-theme="dark"] .faq-withdrawal-table thead th {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .faq-withdrawal-table tbody td {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.faq-withdrawal-table__col-text {
+  text-align: start;
+  max-width: 15rem;
+}
+
+.faq-withdrawal-table__amount {
+  text-align: center;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  min-width: 6.75rem;
+  vertical-align: middle !important;
+}
+
+.faq-withdrawal-table thead .faq-withdrawal-table__amount {
+  white-space: nowrap;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
