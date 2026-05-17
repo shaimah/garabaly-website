@@ -1484,11 +1484,32 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   margin: 0;
 }
 
-/* Mid-story pivot — centered italic, no box (one highlight band at the end only) */
+/* Story pivot — centered pair above the closing band */
+.founder-pivot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+  margin: var(--space-lg) 0;
+  padding: var(--space-md) 0;
+  text-align: center;
+}
+
+.founder-pivot-line {
+  font: var(--font-h3);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  max-width: 42rem;
+  line-height: 1.5;
+}
+
 .founder-callout {
   width: 100%;
-  margin: var(--space-md) 0;
-  padding: var(--space-lg) var(--space-xl);
+  margin: 0;
+  padding: 0 var(--space-xl);
   border: none;
   background: none;
   text-align: center;
