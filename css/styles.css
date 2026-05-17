@@ -1402,7 +1402,10 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 }
 
 .founder-showcase.image-showcase {
-  aspect-ratio: 21 / 9;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: min(92vw, 640px);
+  margin-inline: auto;
 }
 
 .founder-showcase.image-showcase img {
@@ -1411,7 +1414,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   min-height: 0;
   max-height: none;
   object-fit: cover;
-  object-position: 50% 8%;
+  object-position: 50% 14%;
 }
 
 .founder-credibility {
@@ -1546,11 +1549,12 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 
 @media (max-width: 768px) {
   .founder-showcase.image-showcase {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
+    max-height: none;
   }
 
   .founder-showcase.image-showcase img {
-    object-position: 50% 12%;
+    object-position: 50% 16%;
   }
 }
 
