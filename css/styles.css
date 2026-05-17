@@ -1385,6 +1385,115 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   min-height: 350px;
 }
 
+/* --- About: Founder --- */
+#founder {
+  scroll-margin-top: calc(var(--header-height) + var(--space-lg));
+}
+
+.founder-block {
+  display: grid;
+  grid-template-columns: minmax(200px, 240px) 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.founder-portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(200, 121, 65, 0.45);
+  box-shadow: var(--shadow-md);
+  margin: 0 auto var(--space-lg);
+}
+
+.founder-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.founder-block__name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.founder-block__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.founder-story p {
+  font: var(--font-body);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+
+.founder-story p:last-child {
+  margin-bottom: 0;
+}
+
+.founder-pull-quote {
+  margin: var(--space-xl) 0 var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  border-inline-start: 3px solid var(--primary);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.founder-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-weight: 700;
+  color: var(--primary);
+  transition: color var(--transition-fast);
+}
+
+.founder-link:hover {
+  color: var(--primary-dark);
+}
+
+.founder-link i {
+  width: 18px;
+  height: 18px;
+}
+
+.footer__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__rccm {
+  color: var(--text-tertiary);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .founder-block {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .founder-block__media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* --- Stats Bar --- */
 .stats-bar {
   display: flex;
