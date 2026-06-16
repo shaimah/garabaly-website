@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initValueCards();
   initLangSwitcher();
   initFloatingMobileCta();
+  initRevolutionQr();
 });
 
 /* --- Sticky Header --- */
@@ -401,29 +402,18 @@ function initLangSwitcher() {
       let locale = 'en';
       if (href.includes('/fr/')) locale = 'fr';
       if (href.includes('/ar/')) locale = 'ar';
+      // Pack 2 Task 2: persist the manual choice so auto-detect never overrides it.
+      localStorage.setItem('garabaly_lang_pref', locale);
       localStorage.setItem('garabaly-locale', locale);
     });
   });
 }
 
 function initLocaleRouting() {
-  const path = window.location.pathname;
-  const savedLocale = localStorage.getItem('garabaly-locale');
-  const isRootHome = path === '/' || path.endsWith('/index.html');
-  const isFrenchHome = path.includes('/fr/index.html');
-  const isArabicHome = path.includes('/ar/index.html');
-
-  if (isFrenchHome) localStorage.setItem('garabaly-locale', 'fr');
-  if (isArabicHome) localStorage.setItem('garabaly-locale', 'ar');
-
-  if (!isRootHome) return;
-
-  const target = savedLocale || 'fr';
-  if (target === 'fr') {
-    window.location.replace('fr/index.html');
-  } else if (target === 'ar') {
-    window.location.replace('ar/index.html');
-  }
+  // First-visit language routing is handled by the inline <head> script on the
+  // root index.html (Pack 2, Task 2): it browser-detects FR/AR (EN fallback) and
+  // respects a manual choice stored under 'garabaly_lang_pref'. No automatic
+  // redirect happens here anymore, so the two never conflict.
 }
 
 function initFloatingMobileCta() {
@@ -466,4 +456,17 @@ function toggleValueCard(btn) {
   const isExpanded = desc.classList.contains('expanded');
   desc.classList.toggle('expanded');
   btn.textContent = isExpanded ? 'Read more' : 'Show less';
+}
+
+/* --- Pack 2 Task 6: "the revolution, scannable" QR — scan-reveal on scroll-in --- */
+function initRevolutionQr() {
+  const el = document.querySelector('.qr-revolution');
+  if (!el) return;
+  if (!('IntersectionObserver' in window)) { el.classList.add('in-view'); return; }
+  const io = new IntersectionObserver(function (entries, o) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in-view'); o.unobserve(e.target); }
+    });
+  }, { threshold: 0.4 });
+  io.observe(el);
 }
