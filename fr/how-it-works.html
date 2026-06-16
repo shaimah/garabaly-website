@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#2D2D2D">
   <title>Comment ça marche — Garabaly</title>
   <meta name="description" content="Découvrez comment fonctionne le marketplace de bétail Garabaly avec protection par séquestre. Parcourez, négociez, payez en toute sécurité et recevez en confiance.">
   <link rel="canonical" href="https://www.garabaly.com/fr/how-it-works.html">
@@ -10,7 +12,7 @@
   <link rel="alternate" hreflang="fr" href="https://www.garabaly.com/fr/how-it-works.html">
   <link rel="alternate" hreflang="ar" href="https://www.garabaly.com/ar/how-it-works.html">
   <link rel="alternate" hreflang="x-default" href="https://www.garabaly.com/how-it-works.html">
-  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -22,7 +24,7 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="index.html" class="header__logo">
-        <img src="../assets/images/logo.png" alt="Logo Garabaly">
+        <img src="../assets/images/logo.svg" alt="Logo Garabaly">
         <span class="header__logo-text">Garabaly</span>
       </a>
       <nav class="header__nav">
@@ -242,7 +244,11 @@
     <div class="container">
       <div class="image-text-row">
         <div class="image-showcase reveal">
-          <img src="../assets/images/verification.png" alt="Vérification sécurisée sur téléphone mobile">
+          <picture>
+            <source type="image/avif" srcset="../assets/images/verification-480.avif 480w, ../assets/images/verification-768.avif 768w, ../assets/images/verification-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <source type="image/webp" srcset="../assets/images/verification-480.webp 480w, ../assets/images/verification-768.webp 768w, ../assets/images/verification-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <img src="../assets/images/verification-1024.jpg" alt="Vérification sécurisée sur téléphone mobile" width="1024" height="1536" loading="eager" fetchpriority="high" decoding="async">
+          </picture>
         </div>
         <div class="reveal">
           <span class="section-eyebrow">Le cœur de Garabaly</span>
@@ -370,7 +376,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="header__logo">
-            <img src="../assets/images/logo.png" alt="Logo Garabaly" style="filter: brightness(0) invert(1);">
+            <img src="../assets/images/logo.svg" alt="Logo Garabaly" style="filter: brightness(0) invert(1);">
             <span class="header__logo-text">Garabaly</span>
           </a>
           <p class="footer__motto">Votre bétail. Votre argent. Votre confiance.</p>
