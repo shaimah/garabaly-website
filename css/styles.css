@@ -3587,7 +3587,7 @@ html[lang="ar"] {
 .qr-revolution::after{content:"";position:absolute;left:0;right:0;top:0;height:18%;border-radius:8px;
   background:linear-gradient(180deg,rgba(232,184,84,0)0%,rgba(232,184,84,.55)50%,rgba(232,184,84,0)100%);opacity:0;pointer-events:none}
 .qr-revolution.in-view{animation:qrTiltIn .7s cubic-bezier(.2,.8,.2,1) 1, qrFloat 6s ease-in-out infinite .7s}
-.qr-revolution.in-view::after{animation:qrScan 1.6s ease-out 1}
+.qr-revolution.in-view::after{animation:qrScan 1.5s ease-out 3}
 @keyframes qrScan{0%{top:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{top:82%;opacity:0}}
 @keyframes qrTiltIn{0%{transform:perspective(800px) rotateX(12deg) translateY(14px);opacity:0}100%{transform:perspective(800px) rotateX(0) translateY(0);opacity:1}}
 @keyframes qrFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
