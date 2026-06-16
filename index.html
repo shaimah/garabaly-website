@@ -2,6 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>
+  (function () {
+    try {
+      var KEY = 'garabaly_lang_pref';
+      if (localStorage.getItem(KEY)) return;
+      if (/^\/(fr|ar)\//.test(location.pathname)) return;
+      var lang = (navigator.language || 'en').slice(0,2).toLowerCase();
+      if (lang === 'fr') location.replace('/fr/' + location.search);
+      else if (lang === 'ar') location.replace('/ar/' + location.search);
+    } catch (e) {}
+  })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
   <meta name="theme-color" content="#2D2D2D">
@@ -41,17 +54,17 @@
 }
   </script>
 
-  <!-- Google Fonts: Nunito -->
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Feather Icons -->
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
   <!-- Styles -->
     <link rel="preload" as="image" type="image/avif" imagesrcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/styles.css?v=2">
 </head>
 <body>
 
@@ -159,7 +172,7 @@
       </h1>
       <p class="hero__motto">Your livestock. Your money. Your trust.</p>
       <p class="hero__subtitle">
-        From Sahelian herders to diaspora buyers. Real negotiation. Real escrow. Real trust. Because trust isn't built with a checkout button.
+        A $1 billion+ trade across West Africa and the Sahel still runs on cash, distance, and blind trust. Garabaly is the trust layer it never had.
       </p>
       <div class="hero__actions">
         <a href="get-the-app.html" class="btn btn--primary btn--lg">
@@ -242,7 +255,7 @@
           </div>
           <h3 class="feature-card__title">Escrow Protection</h3>
           <p class="feature-card__desc">
-            Your money stays locked until the cow is in your compound. Period. Free for buyers — no fees, no commissions. Per-party staged escrow with military-grade transaction verification. Bank-level encrypted confirmation codes. Seller payment held for 24-hour dispute window — service providers paid immediately. World-class security — not just words.
+            Your money stays locked until the cow is in your compound. Period. 0% for buyers, always. Sellers pay 5% — and only ever less — charged only once you've been paid. Per-party staged escrow with military-grade transaction verification. Bank-level encrypted confirmation codes. Seller payment held for 24-hour dispute window — service providers paid immediately. World-class security — not just words.
           </p>
         </div>
 
@@ -487,7 +500,7 @@
         <div class="payment-row"><strong>Mobile Money</strong><span class="status-pill status-pill--live">LIVE</span><span>Orange Money, Moov Money, Wave among several others</span></div>
         <div class="payment-row"><strong>Card Payments</strong><span class="status-pill status-pill--live">LIVE</span><span>Visa, Mastercard (135+ currencies via Stripe)</span></div>
         <div class="payment-row"><strong>Garabaly Wallet</strong><span class="status-pill status-pill--live">LIVE</span><span>Load via card or mobile money, instant wallet-to-wallet</span></div>
-        <div class="payment-row"><strong>Bank Withdrawal</strong><span class="status-pill status-pill--live">LIVE</span><span>WAEMU XOF bank accounts (manually processed)</span></div>
+        <div class="payment-row"><strong>Bank Withdrawal</strong><span class="status-pill status-pill--live">LIVE</span><span>WAEMU XOF bank accounts (manually processed)</span></div><!-- TODO: broaden to CEMAC (XAF) accounts when Cameroun confirmed live -->
       </div>
       <p class="section-subtitle text-center reveal" style="margin: var(--space-lg) auto 0;">Countries with mobile money: Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, Cameroun</p>
       <p class="text-center reveal" style="margin-top: var(--space-sm);">Card payments accepted from anywhere in the world.</p>
@@ -672,7 +685,7 @@
               </div>
               <div class="trust-feature__text">
                 <h4>See the Joy</h4>
-                <p>Video-call your family and share in the moment — connection across miles.</p>
+                <p>Call them on WhatsApp the moment it arrives — and share in the joy across the miles.</p>
                 <p><a href="faq.html" class="inline-faq-link">Your family doesn't need the app — you handle everything. -> Learn more</a></p>
               </div>
             </div>
@@ -884,6 +897,12 @@
           <div class="stat-item__label">Dedicated Livestock Marketplaces Before Garabaly</div>
         </div>
       </div>
+      <div class="qr-revolution-wrap" style="text-align:center;margin-top:var(--space-2xl)">
+        <a class="qr-revolution" href="https://garabaly.replit.app/profile/test-seller-amadou" target="_blank" rel="noopener noreferrer" aria-label="Scan to open a live verified seller profile">
+          <img src="assets/images/qr-revolution.webp" width="160" height="160" alt="QR code — scan to open a live verified seller profile" loading="lazy" decoding="async">
+          <span class="qr-revolution__label">Scan me</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -994,7 +1013,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/main.js?v=5"></script>
+  <script src="js/main.js?v=6"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>
