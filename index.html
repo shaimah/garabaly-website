@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#2D2D2D">
   <title>Garabaly - Livestock Marketplace | West Africa</title>
   <meta name="description" content="Garabaly: Your livestock. Your money. Your trust. Secure marketplace for West Africa — escrow protection, mobile money, voice-first, offline-ready. Cattle, sheep, goats, camels, poultry.">
   <meta name="keywords" content="livestock marketplace, buy livestock, sell cattle, West Africa trade, livestock escrow, mobile money, West Africa, Sahel, Senegal, Mali, Nigeria, Ghana">
-  <link rel="canonical" href="https://www.garabaly.com/index.html">
+  <link rel="canonical" href="https://www.garabaly.com/">
   <link rel="alternate" hreflang="en" href="https://www.garabaly.com/index.html">
   <link rel="alternate" hreflang="fr" href="https://www.garabaly.com/fr/index.html">
   <link rel="alternate" hreflang="ar" href="https://www.garabaly.com/ar/index.html">
@@ -23,7 +25,7 @@
   <meta name="twitter:title" content="Garabaly - Livestock Marketplace West Africa">
   <meta name="twitter:description" content="Your livestock. Your money. Your trust. Escrow, mobile money, voice-first — West Africa.">
   <meta name="twitter:image" content="https://www.garabaly.com/assets/images/logo.png">
-  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
 
   <!-- Schema.org Organization -->
   <script type="application/ld+json">
@@ -48,7 +50,8 @@
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" as="image" type="image/avif" imagesrcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -87,7 +90,7 @@
   <header class="header header--transparent" id="header">
     <div class="container header__inner">
       <a href="index.html" class="header__logo">
-        <img src="assets/images/logo.png" alt="Garabaly Logo">
+        <img src="assets/images/logo.svg" alt="Garabaly Logo">
         <span class="header__logo-text">Garabaly</span>
       </a>
 
@@ -139,7 +142,11 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
     <div class="hero__bg">
-      <img src="assets/images/hero-banner.png" alt="Fulani herder with Zebu cattle at golden hour in the West African Sahel">
+      <picture>
+        <source type="image/avif" srcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" sizes="100vw">
+        <source type="image/webp" srcset="assets/images/hero-banner-480.webp 480w, assets/images/hero-banner-768.webp 768w, assets/images/hero-banner-1280.webp 1280w, assets/images/hero-banner-1536.webp 1536w" sizes="100vw">
+        <img src="assets/images/hero-banner-1280.jpg" alt="Fulani herder with Zebu cattle at golden hour in the West African Sahel" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async">
+      </picture>
     </div>
     <div class="hero__overlay"></div>
     <div class="hero__glow"></div>
@@ -166,11 +173,11 @@
       </div>
       <div class="hero__stats">
         <div class="hero__stat">
-          <div class="hero__stat-value" data-count="1000000000" data-suffix="+" data-prefix="$">0</div>
+          <div class="hero__stat-value" data-count="1000000000" data-suffix="+" data-prefix="$">$1B+</div>
           <div class="hero__stat-label">Livestock Traded Annually (OECD)</div>
         </div>
         <div class="hero__stat">
-          <div class="hero__stat-value" data-count="860000" data-suffix="+">0</div>
+          <div class="hero__stat-value" data-count="860000" data-suffix="+">860K+</div>
           <div class="hero__stat-label">Sheep for Tabaski in Senegal (APS 2026)</div>
         </div>
         <div class="hero__stat">
@@ -317,7 +324,11 @@
     <div class="container">
       <div class="trust-grid">
         <div class="trust-image reveal">
-          <img src="assets/images/herder-portrait.png" alt="Fulani herder with cattle at golden hour in the Sahel" style="object-position: center 5%;">
+          <picture>
+            <source type="image/avif" srcset="assets/images/herder-portrait-480.avif 480w, assets/images/herder-portrait-768.avif 768w, assets/images/herder-portrait-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <source type="image/webp" srcset="assets/images/herder-portrait-480.webp 480w, assets/images/herder-portrait-768.webp 768w, assets/images/herder-portrait-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <img src="assets/images/herder-portrait-1024.jpg" alt="Fulani herder with cattle at golden hour in the Sahel" style="object-position: center 5%;" width="1024" height="1536" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="trust-content reveal">
           <span class="section-eyebrow">Culture-First Design</span>
@@ -488,7 +499,11 @@
     <div class="container">
       <div class="trust-grid">
         <div class="trust-image reveal">
-          <img src="assets/images/verification.png" alt="Mobile verification on Garabaly app">
+          <picture>
+            <source type="image/avif" srcset="assets/images/verification-480.avif 480w, assets/images/verification-768.avif 768w, assets/images/verification-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <source type="image/webp" srcset="assets/images/verification-480.webp 480w, assets/images/verification-768.webp 768w, assets/images/verification-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <img src="assets/images/verification-1024.jpg" alt="Mobile verification on Garabaly app" width="1024" height="1536" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="trust-content reveal">
           <span class="section-eyebrow">Your Money is Safe</span>
@@ -618,7 +633,11 @@
     <div class="container">
       <div class="image-text-row image-text-row--reverse">
         <div class="image-showcase reveal">
-          <img src="assets/images/diaspora.png" alt="Young man in diaspora video-calling family and buying livestock through Garabaly">
+          <picture>
+            <source type="image/avif" srcset="assets/images/diaspora-480.avif 480w, assets/images/diaspora-768.avif 768w, assets/images/diaspora-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <source type="image/webp" srcset="assets/images/diaspora-480.webp 480w, assets/images/diaspora-768.webp 768w, assets/images/diaspora-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <img src="assets/images/diaspora-1024.jpg" alt="Young man in diaspora video-calling family and buying livestock through Garabaly" width="1024" height="1536" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="reveal">
           <span class="section-eyebrow">For the Diaspora</span>
@@ -668,7 +687,11 @@
     <div class="container">
       <div class="image-text-row">
         <div class="image-showcase reveal">
-          <img src="assets/images/vet-check.png" alt="Veterinarian examining livestock with health certificate">
+          <picture>
+            <source type="image/avif" srcset="assets/images/vet-check-480.avif 480w, assets/images/vet-check-768.avif 768w, assets/images/vet-check-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <source type="image/webp" srcset="assets/images/vet-check-480.webp 480w, assets/images/vet-check-768.webp 768w, assets/images/vet-check-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <img src="assets/images/vet-check-1024.jpg" alt="Veterinarian examining livestock with health certificate" width="1024" height="1536" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="reveal">
           <span class="section-eyebrow">Quality Assurance</span>
@@ -794,7 +817,11 @@
     <div class="container">
       <div class="image-text-row image-text-row--reverse">
         <div class="image-showcase reveal">
-          <img src="assets/images/delivery.png" alt="Livestock delivery via motorcycle in West Africa">
+          <picture>
+            <source type="image/avif" srcset="assets/images/delivery-480.avif 480w, assets/images/delivery-768.avif 768w, assets/images/delivery-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <source type="image/webp" srcset="assets/images/delivery-480.webp 480w, assets/images/delivery-768.webp 768w, assets/images/delivery-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <img src="assets/images/delivery-1024.jpg" alt="Livestock delivery via motorcycle in West Africa" width="1024" height="1536" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="reveal">
           <span class="section-eyebrow">End-to-End Service</span>
@@ -841,15 +868,15 @@
     <div class="container">
       <div class="stats-bar reveal">
         <div class="stat-item">
-          <div class="stat-item__value" data-count="96400000000" data-prefix="$">0</div>
+          <div class="stat-item__value" data-count="96400000000" data-prefix="$">$96.4B</div>
           <div class="stat-item__label">Remittances to Africa (World Bank 2024)</div>
         </div>
         <div class="stat-item">
-          <div class="stat-item__value" data-count="860000" data-suffix="+">0</div>
+          <div class="stat-item__value" data-count="860000" data-suffix="+">860K+</div>
           <div class="stat-item__label">Sheep for Tabaski in Senegal (APS 2026)</div>
         </div>
         <div class="stat-item">
-          <div class="stat-item__value" data-count="485000000">0</div>
+          <div class="stat-item__value" data-count="485000000">485M</div>
           <div class="stat-item__label">Mobile Money Accounts in West Africa (GSMA)</div>
         </div>
         <div class="stat-item">
@@ -885,7 +912,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="index.html" class="header__logo">
-            <img src="assets/images/logo.png" alt="Garabaly Logo" style="filter: brightness(0) invert(1);">
+            <img src="assets/images/logo.svg" alt="Garabaly Logo" style="filter: brightness(0) invert(1);">
             <span class="header__logo-text">Garabaly</span>
           </a>
           <p class="footer__motto">Your livestock. Your money. Your trust.</p>
