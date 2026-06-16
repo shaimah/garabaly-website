@@ -64,7 +64,7 @@
 
   <!-- Styles -->
     <link rel="preload" as="image" type="image/avif" imagesrcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="css/styles.css?v=4">
+<link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
 
@@ -200,7 +200,7 @@
       </div>
       <div class="qr-revolution-wrap" style="text-align:center;margin-top:var(--space-lg)">
         <a class="qr-revolution" href="https://garabaly.replit.app/profile/test-seller-amadou" target="_blank" rel="noopener noreferrer" aria-label="Scan to open a live verified seller profile">
-          <img src="assets/images/qr-revolution.webp" width="140" height="140" alt="QR code — scan to open a live verified seller profile" loading="eager" decoding="async">
+          <span class="qr-revolution__frame"><img src="assets/images/qr-revolution.webp" width="140" height="140" alt="QR code — scan to open a live verified seller profile" loading="eager" decoding="async"></span>
           <span class="qr-revolution__label">Scan me</span>
         </a>
       </div>
@@ -507,6 +507,7 @@
         <div class="payment-row"><strong>Card Payments</strong><span class="status-pill status-pill--live">LIVE</span><span>Visa, Mastercard (135+ currencies via Stripe)</span></div>
         <div class="payment-row"><strong>Garabaly Wallet</strong><span class="status-pill status-pill--live">LIVE</span><span>Load via card or mobile money, instant wallet-to-wallet</span></div>
         <div class="payment-row"><strong>Bank Withdrawal</strong><span class="status-pill status-pill--live">LIVE</span><span>WAEMU XOF bank accounts (manually processed)</span></div><!-- TODO: broaden to CEMAC (XAF) accounts when Cameroun confirmed live -->
+        <div class="payment-row"><strong>Cash</strong><span class="status-pill status-pill--direct">DIRECT</span><span>Paid directly to the seller or provider — no escrow, not protected by Garabaly. Use at your own risk.</span></div>
       </div>
       <p class="section-subtitle text-center reveal" style="margin: var(--space-lg) auto 0;">Countries with mobile money: Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, Cameroun</p>
       <p class="text-center reveal" style="margin-top: var(--space-sm);">Card payments accepted from anywhere in the world.</p>
