@@ -3592,3 +3592,6 @@ html[lang="ar"] {
 @keyframes qrTiltIn{0%{transform:perspective(800px) rotateX(12deg) translateY(14px);opacity:0}100%{transform:perspective(800px) rotateX(0) translateY(0);opacity:1}}
 @keyframes qrFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @media (prefers-reduced-motion:reduce){.qr-revolution,.qr-revolution.in-view{animation:none}.qr-revolution.in-view::after{animation:none;opacity:0}}
+
+/* Pack 2 follow-up: center the "Invite & Earn" referral CTA buttons (all locales) */
+#invite-earn .btn-group { justify-content: center; }
