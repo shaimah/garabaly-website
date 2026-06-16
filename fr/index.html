@@ -31,7 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=4">
+<link rel="stylesheet" href="../css/styles.css?v=5">
 </head>
 <body>
 
@@ -158,7 +158,7 @@
       </div>
       <div class="qr-revolution-wrap" style="text-align:center;margin-top:var(--space-lg)">
         <a class="qr-revolution" href="https://garabaly.replit.app/profile/test-seller-amadou" target="_blank" rel="noopener noreferrer" aria-label="Scannez pour voir un profil vendeur vérifié en direct">
-          <img src="../assets/images/qr-revolution.webp" width="140" height="140" alt="QR code — scan to open a live verified seller profile" loading="eager" decoding="async">
+          <span class="qr-revolution__frame"><img src="../assets/images/qr-revolution.webp" width="140" height="140" alt="QR code — scan to open a live verified seller profile" loading="eager" decoding="async"></span>
           <span class="qr-revolution__label">Scannez-moi</span>
         </a>
       </div>
@@ -288,6 +288,13 @@
         <div class="feature-card reveal"><h3 class="feature-card__title">2. Invitez des vendeurs</h3><p class="feature-card__desc">Aidez un eleveur a rejoindre la plateforme. Quand il realise sa premiere vente, vous gagnez un bonus.</p></div>
         <div class="feature-card reveal"><h3 class="feature-card__title">3. Invitez des prestataires</h3><p class="feature-card__desc">Vous connaissez un boucher, un veterinaire ou un livreur ? Connectez-les au reseau Garabaly.</p></div>
       </div>
+      <div class="reveal" style="margin-top: var(--space-xl);">
+        <p><strong>Ce que vous obtenez :</strong> 2 000 XOF de crédit bonus par parrainage réussi, 500 XOF de bonus de bienvenue par nouvelle invitation, et des réductions de frais à mesure que vous progressez (Bronze 5+, Argent 15+, Or 30+ parrainages).</p>
+        <div class="btn-group" style="margin-top: var(--space-md);">
+          <a href="#" class="btn btn--primary">Partager via WhatsApp</a>
+          <a href="#" class="btn btn--secondary">Copier le lien de parrainage</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -302,6 +309,7 @@
         <div class="payment-row"><strong>Paiement par carte</strong><span class="status-pill status-pill--live">LIVE</span><span>Visa, Mastercard (135+ devises via Stripe)</span></div>
         <div class="payment-row"><strong>Portefeuille Garabaly</strong><span class="status-pill status-pill--live">LIVE</span><span>Recharge par carte ou mobile money, transferts instantanes</span></div>
         <div class="payment-row"><strong>Retrait bancaire</strong><span class="status-pill status-pill--live">LIVE</span><span>Comptes bancaires XOF UEMOA (traitement manuel)</span></div><!-- TODO: broaden to CEMAC (XAF) accounts when Cameroun confirmed live -->
+        <div class="payment-row"><strong>Espèces</strong><span class="status-pill status-pill--direct">DIRECT</span><span>Payées directement au vendeur ou au prestataire — pas de séquestre, non protégé par Garabaly. À utiliser à vos risques.</span></div>
       </div>
     </div>
   </section>

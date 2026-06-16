@@ -31,7 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=4">
+<link rel="stylesheet" href="../css/styles.css?v=5">
 </head>
 <body>
 
@@ -158,7 +158,7 @@
       </div>
       <div class="qr-revolution-wrap" style="text-align:center;margin-top:var(--space-lg)">
         <a class="qr-revolution" href="https://garabaly.replit.app/profile/test-seller-amadou" target="_blank" rel="noopener noreferrer" aria-label="امسح لفتح ملف بائع موثّق مباشر">
-          <img src="../assets/images/qr-revolution.webp" width="140" height="140" alt="QR code — scan to open a live verified seller profile" loading="eager" decoding="async">
+          <span class="qr-revolution__frame"><img src="../assets/images/qr-revolution.webp" width="140" height="140" alt="QR code — scan to open a live verified seller profile" loading="eager" decoding="async"></span>
           <span class="qr-revolution__label">امسحني</span>
         </a>
       </div>
@@ -288,6 +288,13 @@
         <div class="feature-card reveal"><h3 class="feature-card__title">2) ادعُ البائعين</h3><p class="feature-card__desc">عندما يُتم البائع أول عملية بيع تحصل على بونص.</p></div>
         <div class="feature-card reveal"><h3 class="feature-card__title">3) ادعُ مقدمي الخدمات</h3><p class="feature-card__desc">اعرف جزاراً أو طبيباً بيطرياً أو سائق توصيل؟ ضمه إلى شبكة غرابالي.</p></div>
       </div>
+      <div class="reveal" style="margin-top: var(--space-xl);">
+        <p><strong>ما تحصل عليه:</strong> 2,000 فرنك XOF رصيد إضافي عن كل إحالة ناجحة، و500 فرنك XOF مكافأة ترحيب عن كل دعوة جديدة، وتخفيضات على الرسوم كلما تقدّمت (برونزي 5+، فضي 15+، ذهبي 30+ إحالة).</p>
+        <div class="btn-group" style="margin-top: var(--space-md);">
+          <a href="#" class="btn btn--primary">المشاركة عبر WhatsApp</a>
+          <a href="#" class="btn btn--secondary">نسخ رابط الإحالة</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -302,6 +309,7 @@
         <div class="payment-row"><strong>البطاقات</strong><span class="status-pill status-pill--live">LIVE</span><span>Visa وMastercard (135+ عملة عبر Stripe)</span></div>
         <div class="payment-row"><strong>محفظة غرابالي</strong><span class="status-pill status-pill--live">LIVE</span><span>شحن بالبطاقة أو mobile money وتحويلات فورية</span></div>
         <div class="payment-row"><strong>سحب بنكي</strong><span class="status-pill status-pill--live">LIVE</span><span>حسابات XOF في منطقة UEMOA (معالجة يدوية)</span></div><!-- TODO: broaden to CEMAC (XAF) accounts when Cameroun confirmed live -->
+        <div class="payment-row"><strong>نقد</strong><span class="status-pill status-pill--direct">مباشر</span><span>يُدفع مباشرة إلى البائع أو مقدّم الخدمة — لا ضمان، وغير محمي من Garabaly. استخدم على مسؤوليتك.</span></div>
       </div>
     </div>
   </section>
