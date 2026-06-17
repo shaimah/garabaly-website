@@ -63,14 +63,14 @@
   <main class="section" style="min-height: 70vh; display: flex; align-items: center; text-align: center; padding-top: 120px;">
     <div class="container" style="max-width: 640px;">
       <p style="font-size: clamp(5rem, 18vw, 9rem); font-weight: 800; line-height: 1; color: var(--primary, #B15A38); margin: 0;">404</p>
-      <h1 style="margin: 16px 0 8px;">This trail leads nowhere</h1>
-      <p style="font-size: 1.15rem; opacity: 0.8; margin-bottom: 32px;">
+      <h1 style="margin: 16px 0 8px;" data-404-title>This trail leads nowhere</h1>
+      <p style="font-size: 1.15rem; opacity: 0.8; margin-bottom: 32px;" data-404-body>
         The page you're looking for may have moved or no longer exists. Let's get you back on the right path.
       </p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="/index.html" class="btn btn--primary btn--lg">
+        <a href="/index.html" class="btn btn--primary btn--lg" data-404-cta>
           <i data-feather="home"></i>
-          Back to Home
+          <span data-404-cta-label>Back to Home</span>
         </a>
         <a href="/faq.html" class="btn btn--outline btn--lg">
           <i data-feather="help-circle"></i>
@@ -129,5 +129,23 @@
 
   <script src="/js/main.js?v=7"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
+  <!-- Hotfix: language-aware 404 (one root 404.html serves every locale on GitHub Pages) -->
+  <script>
+  (function(){
+    var pref=null; try{ pref=localStorage.getItem('garabaly_lang_pref'); }catch(e){}
+    var lang=pref||(navigator.language||'en').slice(0,2).toLowerCase();
+    if(lang!=='fr'&&lang!=='ar') lang='en';
+    var T={
+      en:{t:"This trail leads nowhere",b:"The page you're looking for may have moved or no longer exists. Let's get you back on the right path.",c:"Back to Home",href:"/"},
+      fr:{t:"Cette piste ne mène nulle part",b:"La page que vous cherchez a peut-être été déplacée ou n'existe plus. Revenons sur le bon chemin.",c:"Retour à l'accueil",href:"/fr/"},
+      ar:{t:"هذا الطريق لا يؤدي إلى شيء",b:"الصفحة التي تبحث عنها ربما نُقِلت أو لم تعد موجودة. لنُعِدك إلى المسار الصحيح.",c:"العودة إلى الصفحة الرئيسية",href:"/ar/"}
+    }[lang];
+    document.documentElement.lang=lang;
+    document.documentElement.dir=(lang==='ar')?'rtl':'ltr';
+    var h=document.querySelector('[data-404-title]'); if(h) h.textContent=T.t;
+    var p=document.querySelector('[data-404-body]'); if(p) p.textContent=T.b;
+    var a=document.querySelector('[data-404-cta]'); if(a){ a.setAttribute('href',T.href); var lbl=a.querySelector('[data-404-cta-label]')||a; lbl.textContent=T.c; }
+  })();
+  </script>
 </body>
 </html>
