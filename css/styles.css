@@ -3599,3 +3599,13 @@ html[lang="ar"] {
 
 /* Pack 2 follow-up: center the "Invite & Earn" referral CTA buttons (all locales) */
 #invite-earn .btn-group { justify-content: center; }
+
+/* ===== Pack 3 Task 3: accessibility — skip link + visible keyboard focus ===== */
+.skip-link{position:absolute;left:8px;top:-56px;z-index:2000;background:#2D2D2D;color:#fff;
+  padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:8px}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visible,
+textarea:focus-visible,select:focus-visible,summary:focus-visible{
+  outline:3px solid #B8862F;outline-offset:2px;border-radius:4px}
+[data-theme="dark"] a:focus-visible,[data-theme="dark"] button:focus-visible,
+[data-theme="dark"] [tabindex]:focus-visible{outline-color:#E8B854}
