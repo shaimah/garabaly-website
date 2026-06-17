@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLangSwitcher();
   initFloatingMobileCta();
   initRevolutionQr();
+  initTracking();
 });
 
 /* --- Sticky Header --- */
@@ -133,6 +134,7 @@ function initFaqAccordion() {
       // Open clicked one (if it wasn't already open)
       if (!isActive) {
         item.classList.add('active');
+        if (typeof track === 'function') track('faq_expand', { id: item.id || '' });
       }
     });
   });
@@ -405,6 +407,7 @@ function initLangSwitcher() {
       // Pack 2 Task 2: persist the manual choice so auto-detect never overrides it.
       localStorage.setItem('garabaly_lang_pref', locale);
       localStorage.setItem('garabaly-locale', locale);
+      track('lang_switch', { to: locale });
     });
   });
 }
@@ -416,37 +419,55 @@ function initLocaleRouting() {
   // redirect happens here anymore, so the two never conflict.
 }
 
+/* --- Pack 3 Task 6: sticky mobile "Get the App" bar (dismissible) --- */
 function initFloatingMobileCta() {
   if (window.matchMedia('(min-width: 769px)').matches) return;
-  const hero = document.querySelector('.hero');
-  const cta = document.createElement('a');
-  cta.className = 'btn btn--primary floating-download-cta';
-  cta.textContent = 'Download App';
-
+  try { if (sessionStorage.getItem('garabaly-appbar-dismissed')) return; } catch (e) {}
   const path = window.location.pathname;
-  if (path.includes('/fr/')) {
-    cta.textContent = 'Telecharger';
-    cta.href = 'get-the-app.html';
-  } else if (path.includes('/ar/')) {
-    cta.textContent = 'تحميل التطبيق';
-    cta.href = 'get-the-app.html';
-  } else {
-    cta.href = 'get-the-app.html';
-  }
-
-  document.body.appendChild(cta);
-
+  const L = path.includes('/fr/') ? { t: "L'appli Garabaly, séquestre inclus", c: "Télécharger l'appli" }
+          : path.includes('/ar/') ? { t: 'تطبيق غرابالي مع الضمان', c: 'حمّل التطبيق' }
+          : { t: 'Get Garabaly — escrow built in', c: 'Get the App' };
+  const bar = document.createElement('div');
+  bar.className = 'app-bar';
+  bar.setAttribute('role', 'region');
+  bar.setAttribute('aria-label', L.c);
+  bar.innerHTML = '<span class="app-bar__text">' + L.t + '</span>'
+    + '<a class="btn btn--primary app-bar__cta" href="get-the-app.html">' + L.c + '</a>'
+    + '<button class="app-bar__close" type="button" aria-label="Dismiss">&times;</button>';
+  document.body.appendChild(bar);
+  const hero = document.querySelector('.hero');
   function onScroll() {
-    const threshold = hero ? hero.offsetHeight * 0.35 : 200;
-    if (window.scrollY > threshold) {
-      cta.classList.add('visible');
-    } else {
-      cta.classList.remove('visible');
-    }
+    const threshold = hero ? hero.offsetHeight * 0.5 : 240;
+    bar.classList.toggle('visible', window.scrollY > threshold);
   }
-
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+  bar.querySelector('.app-bar__cta').addEventListener('click', function () { track('get_app_click', { source: 'app_bar' }); });
+  bar.querySelector('.app-bar__close').addEventListener('click', function () {
+    bar.classList.remove('visible');
+    try { sessionStorage.setItem('garabaly-appbar-dismissed', '1'); } catch (e) {}
+  });
+}
+
+/* --- Pack 3 Task 9: privacy-first, provider-agnostic event tracking (Plausible / Cloudflare / gtag-ready) --- */
+function track(name, props) {
+  try {
+    if (window.plausible) window.plausible(name, { props: props || {} });
+    if (window.gtag) window.gtag('event', name, props || {});
+    if (window.dataLayer) window.dataLayer.push(Object.assign({ event: name }, props || {}));
+  } catch (e) {}
+}
+function initTracking() {
+  document.addEventListener('click', function (e) {
+    const a = e.target.closest && e.target.closest('a');
+    if (!a) return;
+    const href = a.getAttribute('href') || '';
+    if (href.indexOf('get-the-app') !== -1) track('get_app_click', { source: 'link' });
+    else if (a.classList.contains('qr-revolution') || a.closest('.qr-showcase')) track('qr_scan');
+  }, true);
+  document.addEventListener('submit', function (e) {
+    if (e.target && e.target.id === 'contactForm') track('contact_submit');
+  }, true);
 }
 
 function toggleValueCard(btn) {
