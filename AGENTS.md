@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 # AGENTS.md — Garabaly website (read this first)
 
 This file is the standing brief for any AI agent (Claude Code, Cursor) working in this repo.
