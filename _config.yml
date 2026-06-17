@@ -1,6 +1,0 @@
-# GitHub Pages (Jekyll) configuration.
-# Keep internal repo-governance docs in the repo but OUT of the published site
-# (they should not be reachable at garabaly.com).
-exclude:
-  - AGENTS.md
-  - DEPLOY_CHECKLIST.md
