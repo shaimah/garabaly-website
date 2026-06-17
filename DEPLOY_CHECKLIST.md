@@ -1,3 +1,7 @@
+---
+published: false
+---
+
 # Garabaly Website — Deploy Checklist
 
 Run this before finishing any task and before merging. This repo deploys to **production** (GitHub Pages → garabaly.com) on merge to `main`. Cloudflare sits in front (caching). Keep it short, run it every time.
