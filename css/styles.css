@@ -2285,25 +2285,22 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   100% { transform: translateY(-100vh) translateX(40px) scale(0.3); opacity: 0; }
 }
 
-/* Scroll reveal — with no-JS fallback */
+/* Scroll reveal — visible by default (no-JS / pre-JS safe) */
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.reveal.visible {
+/* Only hide-then-reveal once JS is ready to animate */
+html.js-ready .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+html.js-ready .reveal.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Fallback: if JS hasn't run after 3 s, show everything */
-@keyframes revealFallback {
-  to { opacity: 1; transform: none; }
-}
-
-html:not(.js-ready) .reveal {
-  animation: revealFallback 0s 3s forwards;
 }
 
 /* --- Mobile Menu Overlay --- */
