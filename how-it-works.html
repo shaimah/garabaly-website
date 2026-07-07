@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css?v=8">
+  <link rel="stylesheet" href="css/styles.css?v=9">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -144,7 +144,7 @@
           <div class="timeline-item__content">
             <h3>Browse & Discover</h3>
             <p>
-              Explore thousands of verified livestock listings. Use filters to find exactly what you need — by category (cattle, sheep, goats, poultry), location, price range, and health certification status. Each listing includes photos, detailed specs, and often voice descriptions in local languages.
+              Explore thousands of verified livestock listings. Filter by seller, services, price, region, country, featured, promotions, certified, and Eid-ready. Each listing includes photos, detailed specs, and often voice descriptions in local languages.
             </p>
           </div>
         </div>
@@ -215,7 +215,7 @@
           </div>
         </div>
 
-        <div class="timeline-item reveal">
+        <div class="timeline-item timeline-item--climax reveal">
           <div class="timeline-item__marker">9</div>
           <div class="timeline-item__content">
             <h3>Confirm with Your Unique Code</h3>
@@ -309,60 +309,35 @@
   <!-- ===== ESCROW EXPLAINED ===== -->
   <section class="section">
     <div class="container">
-      <div class="image-text-row">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="assets/images/verification-480.avif 480w, assets/images/verification-768.avif 768w, assets/images/verification-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="assets/images/verification-480.webp 480w, assets/images/verification-768.webp 768w, assets/images/verification-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <img src="assets/images/verification-1024.jpg" alt="Secure verification on mobile phone" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="reveal">
+      <div class="gb reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
           <span class="section-eyebrow">The Heart of Garabaly</span>
-          <h2 class="section-title">Per-Party Staged<br>Escrow Lifecycle</h2>
-          <p class="section-motto">Your livestock. Your money. Your trust.</p>
-          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            Garabaly's escrow is a precision-engineered financial system with per-party staged release. One escrow hold per order, per-party allocation. Sellers and service providers pre-approve before checkout — no post-checkout confirmation needed. Every transaction is encrypted, audited, and protected by fraud detection.
+          <h2 class="section-title">You track every step.<br>You release the funds.</h2>
+          <p class="section-subtitle">
+            The moment you pay, the funds are frozen in escrow. The seller receives nothing until you confirm receipt — with your 6-character code, which you alone hold.
           </p>
-          <div class="trust-features">
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="dollar-sign"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>1. Funded — "Fonds sécurisés"</h4>
-                <p>Buyer pays at checkout. Funds are held in escrow — neither party can touch the money. One payment covers the seller and all service providers, each share tracked separately.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="truck"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>2. Releasing — "Libération en cours"</h4>
-                <p>Buyer confirmed receipt with their 6-character code. Seller's share enters a 24-hour countdown (dispute window). Service providers (butcher, vet, delivery) receive immediate release — no waiting.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="key"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>3. Released — "Fonds libérés"</h4>
-                <p>24-hour countdown expired with no dispute, or service confirmed. Funds credited to the seller's wallet. Each provider was already paid at their step — per-party staged release means no one waits for the entire chain.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="alert-circle"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>4. Disputed — "Litige"</h4>
-                <p>Buyer opened a dispute during the 24-hour window. All unreleased shares are frozen — already-released service provider shares are unaffected. Dual-admin review required. If resolved in buyer's favor, funds are refunded.</p>
-              </div>
-            </div>
-          </div>
         </div>
+        <div class="gb-order-card">
+          <div class="gb-order-head">
+            <div class="gb-order-thumb"><i data-feather="feather"></i></div>
+            <div class="gb-order-meta">
+              <p class="gb-order-name">African guinea fowl</p>
+              <p class="gb-order-price">FCFA 10 000</p>
+              <p class="gb-order-seller"><i data-feather="user"></i> Fatou Traoré</p>
+            </div>
+            <span class="gb-order-id">ORD-MNPYDJDT-3C5J</span>
+          </div>
+          <ol class="gb-tracker">
+            <li data-state="done"><span class="dot"></span>Order confirmed <span class="gb-who gb-who--you">You</span></li>
+            <li data-state="done"><span class="dot"></span>In preparation <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="done"><span class="dot"></span>Ready for pickup <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="done"><span class="dot"></span>On the way <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="active"><span class="dot"></span><strong>Confirm receipt</strong> <span class="gb-who gb-who--you">You</span><small>Confirm you have received your order.</small></li>
+            <li data-state="todo"><span class="dot"></span>Transaction complete <span class="gb-who gb-who--you">You</span></li>
+          </ol>
+          <div class="gb-code-row"><span>Enter your code to release the funds</span><code class="gb-code">FLNTH9</code></div>
+        </div>
+        <p class="gb-strip"><strong>End-to-end escrow</strong> · Every party visible · One code, yours alone</p>
       </div>
     </div>
   </section>
@@ -378,46 +353,85 @@
         </p>
       </div>
 
-      <div class="features-grid" style="max-width: 1200px; margin: 0 auto;">
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="smartphone"></i>
-          </div>
-          <h3 class="feature-card__title">Mobile Money</h3>
-          <p class="feature-card__desc">
-            Mobile money is LIVE via Orange Money, Moov Money, Wave among several others. Pay and receive funds instantly across West Africa.
-          </p>
+      <div class="gb gb-grid" style="max-width: 1100px; margin: 0 auto;">
+        <div class="gb-icard reveal">
+          <div class="gb-icard__icon"><i data-feather="credit-card"></i></div>
+          <h3>Bank Card</h3>
+          <p>Visa, Mastercard · 135+ currencies · ideal for the diaspora.</p>
+          <span class="gb-pill gb-pill--live">Available</span>
         </div>
+        <div class="gb-icard reveal">
+          <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8V5a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V6"/><circle cx="17" cy="13" r="1"/></svg></div>
+          <h3>Garabaly Wallet</h3>
+          <p>Pay from your balance, in one tap.</p>
+          <span class="gb-pill gb-pill--live">Available</span>
+        </div>
+        <div class="gb-icard reveal">
+          <div class="gb-icard__icon"><i data-feather="smartphone"></i></div>
+          <h3>Mobile Money</h3>
+          <p>Orange, Wave, Moov, and others — new providers added regularly.</p>
+          <span class="gb-pill gb-pill--live">Available</span>
+        </div>
+        <div class="gb-icard reveal">
+          <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 10h16M5 6l7-3 7 3M5 10v11M19 10v11M9 14v3M15 14v3"/></svg></div>
+          <h3>Bank Transfer</h3>
+          <p>For large amounts and cooperatives.</p>
+          <span class="gb-pill gb-pill--live">Available</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="credit-card"></i>
-          </div>
-          <h3 class="feature-card__title">International Cards & Banks</h3>
-          <p class="feature-card__desc">
-            Pay with Visa or Mastercard in EUR, USD, GBP, CAD, and 135+ currencies. Powered by Stripe — the payments engine trusted by businesses worldwide. Bank withdrawal is also available.
-          </p>
+  <!-- ===== ORDER MODEL (§3.6) + BUNDLE (§3.4) ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Order Model</span>
+        <h2 class="section-title">Independent by default — bundle when you want</h2>
+        <p class="section-subtitle">Every cart item is its own order with its own code and tracker. Or group one listing with up to 3 services into a single order — one code, one tracker.</p>
+      </div>
+      <div class="gb gb-two reveal" style="max-width: 900px; margin: 0 auto;">
+        <div class="gb-icard">
+          <div class="gb-icard__icon"><i data-feather="grid"></i></div>
+          <h3>Independent <span class="gb-pill">Default</span></h3>
+          <p>Every cart item — an animal or a service — is a separate order with its own ORD- id, its own code, its own tracker.</p>
+          <ul class="gb-icard__mini"><li>1 animal = 1 order</li><li>1 service = 1 order</li></ul>
         </div>
+        <div class="gb-icard">
+          <div class="gb-icard__icon"><i data-feather="package"></i></div>
+          <h3>Bundle <span class="gb-pill">Optional</span></h3>
+          <p>Group one seller listing + up to 3 services (max 1 delivery + 1 butcher + 1 vet) into one order, one code, one tracker.</p>
+          <ul class="gb-icard__mini"><li>Delivery · Butcher · Vet</li><li>1 animal + up to 3 services (1 of each)</li></ul>
+        </div>
+      </div>
+      <p class="gb gb-strip" style="margin-top: var(--space-lg);">You choose at cart — bundle or keep separate. Always escrow-protected.</p>
 
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="briefcase"></i>
-          </div>
-          <h3 class="feature-card__title">Garabaly Wallet</h3>
-          <p class="feature-card__desc">
-            A full digital wallet with available balance, escrow holds, and auditable transaction history. Secured with a private PIN, SMS verification, and a check on every transaction.
-          </p>
+      <div class="gb" style="margin-top: var(--space-3xl);">
+        <div class="section-header text-center reveal" style="margin-bottom: var(--space-xl);">
+          <span class="section-eyebrow">Build Your Bundle</span>
+          <h2 class="section-title">One order. Every service. One code.</h2>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="globe"></i>
+        <div class="gb-bundle reveal">
+          <div class="gb-bundle__head">Protected order</div>
+          <div class="gb-bitem">
+            <div class="gb-bitem__icon"><i data-feather="feather"></i></div>
+            <div class="gb-bitem__text"><p class="gb-bitem__label">Cattle — Sahelian zebu</p><p class="gb-bitem__sub">Seller: Fatou Traoré ✓ verified</p></div>
+            <span class="gb-bitem__price" dir="ltr">FCFA 450 000</span>
           </div>
-          <h3 class="feature-card__title">Multi-Currency Support</h3>
-          <p class="feature-card__desc">
-            135+ currencies supported via Stripe — XOF, XAF, NGN, GHS, EUR, USD, GBP, CAD, and more. Real-time exchange rates with automatic conversion. Trade in the currency you know.
-          </p>
+          <div class="gb-bitem">
+            <div class="gb-bitem__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4H5a1 1 0 0 0-1 1v3a4 4 0 0 0 8 0V5a1 1 0 0 0-1-1h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></div>
+            <div class="gb-bitem__text"><p class="gb-bitem__label">Veterinary service</p><p class="gb-bitem__sub">Dr. Diallo · health check before departure</p></div>
+            <span class="gb-bitem__price" dir="ltr">FCFA 25 000</span>
+          </div>
+          <div class="gb-bitem">
+            <div class="gb-bitem__icon"><i data-feather="truck"></i></div>
+            <div class="gb-bitem__text"><p class="gb-bitem__label">Delivery</p><p class="gb-bitem__sub">Door-to-door · live tracking</p></div>
+            <span class="gb-bitem__price" dir="ltr">FCFA 40 000</span>
+          </div>
+          <div class="gb-bundle__total"><span>Total protected by escrow</span><span dir="ltr">FCFA 515 000</span></div>
+          <div class="gb-bundle__meta"><span>Estimated delivery within 24 hours</span><span>·</span><code>ORD-7K2MNP4T-8Q3V</code><span>·</span><span>Code • • • • • •</span></div>
         </div>
+        <p class="gb gb-strip" style="margin-top: var(--space-lg);"><strong>One order · Three providers visible · One code, yours alone</strong></p>
       </div>
     </div>
   </section>
@@ -429,40 +443,29 @@
         <span class="section-eyebrow">Complete Ecosystem</span>
         <h2 class="section-title">More Than a Marketplace — An Ecosystem</h2>
         <p class="section-subtitle">
-          Garabaly supports four order pathways: Independent orders (default — all cart items are separate), Seller-Only, Service-Only, and Multiparty Bundle orders. Bundle 1 listing with up to 3 services (1 butcher + 1 vet + 1 delivery). You control the fulfillment sequence with drag-to-reorder. One bundle = one order ID = one confirmation code. Each provider gets paid as their step is completed — per-party escrow, total protection.
+          Beyond the marketplace, Garabaly connects you to a growing network of verified service providers — so one order can cover the animal and everything around it, protected by escrow from end to end.
         </p>
       </div>
 
-      <div class="features-grid" style="max-width: 1200px; margin: 0 auto;">
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="truck"></i>
+      <div class="gb" style="max-width: 1000px; margin: 0 auto;">
+        <div class="gb-grid">
+          <div class="gb-icard reveal">
+            <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4H5a1 1 0 0 0-1 1v3a4 4 0 0 0 8 0V5a1 1 0 0 0-1-1h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></div>
+            <h3>Veterinarians</h3>
+            <p>Animal health check and certification before departure.</p>
           </div>
-          <h3 class="feature-card__title">Delivery Drivers</h3>
-          <p class="feature-card__desc">
-            Verified transport professionals who specialize in safe livestock delivery. Track your delivery in real time with live status updates. Escrow-protected — they're only paid after you confirm receipt.
-          </p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="scissors"></i>
+          <div class="gb-icard reveal">
+            <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor" aria-hidden="true"><path d="M2.8 19.2c-.5-.5-.5-1.1 0-1.6L15.4 5a4.6 4.6 0 0 1 3.4-1.4c.7 0 1 .8.5 1.3L6.1 18.1a4 4 0 0 1-2.4 1.2c-.35.05-.65-.05-.9-.1z"/><rect x="16.3" y="16" width="6.4" height="2.5" rx="1.25" transform="rotate(45 16.3 16)"/></svg></div>
+            <h3>Halal Butchers</h3>
+            <p>Halal slaughter and cutting to the animal type and your instructions.</p>
           </div>
-          <h3 class="feature-card__title">Professional Butchers</h3>
-          <p class="feature-card__desc">
-            Book a verified butcher as part of your order. In multiparty orders, the butcher is activated only after the livestock transaction is complete — ensuring the right animal is processed.
-          </p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="heart"></i>
+          <div class="gb-icard reveal">
+            <div class="gb-icard__icon"><i data-feather="truck"></i></div>
+            <h3>Transporters</h3>
+            <p>Door-to-door delivery, tracked live all the way to you.</p>
           </div>
-          <h3 class="feature-card__title">Veterinarians</h3>
-          <p class="feature-card__desc">
-            Request a vet inspection before or after purchase. Veterinarians can issue digital health certificates that sellers attach to their listings, giving buyers confidence in the animal's condition.
-          </p>
         </div>
+        <p class="gb-strip" style="margin-top: var(--space-xl);"><strong>Every provider is verified</strong> — you approve the whole order with a single code, protected by escrow from end to end.</p>
       </div>
     </div>
   </section>

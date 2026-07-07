@@ -67,7 +67,7 @@
 
   <!-- Styles -->
     <link rel="preload" as="image" type="image/avif" imagesrcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="css/styles.css?v=8">
+<link rel="stylesheet" href="css/styles.css?v=9">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -528,6 +528,39 @@
     </div>
   </section>
 
+  <!-- ===== WALLET (§3.5) ===== -->
+  <section class="section" id="wallet">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Garabaly Wallet</span>
+        <h2 class="section-title">Pay with the wallet you already use</h2>
+        <p class="section-subtitle">Load by card, withdraw to your bank, and transfer to another Garabaly wallet — free. Your orders are paid at checkout.</p>
+      </div>
+      <div class="gb reveal" style="max-width: 420px; margin: 0 auto;">
+        <div class="gb-wallet">
+          <img class="gb-wallet__watermark" src="assets/images/logo.svg" alt="" aria-hidden="true">
+          <div class="gb-wallet__top">
+            <span class="gb-wallet__badge">✓ Escrow-Verified</span>
+            <i data-feather="eye"></i>
+          </div>
+          <p class="gb-wallet__label">Garabaly Wallet</p>
+          <p class="gb-wallet__balance" dir="ltr">FCFA 796 930</p>
+          <p class="gb-wallet__sub">Withdrawable funds</p>
+          <div class="gb-wallet__actions">
+            <span class="gb-wallet__action"><b>+</b>Deposit</span>
+            <span class="gb-wallet__action"><b>↑</b>Withdraw</span>
+            <span class="gb-wallet__action"><b>⇄</b>Transfer</span>
+          </div>
+          <div class="gb-wallet__limit">Verified · Max <strong>2 000 000 FCFA</strong>/operation ⓘ</div>
+        </div>
+        <div class="gb-wtx">
+          <div class="gb-wtx__row"><span>Card deposit — Stripe · Jul 6</span><span class="gb-wtx__in" dir="ltr">+FCFA 10 000</span></div>
+          <div class="gb-wtx__row"><span>Wallet transfer received · Jul 4</span><span class="gb-wtx__in" dir="ltr">+FCFA 25 000</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== TRUST / ESCROW SECTION ===== -->
   <section class="section section--alt trust-section" id="trust">
     <div class="container">
@@ -665,52 +698,22 @@
   <!-- ===== DIASPORA SECTION ===== -->
   <section class="section section--alt" id="diaspora">
     <div class="container">
-      <div class="image-text-row image-text-row--reverse">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="assets/images/diaspora-480.avif 480w, assets/images/diaspora-768.avif 768w, assets/images/diaspora-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="assets/images/diaspora-480.webp 480w, assets/images/diaspora-768.webp 768w, assets/images/diaspora-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <img src="assets/images/diaspora-1024.jpg" alt="Young man in diaspora video-calling family and buying livestock through Garabaly" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="reveal">
+      <div class="gb reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
           <span class="section-eyebrow">For the Diaspora</span>
-          <h2 class="section-title">From Paris to Mopti.<br>From New York to Bamako.</h2>
-          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            Millions of West Africans live abroad. Every celebration — Tabaski, weddings, naming ceremonies — they want to be home. They can't be — but their gift can. Browse from Paris. Negotiate in real-time. Pay in euros. Your mother gets the ram. Call on WhatsApp when it arrives. Distance disappears.
-          </p>
-          <p style="margin-bottom: var(--space-lg); color: var(--text-secondary);">Paris ↔ Bamako | London ↔ Dakar | New York ↔ Ouagadougou | Brussels ↔ Niamey | Montreal ↔ Abidjan</p>
-          <p style="margin-bottom: var(--space-lg); color: var(--text-secondary);">You (Paris/London/NYC) -> Garabaly App -> Escrow -> Herder/Seller -> Family Confirms -> Funds Release -> Joy</p>
-          <div class="trust-features">
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="map-pin"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>Buy From Anywhere</h4>
-                <p>Browse and purchase livestock from wherever you are in the world.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="truck"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>Delivered to Family</h4>
-                <p>Your livestock arrives safely at your family's compound — verified and healthy.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="video"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>See the Joy</h4>
-                <p>Call them on WhatsApp the moment it arrives — and share in the joy across the miles.</p>
-                <p><a href="faq.html" class="inline-faq-link">Your family doesn't need the app — you handle everything. -> Learn more</a></p>
-              </div>
-            </div>
-          </div>
+          <h2 class="section-title">Send a ram home — without calling three times to check.</h2>
+          <p class="section-subtitle">From Paris to Bamako, your payment stays frozen in escrow until a loved one receives the order. You follow every step from your phone.</p>
+        </div>
+        <div class="gb-endpoints">
+          <span class="gb-endpoint">Paris<small>Diaspora</small></span>
+          <span class="gb-endpoints__arrow">→</span>
+          <span class="gb-endpoint">Bamako<small>Family</small></span>
+        </div>
+        <p class="gb-endpoints-note">Also from London, New York, Brussels, Montreal…</p>
+        <div class="gb-nsteps" style="max-width: 960px; margin: 0 auto;">
+          <div class="gb-nstep"><p class="gb-nstep__n">01</p><h3>You pay by card</h3><p>From any country. The local currency is converted automatically.</p></div>
+          <div class="gb-nstep"><p class="gb-nstep__n">02</p><h3>The funds are frozen</h3><p>Escrow protects the money until receipt. The seller receives nothing before.</p></div>
+          <div class="gb-nstep gb-nstep--green"><p class="gb-nstep__n">03</p><h3>Delivery confirmed</h3><p>The loved one receives, enters the code, and the funds are released. You're notified.</p></div>
         </div>
       </div>
     </div>

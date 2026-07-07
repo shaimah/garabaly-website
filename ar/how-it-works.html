@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/cairo-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=8">
+  <link rel="stylesheet" href="../css/styles.css?v=9">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -134,7 +134,7 @@
           <div class="timeline-item__marker">2</div>
           <div class="timeline-item__content">
             <h3>تصفح واستكشف</h3>
-            <p>استكشف آلاف إعلانات الماشية المعتمدة. استخدم الفلاتر للعثور على ما تحتاجه بالضبط — حسب الفئة (أبقار، أغنام، ماعز، دواجن)، الموقع، نطاق السعر، وحالة الشهادة الصحية. كل إعلان يتضمن صوراً ومواصفات تفصيلية وغالباً أوصاف صوتية بالعامية المحلية.</p>
+            <p>استكشف آلاف إعلانات الماشية المعتمدة. صفِّ حسب البائع، الخدمات، السعر، المنطقة، الدولة، المميّزة، العروض، المعتمَد، والجاهز للعيد. كل إعلان يتضمن صوراً ومواصفات تفصيلية وغالباً أوصاف صوتية بالعامية المحلية.</p>
           </div>
         </div>
 
@@ -192,7 +192,7 @@
           </div>
         </div>
 
-        <div class="timeline-item reveal">
+        <div class="timeline-item timeline-item--climax reveal">
           <div class="timeline-item__marker">9</div>
           <div class="timeline-item__content">
             <h3>أكّد بكود التأكيد الخاص بك</h3>
@@ -272,52 +272,35 @@
   <!-- ===== شرح الضمان ===== -->
   <section class="section">
     <div class="container">
-      <div class="image-text-row">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="../assets/images/verification-480.avif 480w, ../assets/images/verification-768.avif 768w, ../assets/images/verification-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="../assets/images/verification-480.webp 480w, ../assets/images/verification-768.webp 768w, ../assets/images/verification-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <img src="../assets/images/verification-1024.jpg" alt="التحقق الآمن على الهاتف المحمول" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="reveal">
+      <div class="gb reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
           <span class="section-eyebrow">قلب غرابالي</span>
-          <h2 class="section-title">ضمان مرحلي<br>بتخصيص لكل طرف</h2>
-          <p class="section-motto">ماشيتك. أموالك. ثقتك.</p>
-          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            نظام الضمان في غرابالي يحتجز الدفع بأمان بتخصيص منفصل لكل طرف — بائع، جزار، طبيب بيطري، سائق توصيل. الطلب معتمد مسبقاً من الجميع قبل الدفع. دفعة واحدة، تخصيص لكل طرف. مقدمو الخدمات يُدفع لهم عند اكتمال خطوتهم؛ حصة البائع محتجزة 24 ساعة كنافذة نزاع. كل معاملة مشفّرة ومحمية بكشف الاحتيال.
+          <h2 class="section-title">أنت تتابع كل خطوة.<br>أنت تُفرج عن الأموال.</h2>
+          <p class="section-subtitle">
+            بمجرد دفعك، تُجمَّد الأموال في الضمان. لا يستلم البائع شيئاً حتى تؤكّد الاستلام — برمزك المكوّن من 6 أحرف، الذي تحتفظ به وحدك.
           </p>
-          <div class="trust-features">
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="check-circle"></i></div>
-              <div class="trust-feature__text">
-                <h4>1. معتمد مسبقاً — قبل الدفع</h4>
-                <p>البائع ومقدمو الخدمات يراجعون الطلب ويقبلونه قبل أن يدفع المشتري. لا يُقتطع المال إلا عندما يؤكد الجميع.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="dollar-sign"></i></div>
-              <div class="trust-feature__text">
-                <h4>2. مموّل — أموال مؤمّنة</h4>
-                <p>عندما تضغط "اشترِ بالضمان"، تُحتجز دفعتك بأمان — تخصيص منفصل لكل طرف. لا أحد يمس المال حتى اكتمال التسليم وتأكيد المشتري بالرمز.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="truck"></i></div>
-              <div class="trust-feature__text">
-                <h4>3. قيد التنفيذ والتحرير</h4>
-                <p>تحضير، نقل، توصيل. كل مقدم خدمة يعمل بالتسلسل ويُدفع له فور إنجاز عمله عند إدخال المشتري للرمز. دفعة البائع تبقى محتجزة 24 ساعة كنافذة حماية المشتري.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="alert-circle"></i></div>
-              <div class="trust-feature__text">
-                <h4>4. متنازع عليه</h4>
-                <p>خلال نافذة الـ 24 ساعة بعد التأكيد بالرمز، يمكن للمشتري فتح نزاع على حصة البائع. تُجمّد الأموال المعنية، وساطة بموافقة مسؤولين. غرابالي يتوسط بموافقة مزدوجة لضمان العدالة.</p>
-              </div>
-            </div>
-          </div>
         </div>
+        <div class="gb-order-card">
+          <div class="gb-order-head">
+            <div class="gb-order-thumb"><i data-feather="feather"></i></div>
+            <div class="gb-order-meta">
+              <p class="gb-order-name">دجاج غينيا أفريقي</p>
+              <p class="gb-order-price" dir="ltr">FCFA 10 000</p>
+              <p class="gb-order-seller"><i data-feather="user"></i> Fatou Traoré</p>
+            </div>
+            <span class="gb-order-id" dir="ltr">ORD-MNPYDJDT-3C5J</span>
+          </div>
+          <ol class="gb-tracker">
+            <li data-state="done"><span class="dot"></span>تم تأكيد الطلب <span class="gb-who gb-who--you">أنت</span></li>
+            <li data-state="done"><span class="dot"></span>قيد التحضير <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="done"><span class="dot"></span>جاهز للاستلام <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="done"><span class="dot"></span>في الطريق <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="active"><span class="dot"></span><strong>أكّد الاستلام</strong> <span class="gb-who gb-who--you">أنت</span><small>أكّد استلامك لطلبك.</small></li>
+            <li data-state="todo"><span class="dot"></span>اكتملت المعاملة <span class="gb-who gb-who--you">أنت</span></li>
+          </ol>
+          <div class="gb-code-row"><span>أدخل رمزك للإفراج عن الأموال</span><code class="gb-code" dir="ltr">FLNTH9</code></div>
+        </div>
+        <p class="gb-strip"><strong>ضمان من البداية إلى النهاية</strong> · كل طرف مرئي · رمز واحد، لك وحدك</p>
       </div>
     </div>
   </section>
@@ -333,30 +316,73 @@
         </p>
       </div>
 
-      <div class="features-grid" style="max-width: 1200px; margin: 0 auto;">
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="smartphone"></i></div>
-          <h3 class="feature-card__title">الأموال المحمولة</h3>
-          <p class="feature-card__desc">mobile money أصبح LIVE عبر Orange Money وMoov Money وWave وغيرها. ادفع واستلم الأموال فوراً عبر غرب أفريقيا.</p>
+      <div class="gb gb-grid" style="max-width: 1100px; margin: 0 auto;">
+        <div class="gb-icard reveal">
+          <div class="gb-icard__icon"><i data-feather="credit-card"></i></div>
+          <h3>البطاقة البنكية</h3>
+          <p>Visa وMastercard · 135+ عملة · مثالية للمهجر.</p>
+          <span class="gb-pill gb-pill--live">متاح</span>
         </div>
+        <div class="gb-icard reveal">
+          <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8V5a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V6"/><circle cx="17" cy="13" r="1"/></svg></div>
+          <h3>محفظة غرابالي</h3>
+          <p>ادفع من رصيدك بلمسة واحدة.</p>
+          <span class="gb-pill gb-pill--live">متاح</span>
+        </div>
+        <div class="gb-icard reveal">
+          <div class="gb-icard__icon"><i data-feather="smartphone"></i></div>
+          <h3>Mobile Money</h3>
+          <p>Orange وWave وMoov وغيرها — يُضاف موفّرون جدد بانتظام.</p>
+          <span class="gb-pill gb-pill--live">متاح</span>
+        </div>
+        <div class="gb-icard reveal">
+          <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 10h16M5 6l7-3 7 3M5 10v11M19 10v11M9 14v3M15 14v3"/></svg></div>
+          <h3>التحويل البنكي</h3>
+          <p>للمبالغ الكبيرة والتعاونيات.</p>
+          <span class="gb-pill gb-pill--live">متاح</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="credit-card"></i></div>
-          <h3 class="feature-card__title">بطاقات وبنوك دولية</h3>
-          <p class="feature-card__desc">ادفع بـ Visa أو Mastercard بالـ EUR وUSD وGBP وCAD و135+ عملة. مدعوم بـ Stripe — محرّك الدفع الموثوق به لدى الشركات حول العالم. السحب البنكي متاح أيضاً.</p>
+  <!-- ===== نموذج الطلب (§3.6) + الحزمة (§3.4) ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">نموذج الطلب</span>
+        <h2 class="section-title">مستقل افتراضياً — جمّع عند الرغبة</h2>
+        <p class="section-subtitle">كل عنصر في السلة هو طلب مستقل برمزه وتتبّعه. أو اجمع إعلاناً مع حتى 3 خدمات في طلب واحد — رمز واحد، تتبّع واحد.</p>
+      </div>
+      <div class="gb gb-two reveal" style="max-width: 900px; margin: 0 auto;">
+        <div class="gb-icard">
+          <div class="gb-icard__icon"><i data-feather="grid"></i></div>
+          <h3>مستقل <span class="gb-pill">افتراضي</span></h3>
+          <p>كل عنصر — حيوان أو خدمة — طلب منفصل بمعرّف ORD- خاص، ورمز خاص، وتتبّع خاص.</p>
+          <ul class="gb-icard__mini"><li>حيوان واحد = طلب واحد</li><li>خدمة واحدة = طلب واحد</li></ul>
         </div>
+        <div class="gb-icard">
+          <div class="gb-icard__icon"><i data-feather="package"></i></div>
+          <h3>مجمّعة <span class="gb-pill">اختياري</span></h3>
+          <p>اجمع إعلان بائع + حتى 3 خدمات (بحد أقصى توصيل + جزار + بيطري) في طلب واحد، رمز واحد، تتبّع واحد.</p>
+          <ul class="gb-icard__mini"><li>توصيل · جزار · بيطري</li><li>حيوان واحد + حتى 3 خدمات (واحدة من كل)</li></ul>
+        </div>
+      </div>
+      <p class="gb gb-strip" style="margin-top: var(--space-lg);">تختار في السلة — جمّع أو اترك منفصلاً. محمي دائماً بالضمان.</p>
 
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="briefcase"></i></div>
-          <h3 class="feature-card__title">محفظة غرابالي</h3>
-          <p class="feature-card__desc">محفظة رقمية كاملة مع رصيد متاح واحتجازات ضمان وسجل معاملات قابل للتدقيق. محمية برمز PIN خاص وتحقق عبر SMS وفحص لكل معاملة.</p>
+      <div class="gb" style="margin-top: var(--space-3xl);">
+        <div class="section-header text-center reveal" style="margin-bottom: var(--space-xl);">
+          <span class="section-eyebrow">كوّن حزمتك</span>
+          <h2 class="section-title">طلب واحد. كل الخدمات. رمز واحد.</h2>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="globe"></i></div>
-          <h3 class="feature-card__title">دعم العملات المتعددة</h3>
-          <p class="feature-card__desc">أكثر من 135 عملة مدعومة عبر Stripe — XOF وXAF وNGN وGHS وEUR وUSD وGBP والمزيد. أسعار صرف فورية مع تحويل تلقائي. تداول بالعملة التي تعرفها.</p>
+        <div class="gb-bundle reveal">
+          <div class="gb-bundle__head">طلب محمي</div>
+          <div class="gb-bitem"><div class="gb-bitem__icon"><i data-feather="feather"></i></div><div class="gb-bitem__text"><p class="gb-bitem__label">ماشية — زيبو ساحلي</p><p class="gb-bitem__sub">البائع: Fatou Traoré ✓ موثّق</p></div><span class="gb-bitem__price" dir="ltr">FCFA 450 000</span></div>
+          <div class="gb-bitem"><div class="gb-bitem__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4H5a1 1 0 0 0-1 1v3a4 4 0 0 0 8 0V5a1 1 0 0 0-1-1h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></div><div class="gb-bitem__text"><p class="gb-bitem__label">خدمة بيطرية</p><p class="gb-bitem__sub">د. ديالو · فحص صحي قبل المغادرة</p></div><span class="gb-bitem__price" dir="ltr">FCFA 25 000</span></div>
+          <div class="gb-bitem"><div class="gb-bitem__icon"><i data-feather="truck"></i></div><div class="gb-bitem__text"><p class="gb-bitem__label">توصيل</p><p class="gb-bitem__sub">من الباب إلى الباب · تتبّع مباشر</p></div><span class="gb-bitem__price" dir="ltr">FCFA 40 000</span></div>
+          <div class="gb-bundle__total"><span>الإجمالي محمي بالضمان</span><span dir="ltr">FCFA 515 000</span></div>
+          <div class="gb-bundle__meta"><span>التسليم المقدّر خلال 24 ساعة</span><span>·</span><code dir="ltr">ORD-7K2MNP4T-8Q3V</code><span>·</span><span>الرمز • • • • • •</span></div>
         </div>
+        <p class="gb gb-strip" style="margin-top: var(--space-lg);"><strong>طلب واحد · ثلاثة مقدّمي خدمات ظاهرون · رمز واحد، لك وحدك</strong></p>
       </div>
     </div>
   </section>
@@ -368,28 +394,29 @@
         <span class="section-eyebrow">نظام متكامل</span>
         <h2 class="section-title">أكثر من سوق — نظام بيئي متكامل</h2>
         <p class="section-subtitle">
-          غرابالي يدعم أربعة مسارات للطلب: طلبات مستقلة (افتراضي — جميع عناصر السلة منفصلة)، بائع-فقط، خدمة-فقط، وطلبات مجمّعة متعددة الأطراف.
+          إلى جانب السوق، يربطك غرابالي بشبكة متنامية من مقدّمي الخدمات الموثّقين — لتغطّي طلبية واحدة الحيوان وكل ما يحيط به، محمية بالضمان من البداية إلى النهاية.
         </p>
       </div>
 
-      <div class="features-grid" style="max-width: 1200px; margin: 0 auto;">
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="truck"></i></div>
-          <h3 class="feature-card__title">سائقو التوصيل</h3>
-          <p class="feature-card__desc">محترفو نقل معتمدون متخصصون في توصيل الماشية بأمان. تتبع توصيلك في الوقت الفعلي مع تحديثات حية. محمي بالضمان — يُدفع لهم فقط بعد تأكيد الاستلام.</p>
+      <div class="gb" style="max-width: 1000px; margin: 0 auto;">
+        <div class="gb-grid">
+          <div class="gb-icard reveal">
+            <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4H5a1 1 0 0 0-1 1v3a4 4 0 0 0 8 0V5a1 1 0 0 0-1-1h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></div>
+            <h3>أطباء بيطريون</h3>
+            <p>فحص صحة الحيوان وإصدار شهادته قبل المغادرة.</p>
+          </div>
+          <div class="gb-icard reveal">
+            <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor" aria-hidden="true"><path d="M2.8 19.2c-.5-.5-.5-1.1 0-1.6L15.4 5a4.6 4.6 0 0 1 3.4-1.4c.7 0 1 .8.5 1.3L6.1 18.1a4 4 0 0 1-2.4 1.2c-.35.05-.65-.05-.9-.1z"/><rect x="16.3" y="16" width="6.4" height="2.5" rx="1.25" transform="rotate(45 16.3 16)"/></svg></div>
+            <h3>جزارون حلال</h3>
+            <p>ذبح حلال وتقطيع حسب نوع الحيوان وتعليماتك.</p>
+          </div>
+          <div class="gb-icard reveal">
+            <div class="gb-icard__icon"><i data-feather="truck"></i></div>
+            <h3>ناقلون</h3>
+            <p>توصيل من الباب إلى الباب، مُتابَع مباشرةً حتى وصولك.</p>
+          </div>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="scissors"></i></div>
-          <h3 class="feature-card__title">جزارون محترفون</h3>
-          <p class="feature-card__desc">احجز جزاراً معتمداً كجزء من طلبك. في الطلبات متعددة الأطراف، يُفعّل الجزار فقط بعد اكتمال معاملة الماشية — لضمان معالجة الحيوان الصحيح.</p>
-        </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="heart"></i></div>
-          <h3 class="feature-card__title">أطباء بيطريون</h3>
-          <p class="feature-card__desc">اطلب فحصاً بيطرياً قبل أو بعد الشراء. يمكن للأطباء البيطريين إصدار شهادات صحية رقمية يرفقها البائعون بإعلاناتهم، مما يمنح المشترين ثقة في حالة الحيوان.</p>
-        </div>
+        <p class="gb-strip" style="margin-top: var(--space-xl);"><strong>كل مقدّم خدمة موثّق</strong> — تعتمد الطلب كاملاً برمز واحد، محمي بالضمان من البداية إلى النهاية.</p>
       </div>
     </div>
   </section>

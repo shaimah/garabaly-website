@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=8">
+<link rel="stylesheet" href="../css/styles.css?v=9">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -456,6 +456,36 @@
     </div>
   </section>
 
+  <!-- ===== WALLET (§3.5) ===== -->
+  <section class="section" id="wallet">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Portefeuille Garabaly</span>
+        <h2 class="section-title">Payez avec le portefeuille que vous utilisez déjà</h2>
+        <p class="section-subtitle">Déposez par carte, retirez vers votre banque, et transférez à un autre wallet Garabaly — gratuitement. Le paiement de vos commandes se fait au moment du checkout.</p>
+      </div>
+      <div class="gb reveal" style="max-width: 420px; margin: 0 auto;">
+        <div class="gb-wallet">
+          <img class="gb-wallet__watermark" src="../assets/images/logo.svg" alt="" aria-hidden="true">
+          <div class="gb-wallet__top"><span class="gb-wallet__badge">✓ Vérifié escrow</span><i data-feather="eye"></i></div>
+          <p class="gb-wallet__label">Portefeuille Garabaly</p>
+          <p class="gb-wallet__balance" dir="ltr">FCFA 796 930</p>
+          <p class="gb-wallet__sub">Fonds retirables</p>
+          <div class="gb-wallet__actions">
+            <span class="gb-wallet__action"><b>+</b>Déposer</span>
+            <span class="gb-wallet__action"><b>↑</b>Retirer</span>
+            <span class="gb-wallet__action"><b>⇄</b>Transférer</span>
+          </div>
+          <div class="gb-wallet__limit">Vérifié · Max <strong>2 000 000 FCFA</strong>/opération ⓘ</div>
+        </div>
+        <div class="gb-wtx">
+          <div class="gb-wtx__row"><span>Dépôt carte bancaire — Stripe · 6 juil.</span><span class="gb-wtx__in" dir="ltr">+FCFA 10 000</span></div>
+          <div class="gb-wtx__row"><span>Transfert reçu · 4 juil.</span><span class="gb-wtx__in" dir="ltr">+FCFA 25 000</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== SÉQUESTRE ===== -->
   <section class="section section--alt trust-section" id="trust">
     <div class="container">
@@ -584,46 +614,22 @@
   <!-- ===== DIASPORA ===== -->
   <section class="section section--alt" id="diaspora">
     <div class="container">
-      <div class="image-text-row image-text-row--reverse">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="../assets/images/diaspora-480.avif 480w, ../assets/images/diaspora-768.avif 768w, ../assets/images/diaspora-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="../assets/images/diaspora-480.webp 480w, ../assets/images/diaspora-768.webp 768w, ../assets/images/diaspora-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <img src="../assets/images/diaspora-1024.jpg" alt="Jeune homme de la diaspora achetant du bétail via Garabaly" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="reveal">
+      <div class="gb reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
           <span class="section-eyebrow">Pour la diaspora</span>
-          <h2 class="section-title">De Paris à Mopti.<br>De New York à Bamako.</h2>
-          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            Des millions d'Ouest-Africains vivent à l'étranger. Chaque célébration — Tabaski, mariages, baptêmes — ils veulent être chez eux. Ils ne peuvent pas — mais leur cadeau peut. Parcourez depuis Paris. Négociez en temps réel. Payez en euros. Votre mère reçoit le bélier. Appelez sur WhatsApp quand il arrive. La distance disparaît.
-          </p>
-          <p style="margin-bottom: var(--space-lg); color: var(--text-secondary);">Paris ↔ Bamako | Londres ↔ Dakar | New York ↔ Ouagadougou | Bruxelles ↔ Niamey | Montreal ↔ Abidjan</p>
-          <p style="margin-bottom: var(--space-lg); color: var(--text-secondary);">Vous (Paris/Londres/NYC) -> App Garabaly -> Sequestre -> Eleveur/Vendeur -> Famille confirme -> Liberation des fonds -> Joie</p>
-          <div class="trust-features">
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="map-pin"></i></div>
-              <div class="trust-feature__text">
-                <h4>Achetez de n'importe où</h4>
-                <p>Parcourez et achetez du bétail depuis n'importe où dans le monde.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="truck"></i></div>
-              <div class="trust-feature__text">
-                <h4>Livré à votre famille</h4>
-                <p>Votre bétail arrive en toute sécurité dans la concession de votre famille — vérifié et en bonne santé.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="video"></i></div>
-              <div class="trust-feature__text">
-                <h4>Partagez la joie</h4>
-                <p>Appelez-les sur WhatsApp dès l'arrivée — et partagez la joie malgré la distance.</p>
-                <p><a href="faq.html" class="inline-faq-link">Votre famille n'a pas besoin de l'appli. -> En savoir plus</a></p>
-              </div>
-            </div>
-          </div>
+          <h2 class="section-title">Envoyez un mouton à la maison — sans rappeler trois fois pour vérifier.</h2>
+          <p class="section-subtitle">De Paris à Bamako, votre paiement reste gelé en escrow jusqu'à ce qu'un proche reçoive la commande. Vous suivez chaque étape depuis votre téléphone.</p>
+        </div>
+        <div class="gb-endpoints">
+          <span class="gb-endpoint">Paris<small>Diaspora</small></span>
+          <span class="gb-endpoints__arrow">→</span>
+          <span class="gb-endpoint">Bamako<small>La famille</small></span>
+        </div>
+        <p class="gb-endpoints-note">Aussi depuis Londres, New York, Bruxelles, Montréal…</p>
+        <div class="gb-nsteps" style="max-width: 960px; margin: 0 auto;">
+          <div class="gb-nstep"><p class="gb-nstep__n">01</p><h3>Vous payez par carte</h3><p>Depuis n'importe quel pays. La devise locale est convertie automatiquement.</p></div>
+          <div class="gb-nstep"><p class="gb-nstep__n">02</p><h3>Les fonds sont gelés</h3><p>L'escrow protège l'argent jusqu'à la réception. Le vendeur ne touche rien avant.</p></div>
+          <div class="gb-nstep gb-nstep--green"><p class="gb-nstep__n">03</p><h3>Livraison confirmée</h3><p>Le proche reçoit, entre le code, et les fonds sont versés. Vous êtes prévenu.</p></div>
         </div>
       </div>
     </div>
