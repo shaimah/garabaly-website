@@ -277,52 +277,35 @@
   <!-- ===== SÉQUESTRE EXPLIQUÉ ===== -->
   <section class="section">
     <div class="container">
-      <div class="image-text-row">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="../assets/images/verification-480.avif 480w, ../assets/images/verification-768.avif 768w, ../assets/images/verification-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="../assets/images/verification-480.webp 480w, ../assets/images/verification-768.webp 768w, ../assets/images/verification-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <img src="../assets/images/verification-1024.jpg" alt="Vérification sécurisée sur téléphone mobile" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="reveal">
+      <div class="gb reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
           <span class="section-eyebrow">Le cœur de Garabaly</span>
-          <h2 class="section-title">Séquestre par étapes<br>avec allocation par partie</h2>
-          <p class="section-motto">Votre bétail. Votre argent. Votre confiance.</p>
-          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            Le séquestre de Garabaly conserve le paiement en toute sécurité avec un seul blocage et une allocation par partie — chaque prestataire est payé dès que son étape est terminée. Le paiement du vendeur est retenu 24h après confirmation de réception (fenêtre de protection acheteur). Chaque transaction est chiffrée, auditée et protégée par la détection de fraude.
+          <h2 class="section-title">Vous suivez chaque étape.<br>Vous libérez les fonds.</h2>
+          <p class="section-subtitle">
+            Dès votre paiement, les fonds sont gelés en escrow. Le vendeur ne reçoit rien tant que vous n'avez pas confirmé la réception — avec votre code à 6 caractères, que vous seul détenez.
           </p>
-          <div class="trust-features">
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="dollar-sign"></i></div>
-              <div class="trust-feature__text">
-                <h4>1. Financé — « Fonds sécurisés »</h4>
-                <p>Quand vous payez après pré-approbation, votre paiement est verrouillé en toute sécurité — un seul paiement, allocation par partie. Personne ne touche l'argent avant la confirmation de la livraison par l'acheteur.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="truck"></i></div>
-              <div class="trust-feature__text">
-                <h4>2. En libération — « Libération en cours »</h4>
-                <p>Préparation, transit, livraison. Chaque prestataire (boucher, vétérinaire, livreur) agit dans l'ordre et est payé dès qu'il termine son travail. Suivez en temps réel.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="key"></i></div>
-              <div class="trust-feature__text">
-                <h4>3. Libéré — « Fonds libérés »</h4>
-                <p>L'acheteur utilise son code unique de 6 caractères pour confirmer la réception. Les prestataires sont payés immédiatement. Le paiement du vendeur est retenu pendant une fenêtre de protection acheteur de 24 heures.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon"><i data-feather="alert-circle"></i></div>
-              <div class="trust-feature__text">
-                <h4>4. Contesté — « Contesté »</h4>
-                <p>En cas de problème pendant la fenêtre de 24h, l'acheteur peut ouvrir un litige — fonds du vendeur gelés, médiation à double approbation admin. Votre argent reste protégé.</p>
-              </div>
-            </div>
-          </div>
         </div>
+        <div class="gb-order-card">
+          <div class="gb-order-head">
+            <div class="gb-order-thumb"><i data-feather="feather"></i></div>
+            <div class="gb-order-meta">
+              <p class="gb-order-name">Pintades africaines</p>
+              <p class="gb-order-price">FCFA 10 000</p>
+              <p class="gb-order-seller"><i data-feather="user"></i> Fatou Traoré</p>
+            </div>
+            <span class="gb-order-id">ORD-MNPYDJDT-3C5J</span>
+          </div>
+          <ol class="gb-tracker">
+            <li data-state="done"><span class="dot"></span>Commande confirmée <span class="gb-who gb-who--you">Vous</span></li>
+            <li data-state="done"><span class="dot"></span>En préparation <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="done"><span class="dot"></span>Prêt pour retrait <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="done"><span class="dot"></span>En route <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="active"><span class="dot"></span><strong>Confirmer la réception</strong> <span class="gb-who gb-who--you">Vous</span><small>Confirmez la réception de votre commande.</small></li>
+            <li data-state="todo"><span class="dot"></span>Transaction terminée <span class="gb-who gb-who--you">Vous</span></li>
+          </ol>
+          <div class="gb-code-row"><span>Entrez votre code pour libérer les fonds</span><code class="gb-code">FLNTH9</code></div>
+        </div>
+        <p class="gb-strip"><strong>Escrow de bout en bout</strong> · Chaque partie visible · Un code, à vous seul</p>
       </div>
     </div>
   </section>

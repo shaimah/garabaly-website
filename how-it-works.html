@@ -309,60 +309,35 @@
   <!-- ===== ESCROW EXPLAINED ===== -->
   <section class="section">
     <div class="container">
-      <div class="image-text-row">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="assets/images/verification-480.avif 480w, assets/images/verification-768.avif 768w, assets/images/verification-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="assets/images/verification-480.webp 480w, assets/images/verification-768.webp 768w, assets/images/verification-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <img src="assets/images/verification-1024.jpg" alt="Secure verification on mobile phone" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="reveal">
+      <div class="gb reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
           <span class="section-eyebrow">The Heart of Garabaly</span>
-          <h2 class="section-title">Per-Party Staged<br>Escrow Lifecycle</h2>
-          <p class="section-motto">Your livestock. Your money. Your trust.</p>
-          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            Garabaly's escrow is a precision-engineered financial system with per-party staged release. One escrow hold per order, per-party allocation. Sellers and service providers pre-approve before checkout — no post-checkout confirmation needed. Every transaction is encrypted, audited, and protected by fraud detection.
+          <h2 class="section-title">You track every step.<br>You release the funds.</h2>
+          <p class="section-subtitle">
+            The moment you pay, the funds are frozen in escrow. The seller receives nothing until you confirm receipt — with your 6-character code, which you alone hold.
           </p>
-          <div class="trust-features">
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="dollar-sign"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>1. Funded — "Fonds sécurisés"</h4>
-                <p>Buyer pays at checkout. Funds are held in escrow — neither party can touch the money. One payment covers the seller and all service providers, each share tracked separately.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="truck"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>2. Releasing — "Libération en cours"</h4>
-                <p>Buyer confirmed receipt with their 6-character code. Seller's share enters a 24-hour countdown (dispute window). Service providers (butcher, vet, delivery) receive immediate release — no waiting.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="key"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>3. Released — "Fonds libérés"</h4>
-                <p>24-hour countdown expired with no dispute, or service confirmed. Funds credited to the seller's wallet. Each provider was already paid at their step — per-party staged release means no one waits for the entire chain.</p>
-              </div>
-            </div>
-            <div class="trust-feature">
-              <div class="trust-feature__icon">
-                <i data-feather="alert-circle"></i>
-              </div>
-              <div class="trust-feature__text">
-                <h4>4. Disputed — "Litige"</h4>
-                <p>Buyer opened a dispute during the 24-hour window. All unreleased shares are frozen — already-released service provider shares are unaffected. Dual-admin review required. If resolved in buyer's favor, funds are refunded.</p>
-              </div>
-            </div>
-          </div>
         </div>
+        <div class="gb-order-card">
+          <div class="gb-order-head">
+            <div class="gb-order-thumb"><i data-feather="feather"></i></div>
+            <div class="gb-order-meta">
+              <p class="gb-order-name">African guinea fowl</p>
+              <p class="gb-order-price">FCFA 10 000</p>
+              <p class="gb-order-seller"><i data-feather="user"></i> Fatou Traoré</p>
+            </div>
+            <span class="gb-order-id">ORD-MNPYDJDT-3C5J</span>
+          </div>
+          <ol class="gb-tracker">
+            <li data-state="done"><span class="dot"></span>Order confirmed <span class="gb-who gb-who--you">You</span></li>
+            <li data-state="done"><span class="dot"></span>In preparation <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="done"><span class="dot"></span>Ready for pickup <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="done"><span class="dot"></span>On the way <span class="gb-who gb-who--seller">Fatou Traoré</span></li>
+            <li data-state="active"><span class="dot"></span><strong>Confirm receipt</strong> <span class="gb-who gb-who--you">You</span><small>Confirm you have received your order.</small></li>
+            <li data-state="todo"><span class="dot"></span>Transaction complete <span class="gb-who gb-who--you">You</span></li>
+          </ol>
+          <div class="gb-code-row"><span>Enter your code to release the funds</span><code class="gb-code">FLNTH9</code></div>
+        </div>
+        <p class="gb-strip"><strong>End-to-end escrow</strong> · Every party visible · One code, yours alone</p>
       </div>
     </div>
   </section>
