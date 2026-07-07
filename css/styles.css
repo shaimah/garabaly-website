@@ -2465,7 +2465,8 @@ html.js-ready .reveal.visible {
 .gb-limits { border-top: 1px solid var(--gb-hairline); padding-top: 10px; display: flex; flex-direction: column; gap: 6px; }
 .gb-limit { display: flex; justify-content: space-between; gap: var(--space-md); font-size: 0.9rem; }
 .gb-limit span:first-child { color: var(--gb-muted); }
-.gb-limit span:last-child { font-weight: 700; color: var(--text-primary); }
+.gb-limit span:last-child { font-weight: 700; color: var(--text-primary); white-space: nowrap; }
+.gb-limit span:first-child { flex: 1 1 auto; }
 .gb-compliance { text-align: center; margin-top: var(--space-lg); color: var(--gb-muted); font-size: 0.85rem; }
 
 /* Itemised protected card (§3.4) */
