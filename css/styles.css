@@ -2433,7 +2433,7 @@ html.js-ready .reveal.visible {
 .gb-icard__icon svg, .gb-icard__icon i { width: 24px; height: 24px; }
 .gb-icard h3 { font: var(--font-h3); margin: 0; }
 .gb-icard p { color: var(--text-secondary); font-size: 0.95rem; margin: 0; }
-.gb-icard .gb-pill { align-self: flex-start; }
+.gb-icard > .gb-pill { align-self: flex-start; margin-top: auto; }
 
 /* Numbered step row (§3.3 diaspora) */
 .gb-nsteps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-lg); text-align: start; }
