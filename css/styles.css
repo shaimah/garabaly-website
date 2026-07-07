@@ -2422,7 +2422,7 @@ html.js-ready .reveal.visible {
 .gb-strip strong { color: var(--text-primary); font-weight: 600; }
 
 /* Generic pills */
-.gb-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em; border-radius: 20px; padding: 3px 10px; }
+.gb-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em; border-radius: 20px; padding: 3px 10px; background: var(--gb-cream); color: var(--gb-muted); }
 .gb-pill--live { color: var(--success); background: var(--gb-green-fill); }
 .gb-pill--live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--success); }
 
