@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=20">
+<link rel="stylesheet" href="../css/styles.css?v=21">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -207,7 +207,7 @@
   <section class="section" id="mobile-money-providers" style="padding: var(--space-2xl) 0;">
     <div class="container">
       <div class="section-header text-center reveal" style="margin-bottom: var(--space-xl);">
-        <h2 class="section-title" style="font-size: clamp(1.2rem, 2.2vw, 1.8rem);">ادفع بالمحفظة التي تستخدمها بالفعل</h2>
+        <h2 class="section-title">ادفع بالمحفظة التي تستخدمها بالفعل</h2>
       </div>
       <div class="provider-logos reveal">
         <img src="../assets/images/orange-money.png" alt="Orange Money">
@@ -215,7 +215,7 @@
         <img src="../assets/images/wave.png" alt="Wave">
         <img src="../assets/images/mtn-momo.png" alt="MTN MoMo">
       </div>
-      <p class="text-center section-subtitle reveal" style="font-size: 0.95rem; margin: var(--space-md) auto 0;">
+      <p class="text-center section-subtitle reveal" style="font-size: var(--fs-body); margin: var(--space-md) auto 0;">
         متاح في مالي والسنغال وكوت ديفوار وبوركينا فاسو وبنين وتوغو والكاميرون
       </p>
       <p class="text-center reveal" style="margin-top: var(--space-sm);">
@@ -529,41 +529,42 @@
         </p>
       </div>
 
-      <div class="scroll-hint">
-        <span>اسحب لاستكشاف</span>
-        <i data-feather="arrow-left"></i>
-      </div>
-
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step__number">1</div>
-          <h3 class="step__title">تصفح واكتشف</h3>
-          <p class="step__desc">استكشف إعلانات مع صور وملفات بائعين موثّقة وأوصاف صوتية باللغات المحلية وشهادات صحية اختيارية.</p>
+      <div class="gb gb-flow reveal">
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">1</span>
+          <div class="gb-flow__icon"><i data-feather="search"></i></div>
+          <h3 class="gb-flow__title">تصفّح واكتشف</h3>
+          <p class="gb-flow__desc">صور، بائعون موثّقون، أوصاف صوتية، وشهادات صحية اختيارية.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">2</div>
-          <h3 class="step__title">فاوض واتفق</h3>
-          <p class="step__desc">تحدث مباشرة مع البائع — اسأل أسئلة، اطلب فيديو، فاوض على السعر. مثل السوق تماماً.</p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">2</span>
+          <div class="gb-flow__icon"><i data-feather="mic"></i></div>
+          <h3 class="gb-flow__title">فاوض واتّفق</h3>
+          <p class="gb-flow__desc">تحدّث مع البائع بالصوت واتّفق على السعر. كما في السوق.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">3</div>
-          <h3 class="step__title">معتمد مسبقاً لحمايتك</h3>
-          <p class="step__desc">البائع ومقدمو الخدمات (جزار، طبيب بيطري، سائق توصيل) يراجعون ويقبلون طلبك قبل الدفع. لا تدفع إلا عندما يؤكد الجميع.</p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">3</span>
+          <div class="gb-flow__icon"><i data-feather="check-circle"></i></div>
+          <h3 class="gb-flow__title">مُعتمد مسبقاً لأجلك</h3>
+          <p class="gb-flow__desc">البائع ومقدمو الخدمات يقبلون طلبك قبل أي دفع.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">4</div>
-          <h3 class="step__title">ادفع بالضمان</h3>
-          <p class="step__desc">ادفع عبر أموال الهاتف أو البطاقة أو المحفظة. أموالك محفوظة في الضمان — دفعة واحدة، تخصيص لكل طرف. لا أحد يمس المال حتى تأكيد التسليم.</p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">4</span>
+          <div class="gb-flow__icon"><i data-feather="shield"></i></div>
+          <h3 class="gb-flow__title">ادفع بالضمان</h3>
+          <p class="gb-flow__desc">mobile money أو بطاقة أو محفظة. أموالك محمية — لا أحد يُدفع له قبل رمزك.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">5</div>
-          <h3 class="step__title">تابع واستلم</h3>
-          <p class="step__desc">تابع طلبك مباشرة — تحضير، نقل، توصيل. أضف خدمات اختيارية كالذبح أو الفحص البيطري. كل مقدم خدمة يعمل بالتسلسل.</p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">5</span>
+          <div class="gb-flow__icon"><i data-feather="map-pin"></i></div>
+          <h3 class="gb-flow__title">تابِع واستلم</h3>
+          <p class="gb-flow__desc">تابع لحظياً: التحضير، النقل، التسليم — في كل خطوة.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">6</div>
-          <h3 class="step__title">أكّد بالرمز</h3>
-          <p class="step__desc">استخدم رمزك الفريد المكون من 6 أحرف للتحقق من التسليم. لا يُفرج عن أي مبلغ قبل إدخاله — وبمجرد إدخاله، يُدفع لمقدمي الخدمات وتدخل دفعة البائع في نافذة حماية المشتري لمدة 24 ساعة.</p>
+        <div class="gb-flow__card gb-flow__card--gold">
+          <span class="gb-flow__num">6</span>
+          <div class="gb-flow__icon"><i data-feather="key"></i></div>
+          <h3 class="gb-flow__title">أكِّد بالرمز</h3>
+          <p class="gb-flow__desc">رمزك المكوّن من 6 أحرف يؤكّد الاستلام. أنت وحدك تُحرّر الأموال.</p>
         </div>
       </div>
 
@@ -724,7 +725,8 @@
             تصفّح بالصور، فاوض البائع مباشرة، ثم ادفع في الضمان. إعلانات حقيقية، بائعون موثّقون، وأسعار ظاهرة.
           </p>
         </div>
-        <div class="gb-search"><i data-feather="search"></i><span>ابحث عن كبش للتباسكي…</span></div>
+        <a class="gb-search" href="get-the-app.html" data-typewriter='["ابحث عن كبش للتباسكي…","ثور لحفل تسمية في داكار…","طبيب بيطري في باماكو…","كبش لادوم في داكار…","خراف لتعاونية…"]'><i data-feather="search"></i><span class="gb-search__ph">ابحث عن كبش للتباسكي…</span></a>
+        <p class="gb-search__note">معاينة — يتم البحث داخل التطبيق.</p>
         <div class="scroll-hint"><span>اسحب للاستكشاف</span><i data-feather="arrow-left"></i></div>
         <div class="gb-listings-carousel">
           <div class="gb-listing">
@@ -866,10 +868,10 @@
           <h2 class="section-title">أرسِل كبشاً إلى الوطن — دون أن تتصل ثلاث مرات للتأكّد.</h2>
           <p class="section-subtitle">من باريس إلى باماكو، يبقى دفعك محمياً في الضمان حتى يستلم أحد أحبائك الطلب. تتابع كل خطوة من هاتفك.</p>
         </div>
-        <div class="gb-endpoints">
-          <span class="gb-endpoint">باريس<small>المهجر</small></span>
+        <div class="gb-endpoints" data-corridor data-corridors='[{"from":"مدريد","fl":"المهجر","to":"داكار","tl":"العائلة · السنغال"},{"from":"باريس","fl":"المهجر","to":"باماكو","tl":"العائلة · مالي"},{"from":"روما","fl":"المهجر","to":"واغادوغو","tl":"العائلة · بوركينا فاسو"},{"from":"أبيدجان","fl":"إقليمي","to":"نيامي","tl":"العائلة · النيجر"}]'>
+          <span class="gb-endpoint"><b class="gb-endpoint__city">مدريد</b><small>المهجر</small></span>
           <span class="gb-endpoints__arrow">→</span>
-          <span class="gb-endpoint">باماكو<small>العائلة</small></span>
+          <span class="gb-endpoint"><b class="gb-endpoint__city">داكار</b><small>العائلة · السنغال</small></span>
         </div>
         <p class="gb-endpoints-note">أيضاً من لندن ونيويورك وبروكسل ومونتريال…</p>
         <div class="gb-nsteps" style="max-width: 960px; margin: 0 auto;">
@@ -1073,7 +1075,7 @@
   <section class="section cta-section" id="download">
     <div class="container">
       <div class="cta-content reveal">
-        <h2 class="section-title" style="color: #FFF; font-size: clamp(1.8rem, 4vw, 2.8rem);">
+        <h2 class="section-title" style="color: #FFF;">
           تجارة الماشية لم تتغير منذ 100 عام.
         </h2>
         <p>انضم للثورة. حمّل الآن.</p>
@@ -1149,7 +1151,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=10"></script>
+  <script src="../js/main.js?v=11"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

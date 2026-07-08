@@ -67,7 +67,7 @@
 
   <!-- Styles -->
     <link rel="preload" as="image" type="image/avif" imagesrcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="css/styles.css?v=20">
+<link rel="stylesheet" href="css/styles.css?v=21">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -227,7 +227,7 @@
   <section class="section" id="mobile-money-providers" style="padding: var(--space-2xl) 0;">
     <div class="container">
       <div class="section-header text-center reveal" style="margin-bottom: var(--space-xl);">
-        <h2 class="section-title" style="font-size: clamp(1.2rem, 2.2vw, 1.8rem);">Pay with the wallet you already use</h2>
+        <h2 class="section-title">Pay with the wallet you already use</h2>
       </div>
       <div class="provider-logos reveal">
         <img src="assets/images/orange-money.png" alt="Orange Money">
@@ -235,7 +235,7 @@
         <img src="assets/images/wave.png" alt="Wave">
         <img src="assets/images/mtn-momo.png" alt="MTN MoMo">
       </div>
-      <p class="text-center section-subtitle reveal" style="font-size: 0.95rem; margin: var(--space-md) auto 0;">
+      <p class="text-center section-subtitle reveal" style="font-size: var(--fs-body); margin: var(--space-md) auto 0;">
         Available in Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, and Cameroun
       </p>
       <p class="text-center reveal" style="margin-top: var(--space-sm);">
@@ -480,58 +480,42 @@
         </p>
       </div>
 
-      <div class="scroll-hint">
-        <span>Swipe to explore</span>
-        <i data-feather="arrow-right"></i>
-      </div>
-
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step__number">1</div>
-          <h3 class="step__title">Browse & Discover</h3>
-          <p class="step__desc">
-            Explore listings with photos, verified seller profiles, voice descriptions in local languages, and optional health certificates.
-          </p>
+      <div class="gb gb-flow reveal">
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">1</span>
+          <div class="gb-flow__icon"><i data-feather="search"></i></div>
+          <h3 class="gb-flow__title">Browse &amp; discover</h3>
+          <p class="gb-flow__desc">Photos, verified sellers, voice descriptions, optional health certificates.</p>
         </div>
-
-        <div class="step reveal">
-          <div class="step__number">2</div>
-          <h3 class="step__title">Negotiate & Agree</h3>
-          <p class="step__desc">
-            Chat directly with the seller — ask questions, request videos, negotiate the price. Reach consensus like at the market.
-          </p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">2</span>
+          <div class="gb-flow__icon"><i data-feather="mic"></i></div>
+          <h3 class="gb-flow__title">Negotiate &amp; agree</h3>
+          <p class="gb-flow__desc">Talk to the seller, by voice, and agree on the price. Just like at the market.</p>
         </div>
-
-        <div class="step reveal">
-          <div class="step__number">3</div>
-          <h3 class="step__title">Pre-Approved for Your Protection</h3>
-          <p class="step__desc">
-            The seller and any service providers (butcher, vet, delivery) review and accept your order before you can checkout. You only pay once everyone has confirmed availability.
-          </p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">3</span>
+          <div class="gb-flow__icon"><i data-feather="check-circle"></i></div>
+          <h3 class="gb-flow__title">Pre-approved for you</h3>
+          <p class="gb-flow__desc">Seller and providers accept your order before any payment.</p>
         </div>
-
-        <div class="step reveal">
-          <div class="step__number">4</div>
-          <h3 class="step__title">Pay with Escrow</h3>
-          <p class="step__desc">
-            Pay via mobile money, card, or wallet. Your funds are held securely in escrow — one payment, per-party allocation. No one touches the money until delivery is confirmed.
-          </p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">4</span>
+          <div class="gb-flow__icon"><i data-feather="shield"></i></div>
+          <h3 class="gb-flow__title">Pay with escrow</h3>
+          <p class="gb-flow__desc">Mobile money, card, or wallet. Your funds are protected — no one is paid before your code.</p>
         </div>
-
-        <div class="step reveal">
-          <div class="step__number">5</div>
-          <h3 class="step__title">Track & Receive</h3>
-          <p class="step__desc">
-            Follow your order in real time through each stage — preparation, transit, delivery. Add optional services like butchering or vet inspection. Each provider acts in sequence.
-          </p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">5</span>
+          <div class="gb-flow__icon"><i data-feather="map-pin"></i></div>
+          <h3 class="gb-flow__title">Track &amp; receive</h3>
+          <p class="gb-flow__desc">Follow in real time: preparation, transit, delivery — at every step.</p>
         </div>
-
-        <div class="step reveal">
-          <div class="step__number">6</div>
-          <h3 class="step__title">Confirm with Code</h3>
-          <p class="step__desc">
-            Use your unique 6-character confirmation code to verify delivery. Nothing is released until you enter it — then the service providers are paid and the seller's share enters a 24-hour buyer-protection window.
-          </p>
+        <div class="gb-flow__card gb-flow__card--gold">
+          <span class="gb-flow__num">6</span>
+          <div class="gb-flow__icon"><i data-feather="key"></i></div>
+          <h3 class="gb-flow__title">Confirm with the code</h3>
+          <p class="gb-flow__desc">Your 6-character code verifies receipt. You alone release the funds.</p>
         </div>
       </div>
 
@@ -791,7 +775,8 @@
             Browse by photo, negotiate directly with the seller, then pay into escrow. Real listings, verified sellers, prices you can see.
           </p>
         </div>
-        <div class="gb-search"><i data-feather="search"></i><span>Search for a ram for Tabaski…</span></div>
+        <a class="gb-search" href="get-the-app.html" data-typewriter='["Search for a ram for Tabaski…","A bull for a naming ceremony in Dakar…","A vet in Bamako…","A Ladoum ram in Dakar…","Sheep for a cooperative…"]'><i data-feather="search"></i><span class="gb-search__ph">Search for a ram for Tabaski…</span></a>
+        <p class="gb-search__note">Preview — search happens in the app.</p>
         <div class="scroll-hint"><span>Swipe to explore</span><i data-feather="arrow-right"></i></div>
         <div class="gb-listings-carousel">
           <div class="gb-listing">
@@ -933,10 +918,10 @@
           <h2 class="section-title">Send a ram home — without calling three times to check.</h2>
           <p class="section-subtitle">From Paris to Bamako, your payment stays protected in escrow until a loved one receives the order. You follow every step from your phone.</p>
         </div>
-        <div class="gb-endpoints">
-          <span class="gb-endpoint">Paris<small>Diaspora</small></span>
+        <div class="gb-endpoints" data-corridor data-corridors='[{"from":"Madrid","fl":"Diaspora","to":"Dakar","tl":"Family · Senegal"},{"from":"Paris","fl":"Diaspora","to":"Bamako","tl":"Family · Mali"},{"from":"Rome","fl":"Diaspora","to":"Ouagadougou","tl":"Family · Burkina Faso"},{"from":"Abidjan","fl":"Regional","to":"Niamey","tl":"Family · Niger"}]'>
+          <span class="gb-endpoint"><b class="gb-endpoint__city">Madrid</b><small>Diaspora</small></span>
           <span class="gb-endpoints__arrow">→</span>
-          <span class="gb-endpoint">Bamako<small>Family</small></span>
+          <span class="gb-endpoint"><b class="gb-endpoint__city">Dakar</b><small>Family · Senegal</small></span>
         </div>
         <p class="gb-endpoints-note">Also from London, New York, Brussels, Montreal…</p>
         <div class="gb-nsteps" style="max-width: 960px; margin: 0 auto;">
@@ -1157,7 +1142,7 @@
   <section class="section cta-section" id="download">
     <div class="container">
       <div class="cta-content reveal">
-        <h2 class="section-title" style="color: #FFF; font-size: clamp(1.8rem, 4vw, 2.8rem);">
+        <h2 class="section-title" style="color: #FFF;">
           The livestock trade hasn't changed in 100 years.
         </h2>
         <p>
@@ -1260,7 +1245,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/main.js?v=10"></script>
+  <script src="js/main.js?v=11"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>
