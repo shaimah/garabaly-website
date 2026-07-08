@@ -67,7 +67,7 @@
 
   <!-- Styles -->
     <link rel="preload" as="image" type="image/avif" imagesrcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="css/styles.css?v=13">
+<link rel="stylesheet" href="css/styles.css?v=14">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -584,9 +584,47 @@
           <p class="feature-card__desc">Know a butcher, vet, or delivery driver? Connect them to Garabaly's network.</p>
         </div>
       </div>
-      <div class="reveal" style="margin-top: var(--space-xl);">
-        <p><strong>What you get:</strong> 2,000 XOF bonus credit per successful referral, 500 XOF welcome bonus per new invite, and fee discounts as you grow (Bronze 5+, Silver 15+, Gold 30+ referrals).</p>
-        <div class="btn-group" style="margin-top: var(--space-md);">
+      <div class="gb reveal" style="margin-top: var(--space-2xl);">
+        <p style="text-align:center; max-width:660px; margin:0 auto var(--space-xl); color: var(--text-secondary);">
+          <strong>For sellers &amp; providers:</strong> your commission drops as you refer peers. The standard 5% service fee shrinks with each active referral, and every new one resets the clock at your tier.
+        </p>
+        <div class="gb-tiers">
+          <div class="gb-tier gb-tier--bronze">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">Bronze</div>
+            <div class="gb-tier__reqs">from 1 referral</div>
+            <div class="gb-tier__pct" dir="ltr">−2%</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5% → 3%</span></div>
+            <span class="gb-tier__dur">30 days</span>
+          </div>
+          <div class="gb-tier gb-tier--silver">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">Silver</div>
+            <div class="gb-tier__reqs">from 3 referrals</div>
+            <div class="gb-tier__pct" dir="ltr">−2.5%</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5% → 2.5%</span></div>
+            <span class="gb-tier__dur">45 days</span>
+          </div>
+          <div class="gb-tier gb-tier--gold">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">Gold</div>
+            <div class="gb-tier__reqs">from 6 referrals</div>
+            <div class="gb-tier__pct" dir="ltr">−3%</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5% → 2%</span></div>
+            <span class="gb-tier__dur">60 days</span>
+          </div>
+        </div>
+        <div class="gb-ladder">
+          <div class="gb-ladder__step gb-ladder__step--parrain"><span class="gb-ladder__badge"><i data-feather="user-plus"></i></span><span class="gb-ladder__name">Sponsor</span><span class="gb-ladder__req">3 referrals</span></div>
+          <span class="gb-ladder__arrow">→</span>
+          <div class="gb-ladder__step gb-ladder__step--ambassadeur"><span class="gb-ladder__badge"><i data-feather="award"></i></span><span class="gb-ladder__name">Ambassador</span><span class="gb-ladder__req">10 referrals</span></div>
+          <span class="gb-ladder__arrow">→</span>
+          <div class="gb-ladder__step gb-ladder__step--champion"><span class="gb-ladder__badge"><i data-feather="star"></i></span><span class="gb-ladder__name">Champion</span><span class="gb-ladder__req">25 referrals</span></div>
+          <span class="gb-ladder__arrow">→</span>
+          <div class="gb-ladder__step gb-ladder__step--confiance"><span class="gb-ladder__badge"><i data-feather="shield"></i></span><span class="gb-ladder__name">Trusted</span><span class="gb-ladder__req">higher caps</span></div>
+        </div>
+        <p class="gb gb-strip" style="margin-top: var(--space-xl);">A discount on the 5% seller commission — <strong>never below the 2% floor</strong>. Same-role only: sellers refer sellers, providers refer providers. Buyers who invite earn wallet bonus credit instead.</p>
+        <div class="btn-group" style="justify-content:center; margin-top: var(--space-xl);">
           <a href="https://wa.me/?text=Découvre%20Garabaly%20—%20la%20marketplace%20de%20confiance%20pour%20le%20bétail.%20https://www.garabaly.com/get-the-app.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Share via WhatsApp</a>
           <a href="/get-the-app.html" class="btn btn--secondary">Get the App to Refer</a>
         </div>

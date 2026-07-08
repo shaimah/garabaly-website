@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/cairo-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=13">
+  <link rel="stylesheet" href="../css/styles.css?v=14">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -433,7 +433,11 @@
             <span class="gb-flow__num">4</span>
           </div>
         </div>
-        <p class="gb-flow__hint"><i data-feather="move"></i> اسحب لإعادة الترتيب — يبقى البائع مثبّتاً دائماً في المقام الأول.</p>
+        <p class="gb-flow__hint"><i data-feather="move"></i> اضغط واسحب البطاقات لتغيير الترتيب — يبقى البائع مثبّتاً دائماً في المقام الأول.</p>
+        <div class="gb-flowbtns">
+          <span class="gb-flowbtns__save">حفظ التسلسل</span>
+          <span class="gb-flowbtns__cancel">إلغاء التجميع</span>
+        </div>
       </div>
     </div>
   </section>
@@ -478,93 +482,36 @@
       <div class="gb reveal">
         <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
           <span class="section-eyebrow">لمقدّمي الخدمات</span>
-          <h2 class="section-title">عملك، لوحة تحكّمك.</h2>
+          <h2 class="section-title">بياطرة، جزّارون، ناقلون:<br>استقبل الطلبات، اكسب أكثر.</h2>
           <p class="section-subtitle">
-            الجزّارون والبياطرة والناقلون — يجلب لك Garabaly طلبات مدفوعة. اقبل ما تستطيع إنجازه، وتصرّف عندما يحين دورك، واحصل على أجرك فور تأكيد خطوتك. لا مطاردة للدفع، ولا مخاطرة نقدية.
+            انضم إلى شبكة غرابالي. استقبل طلبات قريبة منك، اقبل بلمسة واحدة، واحصل على أجرك عبر الضمان في نهاية كل خدمة.
           </p>
         </div>
         <div class="gb-dash">
           <div class="gb-dash__head">
             <div class="gb-dash__who">
               <span class="gb-dash__avatar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
-              <div><strong>سيكو تراوري — جزّار</strong><small>حلال موثّق · <span dir="ltr">★ 4.9</span></small></div>
+              <div>
+                <strong>مرحباً، موسى <span class="gb-dash__verif"><i data-feather="check"></i> موثّق</span></strong>
+                <small><span class="gb-dash__role"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg> جزّار</span></small>
+              </div>
             </div>
-            <div class="gb-dash__earn"><small>هذا الأسبوع</small><strong dir="ltr">FCFA 145 000</strong></div>
           </div>
-          <div class="gb-dash__req">
-            <div class="gb-dash__reqmain">
-              <span class="gb-dash__reqic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
-              <div><strong>تجهيز حلال — كبش بالي</strong><small><span dir="ltr">ORD-7K2MNP4T</span> · اليوم · <span dir="ltr">FCFA 15 000</span></small></div>
+          <div class="gb-dash__banner"><i data-feather="bell"></i> طلب جديد</div>
+          <div class="gb-dash__job">
+            <div class="gb-dash__jobtop">
+              <span class="gb-dash__rolepill"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg> جزّار</span>
+              <span class="gb-dash__jobprice" dir="ltr">FCFA 15 000</span>
             </div>
+            <p class="gb-dash__jobmeta"><strong>آوا كوليبالي</strong> · <span dir="ltr">+223 •• •• •• ••</span><br>اليوم · <span dir="ltr">14:30</span> · ذبح حلال — خروف</p>
             <div class="gb-dash__actions">
-              <span class="gb-btn gb-btn--accept">قبول</span>
               <span class="gb-btn gb-btn--refuse">رفض</span>
+              <span class="gb-btn gb-btn--accept">قبول</span>
             </div>
           </div>
-          <div class="gb-dash__req">
-            <div class="gb-dash__reqmain">
-              <span class="gb-dash__reqic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
-              <div><strong>تجهيز حلال — خروفان</strong><small><span dir="ltr">ORD-9F3XQ2L8</span> · دورك بعد البيطري</small></div>
-            </div>
-            <span class="gb-status gb-status--wait"><i data-feather="clock"></i> مقبول</span>
-          </div>
-          <div class="gb-dash__req">
-            <div class="gb-dash__reqmain">
-              <span class="gb-dash__reqic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
-              <div><strong>تجهيز حلال — كبش</strong><small><span dir="ltr">ORD-5T8W2K1P</span> · مكتمل · <span dir="ltr">FCFA 18 000</span></small></div>
-            </div>
-            <span class="gb-status gb-status--done"><i data-feather="check-circle"></i> مدفوع</span>
-          </div>
+          <div class="gb-dash__inprog">أعمال جارية (4)</div>
         </div>
-        <p class="gb gb-strip" style="margin-top: var(--space-lg);">تُدفع فور تأكيد خطوتك — يبقى مال المشتري في الضمان حتى ذلك الحين.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== §3.14 مستويات الإحالة ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="gb reveal">
-        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
-          <span class="section-eyebrow">الإحالة</span>
-          <h2 class="section-title">أحِل زملاءك.<br>خفّض عمولتك.</h2>
-          <p class="section-subtitle">
-            البائعون ومقدّمو الخدمات الذين يجلبون آخرين إلى Garabaly يدفعون رسوم خدمة أقل. تنخفض العمولة القياسية 5% كلما اتّسعت دائرتك — وكل إحالة جديدة تعيد ضبط المؤقّت على مستواك.
-          </p>
-        </div>
-        <div class="gb-refshare">
-          <div class="gb-refshare__code"><small>رمز الإحالة الخاص بك</small><strong dir="ltr">GRB-8QF2</strong></div>
-          <span class="gb-refshare__btn"><i data-feather="share-2"></i> مشاركة</span>
-          <div class="gb-refshare__stat"><strong>4</strong><small>زملاء انضمّوا</small></div>
-        </div>
-        <div class="gb-tiers">
-          <div class="gb-tier gb-tier--bronze">
-            <span class="gb-tier__badge"><i data-feather="award"></i></span>
-            <div class="gb-tier__name">برونزي</div>
-            <div class="gb-tier__reqs"><span dir="ltr">1–2</span> إحالة</div>
-            <div class="gb-tier__pct" dir="ltr">−2%</div>
-            <div class="gb-tier__detail">العمولة <span dir="ltr">5% → 3%</span></div>
-            <span class="gb-tier__dur">30 يوماً</span>
-          </div>
-          <div class="gb-tier gb-tier--silver gb-tier--active">
-            <span class="gb-tier__flag">مستواك · 45 يوماً متبقٍّ</span>
-            <span class="gb-tier__badge"><i data-feather="award"></i></span>
-            <div class="gb-tier__name">فضّي</div>
-            <div class="gb-tier__reqs"><span dir="ltr">3–5</span> إحالات</div>
-            <div class="gb-tier__pct" dir="ltr">−2.5%</div>
-            <div class="gb-tier__detail">العمولة <span dir="ltr">5% → 2.5%</span></div>
-            <span class="gb-tier__dur">45 يوماً</span>
-          </div>
-          <div class="gb-tier gb-tier--gold">
-            <span class="gb-tier__badge"><i data-feather="award"></i></span>
-            <div class="gb-tier__name">ذهبي</div>
-            <div class="gb-tier__reqs"><span dir="ltr">6+</span> إحالات</div>
-            <div class="gb-tier__pct" dir="ltr">−3%</div>
-            <div class="gb-tier__detail">العمولة <span dir="ltr">5% → 2%</span></div>
-            <span class="gb-tier__dur">60 يوماً</span>
-          </div>
-        </div>
-        <p class="gb gb-strip" style="margin-top: var(--space-xl);">شارات السفير — برونزي، فضّي، ذهبي — تظهر على ملفك الموثّق. نفس الدور فقط: البائعون يُحيلون بائعين، ومقدّمو الخدمات يُحيلون مقدّمي خدمات.</p>
+        <p class="gb gb-strip" style="margin-top: var(--space-lg);">تُدفع عبر الضمان في نهاية كل خدمة — دون مطاردة، ودون مخاطرة نقدية.</p>
       </div>
     </div>
   </section>

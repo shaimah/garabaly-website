@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=13">
+<link rel="stylesheet" href="../css/styles.css?v=14">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -327,9 +327,47 @@
         <div class="feature-card reveal"><h3 class="feature-card__title">2) ادعُ البائعين</h3><p class="feature-card__desc">عندما يُتم البائع أول عملية بيع تحصل على بونص.</p></div>
         <div class="feature-card reveal"><h3 class="feature-card__title">3) ادعُ مقدمي الخدمات</h3><p class="feature-card__desc">اعرف جزاراً أو طبيباً بيطرياً أو سائق توصيل؟ ضمه إلى شبكة غرابالي.</p></div>
       </div>
-      <div class="reveal" style="margin-top: var(--space-xl);">
-        <p><strong>ما تحصل عليه:</strong> 2,000 فرنك XOF رصيد إضافي عن كل إحالة ناجحة، و500 فرنك XOF مكافأة ترحيب عن كل دعوة جديدة، وتخفيضات على الرسوم كلما تقدّمت (برونزي 5+، فضي 15+، ذهبي 30+ إحالة).</p>
-        <div class="btn-group" style="margin-top: var(--space-md);">
+      <div class="gb reveal" style="margin-top: var(--space-2xl);">
+        <p style="text-align:center; max-width:660px; margin:0 auto var(--space-xl); color: var(--text-secondary);">
+          <strong>للبائعين ومقدّمي الخدمات:</strong> تنخفض عمولتك كلما أحلت زملاءك. تتقلّص رسوم الخدمة القياسية 5% مع كل إحالة نشطة، وكل إحالة جديدة تعيد ضبط المؤقّت على مستواك.
+        </p>
+        <div class="gb-tiers">
+          <div class="gb-tier gb-tier--bronze">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">برونزي</div>
+            <div class="gb-tier__reqs">من <span dir="ltr">1</span> إحالة</div>
+            <div class="gb-tier__pct" dir="ltr">−2%</div>
+            <div class="gb-tier__detail">العمولة <span dir="ltr">5% → 3%</span></div>
+            <span class="gb-tier__dur">30 يوماً</span>
+          </div>
+          <div class="gb-tier gb-tier--silver">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">فضّي</div>
+            <div class="gb-tier__reqs">من <span dir="ltr">3</span> إحالات</div>
+            <div class="gb-tier__pct" dir="ltr">−2.5%</div>
+            <div class="gb-tier__detail">العمولة <span dir="ltr">5% → 2.5%</span></div>
+            <span class="gb-tier__dur">45 يوماً</span>
+          </div>
+          <div class="gb-tier gb-tier--gold">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">ذهبي</div>
+            <div class="gb-tier__reqs">من <span dir="ltr">6</span> إحالات</div>
+            <div class="gb-tier__pct" dir="ltr">−3%</div>
+            <div class="gb-tier__detail">العمولة <span dir="ltr">5% → 2%</span></div>
+            <span class="gb-tier__dur">60 يوماً</span>
+          </div>
+        </div>
+        <div class="gb-ladder">
+          <div class="gb-ladder__step gb-ladder__step--parrain"><span class="gb-ladder__badge"><i data-feather="user-plus"></i></span><span class="gb-ladder__name">راعٍ</span><span class="gb-ladder__req"><span dir="ltr">3</span> إحالات</span></div>
+          <span class="gb-ladder__arrow">←</span>
+          <div class="gb-ladder__step gb-ladder__step--ambassadeur"><span class="gb-ladder__badge"><i data-feather="award"></i></span><span class="gb-ladder__name">سفير</span><span class="gb-ladder__req"><span dir="ltr">10</span> إحالات</span></div>
+          <span class="gb-ladder__arrow">←</span>
+          <div class="gb-ladder__step gb-ladder__step--champion"><span class="gb-ladder__badge"><i data-feather="star"></i></span><span class="gb-ladder__name">بطل</span><span class="gb-ladder__req"><span dir="ltr">25</span> إحالة</span></div>
+          <span class="gb-ladder__arrow">←</span>
+          <div class="gb-ladder__step gb-ladder__step--confiance"><span class="gb-ladder__badge"><i data-feather="shield"></i></span><span class="gb-ladder__name">موثوق</span><span class="gb-ladder__req">حدود أعلى</span></div>
+        </div>
+        <p class="gb gb-strip" style="margin-top: var(--space-xl);">تخفيض على عمولة البائع البالغة 5%، <strong>ولا تقلّ أبداً عن الحدّ الأدنى 2%</strong>. نفس الدور فقط: البائعون يُحيلون بائعين، ومقدّمو الخدمات يُحيلون مقدّمي خدمات. أما المشترون الذين يدعون فيكسبون رصيداً في محفظتهم.</p>
+        <div class="btn-group" style="justify-content:center; margin-top: var(--space-xl);">
           <a href="https://wa.me/?text=اكتشف%20غرابالي%20—%20سوق%20الثقة%20لتجارة%20الماشية.%20https://www.garabaly.com/get-the-app.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary">المشاركة عبر WhatsApp</a>
           <a href="/ar/get-the-app.html" class="btn btn--secondary">احصل على التطبيق للإحالة</a>
         </div>

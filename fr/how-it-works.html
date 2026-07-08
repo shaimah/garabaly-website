@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=13">
+  <link rel="stylesheet" href="../css/styles.css?v=14">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -437,7 +437,11 @@
             <span class="gb-flow__num">4</span>
           </div>
         </div>
-        <p class="gb-flow__hint"><i data-feather="move"></i> Glissez pour réordonner — le vendeur reste toujours verrouillé en premier.</p>
+        <p class="gb-flow__hint"><i data-feather="move"></i> Maintenez et faites glisser les cartes pour changer l'ordre — le vendeur reste toujours verrouillé en premier.</p>
+        <div class="gb-flowbtns">
+          <span class="gb-flowbtns__save">Enregistrer le flux</span>
+          <span class="gb-flowbtns__cancel">Annuler le regroupement</span>
+        </div>
       </div>
     </div>
   </section>
@@ -481,93 +485,36 @@
       <div class="gb reveal">
         <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
           <span class="section-eyebrow">Pour les prestataires</span>
-          <h2 class="section-title">Votre travail, votre tableau de bord.</h2>
+          <h2 class="section-title">Vétérinaires, bouchers, transporteurs :<br>recevez des demandes, gagnez plus.</h2>
           <p class="section-subtitle">
-            Bouchers, vétérinaires, transporteurs — Garabaly vous apporte des demandes payées. Acceptez ce que vous pouvez assurer, agissez quand c'est votre tour, et soyez payé dès que votre étape est confirmée. Aucune course après le paiement, aucun risque d'espèces.
+            Rejoignez le réseau Garabaly. Recevez des demandes près de chez vous, acceptez en un geste, et soyez payé via séquestre à la fin de chaque prestation.
           </p>
         </div>
         <div class="gb-dash">
           <div class="gb-dash__head">
             <div class="gb-dash__who">
               <span class="gb-dash__avatar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
-              <div><strong>Sékou Traoré — Boucher</strong><small>Halal Certifié · <span dir="ltr">★ 4.9</span></small></div>
+              <div>
+                <strong>Bonjour, Moussa <span class="gb-dash__verif"><i data-feather="check"></i> Vérifié</span></strong>
+                <small><span class="gb-dash__role"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg> Boucher</span></small>
+              </div>
             </div>
-            <div class="gb-dash__earn"><small>Cette semaine</small><strong dir="ltr">FCFA 145 000</strong></div>
           </div>
-          <div class="gb-dash__req">
-            <div class="gb-dash__reqmain">
-              <span class="gb-dash__reqic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
-              <div><strong>Préparation halal — Mouton Bali</strong><small><span dir="ltr">ORD-7K2MNP4T</span> · aujourd'hui · <span dir="ltr">FCFA 15 000</span></small></div>
+          <div class="gb-dash__banner"><i data-feather="bell"></i> Nouvelle demande</div>
+          <div class="gb-dash__job">
+            <div class="gb-dash__jobtop">
+              <span class="gb-dash__rolepill"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg> Boucher</span>
+              <span class="gb-dash__jobprice" dir="ltr">FCFA 15 000</span>
             </div>
+            <p class="gb-dash__jobmeta"><strong>Awa Coulibaly</strong> · <span dir="ltr">+223 •• •• •• ••</span><br>Aujourd'hui · 14:30 · Abattage halal — mouton</p>
             <div class="gb-dash__actions">
-              <span class="gb-btn gb-btn--accept">Accepter</span>
               <span class="gb-btn gb-btn--refuse">Refuser</span>
+              <span class="gb-btn gb-btn--accept">Accepter</span>
             </div>
           </div>
-          <div class="gb-dash__req">
-            <div class="gb-dash__reqmain">
-              <span class="gb-dash__reqic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
-              <div><strong>Préparation halal — 2 moutons</strong><small><span dir="ltr">ORD-9F3XQ2L8</span> · votre tour après le vétérinaire</small></div>
-            </div>
-            <span class="gb-status gb-status--wait"><i data-feather="clock"></i> Accepté</span>
-          </div>
-          <div class="gb-dash__req">
-            <div class="gb-dash__reqmain">
-              <span class="gb-dash__reqic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
-              <div><strong>Préparation halal — mouton</strong><small><span dir="ltr">ORD-5T8W2K1P</span> · terminé · <span dir="ltr">FCFA 18 000</span></small></div>
-            </div>
-            <span class="gb-status gb-status--done"><i data-feather="check-circle"></i> Payé</span>
-          </div>
+          <div class="gb-dash__inprog">Travaux en cours (4)</div>
         </div>
-        <p class="gb gb-strip" style="margin-top: var(--space-lg);">Payé dès que votre étape est confirmée — l'argent de l'acheteur reste en séquestre jusque-là.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== §3.14 Paliers de parrainage ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="gb reveal">
-        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
-          <span class="section-eyebrow">Parrainage</span>
-          <h2 class="section-title">Parrainez vos pairs.<br>Réduisez votre commission.</h2>
-          <p class="section-subtitle">
-            Les vendeurs et prestataires qui font venir d'autres sur Garabaly paient des frais de service réduits. La commission standard de 5 % diminue à mesure que votre cercle grandit — et chaque nouveau parrainage relance le compteur à votre palier.
-          </p>
-        </div>
-        <div class="gb-refshare">
-          <div class="gb-refshare__code"><small>Votre code de parrainage</small><strong dir="ltr">GRB-8QF2</strong></div>
-          <span class="gb-refshare__btn"><i data-feather="share-2"></i> Partager</span>
-          <div class="gb-refshare__stat"><strong>4</strong><small>pairs inscrits</small></div>
-        </div>
-        <div class="gb-tiers">
-          <div class="gb-tier gb-tier--bronze">
-            <span class="gb-tier__badge"><i data-feather="award"></i></span>
-            <div class="gb-tier__name">Bronze</div>
-            <div class="gb-tier__reqs"><span dir="ltr">1–2</span> parrainages</div>
-            <div class="gb-tier__pct" dir="ltr">−2 %</div>
-            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 3 %</span></div>
-            <span class="gb-tier__dur">30 jours</span>
-          </div>
-          <div class="gb-tier gb-tier--silver gb-tier--active">
-            <span class="gb-tier__flag">Votre palier · 45 jours restants</span>
-            <span class="gb-tier__badge"><i data-feather="award"></i></span>
-            <div class="gb-tier__name">Argent</div>
-            <div class="gb-tier__reqs"><span dir="ltr">3–5</span> parrainages</div>
-            <div class="gb-tier__pct" dir="ltr">−2,5 %</div>
-            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 2,5 %</span></div>
-            <span class="gb-tier__dur">45 jours</span>
-          </div>
-          <div class="gb-tier gb-tier--gold">
-            <span class="gb-tier__badge"><i data-feather="award"></i></span>
-            <div class="gb-tier__name">Or</div>
-            <div class="gb-tier__reqs"><span dir="ltr">6+</span> parrainages</div>
-            <div class="gb-tier__pct" dir="ltr">−3 %</div>
-            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 2 %</span></div>
-            <span class="gb-tier__dur">60 jours</span>
-          </div>
-        </div>
-        <p class="gb gb-strip" style="margin-top: var(--space-xl);">Les badges Ambassadeur — Bronze, Argent, Or — s'affichent sur votre profil vérifié. Même rôle uniquement : les vendeurs parrainent des vendeurs, les prestataires des prestataires.</p>
+        <p class="gb gb-strip" style="margin-top: var(--space-lg);">Payé via séquestre à la fin de chaque prestation — aucune course, aucun risque d'espèces.</p>
       </div>
     </div>
   </section>

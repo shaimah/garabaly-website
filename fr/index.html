@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=13">
+<link rel="stylesheet" href="../css/styles.css?v=14">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -327,9 +327,47 @@
         <div class="feature-card reveal"><h3 class="feature-card__title">2. Invitez des vendeurs</h3><p class="feature-card__desc">Aidez un eleveur a rejoindre la plateforme. Quand il realise sa premiere vente, vous gagnez un bonus.</p></div>
         <div class="feature-card reveal"><h3 class="feature-card__title">3. Invitez des prestataires</h3><p class="feature-card__desc">Vous connaissez un boucher, un veterinaire ou un livreur ? Connectez-les au reseau Garabaly.</p></div>
       </div>
-      <div class="reveal" style="margin-top: var(--space-xl);">
-        <p><strong>Ce que vous obtenez :</strong> 2 000 XOF de crédit bonus par parrainage réussi, 500 XOF de bonus de bienvenue par nouvelle invitation, et des réductions de frais à mesure que vous progressez (Bronze 5+, Argent 15+, Or 30+ parrainages).</p>
-        <div class="btn-group" style="margin-top: var(--space-md);">
+      <div class="gb reveal" style="margin-top: var(--space-2xl);">
+        <p style="text-align:center; max-width:660px; margin:0 auto var(--space-xl); color: var(--text-secondary);">
+          <strong>Pour les vendeurs et prestataires :</strong> votre commission baisse à mesure que vous parrainez vos pairs. Les frais de service standard de 5 % diminuent à chaque parrainage actif, et chaque nouveau relance le compteur à votre palier.
+        </p>
+        <div class="gb-tiers">
+          <div class="gb-tier gb-tier--bronze">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">Bronze</div>
+            <div class="gb-tier__reqs">dès 1 parrainage</div>
+            <div class="gb-tier__pct" dir="ltr">−2 %</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 3 %</span></div>
+            <span class="gb-tier__dur">30 jours</span>
+          </div>
+          <div class="gb-tier gb-tier--silver">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">Argent</div>
+            <div class="gb-tier__reqs">dès 3 parrainages</div>
+            <div class="gb-tier__pct" dir="ltr">−2,5 %</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 2,5 %</span></div>
+            <span class="gb-tier__dur">45 jours</span>
+          </div>
+          <div class="gb-tier gb-tier--gold">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">Or</div>
+            <div class="gb-tier__reqs">dès 6 parrainages</div>
+            <div class="gb-tier__pct" dir="ltr">−3 %</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 2 %</span></div>
+            <span class="gb-tier__dur">60 jours</span>
+          </div>
+        </div>
+        <div class="gb-ladder">
+          <div class="gb-ladder__step gb-ladder__step--parrain"><span class="gb-ladder__badge"><i data-feather="user-plus"></i></span><span class="gb-ladder__name">Parrain</span><span class="gb-ladder__req">3 parrainages</span></div>
+          <span class="gb-ladder__arrow">→</span>
+          <div class="gb-ladder__step gb-ladder__step--ambassadeur"><span class="gb-ladder__badge"><i data-feather="award"></i></span><span class="gb-ladder__name">Ambassadeur</span><span class="gb-ladder__req">10 parrainages</span></div>
+          <span class="gb-ladder__arrow">→</span>
+          <div class="gb-ladder__step gb-ladder__step--champion"><span class="gb-ladder__badge"><i data-feather="star"></i></span><span class="gb-ladder__name">Champion</span><span class="gb-ladder__req">25 parrainages</span></div>
+          <span class="gb-ladder__arrow">→</span>
+          <div class="gb-ladder__step gb-ladder__step--confiance"><span class="gb-ladder__badge"><i data-feather="shield"></i></span><span class="gb-ladder__name">De confiance</span><span class="gb-ladder__req">plafonds ↑</span></div>
+        </div>
+        <p class="gb gb-strip" style="margin-top: var(--space-xl);">Réduction sur la commission vendeur de 5 %, <strong>jamais sous le plancher de 2 %</strong>. Même rôle uniquement : les vendeurs parrainent des vendeurs, les prestataires des prestataires. Les acheteurs qui invitent gagnent plutôt du crédit dans leur portefeuille.</p>
+        <div class="btn-group" style="justify-content:center; margin-top: var(--space-xl);">
           <a href="https://wa.me/?text=Découvre%20Garabaly%20—%20la%20marketplace%20de%20confiance%20pour%20le%20bétail.%20https://www.garabaly.com/get-the-app.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Partager via WhatsApp</a>
           <a href="/fr/get-the-app.html" class="btn btn--secondary">Obtenir l'app pour parrainer</a>
         </div>
