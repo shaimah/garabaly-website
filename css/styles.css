@@ -2500,7 +2500,7 @@ html.js-ready .reveal.visible {
 /* editorial hero — scoped under .ab-hero to beat .page-header p */
 .ab-hero { text-align: center; max-width: 760px; margin: 0 auto; }
 .ab-hero .ab-hero__lead { font-size: var(--fs-body-lg); color: rgba(255, 255, 255, 0.74); line-height: 1.7; margin: var(--space-md) auto var(--space-md); max-width: 640px; }
-.ab-hero .ab-hero__punch { font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 800; color: #E8A05E; line-height: 1.15; margin: var(--space-sm) 0 var(--space-xl); }
+.ab-hero .ab-hero__punch { font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 800; color: #E8A05E; line-height: 1.15; text-align: center; margin: var(--space-sm) auto var(--space-xl); }
 .ab-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .ab-chip { font-size: var(--fs-small); font-weight: 500; border: 1px solid var(--gb-hairline); border-radius: 20px; padding: 5px 12px; color: var(--gb-muted); background: var(--surface); }
 .ab-chip--green { color: var(--success); border-color: var(--success); background: var(--gb-green-fill); }
