@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initMobileMenu();
   initScenariosMarquee();
+  initListingsMarquee();
   initScrollReveal();
   initFaqAccordion();
   initSmoothScroll();
@@ -361,6 +362,51 @@ function initScenariosMarquee() {
   scheduleDuration();
   window.addEventListener('resize', updateMarqueeDuration);
   window.addEventListener('load', scheduleDuration, { once: true });
+}
+
+/* --- §3.11 real-listings carousel: same infinite auto-marquee as the scenarios (reuses .scenarios-carousel--marquee CSS) --- */
+function initListingsMarquee() {
+  const root = document.querySelector('.gb-listings-carousel');
+  if (!root || root.dataset.marqueeReady === 'true') return;
+
+  const cards = Array.from(root.querySelectorAll(':scope > .gb-listing'));
+  if (cards.length < 2) return;
+
+  root.dataset.marqueeReady = 'true';
+
+  const marquee = document.createElement('div');
+  marquee.className = 'scenarios-carousel__marquee';
+  const track = document.createElement('div');
+  track.className = 'scenarios-carousel__track';
+
+  cards.forEach((c) => track.appendChild(c));
+
+  Array.from(track.children).forEach((card) => {
+    const copy = card.cloneNode(true);
+    copy.classList.remove('reveal');
+    copy.classList.add('visible');
+    copy.setAttribute('aria-hidden', 'true');
+    track.appendChild(copy);
+  });
+
+  marquee.appendChild(track);
+  root.appendChild(marquee);
+  root.classList.add('scenarios-carousel--marquee');
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    root.classList.add('scenarios-carousel--reduced-motion');
+    return;
+  }
+
+  const update = () => {
+    const half = track.scrollWidth / 2;
+    if (half <= 0) return;
+    root.style.setProperty('--scenarios-marquee-duration', `${half / 42}s`);
+  };
+  const schedule = () => requestAnimationFrame(() => requestAnimationFrame(update));
+  schedule();
+  window.addEventListener('resize', update);
+  window.addEventListener('load', schedule, { once: true });
 }
 
 /* --- Value Cards: show "Read more" only if text is truncated --- */
