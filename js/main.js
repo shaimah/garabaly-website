@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFloatingMobileCta();
   initRevolutionQr();
   initLazyVideo();
+  initDiasporaCorridor();
+  initSearchTypewriter();
   initTracking();
 });
 
@@ -555,4 +557,51 @@ function initLazyVideo() {
       track('demo_video_play', { id: box.getAttribute('data-video') || '' });
     });
   });
+}
+
+/* --- R2-3: rotating diaspora corridor (fade, ~2.8s). Static fallback if reduced-motion --- */
+function initDiasporaCorridor() {
+  const el = document.querySelector('.gb-endpoints[data-corridor]');
+  if (!el) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let data;
+  try { data = JSON.parse(el.getAttribute('data-corridors')); } catch (e) { return; }
+  if (!Array.isArray(data) || data.length < 2) return;
+  const cities = el.querySelectorAll('.gb-endpoint__city');
+  const labels = el.querySelectorAll('.gb-endpoint small');
+  if (cities.length < 2 || labels.length < 2) return;
+  let i = 0;
+  setInterval(function () {
+    i = (i + 1) % data.length;
+    el.classList.add('is-fading');
+    setTimeout(function () {
+      const c = data[i];
+      cities[0].textContent = c.from; labels[0].textContent = c.fl;
+      cities[1].textContent = c.to;   labels[1].textContent = c.tl;
+      el.classList.remove('is-fading');
+    }, 350);
+  }, 2800);
+}
+
+/* --- R2-4: illustrative typewriter placeholder for the (app-only) search. Static fallback if reduced-motion --- */
+function initSearchTypewriter() {
+  const box = document.querySelector('.gb-search[data-typewriter]');
+  if (!box) return;
+  const ph = box.querySelector('.gb-search__ph');
+  if (!ph) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let phrases;
+  try { phrases = JSON.parse(box.getAttribute('data-typewriter')); } catch (e) { return; }
+  if (!Array.isArray(phrases) || phrases.length < 2) return;
+  let pi = 0, ci = 0, deleting = false;
+  function tick() {
+    const full = phrases[pi];
+    ci += deleting ? -1 : 1;
+    ph.textContent = full.slice(0, ci);
+    let delay = deleting ? 35 : 70;
+    if (!deleting && ci === full.length) { deleting = false; delay = 1800; setTimeout(function () { deleting = true; setTimeout(tick, 35); }, delay); return; }
+    if (deleting && ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; delay = 350; }
+    setTimeout(tick, delay);
+  }
+  setTimeout(tick, 1500);
 }

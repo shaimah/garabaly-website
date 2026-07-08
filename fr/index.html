@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=20">
+<link rel="stylesheet" href="../css/styles.css?v=21">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -207,7 +207,7 @@
   <section class="section" id="mobile-money-providers" style="padding: var(--space-2xl) 0;">
     <div class="container">
       <div class="section-header text-center reveal" style="margin-bottom: var(--space-xl);">
-        <h2 class="section-title" style="font-size: clamp(1.2rem, 2.2vw, 1.8rem);">Payez avec le portefeuille que vous utilisez déjà</h2>
+        <h2 class="section-title">Payez avec le portefeuille que vous utilisez déjà</h2>
       </div>
       <div class="provider-logos reveal">
         <img src="../assets/images/orange-money.png" alt="Orange Money">
@@ -215,7 +215,7 @@
         <img src="../assets/images/wave.png" alt="Wave">
         <img src="../assets/images/mtn-momo.png" alt="MTN MoMo">
       </div>
-      <p class="text-center section-subtitle reveal" style="font-size: 0.95rem; margin: var(--space-md) auto 0;">
+      <p class="text-center section-subtitle reveal" style="font-size: var(--fs-body); margin: var(--space-md) auto 0;">
         Disponible au Mali, Senegal, Cote d'Ivoire, Burkina Faso, Benin, Togo et Cameroun
       </p>
       <p class="text-center reveal" style="margin-top: var(--space-sm);">
@@ -529,41 +529,42 @@
         </p>
       </div>
 
-      <div class="scroll-hint">
-        <span>Glissez pour explorer</span>
-        <i data-feather="arrow-right"></i>
-      </div>
-
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step__number">1</div>
-          <h3 class="step__title">Parcourir et découvrir</h3>
-          <p class="step__desc">Explorez des annonces avec photos, profils vendeurs vérifiés, descriptions vocales en langues locales, et certificats sanitaires optionnels.</p>
+      <div class="gb gb-flow reveal">
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">1</span>
+          <div class="gb-flow__icon"><i data-feather="search"></i></div>
+          <h3 class="gb-flow__title">Parcourir et découvrir</h3>
+          <p class="gb-flow__desc">Photos, vendeurs vérifiés, descriptions vocales, certificats sanitaires optionnels.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">2</div>
-          <h3 class="step__title">Négocier et convenir</h3>
-          <p class="step__desc">Discutez directement avec le vendeur — posez des questions, demandez des vidéos, négociez le prix. Comme au marché.</p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">2</span>
+          <div class="gb-flow__icon"><i data-feather="mic"></i></div>
+          <h3 class="gb-flow__title">Négocier et convenir</h3>
+          <p class="gb-flow__desc">Discutez avec le vendeur, par la voix, et convenez du prix. Comme au marché.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">3</div>
-          <h3 class="step__title">Pré-approuvé pour votre protection</h3>
-          <p class="step__desc">Le vendeur et les prestataires (boucher, vétérinaire, livreur) examinent et acceptent votre commande avant le paiement. Vous ne payez que lorsque tout le monde a confirmé.</p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">3</span>
+          <div class="gb-flow__icon"><i data-feather="check-circle"></i></div>
+          <h3 class="gb-flow__title">Pré-approuvé pour vous</h3>
+          <p class="gb-flow__desc">Vendeur et prestataires acceptent votre commande avant tout paiement.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">4</div>
-          <h3 class="step__title">Payer avec séquestre</h3>
-          <p class="step__desc">Payez via mobile money, carte ou portefeuille. Vos fonds sont en séquestre — un seul paiement, allocation par partie. Personne ne touche l'argent avant la confirmation de la livraison.</p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">4</span>
+          <div class="gb-flow__icon"><i data-feather="shield"></i></div>
+          <h3 class="gb-flow__title">Payer avec séquestre</h3>
+          <p class="gb-flow__desc">Mobile money, carte ou portefeuille. Vos fonds sont protégés — personne n'est payé avant votre code.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">5</div>
-          <h3 class="step__title">Suivre et recevoir</h3>
-          <p class="step__desc">Suivez votre commande en temps réel — préparation, transit, livraison. Ajoutez des services optionnels comme l'abattage ou l'inspection vétérinaire. Chaque prestataire agit dans l'ordre.</p>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">5</span>
+          <div class="gb-flow__icon"><i data-feather="map-pin"></i></div>
+          <h3 class="gb-flow__title">Suivre et recevoir</h3>
+          <p class="gb-flow__desc">Suivez en temps réel : préparation, transit, livraison — à chaque étape.</p>
         </div>
-        <div class="step reveal">
-          <div class="step__number">6</div>
-          <h3 class="step__title">Confirmer avec le code</h3>
-          <p class="step__desc">Utilisez votre code unique de 6 caractères pour vérifier la livraison. Rien n'est versé tant que vous ne l'avez pas saisi — ensuite les prestataires sont payés et la part du vendeur entre dans une fenêtre de protection acheteur de 24 heures.</p>
+        <div class="gb-flow__card gb-flow__card--gold">
+          <span class="gb-flow__num">6</span>
+          <div class="gb-flow__icon"><i data-feather="key"></i></div>
+          <h3 class="gb-flow__title">Confirmer avec le code</h3>
+          <p class="gb-flow__desc">Votre code à 6 caractères vérifie la réception. Vous seul libérez les fonds.</p>
         </div>
       </div>
 
@@ -724,7 +725,8 @@
             Parcourez par photo, négociez directement avec le vendeur, puis payez en séquestre. De vraies annonces, des vendeurs vérifiés, des prix visibles.
           </p>
         </div>
-        <div class="gb-search"><i data-feather="search"></i><span>Rechercher un mouton pour Tabaski…</span></div>
+        <a class="gb-search" href="get-the-app.html" data-typewriter='["Rechercher un mouton pour Tabaski…","Un taureau pour un baptême à Dakar…","Un vétérinaire à Bamako…","Un bélier Ladoum à Dakar…","Des moutons pour une coopérative…"]'><i data-feather="search"></i><span class="gb-search__ph">Rechercher un mouton pour Tabaski…</span></a>
+        <p class="gb-search__note">Aperçu — la recherche se fait dans l'application.</p>
         <div class="scroll-hint"><span>Glissez pour explorer</span><i data-feather="arrow-right"></i></div>
         <div class="gb-listings-carousel">
           <div class="gb-listing">
@@ -866,10 +868,10 @@
           <h2 class="section-title">Envoyez un mouton à la maison — sans rappeler trois fois pour vérifier.</h2>
           <p class="section-subtitle">De Paris à Bamako, votre paiement reste protégé en séquestre jusqu'à ce qu'un proche reçoive la commande. Vous suivez chaque étape depuis votre téléphone.</p>
         </div>
-        <div class="gb-endpoints">
-          <span class="gb-endpoint">Paris<small>Diaspora</small></span>
+        <div class="gb-endpoints" data-corridor data-corridors='[{"from":"Madrid","fl":"Diaspora","to":"Dakar","tl":"La famille · Sénégal"},{"from":"Paris","fl":"Diaspora","to":"Bamako","tl":"La famille · Mali"},{"from":"Rome","fl":"Diaspora","to":"Ouagadougou","tl":"La famille · Burkina Faso"},{"from":"Abidjan","fl":"Régional","to":"Niamey","tl":"La famille · Niger"}]'>
+          <span class="gb-endpoint"><b class="gb-endpoint__city">Madrid</b><small>Diaspora</small></span>
           <span class="gb-endpoints__arrow">→</span>
-          <span class="gb-endpoint">Bamako<small>La famille</small></span>
+          <span class="gb-endpoint"><b class="gb-endpoint__city">Dakar</b><small>La famille · Sénégal</small></span>
         </div>
         <p class="gb-endpoints-note">Aussi depuis Londres, New York, Bruxelles, Montréal…</p>
         <div class="gb-nsteps" style="max-width: 960px; margin: 0 auto;">
@@ -1073,7 +1075,7 @@
   <section class="section cta-section" id="download">
     <div class="container">
       <div class="cta-content reveal">
-        <h2 class="section-title" style="color: #FFF; font-size: clamp(1.8rem, 4vw, 2.8rem);">
+        <h2 class="section-title" style="color: #FFF;">
           Le commerce du bétail n'a pas changé depuis 100 ans.
         </h2>
         <p>Rejoignez la révolution. Essayez l'application maintenant.</p>
@@ -1152,7 +1154,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=10"></script>
+  <script src="../js/main.js?v=11"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>
