@@ -67,7 +67,7 @@
 
   <!-- Styles -->
     <link rel="preload" as="image" type="image/avif" imagesrcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="css/styles.css?v=14">
+<link rel="stylesheet" href="css/styles.css?v=16">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -448,33 +448,32 @@
             </div>
           </div>
 
-          <!-- Right column: video + price proposal -->
-          <div class="gb-neg__col">
-            <div class="gb-video" data-video="negotiation">
-              <div class="gb-video__fallback">See a real negotiation, by voice</div>
-              <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
-              <div class="gb-video__cap">Negotiating a price · 0:32</div>
-              <video preload="none" playsinline poster="assets/video/negotiation-poster.jpg" data-src="assets/video/demo-negotiation.mp4"></video>
-            </div>
-
-            <div class="gb-proposal">
-              <div class="gb-proposal__head">The seller adjusted the price</div>
-              <div class="gb-ref" style="margin-bottom: var(--space-sm);">
-                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
-                <div><small>Bali Ram</small><strong>Order request</strong></div>
-              </div>
-              <div class="gb-proposal__prices">
-                <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
-                <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
-              </div>
-              <p class="gb-proposal__reason">Reason: As we discussed</p>
-              <div class="gb-proposal__actions">
-                <span class="gb-btn gb-btn--accept">Accept</span>
-                <span class="gb-btn gb-btn--refuse">Decline</span>
-              </div>
-              <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> Secure payment — held in escrow</p>
-            </div>
+          <!-- Video phone -->
+          <div class="gb-video" data-video="negotiation">
+            <div class="gb-video__fallback">See a real negotiation, by voice</div>
+            <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <div class="gb-video__cap">Negotiating a price · 0:32</div>
+            <video preload="none" playsinline poster="assets/video/negotiation-poster.jpg" data-src="assets/video/demo-negotiation.mp4"></video>
           </div>
+        </div>
+
+        <!-- Seller adjusted the price — centered below the two phones -->
+        <div class="gb-proposal gb-neg__proposal">
+          <div class="gb-proposal__head">The seller adjusted the price</div>
+          <div class="gb-ref" style="margin-bottom: var(--space-sm);">
+            <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+            <div><small>Bali Ram</small><strong>Order request</strong></div>
+          </div>
+          <div class="gb-proposal__prices">
+            <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
+            <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
+          </div>
+          <p class="gb-proposal__reason">Reason: As we discussed</p>
+          <div class="gb-proposal__actions">
+            <span class="gb-btn gb-btn--accept">Accept</span>
+            <span class="gb-btn gb-btn--refuse">Decline</span>
+          </div>
+          <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> Secure payment — held in escrow</p>
         </div>
 
         <div class="gb-flowstrip">
@@ -749,49 +748,131 @@
   <section class="section" id="categories">
     <div class="container">
       <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Find the Right Livestock</span>
-        <h2 class="section-title">Thousands of animals, near you</h2>
+        <span class="section-eyebrow">Browse by Category</span>
+        <h2 class="section-title">Find the Right Livestock</h2>
         <p class="section-subtitle">
-          Browse by photo, negotiate directly with the seller, then pay into escrow. Real listings, verified sellers, prices you can see.
+          From wedding feasts to Tabaski celebrations, naming ceremonies to everyday meals — discover livestock across all major categories.
         </p>
       </div>
 
-      <div class="gb reveal">
+      <div class="carousel-wrapper">
+        <div class="categories-grid">
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f404.svg" alt="Cattle" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Cattle</div>
+              <div class="category-card__count">Available now</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f411.svg" alt="Sheep" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Sheep</div>
+              <div class="category-card__count">Available now</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f410.svg" alt="Goats" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Goats</div>
+              <div class="category-card__count">Available now</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f413.svg" alt="Poultry" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Poultry</div>
+              <div class="category-card__count">Available now</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f42a.svg" alt="Camels" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Camels</div>
+              <div class="category-card__count">Available now</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== §3.11 Real listings carousel ===== -->
+      <div class="gb reveal" style="margin-top: var(--space-3xl);">
+        <div class="section-header text-center" style="margin-bottom: var(--space-lg);">
+          <span class="section-eyebrow">Live Listings</span>
+          <h2 class="section-title">Thousands of animals, near you</h2>
+          <p class="section-subtitle">
+            Browse by photo, negotiate directly with the seller, then pay into escrow. Real listings, verified sellers, prices you can see.
+          </p>
+        </div>
         <div class="gb-search"><i data-feather="search"></i><span>Search for a ram for Tabaski…</span></div>
-        <div class="gb-grid" style="max-width: 1080px; margin: 0 auto;">
+        <div class="scroll-hint"><span>Swipe to explore</span><i data-feather="arrow-right"></i></div>
+        <div class="gb-listings-carousel">
           <div class="gb-listing">
             <div class="gb-listing__media">
-              <img src="assets/images/hero-herder-1024.jpg" alt="Bali ram listed on Garabaly" loading="lazy" decoding="async">
-              <span class="gb-listing__verif"><i data-feather="check"></i> Verified seller</span>
+              <img src="assets/images/listings/mouton-bali-bali-60kg.jpg" alt="Bali-Bali ram, ~60 kg, listed on Garabaly in Bamako" loading="lazy" decoding="async">
+              <span class="gb-listing__star"><i data-feather="star"></i></span>
               <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
             <div class="gb-listing__body">
-              <p class="gb-listing__title">Bali ram · male, Tabaski-ready</p>
-              <p class="gb-listing__price">FCFA 130 000</p>
-              <div class="gb-listing__meta"><span>📍 Bamako · Moussa Dicko</span><span class="gb-listing__rating">★ 4.8</span></div>
+              <p class="gb-listing__title">Bali-Bali ram · male, ~60 kg</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 250 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller"><i data-feather="check-circle"></i> Alamissa Dicko</p>
             </div>
           </div>
           <div class="gb-listing">
             <div class="gb-listing__media">
-              <img src="assets/images/hero-banner-1280.jpg" alt="Sahelian zebu listed on Garabaly" loading="lazy" decoding="async">
-              <span class="gb-listing__verif"><i data-feather="check"></i> Verified seller</span>
+              <img src="assets/images/listings/bali-bali-pur-350.jpg" alt="Pure Bali-Bali ram listed on Garabaly in Bamako" loading="lazy" decoding="async">
               <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
             <div class="gb-listing__body">
-              <p class="gb-listing__title">Sahelian zebu · sturdy</p>
-              <p class="gb-listing__price">FCFA 450 000</p>
-              <div class="gb-listing__meta"><span>📍 Ségou · Fatou Traoré</span><span class="gb-listing__rating">★ 4.9</span></div>
+              <p class="gb-listing__title">Pure Bali-Bali</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 350 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller gb-listing__seller--muted">Ousmane Dicko</p>
             </div>
           </div>
           <div class="gb-listing">
             <div class="gb-listing__media">
-              <img src="assets/images/herder-portrait-1024.jpg" alt="Red goats listed on Garabaly" loading="lazy" decoding="async">
+              <img src="assets/images/listings/belier-235.jpg" alt="Ram listed on Garabaly in Bamako" loading="lazy" decoding="async">
+              <span class="gb-listing__star"><i data-feather="star"></i></span>
               <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
             <div class="gb-listing__body">
-              <p class="gb-listing__title">Red goats · pair</p>
-              <p class="gb-listing__price">FCFA 60 000</p>
-              <div class="gb-listing__meta"><span>📍 Sikasso · Awa Coulibaly</span><span class="gb-listing__rating">★ 4.7</span></div>
+              <p class="gb-listing__title">Ram</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 235 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller"><i data-feather="check-circle"></i> Abdoulaye Bagayoko</p>
+            </div>
+          </div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="assets/images/listings/mouton-sahelien-35-40kg.jpg" alt="Sahelian ram, 35-40 kg, listed on Garabaly in Bamako" loading="lazy" decoding="async">
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">Sahelian ram · male, 35–40 kg</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 175 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller"><i data-feather="check-circle"></i> Abdoulkader Zakaria Maiga</p>
+            </div>
+          </div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="assets/images/listings/belier-bali-blanc-60kg.jpg" alt="White long-horned Bali-Bali ram, 60 kg, listed on Garabaly in Bamako" loading="lazy" decoding="async">
+              <span class="gb-listing__star"><i data-feather="star"></i></span>
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">White Bali-Bali ram · long horns, 60 kg</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 150 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller gb-listing__seller--muted">Abba Champion</p>
             </div>
           </div>
         </div>

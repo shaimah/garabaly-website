@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=14">
+<link rel="stylesheet" href="../css/styles.css?v=16">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -481,33 +481,32 @@
             </div>
           </div>
 
-          <!-- العمود الأيسر: فيديو + اقتراح السعر -->
-          <div class="gb-neg__col">
-            <div class="gb-video" data-video="negotiation">
-              <div class="gb-video__fallback">شاهد تفاوضاً حقيقياً، بالصوت</div>
-              <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
-              <div class="gb-video__cap">التفاوض على السعر · <span dir="ltr">0:32</span></div>
-              <video preload="none" playsinline poster="../assets/video/negotiation-poster.jpg" data-src="../assets/video/demo-negotiation.mp4"></video>
-            </div>
-
-            <div class="gb-proposal">
-              <div class="gb-proposal__head">عدّل البائع السعر</div>
-              <div class="gb-ref" style="margin-bottom: var(--space-sm);">
-                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
-                <div><small>كبش بالي</small><strong>طلب شراء</strong></div>
-              </div>
-              <div class="gb-proposal__prices">
-                <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
-                <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
-              </div>
-              <p class="gb-proposal__reason">السبب: كما اتفقنا</p>
-              <div class="gb-proposal__actions">
-                <span class="gb-btn gb-btn--accept">قبول</span>
-                <span class="gb-btn gb-btn--refuse">رفض</span>
-              </div>
-              <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> دفع آمن — محمي بالضمان</p>
-            </div>
+          <!-- هاتف الفيديو -->
+          <div class="gb-video" data-video="negotiation">
+            <div class="gb-video__fallback">شاهد تفاوضاً حقيقياً، بالصوت</div>
+            <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <div class="gb-video__cap">التفاوض على السعر · <span dir="ltr">0:32</span></div>
+            <video preload="none" playsinline poster="../assets/video/negotiation-poster.jpg" data-src="../assets/video/demo-negotiation.mp4"></video>
           </div>
+        </div>
+
+        <!-- عدّل البائع السعر — في المنتصف أسفل الهاتفين -->
+        <div class="gb-proposal gb-neg__proposal">
+          <div class="gb-proposal__head">عدّل البائع السعر</div>
+          <div class="gb-ref" style="margin-bottom: var(--space-sm);">
+            <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+            <div><small>كبش بالي</small><strong>طلب شراء</strong></div>
+          </div>
+          <div class="gb-proposal__prices">
+            <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
+            <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
+          </div>
+          <p class="gb-proposal__reason">السبب: كما اتفقنا</p>
+          <div class="gb-proposal__actions">
+            <span class="gb-btn gb-btn--accept">قبول</span>
+            <span class="gb-btn gb-btn--refuse">رفض</span>
+          </div>
+          <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> دفع آمن — محمي بالضمان</p>
         </div>
 
         <div class="gb-flowstrip">
@@ -666,49 +665,131 @@
   <section class="section" id="categories">
     <div class="container">
       <div class="section-header text-center reveal">
-        <span class="section-eyebrow">جد الماشية المناسبة</span>
-        <h2 class="section-title">آلاف الحيوانات، بالقرب منك</h2>
+        <span class="section-eyebrow">تصفّح حسب الفئة</span>
+        <h2 class="section-title">جد الماشية المناسبة</h2>
         <p class="section-subtitle">
-          تصفّح بالصور، فاوض البائع مباشرة، ثم ادفع في الضمان. إعلانات حقيقية، بائعون موثّقون، وأسعار ظاهرة.
+          من ولائم الأعراس إلى احتفالات عيد الأضحى، ومن حفلات التسمية إلى وجبات كل يوم — اكتشف الماشية في جميع الفئات الرئيسية.
         </p>
       </div>
 
-      <div class="gb reveal">
+      <div class="carousel-wrapper">
+        <div class="categories-grid">
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f404.svg" alt="أبقار" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">أبقار</div>
+              <div class="category-card__count">متاح الآن</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f411.svg" alt="أغنام" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">أغنام</div>
+              <div class="category-card__count">متاح الآن</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f410.svg" alt="ماعز" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">ماعز</div>
+              <div class="category-card__count">متاح الآن</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f413.svg" alt="دواجن" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">دواجن</div>
+              <div class="category-card__count">متاح الآن</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f42a.svg" alt="إبل" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">إبل</div>
+              <div class="category-card__count">متاح الآن</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== §3.11 كاروسيل إعلانات حقيقية ===== -->
+      <div class="gb reveal" style="margin-top: var(--space-3xl);">
+        <div class="section-header text-center" style="margin-bottom: var(--space-lg);">
+          <span class="section-eyebrow">إعلانات مباشرة</span>
+          <h2 class="section-title">آلاف الحيوانات، بالقرب منك</h2>
+          <p class="section-subtitle">
+            تصفّح بالصور، فاوض البائع مباشرة، ثم ادفع في الضمان. إعلانات حقيقية، بائعون موثّقون، وأسعار ظاهرة.
+          </p>
+        </div>
         <div class="gb-search"><i data-feather="search"></i><span>ابحث عن كبش للتباسكي…</span></div>
-        <div class="gb-grid" style="max-width: 1080px; margin: 0 auto;">
+        <div class="scroll-hint"><span>اسحب للاستكشاف</span><i data-feather="arrow-left"></i></div>
+        <div class="gb-listings-carousel">
           <div class="gb-listing">
             <div class="gb-listing__media">
-              <img src="../assets/images/hero-herder-1024.jpg" alt="كبش بالي على غرابالي" loading="lazy" decoding="async">
-              <span class="gb-listing__verif"><i data-feather="check"></i> بائع موثّق</span>
+              <img src="../assets/images/listings/mouton-bali-bali-60kg.jpg" alt="خروف بالي-بالي على غرابالي في باماكو" loading="lazy" decoding="async">
+              <span class="gb-listing__star"><i data-feather="star"></i></span>
               <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
             <div class="gb-listing__body">
-              <p class="gb-listing__title">كبش بالي · ذكر، جاهز للتباسكي</p>
-              <p class="gb-listing__price" dir="ltr">FCFA 130 000</p>
-              <div class="gb-listing__meta"><span>📍 باماكو · موسى ديكو</span><span class="gb-listing__rating" dir="ltr">★ 4.8</span></div>
+              <p class="gb-listing__title">خروف بالي-بالي ذكر <span dir="ltr">~60</span> كغ</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 250 000</p>
+              <div class="gb-listing__meta"><span>📍 باماكو</span></div>
+              <p class="gb-listing__seller"><i data-feather="check-circle"></i> ألاميسا ديكو</p>
             </div>
           </div>
           <div class="gb-listing">
             <div class="gb-listing__media">
-              <img src="../assets/images/hero-banner-1280.jpg" alt="زيبو ساحلي على غرابالي" loading="lazy" decoding="async">
-              <span class="gb-listing__verif"><i data-feather="check"></i> بائع موثّق</span>
+              <img src="../assets/images/listings/bali-bali-pur-350.jpg" alt="بالي بالي أصيل على غرابالي في باماكو" loading="lazy" decoding="async">
               <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
             <div class="gb-listing__body">
-              <p class="gb-listing__title">زيبو ساحلي · قوي</p>
-              <p class="gb-listing__price" dir="ltr">FCFA 450 000</p>
-              <div class="gb-listing__meta"><span>📍 سيغو · فاتو تراوري</span><span class="gb-listing__rating" dir="ltr">★ 4.9</span></div>
+              <p class="gb-listing__title">بالي بالي أصيل</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 350 000</p>
+              <div class="gb-listing__meta"><span>📍 باماكو</span></div>
+              <p class="gb-listing__seller gb-listing__seller--muted">عثمان ديكو</p>
             </div>
           </div>
           <div class="gb-listing">
             <div class="gb-listing__media">
-              <img src="../assets/images/herder-portrait-1024.jpg" alt="معزتان حمراوان على غرابالي" loading="lazy" decoding="async">
+              <img src="../assets/images/listings/belier-235.jpg" alt="كبش على غرابالي في باماكو" loading="lazy" decoding="async">
+              <span class="gb-listing__star"><i data-feather="star"></i></span>
               <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
             <div class="gb-listing__body">
-              <p class="gb-listing__title">معزتان حمراوان · زوج</p>
-              <p class="gb-listing__price" dir="ltr">FCFA 60 000</p>
-              <div class="gb-listing__meta"><span>📍 سيكاسو · آوا كوليبالي</span><span class="gb-listing__rating" dir="ltr">★ 4.7</span></div>
+              <p class="gb-listing__title">كبش</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 235 000</p>
+              <div class="gb-listing__meta"><span>📍 باماكو</span></div>
+              <p class="gb-listing__seller"><i data-feather="check-circle"></i> عبدولاي باغايوكو</p>
+            </div>
+          </div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/listings/mouton-sahelien-35-40kg.jpg" alt="خروف ساحلي على غرابالي في باماكو" loading="lazy" decoding="async">
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">خروف ساحلي ذكر <span dir="ltr">35-40</span> كغ</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 175 000</p>
+              <div class="gb-listing__meta"><span>📍 باماكو</span></div>
+              <p class="gb-listing__seller"><i data-feather="check-circle"></i> عبد القادر زكريا مايغا</p>
+            </div>
+          </div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/listings/belier-bali-blanc-60kg.jpg" alt="كبش بالي-بالي أبيض بقرون طويلة على غرابالي في باماكو" loading="lazy" decoding="async">
+              <span class="gb-listing__star"><i data-feather="star"></i></span>
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">كبش بالي-بالي أبيض بقرون طويلة <span dir="ltr">60</span> كغ</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 150 000</p>
+              <div class="gb-listing__meta"><span>📍 باماكو</span></div>
+              <p class="gb-listing__seller gb-listing__seller--muted">أبا شامبيون</p>
             </div>
           </div>
         </div>
