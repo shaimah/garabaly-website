@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initListingsMarquee();
   initScrollReveal();
   initFaqAccordion();
+  initFaqSingleOpen();
+  initFaqSearch();
   initSmoothScroll();
   initCountUp();
   initCardGlow();
@@ -141,6 +143,81 @@ function initFaqAccordion() {
         if (typeof track === 'function') track('faq_expand', { id: item.id || '' });
       }
     });
+  });
+}
+
+/* --- FAQ redesign: single-open native <details> --- */
+function initFaqSingleOpen() {
+  const all = [...document.querySelectorAll('details.faq')];
+  if (!all.length) return;
+  all.forEach(d => d.addEventListener('toggle', () => {
+    if (d.open) {
+      all.forEach(o => { if (o !== d) o.open = false; });
+      if (typeof track === 'function') track('faq_expand', { id: d.id || '' });
+    }
+  }));
+}
+
+/* --- FAQ redesign: live on-page search (no backend) --- */
+function initFaqSearch() {
+  const input = document.getElementById('faqSearch');
+  const results = document.getElementById('faqResults');
+  if (!input || !results) return;
+
+  const items = [...document.querySelectorAll('details.faq')].map(el => ({
+    el,
+    id: el.id,
+    title: (el.querySelector('summary')?.textContent || '').trim(),
+    text: (el.querySelector('.ans')?.textContent || '').trim()
+  }));
+  const nomatch = results.getAttribute('data-nomatch') || 'No matching question — message us on WhatsApp';
+  const wa = 'https://wa.me/22362778871';
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const esc = s => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+
+  function highlight(title, q) {
+    const i = title.toLowerCase().indexOf(q.toLowerCase());
+    if (i < 0) return esc(title);
+    return esc(title.slice(0, i)) + '<mark>' + esc(title.slice(i, i + q.length)) + '</mark>' + esc(title.slice(i + q.length));
+  }
+  function openAndScroll(el) {
+    el.open = true;
+    const headerH = document.querySelector('.header')?.offsetHeight || 72;
+    const top = el.getBoundingClientRect().top + window.scrollY - headerH - 10;
+    window.scrollTo({ top, behavior: 'smooth' });
+    if (typeof track === 'function') track('faq_search_jump', { id: el.id });
+  }
+  function render(q) {
+    const nq = norm(q.trim());
+    if (!nq) { results.hidden = true; results.innerHTML = ''; return; }
+    const matches = items.filter(it => norm(it.title).includes(nq) || norm(it.text).includes(nq)).slice(0, 8);
+    results.innerHTML = '';
+    if (!matches.length) {
+      const li = document.createElement('li');
+      li.className = 'faq-search__empty';
+      li.innerHTML = nomatch.replace(/WhatsApp|واتساب/, m => `<a href="${wa}" target="_blank" rel="noopener noreferrer">${m}</a>`);
+      results.appendChild(li);
+    } else {
+      matches.forEach(it => {
+        const li = document.createElement('li');
+        li.setAttribute('role', 'option');
+        const a = document.createElement('a');
+        a.className = 'faq-search__result';
+        a.href = '#' + it.id;
+        a.innerHTML = highlight(it.title, q.trim());
+        a.addEventListener('click', (e) => { e.preventDefault(); openAndScroll(it.el); results.hidden = true; });
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+    results.hidden = false;
+  }
+
+  input.addEventListener('input', () => render(input.value));
+  input.addEventListener('focus', () => { if (input.value) render(input.value); });
+  input.addEventListener('keydown', (e) => { if (e.key === 'Escape') { input.value = ''; results.hidden = true; } });
+  document.addEventListener('click', (e) => {
+    if (!results.contains(e.target) && e.target !== input) results.hidden = true;
   });
 }
 
