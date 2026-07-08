@@ -3965,3 +3965,30 @@ textarea:focus-visible,select:focus-visible,summary:focus-visible{
 .gb-status svg { width: 13px; height: 13px; }
 .gb-status--wait { color: #A97B1E; background: rgba(232,184,84,0.18); }
 .gb-status--done { color: var(--gb-green); background: var(--gb-green-fill); }
+
+/* §3.14 Referral tiers */
+.gb-refshare { max-width: 540px; margin: 0 auto var(--space-2xl); background: var(--surface); border: 1px solid var(--gb-hairline); border-radius: 16px; padding: var(--space-lg); box-shadow: var(--shadow-sm); display: flex; align-items: center; gap: var(--space-lg); flex-wrap: wrap; text-align: start; }
+.gb-refshare__code { flex: 1 1 180px; }
+.gb-refshare__code small { display: block; color: var(--gb-muted); font-size: 0.76rem; margin-bottom: 3px; }
+.gb-refshare__code strong { font-family: 'Courier New', monospace; font-size: 1.2rem; letter-spacing: 0.12em; color: var(--text-primary); }
+.gb-refshare__btn { background: var(--primary); color: #fff; border-radius: 10px; padding: 10px 18px; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 7px; flex: 0 0 auto; }
+.gb-refshare__btn svg { width: 15px; height: 15px; }
+.gb-refshare__stat { flex: 0 0 auto; text-align: center; }
+.gb-refshare__stat strong { display: block; font-size: 1.35rem; color: var(--primary); line-height: 1; }
+.gb-refshare__stat small { color: var(--gb-muted); font-size: 0.72rem; }
+.gb-tiers { display: grid; gap: var(--space-md); max-width: 840px; margin: 0 auto; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .gb-tiers { grid-template-columns: repeat(3, 1fr); } }
+.gb-tier { position: relative; background: var(--surface); border: 1px solid var(--gb-hairline); border-top: 3px solid var(--gb-tier); border-radius: 14px; padding: var(--space-lg); text-align: center; box-shadow: var(--shadow-sm); }
+.gb-tier--bronze { --gb-tier: #CD7F32; }
+.gb-tier--silver { --gb-tier: #9AA0A6; }
+.gb-tier--gold { --gb-tier: #E0A82E; }
+.gb-tier--active { box-shadow: 0 0 0 2px var(--gb-tier), var(--shadow-md); }
+.gb-tier__flag { position: absolute; top: -11px; inset-inline-start: 50%; transform: translateX(-50%); background: var(--gb-tier); color: #fff; font-size: 0.66rem; font-weight: 700; border-radius: 20px; padding: 3px 12px; white-space: nowrap; }
+[dir="rtl"] .gb-tier__flag { transform: translateX(50%); }
+.gb-tier__badge { width: 46px; height: 46px; border-radius: 50%; margin: 4px auto 10px; display: grid; place-items: center; color: #fff; background: var(--gb-tier); }
+.gb-tier__badge svg { width: 23px; height: 23px; }
+.gb-tier__name { font-weight: 700; color: var(--text-primary); }
+.gb-tier__reqs { font-size: 0.78rem; color: var(--gb-muted); margin-bottom: 12px; }
+.gb-tier__pct { font-size: 2rem; font-weight: 800; color: var(--gb-tier); line-height: 1; }
+.gb-tier__detail { font-size: 0.82rem; color: var(--text-secondary); margin-top: 6px; }
+.gb-tier__dur { display: inline-block; margin-top: 12px; font-size: 0.74rem; font-weight: 700; color: var(--text-secondary); background: var(--surface-elevated); border-radius: 20px; padding: 4px 12px; }
