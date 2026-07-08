@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css?v=24">
+  <link rel="stylesheet" href="css/styles.css?v=29">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -562,685 +562,415 @@
   </div>
 
   <!-- ===== PAGE HEADER ===== -->
-  <section class="page-header">
+    <section class="page-header">
     <div class="container page-header__content">
-      <div class="page-header__breadcrumb">
-        <a href="index.html">Home</a>
-        <i data-feather="chevron-right" style="width:14px;height:14px;"></i>
-        <span>FAQ</span>
-      </div>
-      <h1>Frequently Asked Questions</h1>
-      <p>Everything you need to know about using Garabaly for buying and selling livestock.</p>
+      <span class="section-eyebrow">Help & answers</span>
+      <h1>Frequently asked questions</h1>
+      <p>Search for an answer, or browse by topic. Everything about escrow, payments, diaspora and security.</p>
     </div>
   </section>
-
-  <!-- ===== FAQ: GENERAL ===== -->
-  <section class="section">
+  <section class="section faq-tools-section">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">General</span>
-        <h2 class="section-title">About Garabaly</h2>
+      <div class="faq-search reveal">
+        <i data-feather="search" class="faq-search__icon" aria-hidden="true"></i>
+        <input type="search" id="faqSearch" class="faq-search__input" placeholder="Search for a question…" autocomplete="off" aria-label="Search for a question…" aria-controls="faqResults">
+        <ul id="faqResults" class="faq-search__results" role="listbox" data-nomatch="No matching question — message us on WhatsApp" hidden></ul>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-what-is-garabaly">
-          <button class="faq-item__question">
-            What is Garabaly?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly is the trusted livestock marketplace. It's a mobile app that connects livestock sellers with buyers — and the diaspora with home — with built-in escrow protection and real negotiation for every transaction. You can browse cattle, sheep, goats, camels, and poultry — with photos, verified seller profiles, and optional veterinary health certificates uploaded by sellers.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-where-available">
-          <button class="faq-item__question">
-            Where is Garabaly available?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly is launching in Mali first and expanding across the Sahel and West Africa. Mobile money payments are already live in Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, and Cameroun. Card payments are accepted from anywhere in the world — so diaspora buyers in Paris, London, New York, Brussels, Montreal, and beyond can use Garabaly today.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-app-free">
-          <button class="faq-item__question">
-            Is the app free to download?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly is completely free for buyers — no platform fees, no commissions, no hidden charges. The price you see is the price you pay. A small platform fee is charged to sellers and service providers upon successful transactions only.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-languages">
-          <button class="faq-item__question">
-            What languages does Garabaly support?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Full interface in French, English, and Arabic with native right-to-left (RTL) layout support — Arabic isn't an afterthought, it's a first-class experience. Voice descriptions and reviews can be recorded in any language: Bambara, Mooré, Hausa, Fulfulde, Wolof, Songhai, and more. Voice is how business gets done — sellers describe their livestock by speaking, buyers leave voice reviews, and everyone communicates in their own language. No typing required.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-different-from-others">
-          <button class="faq-item__question">
-            How is Garabaly different from other marketplaces?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly is purpose-built for the livestock trade. Unlike generic marketplaces, we have escrow protection on every transaction, a dedicated negotiation feature (because "add to cart" doesn't exist in a Sahelian market), the ability for sellers to attach veterinary health certificates and for buyers to request vet inspections through our service provider network, voice descriptions in local languages, and special support for the diaspora to buy livestock for family back home.</p>
-          </div>
-        </div>
+      <p class="faq-toc__label reveal">Browse by topic</p>
+      <div class="faq-toc reveal">
+        <a class="faq-toc__card" href="#cat-general">
+          <span class="faq-toc__icon"><i data-feather="help-circle"></i></span>
+          <span class="faq-toc__name">General <span class="faq-toc__count">· 11</span></span>
+          <span class="faq-toc__desc">What Garabaly is, where, languages, Pioneer access.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-ordering">
+          <span class="faq-toc__icon"><i data-feather="mic"></i></span>
+          <span class="faq-toc__name">Ordering & negotiating <span class="faq-toc__count">· 10</span></span>
+          <span class="faq-toc__desc">Ordering, negotiation, inspection, providers.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-payments">
+          <span class="faq-toc__icon"><i data-feather="credit-card"></i></span>
+          <span class="faq-toc__name">Payments & diaspora <span class="faq-toc__count">· 11</span></span>
+          <span class="faq-toc__desc">Payment methods, mobile money, exchange.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-sellers">
+          <span class="faq-toc__icon"><i data-feather="shield"></i></span>
+          <span class="faq-toc__name">Sellers & escrow <span class="faq-toc__count">· 10</span></span>
+          <span class="faq-toc__desc">Verification, payout, withdrawals, limits.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-security">
+          <span class="faq-toc__icon"><i data-feather="lock"></i></span>
+          <span class="faq-toc__name">Security & trust <span class="faq-toc__count">· 10</span></span>
+          <span class="faq-toc__desc">Confirmation code, disputes, wallet.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-account">
+          <span class="faq-toc__icon"><i data-feather="user"></i></span>
+          <span class="faq-toc__name">Account & data <span class="faq-toc__count">· 3</span></span>
+          <span class="faq-toc__desc">Delete account, your data, minimum age.</span>
+        </a>
       </div>
     </div>
   </section>
-
-  <!-- ===== FAQ: BUYING & NEGOTIATION ===== -->
-  <section class="section section--alt">
+  <section class="section" id="cat-general">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Buying & Negotiation</span>
-        <h2 class="section-title">For Buyers</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="help-circle"></i></span>
+        <h2 class="faq-cat__title">General</h2>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-order-process">
-          <button class="faq-item__question">
-            How does the order process work?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>When you add items to your cart, the seller (and any service providers) must first confirm availability before you can checkout. This pre-checkout approval protects all parties. Once confirmed, you pay and your funds are held securely in escrow until delivery is complete.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-negotiation">
-          <button class="faq-item__question">
-            How does negotiation work on Garabaly?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly has a dedicated negotiation feature built in. You can chat directly with sellers, ask for more photos or videos, negotiate the price, and reach consensus — just like at a physical market. Once you and the seller agree on a price, you proceed to payment with escrow protection. We believe price is a conversation, not a label.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-buyer-fees">
-          <button class="faq-item__question">
-            Does Garabaly charge buyers any fees?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>No. Garabaly is completely free for buyers. There are no platform fees, no commissions, and no hidden charges. The price you see is the price you pay. We only charge a small platform fee to sellers and service providers upon successful transactions.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-escrow">
-          <button class="faq-item__question">
-            How does escrow protection work?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly uses per-party escrow. When you pay, your money is held securely. <strong>Nothing is released until you enter your 6-character confirmation code</strong> at delivery. The moment you enter it, the service providers (butcher, vet, transporter) are paid and the seller's share enters a <strong>24-hour buyer-protection window</strong> — during those 24 hours, you can open a dispute if anything is wrong. Otherwise, the seller's share is released automatically at the end of the window — you don't have to do anything. If a dispute is opened, all unreleased shares are held and our team (two people approve together) makes the call.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-animal-not-as-described">
-          <button class="faq-item__question">
-            What if the animal is sick or different from the photos?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>You're protected. After delivery, inspect the animal carefully before you enter your confirmation code. Verify that it matches the listing — including photos, description, and any health documentation provided by the seller. If something is wrong, open a dispute directly in the app before confirming. Garabaly's team reviews the evidence and mediates. If the dispute is resolved in your favor, you receive a full refund from escrow. Your money is never released until you're satisfied.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-buy-from-abroad">
-          <button class="faq-item__question">
-            Can I buy livestock for my family from abroad?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Absolutely! Garabaly is designed for the diaspora. Whether you're in Paris, London, New York, Washington DC, Brussels, Montreal, or anywhere else, you can browse livestock, negotiate with local sellers, pay with escrow protection, and have the animal delivered to your family's compound. It's perfect for Tabaski, weddings, naming ceremonies (baptêmes), funerals, or simply caring for your loved ones from afar.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-payment-methods">
-          <button class="faq-item__question">
-            How do I pay for livestock?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly supports multiple payment methods:</p>
-            <p>• Mobile Money (LIVE): Pay with Orange Money, Moov Money, Wave, with more providers being added. Available in Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, and Cameroun.<br>
-            • Card Payments (LIVE): Visa, Mastercard via Stripe. You pay in your own currency at a rate fixed when you pay — no conversion fee within the CFA zone or in euros, and a small fee shown upfront for other currencies.<br>
-            • Garabaly Wallet (LIVE): Deposit via card or mobile money, instant wallet-to-wallet transfers.<br>
-            • Cash: pay the seller directly on delivery — no escrow hold and limited protection. We recommend an escrow-backed method (card, mobile money, or wallet) for full safety.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-mobile-money-providers">
-          <button class="faq-item__question">
-            Which mobile money providers work with Garabaly?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly supports Orange Money, Moov Money, and Wave. Mobile money is available in Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, and Cameroun. New providers and countries are being added regularly.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-cash-vs-escrow">
-          <button class="faq-item__question">
-            What's the difference between cash on delivery and escrow?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>With escrow-backed methods (card, mobile money, wallet), your funds are held securely until you confirm delivery with your confirmation code. After you enter the code, the seller's share enters a <strong>24-hour buyer-protection window</strong> — during those 24 hours you can open a dispute if anything is wrong. With cash on delivery, you pay the seller directly when the livestock arrives. Cash offers limited platform protection — we recommend escrow-backed payment methods for maximum safety.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-inspection-time">
-          <button class="faq-item__question">
-            How long do I have to inspect the livestock?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Once the livestock is delivered, you have a reasonable inspection period to verify that it matches the listing. The specific timeframe is shown in your escrow details within the app. If you don't confirm or dispute within the allotted period, the escrow is automatically released to the seller.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-family-no-app">
-          <button class="faq-item__question">
-            Can my family receive the livestock without downloading the app?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Yes. Your family doesn't need to download Garabaly. You place the order, pay, and track delivery from wherever you are. The livestock is delivered directly to your family's compound. You can coordinate the delivery time so you're on a WhatsApp call when it arrives — many diaspora buyers do exactly that.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-when-tabaski">
-          <button class="faq-item__question">
-            When should I order for Tabaski or other celebrations?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>For weddings and naming ceremonies, order as early as possible to secure the best livestock. Our verified sellers maintain inventory year-round — the livestock trade never stops. You can track your order in real-time and call your family on WhatsApp when it arrives. For Tabaski / Eid al-Adha timing, see the dedicated question below.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-eur-xof-rate">
-          <button class="faq-item__question">What exchange rate do you apply for the diaspora?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>EUR ↔ XOF: <strong>fixed at 655.957</strong> (the official CFA peg), with no Garabaly markup. Other currencies (USD, GBP, CAD…) use the Stripe rate at the moment of payment; you always see the XOF amount the seller will receive <strong>before</strong> you pay.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-mobile-money-failed">
-          <button class="faq-item__question">My mobile money payment failed — is it you or my operator?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>It's almost always a refusal on the operator side (insufficient balance, USSD prompt not confirmed, daily cap reached, brief outage). Check your balance via the operator USSD, check no cap has been hit, and try again in the app. If it fails again, change method (another operator or card). <strong>If you were debited but Garabaly didn't confirm</strong>, message us immediately on WhatsApp +223 62 77 88 71 — that's a top priority, response within a few hours, day or night.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-when-eid">
-          <button class="faq-item__question">When should I order for Tabaski / Eid al-Adha?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>For a stress-free Eid (T = day of the celebration):</p>
-            <p>• <strong>T - 4 weeks</strong>: pick your seller, negotiate.<br>
-            • <strong>T - 3 weeks</strong>: pay and lock your livestock.<br>
-            • <strong>T - 1 week</strong>: coordinate delivery with your family.<br>
-            • <strong>T - 3 to T - 1 day</strong>: delivery to the family compound.<br>
-            • <strong>Day T</strong>: confirm by call + enter your code.</p>
-            <p>Eid week, roads are loaded, prices spike, and transporters are saturated. Ordering at T - 3 weeks is cheaper, calmer, and more reliable.</p>
-            <p><em>The date of Tabaski (Eid al-Adha) shifts by ~11 days each year based on moon sighting. Check the official calendar for the current year's exact date.</em></p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-arrival-call">
-          <button class="faq-item__question">
-            Can I see when my gift arrives?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Absolutely. Many diaspora buyers coordinate the delivery timing so they can be on a WhatsApp call when their family receives the livestock. Sellers' WhatsApp contact information is available in their profile. It's become one of the most emotional parts of using Garabaly — seeing your mother's joy from thousands of kilometers away.</p>
-          </div>
-        </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-what-is-garabaly">
+          <summary>What is Garabaly?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly is the trusted livestock marketplace. It's a mobile app that connects livestock sellers with buyers — and the diaspora with home — with built-in escrow protection and real negotiation for every transaction. You can browse cattle, sheep, goats, camels, and poultry — with photos, verified seller profiles, and optional veterinary health certificates uploaded by sellers.</p></div>
+        </details>
+        <details class="faq" id="faq-where-available">
+          <summary>Where is Garabaly available?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly is launching in Mali first and expanding across the Sahel and West Africa. Mobile money payments are already live in Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, and Cameroun. Card payments are accepted from anywhere in the world — so diaspora buyers in Paris, London, New York, Brussels, Montreal, and beyond can use Garabaly today.</p></div>
+        </details>
+        <details class="faq" id="faq-app-free">
+          <summary>Is the app free to download?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly is completely free for buyers — no platform fees, no commissions, no hidden charges. The price you see is the price you pay. A small platform fee is charged to sellers and service providers upon successful transactions only.</p></div>
+        </details>
+        <details class="faq" id="faq-languages">
+          <summary>What languages does Garabaly support?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Full interface in French, English, and Arabic with native right-to-left (RTL) layout support — Arabic isn't an afterthought, it's a first-class experience. Voice descriptions and reviews can be recorded in any language: Bambara, Mooré, Hausa, Fulfulde, Wolof, Songhai, and more. Voice is how business gets done — sellers describe their livestock by speaking, buyers leave voice reviews, and everyone communicates in their own language. No typing required.</p></div>
+        </details>
+        <details class="faq" id="faq-different-from-others">
+          <summary>How is Garabaly different from other marketplaces?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly is purpose-built for the livestock trade. Unlike generic marketplaces, we have escrow protection on every transaction, a dedicated negotiation feature (because "add to cart" doesn't exist in a Sahelian market), the ability for sellers to attach veterinary health certificates and for buyers to request vet inspections through our service provider network, voice descriptions in local languages, and special support for the diaspora to buy livestock for family back home.</p></div>
+        </details>
+        <details class="faq" id="faq-voice-messages">
+          <summary>Can I chat with sellers using voice messages?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Yes! Garabaly's chat supports text messages, voice recordings, photos, and video. You can also share listing details directly in the chat. Voice messages are especially popular — they let sellers describe their livestock in any language and let buyers ask detailed questions naturally. Messages are delivered in real time with offline queuing so nothing gets lost.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-what">
+          <summary>What are "Pioneers" and "Expo Go"?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>While Garabaly is in review on Google Play and the App Store, our earliest users — the <strong>Pioneers</strong> — get the app through <strong>Expo Go</strong>, a tool that runs Garabaly on your phone from a QR code or a link. It's intentional, exclusive early access — and entirely real: your account, your wallet, your orders are all live and stay with you when the app launches in the stores.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-start">
+          <summary>How do I get started?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>1. Visit <a href="https://www.garabaly.com/get-the-app.html"><strong>garabaly.com</strong></a> and tap the <strong>Download</strong> button — or go straight to the <a href="get-the-app.html">Get the App page</a>.<br>
+                      2. Install <strong>Expo Go</strong> on your phone (we provide QR codes and direct links for the App Store and Google Play).<br>
+                      3. Scan the Garabaly QR code — with your phone's camera on iPhone, or with the Expo Go app on Android — or tap the direct "Open in Expo Go" link. Both work on both platforms.<br>
+                      4. Garabaly opens inside Expo Go. Create your account as you normally would.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-account-survives">
+          <summary>Will my Expo Go account survive when the app launches on the stores?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Yes. The Expo Go version and the store version are exactly the same product on the same servers. Your account, your wallet, your orders, your reputation score, your reviews — everything migrates with no action from you. Just download the store version when it launches and log in with the same credentials.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-store-launch-date">
+          <summary>When will the app launch officially on the stores?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>The decision belongs to Apple and Google. The app was submitted in April 2026 and review is in progress. As soon as we have news, we share it on Facebook, TikTok and WhatsApp. While you wait, your Expo Go access is fully functional.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-bug-report">
+          <summary>I found a bug — where do I send it?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Thank you 🙏 — a Pioneer who reports a bug is gold to us. Send it on WhatsApp <strong>+223 62 77 88 71</strong> or by email at <strong>support@garabaly.com</strong>: the screen where it happened (screenshot or video if possible), what you were doing right before, and your phone model / OS version. We'll keep you posted on the fix.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== SELLER TRUST TIERS (§3.2) ===== -->
-  <section class="section">
+  <section class="section section--alt" id="cat-ordering">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Verified Sellers</span>
-        <h2 class="section-title">Verification you can see. Limits that scale with trust.</h2>
-        <p class="section-subtitle">Every account is checked continuously. As sellers verify more, their withdrawal limits rise.</p>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="mic"></i></span>
+        <h2 class="faq-cat__title">Ordering & negotiating</h2>
       </div>
-      <div class="gb gb-tiers reveal" style="max-width: 1000px; margin: 0 auto;">
-        <div class="gb-tier">
-          <p class="gb-tier__badge">Unverified</p>
-          <p class="gb-tier__tag">Getting started</p>
-          <ul class="gb-reqs"><li>Email &amp; phone</li><li>Basic profile</li></ul>
-          <div class="gb-limits">
-            <div class="gb-limit"><span>Withdrawal · per operation</span><span dir="ltr">FCFA 100 000</span></div>
-            <div class="gb-limit"><span>Withdrawal · per day</span><span dir="ltr">FCFA 200 000</span></div>
-          </div>
-        </div>
-        <div class="gb-tier gb-tier--featured">
-          <span class="gb-tier__ribbon">Most common</span>
-          <p class="gb-tier__badge">Verified</p>
-          <p class="gb-tier__tag">Full marketplace access</p>
-          <ul class="gb-reqs"><li>ID document</li><li>Proof of address</li><li>Verification selfie</li></ul>
-          <div class="gb-limits">
-            <div class="gb-limit"><span>Withdrawal · per operation</span><span dir="ltr">FCFA 2 000 000</span></div>
-            <div class="gb-limit"><span>Withdrawal · per day</span><span dir="ltr">FCFA 5 000 000</span></div>
-          </div>
-        </div>
-        <div class="gb-tier">
-          <p class="gb-tier__badge">Trusted</p>
-          <p class="gb-tier__tag">For businesses &amp; cooperatives</p>
-          <ul class="gb-reqs"><li>Business registration (RCCM)</li><li>Enhanced due diligence</li><li>Platform history</li></ul>
-          <div class="gb-limits">
-            <div class="gb-limit"><span>Withdrawal · per operation</span><span dir="ltr">FCFA 3 000 000</span></div>
-            <div class="gb-limit"><span>Withdrawal · per day</span><span dir="ltr">FCFA 8 000 000</span></div>
-          </div>
-        </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-order-process">
+          <summary>How does the order process work?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>When you add items to your cart, the seller (and any service providers) must first confirm availability before you can checkout. This pre-checkout approval protects all parties. Once confirmed, you pay and your funds are held securely in escrow until delivery is complete.</p></div>
+        </details>
+        <details class="faq" id="faq-negotiation">
+          <summary>How does negotiation work on Garabaly?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly has a dedicated negotiation feature built in. You can chat directly with sellers, ask for more photos or videos, negotiate the price, and reach consensus — just like at a physical market. Once you and the seller agree on a price, you proceed to payment with escrow protection. We believe price is a conversation, not a label.</p></div>
+        </details>
+        <details class="faq" id="faq-buyer-fees">
+          <summary>Does Garabaly charge buyers any fees?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>No. Garabaly is completely free for buyers. There are no platform fees, no commissions, and no hidden charges. The price you see is the price you pay. We only charge a small platform fee to sellers and service providers upon successful transactions.</p></div>
+        </details>
+        <details class="faq" id="faq-escrow">
+          <summary>How does escrow protection work?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly uses per-party escrow. When you pay, your money is held securely. <strong>Nothing is released until you enter your 6-character confirmation code</strong> at delivery. The moment you enter it, the service providers (butcher, vet, transporter) are paid and the seller's share enters a <strong>24-hour buyer-protection window</strong> — during those 24 hours, you can open a dispute if anything is wrong. Otherwise, the seller's share is released automatically at the end of the window — you don't have to do anything. If a dispute is opened, all unreleased shares are held and our team (two people approve together) makes the call.</p></div>
+        </details>
+        <details class="faq" id="faq-animal-not-as-described">
+          <summary>What if the animal is sick or different from the photos?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>You're protected. After delivery, inspect the animal carefully before you enter your confirmation code. Verify that it matches the listing — including photos, description, and any health documentation provided by the seller. If something is wrong, open a dispute directly in the app before confirming. Garabaly's team reviews the evidence and mediates. If the dispute is resolved in your favor, you receive a full refund from escrow. Your money is never released until you're satisfied.</p></div>
+        </details>
+        <details class="faq" id="faq-inspection-time">
+          <summary>How long do I have to inspect the livestock?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Once the livestock is delivered, you have a reasonable inspection period to verify that it matches the listing. The specific timeframe is shown in your escrow details within the app. If you don't confirm or dispute within the allotted period, the escrow is automatically released to the seller.</p></div>
+        </details>
+        <details class="faq" id="faq-service-providers">
+          <summary>What service providers are available on Garabaly?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly supports three types of service providers: delivery drivers for livestock transport, professional butchers for meat preparation, and veterinarians for health inspections and certificates. Each service provider is verified, rated, and reviewed by previous clients. All service providers are paid through the same escrow system, so everyone is protected.</p></div>
+        </details>
+        <details class="faq" id="faq-order-types">
+          <summary>What are the different order types?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>By default, every item in your cart is an <strong>independent order</strong> — each with its own order ID and confirmation code, whether it is an animal or a standalone service like a butcher, vet, or delivery. When you want everything under one code, you can <strong>bundle</strong> one listing with up to 3 services (maximum 1 delivery + 1 butcher + 1 vet) into a single order, and drag-to-reorder the fulfillment sequence. So there are really two ways to order: independent by default, or bundled when you choose.</p></div>
+        </details>
+        <details class="faq" id="faq-order-tracking">
+          <summary>How does order tracking work?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Every order has a real-time progress tracker visible in the app. You'll see each stage — from order placed, to seller confirmed, preparation, in transit, delivered, and completed. Push notifications and in-app alerts keep you updated at every stage. For multiparty orders, you'll see the progress of each party (seller, delivery, butcher) independently.</p></div>
+        </details>
+        <details class="faq" id="faq-book-butcher-only">
+          <summary>Can I book a butcher without buying livestock on the app?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Yes! You can book a butcher, delivery driver, or vet on its own — it is simply an independent order, with no animal purchase required. This is useful if you've already purchased your livestock elsewhere but need a professional service. The service provider is still paid through Garabaly's escrow for your protection.</p></div>
+        </details>
       </div>
-      <p class="gb gb-compliance">Identity check (KYC) · Anti-money-laundering (AML) · Fraud prevention — on every account, continuously.</p>
     </div>
   </section>
-
-  <!-- ===== FAQ: SELLING ===== -->
-  <section class="section">
+  <section class="section" id="cat-payments">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Selling</span>
-        <h2 class="section-title">For Sellers</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="credit-card"></i></span>
+        <h2 class="faq-cat__title">Payments & diaspora</h2>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-become-verified-seller">
-          <button class="faq-item__question">
-            How do I get verified as a seller?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>To become a verified seller, download the app and create an account. Then complete the verification process by providing a valid ID and a selfie. Verified sellers earn a badge on their profile, which builds trust with buyers and increases the visibility of your listings.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-when-paid">
-          <button class="faq-item__question">
-            When do I receive payment?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p><strong>Nothing is released until the buyer enters their 6-character confirmation code.</strong> The moment they do, the service providers (butchers, veterinarians, delivery drivers) are paid and your seller's share enters a <strong>24-hour buyer-protection window</strong> — the window applies only to the seller's share, and there is no per-step payout before the code. If no dispute is raised during that window, the funds are released automatically to your Garabaly Wallet — you don't have to do anything. Once released, funds are available in your Garabaly Wallet for instant transfer to other users or external withdrawal via Orange Money, Moov Money, or Wave, with more providers being added. Bank withdrawal is also available.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-withdraw-earnings">
-          <button class="faq-item__question">
-            How do I withdraw my earnings?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Your Garabaly Wallet supports deposits via card or mobile money, escrow releases, and instant wallet-to-wallet transfers to other users. Withdraw via Orange Money, Moov Money, Wave, with more providers being added. Bank withdrawal is also available. All wallet operations require your secure PIN (set during onboarding). Your wallet uses auditable financial records and tamper-proof balance checks to ensure every transaction is accurate.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-seller-fees">
-          <button class="faq-item__question">
-            What fees does Garabaly charge sellers?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly charges a small platform fee to sellers upon successful sale, and to service providers upon task completion. No upfront costs, no listing fees. Buyers always pay zero fees. 0% for buyers, always. Sellers pay 5% — and only ever less — charged only once you've been paid.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-withdrawal-limits">
-          <button class="faq-item__question">What are the wallet withdrawal limits?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>Limits depend on your account status. The more verified your account and the cleaner your trading history, the higher your limits.</p>
-            <div class="faq-withdrawal-scroll" role="region" aria-label="Withdrawal limits by account tier">
-            <table class="faq-withdrawal-table">
-              <thead>
-                <tr>
-                  <th scope="col" class="faq-withdrawal-table__col-text">Status</th>
-                  <th scope="col" class="faq-withdrawal-table__col-text">How to reach it</th>
-                  <th scope="col" class="faq-withdrawal-table__amount">Per-tx</th>
-                  <th scope="col" class="faq-withdrawal-table__amount">Daily</th>
-                  <th scope="col" class="faq-withdrawal-table__amount">Weekly</th>
-                  <th scope="col" class="faq-withdrawal-table__amount">Monthly</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>Cooling-off</strong></td><td class="faq-withdrawal-table__col-text">First 24h after account creation</td><td class="faq-withdrawal-table__amount">blocked</td><td class="faq-withdrawal-table__amount">blocked</td><td class="faq-withdrawal-table__amount">blocked</td><td class="faq-withdrawal-table__amount">blocked</td></tr>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>Unverified</strong></td><td class="faq-withdrawal-table__col-text">Account created, not yet verified</td><td class="faq-withdrawal-table__amount">100 000</td><td class="faq-withdrawal-table__amount">200 000</td><td class="faq-withdrawal-table__amount">600 000</td><td class="faq-withdrawal-table__amount">2 000 000</td></tr>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>Verified</strong></td><td class="faq-withdrawal-table__col-text">ID + selfie validated</td><td class="faq-withdrawal-table__amount">2 000 000</td><td class="faq-withdrawal-table__amount">5 000 000</td><td class="faq-withdrawal-table__amount">20 000 000</td><td class="faq-withdrawal-table__amount">60 000 000</td></tr>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>Trusted</strong></td><td class="faq-withdrawal-table__col-text">Verified + 90 days of clean history</td><td class="faq-withdrawal-table__amount">3 000 000</td><td class="faq-withdrawal-table__amount">8 000 000</td><td class="faq-withdrawal-table__amount">35 000 000</td><td class="faq-withdrawal-table__amount">120 000 000</td></tr>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>Market Builder</strong></td><td class="faq-withdrawal-table__col-text">Market Builder badge (15 same-role referrals) or partner status</td><td class="faq-withdrawal-table__amount">5 000 000</td><td class="faq-withdrawal-table__amount">15 000 000</td><td class="faq-withdrawal-table__amount">60 000 000</td><td class="faq-withdrawal-table__amount">200 000 000</td></tr>
-              </tbody>
-            </table>
-            </div>
-            <p style="margin-top:var(--space-md);">Amounts in XOF. <strong>Absolute single-transaction ceiling: 5 000 000 XOF</strong> regardless of status (BCEAO regulation). If you hit your cap before a major event (Tabaski, large cooperative purchase…), message us 24h ahead — we raise it temporarily after verification.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-cooling-off">
-          <button class="faq-item__question">Why can't I withdraw on my first day?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>For your safety, withdrawals are blocked during the first 24 hours after account creation. This is a protection against account takeover right after sign-up. Everything else — browse, negotiate, pay, sell, receive payments into your wallet — works normally during this window. Only outgoing withdrawal waits for the period to end.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-verify-value">
-          <button class="faq-item__question">What does verifying my account change?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>A lot. Verification multiplies your limits by roughly 20× — you go from 200 000 XOF to 5 000 000 XOF per day for withdrawals. You also get a verification badge on your profile (which builds buyer trust and lifts your listing visibility), unlock professional-seller features (unlimited listings, larger transactions), and become eligible for <strong>Trusted</strong> status after 90 days of clean trading.</p>
-            <p>To verify: <strong>Profile → Become a verified seller</strong> → upload a valid ID + selfie. Validation within 24-48 business hours.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-raise-limits">
-          <button class="faq-item__question">How do I raise my limits further?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>With time and exemplary behavior, you graduate automatically to <strong>Trusted</strong>, then to <strong>Market Builder</strong>. No application needed — our system promotes you.</p>
-            <p><strong>To reach Trusted</strong> (8 000 000 XOF / day): verified account + 90 days of history + at least 10 successful withdrawals + zero disputes resolved against you in the last 90 days + at least 1 000 000 XOF withdrawn lifetime. You also reach Trusted automatically with a Champion (25 referrals), Ambassador Gold (6 same-role referrals), or Local Breeder badge.</p>
-            <p><strong>To reach Market Builder</strong> (15 000 000 XOF / day): earn the <strong>Market Builder</strong> badge — 15 same-role qualified referrals (sellers referring sellers, providers referring providers…). It is our highest tier.</p>
-            <p>If you need a one-off raise for a specific event (Tabaski, cooperative purchase…), message us — temporary raises are granted on a case-by-case basis after verification.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-hit-cap">
-          <button class="faq-item__question">I've hit my limit — what do I do?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>Three options: wait for the period to reset, ask us for a temporary raise, or graduate to a higher status.</p>
-            <p><strong>If it's one-off</strong> (e.g. your monthly cap resets in 5 days): just wait. Your cap resets automatically at midnight GMT.</p>
-            <p><strong>If you need it now</strong>: message us on WhatsApp <strong>+223 62 77 88 71</strong> with the amount you want to withdraw, the reason (Tabaski sale, cooperative purchase, family emergency…), and your verified phone / account number. Reply within a few hours, day or night. If the request is legitimate and reasonable, we raise the cap on the spot.</p>
-            <p><strong>If you keep hitting the cap</strong>: you are probably already eligible for <strong>Trusted</strong> or will be soon. No action needed — the system promotes you automatically when you meet the conditions.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-health-certificate-optional">
-          <button class="faq-item__question">
-            Can I list livestock without a health certificate?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Yes, a health certificate is optional but highly recommended. Listings with verified health certificates get significantly more buyer interest and tend to sell faster. We encourage all sellers to work with local veterinarians to obtain certificates for their livestock.</p>
-          </div>
-        </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-buy-from-abroad">
+          <summary>Can I buy livestock for my family from abroad?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Absolutely! Garabaly is designed for the diaspora. Whether you're in Paris, London, New York, Washington DC, Brussels, Montreal, or anywhere else, you can browse livestock, negotiate with local sellers, pay with escrow protection, and have the animal delivered to your family's compound. It's perfect for Tabaski, weddings, naming ceremonies (baptêmes), funerals, or simply caring for your loved ones from afar.</p></div>
+        </details>
+        <details class="faq" id="faq-payment-methods">
+          <summary>How do I pay for livestock?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly supports multiple payment methods:</p>
+                      <p>• Mobile Money (LIVE): Pay with Orange Money, Moov Money, Wave, with more providers being added. Available in Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, and Cameroun.<br>
+                      • Card Payments (LIVE): Visa, Mastercard via Stripe. You pay in your own currency at a rate fixed when you pay — no conversion fee within the CFA zone or in euros, and a small fee shown upfront for other currencies.<br>
+                      • Garabaly Wallet (LIVE): Deposit via card or mobile money, instant wallet-to-wallet transfers.<br>
+                      • Cash: pay the seller directly on delivery — no escrow hold and limited protection. We recommend an escrow-backed method (card, mobile money, or wallet) for full safety.</p></div>
+        </details>
+        <details class="faq" id="faq-mobile-money-providers">
+          <summary>Which mobile money providers work with Garabaly?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly supports Orange Money, Moov Money, and Wave. Mobile money is available in Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, and Cameroun. New providers and countries are being added regularly.</p></div>
+        </details>
+        <details class="faq" id="faq-cash-vs-escrow">
+          <summary>What's the difference between cash on delivery and escrow?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>With escrow-backed methods (card, mobile money, wallet), your funds are held securely until you confirm delivery with your confirmation code. After you enter the code, the seller's share enters a <strong>24-hour buyer-protection window</strong> — during those 24 hours you can open a dispute if anything is wrong. With cash on delivery, you pay the seller directly when the livestock arrives. Cash offers limited platform protection — we recommend escrow-backed payment methods for maximum safety.</p></div>
+        </details>
+        <details class="faq" id="faq-family-no-app">
+          <summary>Can my family receive the livestock without downloading the app?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Yes. Your family doesn't need to download Garabaly. You place the order, pay, and track delivery from wherever you are. The livestock is delivered directly to your family's compound. You can coordinate the delivery time so you're on a WhatsApp call when it arrives — many diaspora buyers do exactly that.</p></div>
+        </details>
+        <details class="faq" id="faq-eur-xof-rate">
+          <summary>What exchange rate do you apply for the diaspora?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>EUR ↔ XOF: <strong>fixed at 655.957</strong> (the official CFA peg), with no Garabaly markup. Other currencies (USD, GBP, CAD…) use the Stripe rate at the moment of payment; you always see the XOF amount the seller will receive <strong>before</strong> you pay.</p></div>
+        </details>
+        <details class="faq" id="faq-mobile-money-failed">
+          <summary>My mobile money payment failed — is it you or my operator?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>It's almost always a refusal on the operator side (insufficient balance, USSD prompt not confirmed, daily cap reached, brief outage). Check your balance via the operator USSD, check no cap has been hit, and try again in the app. If it fails again, change method (another operator or card). <strong>If you were debited but Garabaly didn't confirm</strong>, message us immediately on WhatsApp +223 62 77 88 71 — that's a top priority, response within a few hours, day or night.</p></div>
+        </details>
+        <details class="faq" id="faq-when-eid">
+          <summary>When should I order for Tabaski / Eid al-Adha?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>For a stress-free Eid (T = day of the celebration):</p>
+                      <p>• <strong>T - 4 weeks</strong>: pick your seller, negotiate.<br>
+                      • <strong>T - 3 weeks</strong>: pay and lock your livestock.<br>
+                      • <strong>T - 1 week</strong>: coordinate delivery with your family.<br>
+                      • <strong>T - 3 to T - 1 day</strong>: delivery to the family compound.<br>
+                      • <strong>Day T</strong>: confirm by call + enter your code.</p>
+                      <p>Eid week, roads are loaded, prices spike, and transporters are saturated. Ordering at T - 3 weeks is cheaper, calmer, and more reliable.</p>
+                      <p><em>The date of Tabaski (Eid al-Adha) shifts by ~11 days each year based on moon sighting. Check the official calendar for the current year's exact date.</em></p></div>
+        </details>
+        <details class="faq" id="faq-arrival-call">
+          <summary>Can I see when my gift arrives?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Absolutely. Many diaspora buyers coordinate the delivery timing so they can be on a WhatsApp call when their family receives the livestock. Sellers' WhatsApp contact information is available in their profile. It's become one of the most emotional parts of using Garabaly — seeing your mother's joy from thousands of kilometers away.</p></div>
+        </details>
+        <details class="faq" id="faq-currencies">
+          <summary>What currencies does Garabaly support?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>You always pay in your own currency, and the seller is always paid in theirs — Garabaly handles the conversion. The rate is fixed the moment you pay and shown before you confirm; the same fixed rate is used for any refund. Within the CFA franc zone (XOF/XAF) and for euros, payment is at the official fixed rate with no conversion fee. For other currencies — such as USD, GBP, CAD — a small conversion fee applies and is always shown upfront. Cross-currency payment is currently available by card and Garabaly Wallet.</p></div>
+        </details>
+        <details class="faq" id="faq-paying-from-abroad">
+          <summary>I'm in the diaspora — how do I pay from abroad?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>You pay in your own currency, and the seller is paid in theirs — Garabaly handles the conversion in the middle. The rate is fixed the moment you pay and shown to you before you confirm, and the same fixed rate is used if you are ever refunded. If you pay in euros, we use the official fixed rate (1 € = 655.957 FCFA) with no conversion fee. For other currencies a small conversion fee applies, always shown upfront. Paying from abroad is available by card and Garabaly Wallet.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== FAQ: SECURITY ===== -->
-  <section class="section section--alt">
+  <section class="section section--alt" id="cat-sellers">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Security & Trust</span>
-        <h2 class="section-title">Safety & Security</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="shield"></i></span>
+        <h2 class="faq-cat__title">Sellers & escrow</h2>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-money-safe">
-          <button class="faq-item__question">
-            Is my money safe with Garabaly?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Absolutely. All escrow funds are held in secure, regulated accounts — your payment is never mixed with Garabaly's operating funds. We use strong encryption, strict data-integrity safeguards, and comprehensive monitoring. Your money is protected by architecture, not promises.</p>
-            <p>Card payments are processed by Stripe; we never store full card numbers on our servers. Sensitive payment data is handled with industry-standard protections end-to-end.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-confirmation-code">
-          <button class="faq-item__question">
-            What is the confirmation code and how does it work?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Every Garabaly order generates a unique 6-character alphanumeric confirmation code visible only to the buyer. When the livestock (or service) is delivered, the buyer enters this code directly in the app. <strong>Nothing is released before that:</strong> entering the code pays the service providers and starts the seller's <strong>24-hour buyer-protection window</strong> (during which the buyer can open a dispute). One code releases the whole order — independent or bundled — with no per-step payout. The code is never shared with the seller or anyone else — only the buyer can enter it. This system prevents fraud and keeps everyone aligned on what "delivered" means.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-seller-no-confirm">
-          <button class="faq-item__question">
-            What happens if the seller doesn't confirm my order?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Sellers and service providers pre-approve your order before you can checkout, so the order is already committed when you pay. After delivery, you have a 24-hour buyer protection window to open a dispute if something is wrong. If you don't confirm or dispute within that window, the seller's share is released automatically. This protection runs on our server-side scheduler — no action required from you unless you need to dispute.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-dispute">
-          <button class="faq-item__question">
-            What happens if there's a dispute?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>If a buyer and seller can't agree, either party can open a dispute through the app. Garabaly's support team reviews the evidence (photos, messages, listing details, chat history). Disputes require dual-admin approval for resolution — meaning no single person can make a unilateral decision. During the dispute, funds remain in escrow. We aim to resolve all disputes quickly and fairly.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-wallet-secured">
-          <button class="faq-item__question">
-            How is my wallet secured?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Your Garabaly wallet is protected by a private PIN that you set during onboarding. Your PIN is encrypted with strong standards (never stored in plain text) and required for all sensitive operations like withdrawals. For additional security, we use SMS verification for high-value transactions, built-in fraud prevention to detect suspicious activity, and device verification to prevent unauthorized access.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-report-suspicious">
-          <button class="faq-item__question">
-            How do I report a suspicious listing or user?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>You can report any listing or user directly in the app by tapping the report button. You can also reach our support team through the Contact page or via our social media channels. We take all reports seriously and investigate promptly. Our fraud detection system includes velocity limits and comprehensive event logging to maintain marketplace integrity.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-escrow-secure">
-          <button class="faq-item__question">
-            How secure is the escrow system really?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Every transaction is protected by strong encryption, tamper-proof integrity checks, encrypted confirmation codes, dispute mediation with manual approval, and built-in fraud prevention. This isn't a promise — it's our architecture.</p>
-          </div>
-        </div>
-        <div class="faq-item" id="faq-can-read-messages">
-          <button class="faq-item__question">
-            Can Garabaly read my messages?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly does not routinely read your messages. However, if a user files a report, our designated moderation staff may review the conversation to investigate. Deleted messages remain visible to moderators for evidence purposes — for example, to resolve a dispute — for as long as your account exists, and are removed when you delete your account. This protects both buyers and sellers in disputes.</p>
-            <p>Tips for safe trade: inspect animals before paying, use our secure payment when possible, and never share financial PINs or passwords. For your safety, keep conversations on Garabaly — it lets us help if something goes wrong.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-delete-account">
-          <button class="faq-item__question">How do I delete my account?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>Go to <strong>Profile → Settings → Delete my account</strong>. The app asks for your PIN as a safeguard. If you have funds in your wallet or open orders, you must withdraw or finalize them first. Confirm: your account is marked for deletion and anonymized within 30 days. You can also email <strong>support@garabaly.com</strong> with the subject "Account deletion request" if you can't do it from the app.</p>
-            <p>What is kept: financial transaction records (invoices, accounting ledgers), anonymized with respect to your identity — to satisfy legal obligations.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-data-access">
-          <button class="faq-item__question">How do I get a copy of my data?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>You have the right to a copy of your data. Email us at <strong>support@garabaly.com</strong> from the email on your account (or from a verified phone number) with the subject "Data access request — [your name]". We send back an archive (JSON + readable PDF) within 30 days maximum, usually within 7-10 days.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-min-age">
-          <button class="faq-item__question">What is the minimum age to use Garabaly?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>You must be at least 18 — the age of legal majority in our markets — to use Garabaly. Garabaly is a marketplace for buying and selling livestock and services, and using it means entering binding purchase agreements and making payments, which require legal capacity. By creating an account you confirm you meet this requirement (see our Terms of Service). If we find an account belongs to a minor, we close it and return any funds to a legal guardian after verification.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-verify-garabaly">
-          <button class="faq-item__question">How do I verify that a message really comes from Garabaly?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>Official WhatsApp: <strong>+223 62 77 88 71</strong>. Official email: <strong>info@garabaly.com</strong> (and any address @garabaly.com). Social media: @GarabalyApp on X / Twitter, the official Facebook page, and TikTok @garabaly. We will <strong>never</strong> ask you for your PIN, your password, your confirmation code, or for payment outside the app. If anyone contacts you claiming to be Garabaly and asks for any of these, do not respond and report it to us.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-code-locked">
-          <button class="faq-item__question">My code is locked after multiple attempts — how do I unblock it?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>For your protection, after multiple failed attempts your code is temporarily locked. Message us on WhatsApp <strong>+223 62 77 88 71</strong> with your order number and a selfie holding a paper with that order number written on it — that's our identity check. We unlock within a few hours.</p>
-          </div>
-        </div>
+      <div class="faq-tiers reveal">
+        <p class="faq-tiers__intro">Every account is checked continuously. As sellers verify more, their withdrawal limits rise.</p>
+        <div class="gb gb-tiers reveal" style="max-width: 1000px; margin: 0 auto;">
+                <div class="gb-tier">
+                  <p class="gb-tier__badge">Unverified</p>
+                  <p class="gb-tier__tag">Getting started</p>
+                  <ul class="gb-reqs"><li>Email &amp; phone</li><li>Basic profile</li></ul>
+                  <div class="gb-limits">
+                    <div class="gb-limit"><span>Withdrawal · per operation</span><span dir="ltr">FCFA 100 000</span></div>
+                    <div class="gb-limit"><span>Withdrawal · per day</span><span dir="ltr">FCFA 200 000</span></div>
+                  </div>
+                </div>
+                <div class="gb-tier gb-tier--featured">
+                  <span class="gb-tier__ribbon">Most common</span>
+                  <p class="gb-tier__badge">Verified</p>
+                  <p class="gb-tier__tag">Full marketplace access</p>
+                  <ul class="gb-reqs"><li>ID document</li><li>Proof of address</li><li>Verification selfie</li></ul>
+                  <div class="gb-limits">
+                    <div class="gb-limit"><span>Withdrawal · per operation</span><span dir="ltr">FCFA 2 000 000</span></div>
+                    <div class="gb-limit"><span>Withdrawal · per day</span><span dir="ltr">FCFA 5 000 000</span></div>
+                  </div>
+                </div>
+                <div class="gb-tier">
+                  <p class="gb-tier__badge">Trusted</p>
+                  <p class="gb-tier__tag">For businesses &amp; cooperatives</p>
+                  <ul class="gb-reqs"><li>Business registration (RCCM)</li><li>Enhanced due diligence</li><li>Platform history</li></ul>
+                  <div class="gb-limits">
+                    <div class="gb-limit"><span>Withdrawal · per operation</span><span dir="ltr">FCFA 3 000 000</span></div>
+                    <div class="gb-limit"><span>Withdrawal · per day</span><span dir="ltr">FCFA 8 000 000</span></div>
+                  </div>
+                </div>
+              </div>
+        <p class="gb gb-compliance">Identity check (KYC) · Anti-money-laundering (AML) · Fraud prevention — on every account, continuously.</p>
+      </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-become-verified-seller">
+          <summary>How do I get verified as a seller?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>To become a verified seller, download the app and create an account. Then complete the verification process by providing a valid ID and a selfie. Verified sellers earn a badge on their profile, which builds trust with buyers and increases the visibility of your listings.</p></div>
+        </details>
+        <details class="faq" id="faq-when-paid">
+          <summary>When do I receive payment?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p><strong>Nothing is released until the buyer enters their 6-character confirmation code.</strong> The moment they do, the service providers (butchers, veterinarians, delivery drivers) are paid and your seller's share enters a <strong>24-hour buyer-protection window</strong> — the window applies only to the seller's share, and there is no per-step payout before the code. If no dispute is raised during that window, the funds are released automatically to your Garabaly Wallet — you don't have to do anything. Once released, funds are available in your Garabaly Wallet for instant transfer to other users or external withdrawal via Orange Money, Moov Money, or Wave, with more providers being added. Bank withdrawal is also available.</p></div>
+        </details>
+        <details class="faq" id="faq-withdraw-earnings">
+          <summary>How do I withdraw my earnings?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Your Garabaly Wallet supports deposits via card or mobile money, escrow releases, and instant wallet-to-wallet transfers to other users. Withdraw via Orange Money, Moov Money, Wave, with more providers being added. Bank withdrawal is also available. All wallet operations require your secure PIN (set during onboarding). Your wallet uses auditable financial records and tamper-proof balance checks to ensure every transaction is accurate.</p></div>
+        </details>
+        <details class="faq" id="faq-seller-fees">
+          <summary>What fees does Garabaly charge sellers?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly charges a small platform fee to sellers upon successful sale, and to service providers upon task completion. No upfront costs, no listing fees. Buyers always pay zero fees. 0% for buyers, always. Sellers pay 5% — and only ever less — charged only once you've been paid.</p></div>
+        </details>
+        <details class="faq" id="faq-withdrawal-limits">
+          <summary>What are the wallet withdrawal limits?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Limits depend on your account status. The more verified your account and the cleaner your trading history, the higher your limits.</p>
+                      <div class="faq-withdrawal-scroll" role="region" aria-label="Withdrawal limits by account tier">
+                      <table class="faq-withdrawal-table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="faq-withdrawal-table__col-text">Status</th>
+                            <th scope="col" class="faq-withdrawal-table__col-text">How to reach it</th>
+                            <th scope="col" class="faq-withdrawal-table__amount">Per-tx</th>
+                            <th scope="col" class="faq-withdrawal-table__amount">Daily</th>
+                            <th scope="col" class="faq-withdrawal-table__amount">Weekly</th>
+                            <th scope="col" class="faq-withdrawal-table__amount">Monthly</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>Cooling-off</strong></td><td class="faq-withdrawal-table__col-text">First 24h after account creation</td><td class="faq-withdrawal-table__amount">blocked</td><td class="faq-withdrawal-table__amount">blocked</td><td class="faq-withdrawal-table__amount">blocked</td><td class="faq-withdrawal-table__amount">blocked</td></tr>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>Unverified</strong></td><td class="faq-withdrawal-table__col-text">Account created, not yet verified</td><td class="faq-withdrawal-table__amount">100 000</td><td class="faq-withdrawal-table__amount">200 000</td><td class="faq-withdrawal-table__amount">600 000</td><td class="faq-withdrawal-table__amount">2 000 000</td></tr>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>Verified</strong></td><td class="faq-withdrawal-table__col-text">ID + selfie validated</td><td class="faq-withdrawal-table__amount">2 000 000</td><td class="faq-withdrawal-table__amount">5 000 000</td><td class="faq-withdrawal-table__amount">20 000 000</td><td class="faq-withdrawal-table__amount">60 000 000</td></tr>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>Trusted</strong></td><td class="faq-withdrawal-table__col-text">Verified + 90 days of clean history</td><td class="faq-withdrawal-table__amount">3 000 000</td><td class="faq-withdrawal-table__amount">8 000 000</td><td class="faq-withdrawal-table__amount">35 000 000</td><td class="faq-withdrawal-table__amount">120 000 000</td></tr>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>Market Builder</strong></td><td class="faq-withdrawal-table__col-text">Market Builder badge (15 same-role referrals) or partner status</td><td class="faq-withdrawal-table__amount">5 000 000</td><td class="faq-withdrawal-table__amount">15 000 000</td><td class="faq-withdrawal-table__amount">60 000 000</td><td class="faq-withdrawal-table__amount">200 000 000</td></tr>
+                        </tbody>
+                      </table>
+                      </div>
+                      <p style="margin-top:var(--space-md);">Amounts in XOF. <strong>Absolute single-transaction ceiling: 5 000 000 XOF</strong> regardless of status (BCEAO regulation). If you hit your cap before a major event (Tabaski, large cooperative purchase…), message us 24h ahead — we raise it temporarily after verification.</p></div>
+        </details>
+        <details class="faq" id="faq-cooling-off">
+          <summary>Why can't I withdraw on my first day?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>For your safety, withdrawals are blocked during the first 24 hours after account creation. This is a protection against account takeover right after sign-up. Everything else — browse, negotiate, pay, sell, receive payments into your wallet — works normally during this window. Only outgoing withdrawal waits for the period to end.</p></div>
+        </details>
+        <details class="faq" id="faq-verify-value">
+          <summary>What does verifying my account change?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>A lot. Verification multiplies your limits by roughly 20× — you go from 200 000 XOF to 5 000 000 XOF per day for withdrawals. You also get a verification badge on your profile (which builds buyer trust and lifts your listing visibility), unlock professional-seller features (unlimited listings, larger transactions), and become eligible for <strong>Trusted</strong> status after 90 days of clean trading.</p>
+                      <p>To verify: <strong>Profile → Become a verified seller</strong> → upload a valid ID + selfie. Validation within 24-48 business hours.</p></div>
+        </details>
+        <details class="faq" id="faq-raise-limits">
+          <summary>How do I raise my limits further?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>With time and exemplary behavior, you graduate automatically to <strong>Trusted</strong>, then to <strong>Market Builder</strong>. No application needed — our system promotes you.</p>
+                      <p><strong>To reach Trusted</strong> (8 000 000 XOF / day): verified account + 90 days of history + at least 10 successful withdrawals + zero disputes resolved against you in the last 90 days + at least 1 000 000 XOF withdrawn lifetime. You also reach Trusted automatically with a Champion (25 referrals), Ambassador Gold (6 same-role referrals), or Local Breeder badge.</p>
+                      <p><strong>To reach Market Builder</strong> (15 000 000 XOF / day): earn the <strong>Market Builder</strong> badge — 15 same-role qualified referrals (sellers referring sellers, providers referring providers…). It is our highest tier.</p>
+                      <p>If you need a one-off raise for a specific event (Tabaski, cooperative purchase…), message us — temporary raises are granted on a case-by-case basis after verification.</p></div>
+        </details>
+        <details class="faq" id="faq-hit-cap">
+          <summary>I've hit my limit — what do I do?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Three options: wait for the period to reset, ask us for a temporary raise, or graduate to a higher status.</p>
+                      <p><strong>If it's one-off</strong> (e.g. your monthly cap resets in 5 days): just wait. Your cap resets automatically at midnight GMT.</p>
+                      <p><strong>If you need it now</strong>: message us on WhatsApp <strong>+223 62 77 88 71</strong> with the amount you want to withdraw, the reason (Tabaski sale, cooperative purchase, family emergency…), and your verified phone / account number. Reply within a few hours, day or night. If the request is legitimate and reasonable, we raise the cap on the spot.</p>
+                      <p><strong>If you keep hitting the cap</strong>: you are probably already eligible for <strong>Trusted</strong> or will be soon. No action needed — the system promotes you automatically when you meet the conditions.</p></div>
+        </details>
+        <details class="faq" id="faq-health-certificate-optional">
+          <summary>Can I list livestock without a health certificate?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Yes, a health certificate is optional but highly recommended. Listings with verified health certificates get significantly more buyer interest and tend to sell faster. We encourage all sellers to work with local veterinarians to obtain certificates for their livestock.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== FAQ: SERVICE PROVIDERS & ORDERS ===== -->
-  <section class="section">
+  <section class="section" id="cat-security">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Services & Orders</span>
-        <h2 class="section-title">Service Providers & Order Types</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="lock"></i></span>
+        <h2 class="faq-cat__title">Security & trust</h2>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-service-providers">
-          <button class="faq-item__question">
-            What service providers are available on Garabaly?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Garabaly supports three types of service providers: delivery drivers for livestock transport, professional butchers for meat preparation, and veterinarians for health inspections and certificates. Each service provider is verified, rated, and reviewed by previous clients. All service providers are paid through the same escrow system, so everyone is protected.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-order-types">
-          <button class="faq-item__question">
-            What are the different order types?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>By default, every item in your cart is an <strong>independent order</strong> — each with its own order ID and confirmation code, whether it is an animal or a standalone service like a butcher, vet, or delivery. When you want everything under one code, you can <strong>bundle</strong> one listing with up to 3 services (maximum 1 delivery + 1 butcher + 1 vet) into a single order, and drag-to-reorder the fulfillment sequence. So there are really two ways to order: independent by default, or bundled when you choose.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-order-tracking">
-          <button class="faq-item__question">
-            How does order tracking work?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Every order has a real-time progress tracker visible in the app. You'll see each stage — from order placed, to seller confirmed, preparation, in transit, delivered, and completed. Push notifications and in-app alerts keep you updated at every stage. For multiparty orders, you'll see the progress of each party (seller, delivery, butcher) independently.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-book-butcher-only">
-          <button class="faq-item__question">
-            Can I book a butcher without buying livestock on the app?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Yes! You can book a butcher, delivery driver, or vet on its own — it is simply an independent order, with no animal purchase required. This is useful if you've already purchased your livestock elsewhere but need a professional service. The service provider is still paid through Garabaly's escrow for your protection.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-currencies">
-          <button class="faq-item__question">
-            What currencies does Garabaly support?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>You always pay in your own currency, and the seller is always paid in theirs — Garabaly handles the conversion. The rate is fixed the moment you pay and shown before you confirm; the same fixed rate is used for any refund. Within the CFA franc zone (XOF/XAF) and for euros, payment is at the official fixed rate with no conversion fee. For other currencies — such as USD, GBP, CAD — a small conversion fee applies and is always shown upfront. Cross-currency payment is currently available by card and Garabaly Wallet.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-paying-from-abroad">
-          <button class="faq-item__question">
-            I'm in the diaspora — how do I pay from abroad?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>You pay in your own currency, and the seller is paid in theirs — Garabaly handles the conversion in the middle. The rate is fixed the moment you pay and shown to you before you confirm, and the same fixed rate is used if you are ever refunded. If you pay in euros, we use the official fixed rate (1 € = 655.957 FCFA) with no conversion fee. For other currencies a small conversion fee applies, always shown upfront. Paying from abroad is available by card and Garabaly Wallet.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-voice-messages">
-          <button class="faq-item__question">
-            Can I chat with sellers using voice messages?
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>Yes! Garabaly's chat supports text messages, voice recordings, photos, and video. You can also share listing details directly in the chat. Voice messages are especially popular — they let sellers describe their livestock in any language and let buyers ask detailed questions naturally. Messages are delivered in real time with offline queuing so nothing gets lost.</p>
-          </div>
-        </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-money-safe">
+          <summary>Is my money safe with Garabaly?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Absolutely. All escrow funds are held in secure, regulated accounts — your payment is never mixed with Garabaly's operating funds. We use strong encryption, strict data-integrity safeguards, and comprehensive monitoring. Your money is protected by architecture, not promises.</p>
+                      <p>Card payments are processed by Stripe; we never store full card numbers on our servers. Sensitive payment data is handled with industry-standard protections end-to-end.</p></div>
+        </details>
+        <details class="faq" id="faq-confirmation-code">
+          <summary>What is the confirmation code and how does it work?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Every Garabaly order generates a unique 6-character alphanumeric confirmation code visible only to the buyer. When the livestock (or service) is delivered, the buyer enters this code directly in the app. <strong>Nothing is released before that:</strong> entering the code pays the service providers and starts the seller's <strong>24-hour buyer-protection window</strong> (during which the buyer can open a dispute). One code releases the whole order — independent or bundled — with no per-step payout. The code is never shared with the seller or anyone else — only the buyer can enter it. This system prevents fraud and keeps everyone aligned on what "delivered" means.</p></div>
+        </details>
+        <details class="faq" id="faq-seller-no-confirm">
+          <summary>What happens if the seller doesn't confirm my order?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Sellers and service providers pre-approve your order before you can checkout, so the order is already committed when you pay. After delivery, you have a 24-hour buyer protection window to open a dispute if something is wrong. If you don't confirm or dispute within that window, the seller's share is released automatically. This protection runs on our server-side scheduler — no action required from you unless you need to dispute.</p></div>
+        </details>
+        <details class="faq" id="faq-dispute">
+          <summary>What happens if there's a dispute?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>If a buyer and seller can't agree, either party can open a dispute through the app. Garabaly's support team reviews the evidence (photos, messages, listing details, chat history). Disputes require dual-admin approval for resolution — meaning no single person can make a unilateral decision. During the dispute, funds remain in escrow. We aim to resolve all disputes quickly and fairly.</p></div>
+        </details>
+        <details class="faq" id="faq-wallet-secured">
+          <summary>How is my wallet secured?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Your Garabaly wallet is protected by a private PIN that you set during onboarding. Your PIN is encrypted with strong standards (never stored in plain text) and required for all sensitive operations like withdrawals. For additional security, we use SMS verification for high-value transactions, built-in fraud prevention to detect suspicious activity, and device verification to prevent unauthorized access.</p></div>
+        </details>
+        <details class="faq" id="faq-report-suspicious">
+          <summary>How do I report a suspicious listing or user?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>You can report any listing or user directly in the app by tapping the report button. You can also reach our support team through the Contact page or via our social media channels. We take all reports seriously and investigate promptly. Our fraud detection system includes velocity limits and comprehensive event logging to maintain marketplace integrity.</p></div>
+        </details>
+        <details class="faq" id="faq-escrow-secure">
+          <summary>How secure is the escrow system really?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Every transaction is protected by strong encryption, tamper-proof integrity checks, encrypted confirmation codes, dispute mediation with manual approval, and built-in fraud prevention. This isn't a promise — it's our architecture.</p></div>
+        </details>
+        <details class="faq" id="faq-can-read-messages">
+          <summary>Can Garabaly read my messages?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Garabaly does not routinely read your messages. However, if a user files a report, our designated moderation staff may review the conversation to investigate. Deleted messages remain visible to moderators for evidence purposes — for example, to resolve a dispute — for as long as your account exists, and are removed when you delete your account. This protects both buyers and sellers in disputes.</p>
+                      <p>Tips for safe trade: inspect animals before paying, use our secure payment when possible, and never share financial PINs or passwords. For your safety, keep conversations on Garabaly — it lets us help if something goes wrong.</p></div>
+        </details>
+        <details class="faq" id="faq-verify-garabaly">
+          <summary>How do I verify that a message really comes from Garabaly?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Official WhatsApp: <strong>+223 62 77 88 71</strong>. Official email: <strong>info@garabaly.com</strong> (and any address @garabaly.com). Social media: @GarabalyApp on X / Twitter, the official Facebook page, and TikTok @garabaly. We will <strong>never</strong> ask you for your PIN, your password, your confirmation code, or for payment outside the app. If anyone contacts you claiming to be Garabaly and asks for any of these, do not respond and report it to us.</p></div>
+        </details>
+        <details class="faq" id="faq-code-locked">
+          <summary>My code is locked after multiple attempts — how do I unblock it?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>For your protection, after multiple failed attempts your code is temporarily locked. Message us on WhatsApp <strong>+223 62 77 88 71</strong> with your order number and a selfie holding a paper with that order number written on it — that's our identity check. We unlock within a few hours.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== FAQ: PIONEERS & EXPO GO ===== -->
-  <section class="section section--alt">
+  <section class="section section--alt" id="cat-account">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Pioneers</span>
-        <h2 class="section-title">Early Access via Expo Go</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="user"></i></span>
+        <h2 class="faq-cat__title">Account & data</h2>
       </div>
-      <div class="faq-list reveal">
-
-        <div class="faq-item" id="faq-pioneers-what">
-          <button class="faq-item__question">What are "Pioneers" and "Expo Go"?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>While Garabaly is in review on Google Play and the App Store, our earliest users — the <strong>Pioneers</strong> — get the app through <strong>Expo Go</strong>, a tool that runs Garabaly on your phone from a QR code or a link. It's intentional, exclusive early access — and entirely real: your account, your wallet, your orders are all live and stay with you when the app launches in the stores.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-pioneers-start">
-          <button class="faq-item__question">How do I get started?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>1. Visit <a href="https://www.garabaly.com/get-the-app.html"><strong>garabaly.com</strong></a> and tap the <strong>Download</strong> button — or go straight to the <a href="get-the-app.html">Get the App page</a>.<br>
-            2. Install <strong>Expo Go</strong> on your phone (we provide QR codes and direct links for the App Store and Google Play).<br>
-            3. Scan the Garabaly QR code — with your phone's camera on iPhone, or with the Expo Go app on Android — or tap the direct "Open in Expo Go" link. Both work on both platforms.<br>
-            4. Garabaly opens inside Expo Go. Create your account as you normally would.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-pioneers-account-survives">
-          <button class="faq-item__question">Will my Expo Go account survive when the app launches on the stores?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>Yes. The Expo Go version and the store version are exactly the same product on the same servers. Your account, your wallet, your orders, your reputation score, your reviews — everything migrates with no action from you. Just download the store version when it launches and log in with the same credentials.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-pioneers-store-launch-date">
-          <button class="faq-item__question">When will the app launch officially on the stores?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>The decision belongs to Apple and Google. The app was submitted in April 2026 and review is in progress. As soon as we have news, we share it on Facebook, TikTok and WhatsApp. While you wait, your Expo Go access is fully functional.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-pioneers-bug-report">
-          <button class="faq-item__question">I found a bug — where do I send it?<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>Thank you 🙏 — a Pioneer who reports a bug is gold to us. Send it on WhatsApp <strong>+223 62 77 88 71</strong> or by email at <strong>support@garabaly.com</strong>: the screen where it happened (screenshot or video if possible), what you were doing right before, and your phone model / OS version. We'll keep you posted on the fix.</p>
-          </div>
-        </div>
-
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-delete-account">
+          <summary>How do I delete my account?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>Go to <strong>Profile → Settings → Delete my account</strong>. The app asks for your PIN as a safeguard. If you have funds in your wallet or open orders, you must withdraw or finalize them first. Confirm: your account is marked for deletion and anonymized within 30 days. You can also email <strong>support@garabaly.com</strong> with the subject "Account deletion request" if you can't do it from the app.</p>
+                      <p>What is kept: financial transaction records (invoices, accounting ledgers), anonymized with respect to your identity — to satisfy legal obligations.</p></div>
+        </details>
+        <details class="faq" id="faq-data-access">
+          <summary>How do I get a copy of my data?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>You have the right to a copy of your data. Email us at <strong>support@garabaly.com</strong> from the email on your account (or from a verified phone number) with the subject "Data access request — [your name]". We send back an archive (JSON + readable PDF) within 30 days maximum, usually within 7-10 days.</p></div>
+        </details>
+        <details class="faq" id="faq-min-age">
+          <summary>What is the minimum age to use Garabaly?<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>You must be at least 18 — the age of legal majority in our markets — to use Garabaly. Garabaly is a marketplace for buying and selling livestock and services, and using it means entering binding purchase agreements and making payments, which require legal capacity. By creating an account you confirm you meet this requirement (see our Terms of Service). If we find an account belongs to a minor, we close it and return any funds to a legal guardian after verification.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== STILL HAVE QUESTIONS? ===== -->
   <section class="section">
     <div class="container text-center reveal">
       <h2 class="section-title">Still Have Questions?</h2>
@@ -1260,8 +990,7 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
+<footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
@@ -1323,7 +1052,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=12"></script>
+  <script src="js/main.js?v=13"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

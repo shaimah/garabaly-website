@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/cairo-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=24">
+  <link rel="stylesheet" href="../css/styles.css?v=29">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -555,573 +555,415 @@
     <a href="get-the-app.html" class="btn btn--primary">تحميل التطبيق</a>
   </div>
 
-  <section class="page-header">
+    <section class="page-header">
     <div class="container page-header__content">
-      <div class="page-header__breadcrumb">
-        <a href="index.html">الرئيسية</a>
-        <i data-feather="chevron-left" style="width:14px;height:14px;"></i>
-        <span>الأسئلة الشائعة</span>
-      </div>
+      <span class="section-eyebrow">مساعدة وإجابات</span>
       <h1>الأسئلة الشائعة</h1>
-      <p>كل ما تحتاج معرفته عن استخدام غرابالي لشراء وبيع الماشية.</p>
+      <p>ابحث عن إجابة، أو تصفّح حسب الموضوع. كل شيء عن الضمان والمدفوعات والمغتربين والأمان.</p>
     </div>
   </section>
-
-  <!-- ===== عام ===== -->
-  <section class="section">
+  <section class="section faq-tools-section">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">عام</span>
-        <h2 class="section-title">عن غرابالي</h2>
+      <div class="faq-search reveal">
+        <i data-feather="search" class="faq-search__icon" aria-hidden="true"></i>
+        <input type="search" id="faqSearch" class="faq-search__input" placeholder="ابحث عن سؤال…" autocomplete="off" aria-label="ابحث عن سؤال…" aria-controls="faqResults">
+        <ul id="faqResults" class="faq-search__results" role="listbox" data-nomatch="لا يوجد سؤال مطابق — راسلنا على واتساب" hidden></ul>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-what-is-garabaly">
-          <button class="faq-item__question">ما هو غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>غرابالي هو سوق الماشية الموثوق. إنه تطبيق موبايل يربط بائعي الماشية بالمشترين — والمهجر بالوطن — مع حماية ضمان مدمجة وتفاوض حقيقي لكل معاملة. يمكنك تصفح الأبقار والأغنام والماعز والإبل والدواجن — مع صور وملفات بائعين موثّقة، وشهادات صحية بيطرية اختيارية يرفعها البائعون.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-where-available">
-          <button class="faq-item__question">أين يتوفر غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>غرابالي ينطلق في مالي أولاً ثم يتوسع عبر الساحل وغرب أفريقيا. المدفوعات عبر mobile money أصبحت LIVE في مالي والسنغال وكوت ديفوار وبوركينا فاسو وبنين وتوغو والكاميرون. المدفوعات بالبطاقة متاحة من أي مكان في العالم — لذلك يمكن لمشتري المهجر في باريس ولندن ونيويورك وبروكسل ومونتريال وغيرها استخدام غرابالي اليوم.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-app-free">
-          <button class="faq-item__question">هل التطبيق مجاني للتحميل؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>غرابالي مجاني تماماً للمشترين — لا رسوم منصة، لا عمولات، لا رسوم خفية. السعر الذي تراه هو السعر الذي تدفعه. يتم فرض رسوم منصة صغيرة على البائعين ومقدمي الخدمات فقط عند إتمام المعاملات بنجاح.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-languages">
-          <button class="faq-item__question">ما اللغات التي يدعمها غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>واجهة كاملة بالفرنسية والإنجليزية والعربية مع دعم أصلي للكتابة من اليمين لليسار (RTL) — العربية ليست فكرة ثانوية بل تجربة من الدرجة الأولى. الأوصاف الصوتية والمراجعات يمكن تسجيلها بأي لغة: البمبارا والمُورِي والهاوسا والفلفلدي والولوف والسنغاي والمزيد. الصوت هو لغة التجارة — البائعون يصفون ماشيتهم بالكلام، والمشترون يتركون مراجعات صوتية، والجميع يتواصل بلغته الخاصة. لا حاجة للكتابة.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-different-from-others">
-          <button class="faq-item__question">كيف يختلف غرابالي عن الأسواق الأخرى؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>غرابالي مصمم خصيصاً لتجارة الماشية. على عكس الأسواق العامة، لدينا حماية ضمان على كل معاملة، وميزة تفاوض مخصصة (لأن \"أضف للسلة\" لا يوجد في سوق ساحلي)، وإمكانية أن يرفق البائعون شهادات صحية بيطرية، وأن يطلب المشترون فحوصات بيطرية عبر شبكة مقدمي الخدمات لدينا، وأوصاف صوتية باللغات المحلية، ودعم خاص للمهجر لشراء الماشية لعائلاتهم في الوطن.</p>
-          </div>
-        </div>
+      <p class="faq-toc__label reveal">تصفّح حسب الموضوع</p>
+      <div class="faq-toc reveal">
+        <a class="faq-toc__card" href="#cat-general">
+          <span class="faq-toc__icon"><i data-feather="help-circle"></i></span>
+          <span class="faq-toc__name">عام <span class="faq-toc__count">· 11</span></span>
+          <span class="faq-toc__desc">ما هو غرابالي، أين، اللغات، وصول Pioneers.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-ordering">
+          <span class="faq-toc__icon"><i data-feather="mic"></i></span>
+          <span class="faq-toc__name">الطلب والتفاوض <span class="faq-toc__count">· 10</span></span>
+          <span class="faq-toc__desc">الطلب، التفاوض، الفحص، مقدمو الخدمات.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-payments">
+          <span class="faq-toc__icon"><i data-feather="credit-card"></i></span>
+          <span class="faq-toc__name">المدفوعات والمغتربون <span class="faq-toc__count">· 11</span></span>
+          <span class="faq-toc__desc">طرق الدفع، المحفظة الجوّالة، الصرف.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-sellers">
+          <span class="faq-toc__icon"><i data-feather="shield"></i></span>
+          <span class="faq-toc__name">البائعون والضمان <span class="faq-toc__count">· 10</span></span>
+          <span class="faq-toc__desc">التوثيق، الدفع، السحوبات، الحدود.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-security">
+          <span class="faq-toc__icon"><i data-feather="lock"></i></span>
+          <span class="faq-toc__name">الأمان والثقة <span class="faq-toc__count">· 10</span></span>
+          <span class="faq-toc__desc">رمز التأكيد، النزاعات، المحفظة.</span>
+        </a>
+        <a class="faq-toc__card" href="#cat-account">
+          <span class="faq-toc__icon"><i data-feather="user"></i></span>
+          <span class="faq-toc__name">الحساب والبيانات <span class="faq-toc__count">· 3</span></span>
+          <span class="faq-toc__desc">حذف الحساب، بياناتك، الحد الأدنى للعمر.</span>
+        </a>
       </div>
     </div>
   </section>
-
-  <!-- ===== الشراء والتفاوض ===== -->
-  <section class="section section--alt">
+  <section class="section" id="cat-general">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">الشراء والتفاوض</span>
-        <h2 class="section-title">للمشترين</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="help-circle"></i></span>
+        <h2 class="faq-cat__title">عام</h2>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-order-process">
-          <button class="faq-item__question">كيف يعمل مسار الطلب؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>عند إضافة عناصر إلى سلة التسوق، يجب على البائع (وأي مقدم خدمة) تأكيد التوفر أولاً قبل أن تتمكن من إتمام الدفع. هذا التأكيد قبل الدفع يحمي جميع الأطراف. بمجرد التأكيد، تدفع وتُحتجز أموالك بأمان في الضمان حتى اكتمال التسليم.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-negotiation">
-          <button class="faq-item__question">كيف يعمل التفاوض على غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>غرابالي لديه ميزة تفاوض مدمجة. يمكنك التحدث مباشرة مع البائعين، وطلب صور أو فيديوهات إضافية، والتفاوض على السعر، والتوصل لاتفاق — تماماً كما في السوق الفعلي. بمجرد الاتفاق مع البائع على السعر، تنتقل للدفع مع حماية الضمان. نؤمن أن السعر محادثة وليس ملصقاً.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-buyer-fees">
-          <button class="faq-item__question">هل يفرض غرابالي رسوماً على المشترين؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>لا. غرابالي مجاني تماماً للمشترين — لا رسوم منصة، لا عمولات، لا رسوم خفية. السعر الذي تراه هو السعر الذي تدفعه. تُفرض رسوم منصة صغيرة على البائعين ومقدمي الخدمات فقط عند إتمام المعاملات بنجاح.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-escrow">
-          <button class="faq-item__question">كيف تعمل حماية الضمان؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>يستخدم غرابالي ضماناً بتخصيص لكل طرف. عند الدفع، يُحفظ مالك بأمان. <strong>لا يُفرج عن أي مبلغ قبل أن تُدخل رمز التأكيد المكوّن من 6 أحرف</strong> عند التسليم. وبمجرد إدخاله، يُدفع لمقدمي الخدمات (الجزّار، البيطري، الناقل) وتدخل حصة البائع في <strong>فترة حماية المشتري لمدة 24 ساعة</strong> — خلال هذه الـ 24 ساعة، يمكنك فتح نزاع إذا كان هناك شيء خاطئ. وإلا، تُحرّر حصة البائع تلقائياً في نهاية الفترة — لا يلزمك فعل شيء. في حالة فتح نزاع، تُحتجَز جميع الحصص غير المحرَّرة ويتخذ فريقنا (شخصان يوافقان معاً) القرار.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-animal-not-as-described">
-          <button class="faq-item__question">ماذا لو لم تطابق الماشية الإعلان؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>أنت محمي. بعد التسليم، افحص الماشية بعناية <strong>قبل</strong> إدخال رمز التأكيد. تحقق أنها تطابق الإعلان — بما في ذلك الصور والوصف وأي وثائق صحية قدّمها البائع. إذا كان هناك خطأ، افتح نزاعاً داخل التطبيق <strong>قبل</strong> التأكيد. يراجع فريق غرابالي الأدلة ويتوسط. إذا تم حل النزاع لصالحك، تحصل على استرداد كامل من الضمان. لا تُحرر أموالك حتى تكون راضياً.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-buy-from-abroad">
-          <button class="faq-item__question">هل يمكنني شراء ماشية لعائلتي من الخارج؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>بالتأكيد! غرابالي مصمم للمهجر. سواء كنت في باريس أو لندن أو نيويورك أو واشنطن العاصمة أو بروكسل أو مونتريال أو أي مكان آخر، يمكنك تصفح الماشية والتفاوض مع البائعين المحليين والدفع بحماية الضمان وتوصيل الحيوان لبيت عائلتك. مثالي للتباسكي والاحتفالات أو ببساطة رعاية أحبائك عن بعد.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-payment-methods">
-          <button class="faq-item__question">كيف أدفع ثمن الماشية؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>غرابالي يدعم عدة طرق للدفع:</p>
-            <p>• Mobile Money (LIVE): Orange Money وMoov Money وWave، ويُضاف المزيد من المزودين. متاح في مالي والسنغال وكوت ديفوار وبوركينا فاسو وبنين وتوغو والكاميرون.<br>
-            • بطاقات الدفع (LIVE): Visa وMastercard عبر Stripe. تدفع بعملتك الخاصة بسعر يُثبَّت لحظة الدفع — دون رسوم تحويل داخل منطقة CFA أو باليورو، ومع رسم صغير يُعرض مسبقاً للعملات الأخرى.<br>
-            • محفظة غرابالي (LIVE): شحن بالبطاقة أو mobile money وتحويلات فورية.<br>
-            • نقداً: ادفع للبائع مباشرة عند التسليم — دون ضمان وبحماية محدودة. ننصح بطريقة محمية بالضمان (بطاقة أو موبايل موني أو محفظة) لأقصى أمان.</p>
-          </div>
-        </div>
-        <div class="faq-item" id="faq-mobile-money-providers">
-          <button class="faq-item__question">ما مزودو mobile money الذين يعملون مع غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>غرابالي يدعم Orange Money وMoov Money وWave. ويتم إضافة مزودين ودول جديدة بشكل مستمر.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-cash-vs-escrow">
-          <button class="faq-item__question">ما الفرق بين الدفع نقداً عند التسليم والضمان؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>مع وسائل الدفع المحمية بالضمان (البطاقة، mobile money، المحفظة)، تبقى أموالك محتجزة بأمان حتى تؤكد التسليم برمز التأكيد. بعد إدخال الرمز، تدخل حصة البائع في <strong>فترة حماية المشتري لمدة 24 ساعة</strong> — خلال هذه الـ 24 ساعة يمكنك فتح نزاع إذا كان هناك خطأ. مع الدفع نقداً عند التسليم، تدفع للبائع مباشرة عند استلام الماشية. النقد يوفر حماية أقل من المنصة؛ لذلك نوصي بوسائل الدفع المضمونة بالضمان لأقصى أمان.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-inspection-time">
-          <button class="faq-item__question">كم من الوقت لدي لفحص الماشية؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>بمجرد توصيل الماشية، لديك فترة فحص معقولة للتحقق من مطابقتها للإعلان. الإطار الزمني المحدد يظهر في تفاصيل الضمان داخل التطبيق. إذا لم تؤكد أو تعترض خلال الفترة المحددة، يُحرر الضمان تلقائياً للبائع.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-family-no-app">
-          <button class="faq-item__question">هل يمكن لعائلتي استلام الماشية دون تنزيل التطبيق؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>نعم. لا تحتاج عائلتك إلى تنزيل غرابالي. أنت تقدم الطلب وتدفع وتتابع التوصيل من أي مكان. تُوصَّل الماشية مباشرة إلى منزل العائلة. يمكنك تنسيق وقت التوصيل لتكون على مكالمة WhatsApp عند الوصول — يفعل ذلك كثير من مشتري المهجر.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-when-tabaski">
-          <button class="faq-item__question">متى أطلب للتباسكي أو احتفالات أخرى؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>للأعراس وتسمية المولود وغيرها من المناسبات، اطلب في أقرب وقت ممكن لتأمين أفضل الماشية. بائعونا المعتمدون يحافظون على مخزون على مدار السنة — تجارة الماشية لا تتوقف. يمكنك تتبع طلبك لحظياً والاتصال بعائلتك على WhatsApp عند الوصول. أما توقيت عيد الأضحى / التباسكي، فراجع السؤال المخصص أدناه.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-eur-xof-rate">
-          <button class="faq-item__question">ما سعر الصرف الذي تطبّقونه للمهجر؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>EUR ↔ XOF: <strong>سعر ثابت عند 655,957</strong> (التثبيت الرسمي لفرنك CFA)، دون أي زيادة من غرابالي. العملات الأخرى (USD, GBP, CAD…) تستخدم سعر Stripe في وقت الدفع؛ ترى دائماً مبلغ XOF الذي سيستلمه البائع <strong>قبل</strong> الدفع.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-mobile-money-failed">
-          <button class="faq-item__question">دفع mobile money لم ينجح — هل المشكلة منكم أم من المشغّل؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>في الغالب يكون الرفض من جانب المشغّل (رصيد غير كافٍ، عدم تأكيد USSD، تجاوز الحد اليومي، انقطاع قصير). تحقّق من رصيدك عبر USSD، تحقّق من عدم بلوغ الحد، وأعد المحاولة في التطبيق. إذا فشل مجدداً، غيّر الطريقة (مشغّل آخر أو بطاقة). <strong>إذا تم خصم المبلغ ولم يؤكّد غرابالي</strong>، راسلنا فوراً على WhatsApp ‪+223 62 77 88 71‬ — هذه أولوية قصوى، رد خلال بضع ساعات، ليلاً أو نهاراً.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-when-eid">
-          <button class="faq-item__question">متى أطلب لعيد الأضحى / Tabaski؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>لعيد هانئ (T = يوم العيد):</p>
-            <p>• <strong>T - 4 أسابيع</strong>: اختر بائعك، تفاوض.<br>
-            • <strong>T - 3 أسابيع</strong>: ادفع واحجز ماشيتك.<br>
-            • <strong>T - 1 أسبوع</strong>: نسّق التسليم مع عائلتك.<br>
-            • <strong>T - 3 إلى T - 1 يوم</strong>: التسليم إلى منزل العائلة.<br>
-            • <strong>يوم T</strong>: أكّد بمكالمة + أدخل رمزك.</p>
-            <p>أسبوع العيد، الطرق مزدحمة، الأسعار ترتفع، والناقلون مشبعون. الطلب في T - 3 أسابيع أرخص وأهدأ وأكثر موثوقية.</p>
-            <p><em>تاريخ عيد الأضحى يتغيّر بحوالي 11 يوماً كل عام حسب رؤية الهلال. راجع التقويم الرسمي للسنة الحالية للتاريخ الدقيق.</em></p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-arrival-call">
-          <button class="faq-item__question">هل يمكنني إجراء مكالمة WhatsApp عند وصول هديتي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>بالتأكيد. كثير من مشتري المهجر ينسقون توقيت التوصيل ليكونوا على مكالمة WhatsApp عندما تستلم عائلتهم الماشية. أصبحت واحدة من أكثر اللحظات العاطفية في استخدام غرابالي — رؤية فرحة أمك من آلاف الكيلومترات.</p>
-          </div>
-        </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-what-is-garabaly">
+          <summary>ما هو غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>غرابالي هو سوق الماشية الموثوق. إنه تطبيق موبايل يربط بائعي الماشية بالمشترين — والمهجر بالوطن — مع حماية ضمان مدمجة وتفاوض حقيقي لكل معاملة. يمكنك تصفح الأبقار والأغنام والماعز والإبل والدواجن — مع صور وملفات بائعين موثّقة، وشهادات صحية بيطرية اختيارية يرفعها البائعون.</p></div>
+        </details>
+        <details class="faq" id="faq-where-available">
+          <summary>أين يتوفر غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>غرابالي ينطلق في مالي أولاً ثم يتوسع عبر الساحل وغرب أفريقيا. المدفوعات عبر mobile money أصبحت LIVE في مالي والسنغال وكوت ديفوار وبوركينا فاسو وبنين وتوغو والكاميرون. المدفوعات بالبطاقة متاحة من أي مكان في العالم — لذلك يمكن لمشتري المهجر في باريس ولندن ونيويورك وبروكسل ومونتريال وغيرها استخدام غرابالي اليوم.</p></div>
+        </details>
+        <details class="faq" id="faq-app-free">
+          <summary>هل التطبيق مجاني للتحميل؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>غرابالي مجاني تماماً للمشترين — لا رسوم منصة، لا عمولات، لا رسوم خفية. السعر الذي تراه هو السعر الذي تدفعه. يتم فرض رسوم منصة صغيرة على البائعين ومقدمي الخدمات فقط عند إتمام المعاملات بنجاح.</p></div>
+        </details>
+        <details class="faq" id="faq-languages">
+          <summary>ما اللغات التي يدعمها غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>واجهة كاملة بالفرنسية والإنجليزية والعربية مع دعم أصلي للكتابة من اليمين لليسار (RTL) — العربية ليست فكرة ثانوية بل تجربة من الدرجة الأولى. الأوصاف الصوتية والمراجعات يمكن تسجيلها بأي لغة: البمبارا والمُورِي والهاوسا والفلفلدي والولوف والسنغاي والمزيد. الصوت هو لغة التجارة — البائعون يصفون ماشيتهم بالكلام، والمشترون يتركون مراجعات صوتية، والجميع يتواصل بلغته الخاصة. لا حاجة للكتابة.</p></div>
+        </details>
+        <details class="faq" id="faq-different-from-others">
+          <summary>كيف يختلف غرابالي عن الأسواق الأخرى؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>غرابالي مصمم خصيصاً لتجارة الماشية. على عكس الأسواق العامة، لدينا حماية ضمان على كل معاملة، وميزة تفاوض مخصصة (لأن \"أضف للسلة\" لا يوجد في سوق ساحلي)، وإمكانية أن يرفق البائعون شهادات صحية بيطرية، وأن يطلب المشترون فحوصات بيطرية عبر شبكة مقدمي الخدمات لدينا، وأوصاف صوتية باللغات المحلية، ودعم خاص للمهجر لشراء الماشية لعائلاتهم في الوطن.</p></div>
+        </details>
+        <details class="faq" id="faq-voice-messages">
+          <summary>هل يمكنني التحدث مع البائعين برسائل صوتية؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>نعم! محادثة غرابالي تدعم الرسائل النصية والتسجيلات الصوتية والصور والفيديو. يمكنك أيضاً مشاركة تفاصيل الإعلان مباشرة في المحادثة. الرسائل الصوتية شائعة جداً — تتيح للبائعين وصف ماشيتهم بأي لغة وللمشترين طرح أسئلة تفصيلية بشكل طبيعي. تُوصّل الرسائل في الوقت الفعلي مع طابور للرسائل أثناء عدم الاتصال حتى لا يضيع شيء.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-what">
+          <summary>ما هي "Pioneers" و"Expo Go"؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>بينما يخضع غرابالي للمراجعة على Google Play وApp Store، يحصل أوائل مستخدمينا — <strong>Pioneers</strong> — على التطبيق عبر <strong>Expo Go</strong>، أداة تشغّل غرابالي على هاتفك من رمز QR أو رابط. إنه وصول مبكر مقصود وحصري — وحقيقي تماماً: حسابك ومحفظتك وطلباتك كلها مباشرة وتبقى معك عند إطلاق التطبيق في المتاجر.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-start">
+          <summary>كيف أبدأ؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>1. ادخل إلى <a href="https://www.garabaly.com/ar/get-the-app.html"><strong>garabaly.com</strong></a> واضغط على زر <strong>تحميل التطبيق</strong> — أو اذهب مباشرة إلى صفحة <a href="get-the-app.html">تحميل التطبيق</a>.<br>
+                      2. ثبّت <strong>Expo Go</strong> على هاتفك (نوفّر رموز QR والروابط المباشرة لـ App Store و Google Play).<br>
+                      3. امسح رمز QR الخاص بـ Garabaly — بكاميرا هاتفك على iPhone، أو بتطبيق Expo Go على Android — أو اضغط على الرابط المباشر "Open in Expo Go". الطريقتان تعملان على كلا النظامين.<br>
+                      4. يفتح Garabaly داخل Expo Go. أنشئ حسابك كالمعتاد.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-account-survives">
+          <summary>هل يبقى حسابي على Expo Go عند إطلاق التطبيق على المتاجر؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>نعم. نسخة Expo Go ونسخة المتجر هي نفس المنتج تماماً على نفس الخوادم. حسابك، محفظتك، طلباتك، درجة سمعتك، تقييماتك — كل شيء يهاجر دون أي إجراء منك. فقط حمّل نسخة المتجر عند إطلاقها وسجّل الدخول بنفس بيانات الاعتماد.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-store-launch-date">
+          <summary>متى يُطلق التطبيق رسمياً على المتاجر؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>القرار يعود إلى Apple وGoogle. تم تقديم التطبيق في أبريل 2026 والمراجعة قائمة. بمجرد توفر أي جديد، نشاركه على Facebook وTikTok وWhatsApp. أثناء الانتظار، وصولك عبر Expo Go يعمل بالكامل.</p></div>
+        </details>
+        <details class="faq" id="faq-pioneers-bug-report">
+          <summary>وجدت خللاً — أين أرسله؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>شكراً 🙏 — Pioneer يبلّغ عن خلل هو ذهب بالنسبة لنا. أرسله على WhatsApp <strong>+223 62 77 88 71</strong> أو بالبريد الإلكتروني إلى <strong>support@garabaly.com</strong>: الشاشة التي حدث فيها (لقطة شاشة أو فيديو إن أمكن)، ما كنت تفعله قبل ذلك مباشرة، وموديل هاتفك ونظام التشغيل. سنبقيك على اطلاع بالإصلاح.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== مستويات ثقة البائع (§3.2) ===== -->
-  <section class="section">
+  <section class="section section--alt" id="cat-ordering">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">بائعون موثّقون</span>
-        <h2 class="section-title">تحقّق تراه بعينك. حدود ترتفع مع الثقة.</h2>
-        <p class="section-subtitle">كل حساب يُفحَص باستمرار. كلما زاد توثيق البائع، ارتفعت حدود سحبه.</p>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="mic"></i></span>
+        <h2 class="faq-cat__title">الطلب والتفاوض</h2>
       </div>
-      <div class="gb gb-tiers reveal" style="max-width: 1000px; margin: 0 auto;">
-        <div class="gb-tier">
-          <p class="gb-tier__badge">غير موثّق</p>
-          <p class="gb-tier__tag">للبداية</p>
-          <ul class="gb-reqs"><li>البريد والهاتف</li><li>ملف أساسي</li></ul>
-          <div class="gb-limits">
-            <div class="gb-limit"><span>السحب · لكل عملية</span><span dir="ltr">FCFA 100 000</span></div>
-            <div class="gb-limit"><span>السحب · لكل يوم</span><span dir="ltr">FCFA 200 000</span></div>
-          </div>
-        </div>
-        <div class="gb-tier gb-tier--featured">
-          <span class="gb-tier__ribbon">الأكثر شيوعاً</span>
-          <p class="gb-tier__badge">موثّق</p>
-          <p class="gb-tier__tag">وصول كامل إلى السوق</p>
-          <ul class="gb-reqs"><li>بطاقة هوية</li><li>إثبات سكن</li><li>سيلفي التحقق</li></ul>
-          <div class="gb-limits">
-            <div class="gb-limit"><span>السحب · لكل عملية</span><span dir="ltr">FCFA 2 000 000</span></div>
-            <div class="gb-limit"><span>السحب · لكل يوم</span><span dir="ltr">FCFA 5 000 000</span></div>
-          </div>
-        </div>
-        <div class="gb-tier">
-          <p class="gb-tier__badge">جدير بالثقة</p>
-          <p class="gb-tier__tag">للشركات والتعاونيات</p>
-          <ul class="gb-reqs"><li>السجل التجاري (RCCM)</li><li>عناية واجبة معزّزة</li><li>سجل على المنصة</li></ul>
-          <div class="gb-limits">
-            <div class="gb-limit"><span>السحب · لكل عملية</span><span dir="ltr">FCFA 3 000 000</span></div>
-            <div class="gb-limit"><span>السحب · لكل يوم</span><span dir="ltr">FCFA 8 000 000</span></div>
-          </div>
-        </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-order-process">
+          <summary>كيف يعمل مسار الطلب؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>عند إضافة عناصر إلى سلة التسوق، يجب على البائع (وأي مقدم خدمة) تأكيد التوفر أولاً قبل أن تتمكن من إتمام الدفع. هذا التأكيد قبل الدفع يحمي جميع الأطراف. بمجرد التأكيد، تدفع وتُحتجز أموالك بأمان في الضمان حتى اكتمال التسليم.</p></div>
+        </details>
+        <details class="faq" id="faq-negotiation">
+          <summary>كيف يعمل التفاوض على غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>غرابالي لديه ميزة تفاوض مدمجة. يمكنك التحدث مباشرة مع البائعين، وطلب صور أو فيديوهات إضافية، والتفاوض على السعر، والتوصل لاتفاق — تماماً كما في السوق الفعلي. بمجرد الاتفاق مع البائع على السعر، تنتقل للدفع مع حماية الضمان. نؤمن أن السعر محادثة وليس ملصقاً.</p></div>
+        </details>
+        <details class="faq" id="faq-buyer-fees">
+          <summary>هل يفرض غرابالي رسوماً على المشترين؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>لا. غرابالي مجاني تماماً للمشترين — لا رسوم منصة، لا عمولات، لا رسوم خفية. السعر الذي تراه هو السعر الذي تدفعه. تُفرض رسوم منصة صغيرة على البائعين ومقدمي الخدمات فقط عند إتمام المعاملات بنجاح.</p></div>
+        </details>
+        <details class="faq" id="faq-escrow">
+          <summary>كيف تعمل حماية الضمان؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>يستخدم غرابالي ضماناً بتخصيص لكل طرف. عند الدفع، يُحفظ مالك بأمان. <strong>لا يُفرج عن أي مبلغ قبل أن تُدخل رمز التأكيد المكوّن من 6 أحرف</strong> عند التسليم. وبمجرد إدخاله، يُدفع لمقدمي الخدمات (الجزّار، البيطري، الناقل) وتدخل حصة البائع في <strong>فترة حماية المشتري لمدة 24 ساعة</strong> — خلال هذه الـ 24 ساعة، يمكنك فتح نزاع إذا كان هناك شيء خاطئ. وإلا، تُحرّر حصة البائع تلقائياً في نهاية الفترة — لا يلزمك فعل شيء. في حالة فتح نزاع، تُحتجَز جميع الحصص غير المحرَّرة ويتخذ فريقنا (شخصان يوافقان معاً) القرار.</p></div>
+        </details>
+        <details class="faq" id="faq-animal-not-as-described">
+          <summary>ماذا لو لم تطابق الماشية الإعلان؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>أنت محمي. بعد التسليم، افحص الماشية بعناية <strong>قبل</strong> إدخال رمز التأكيد. تحقق أنها تطابق الإعلان — بما في ذلك الصور والوصف وأي وثائق صحية قدّمها البائع. إذا كان هناك خطأ، افتح نزاعاً داخل التطبيق <strong>قبل</strong> التأكيد. يراجع فريق غرابالي الأدلة ويتوسط. إذا تم حل النزاع لصالحك، تحصل على استرداد كامل من الضمان. لا تُحرر أموالك حتى تكون راضياً.</p></div>
+        </details>
+        <details class="faq" id="faq-inspection-time">
+          <summary>كم من الوقت لدي لفحص الماشية؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>بمجرد توصيل الماشية، لديك فترة فحص معقولة للتحقق من مطابقتها للإعلان. الإطار الزمني المحدد يظهر في تفاصيل الضمان داخل التطبيق. إذا لم تؤكد أو تعترض خلال الفترة المحددة، يُحرر الضمان تلقائياً للبائع.</p></div>
+        </details>
+        <details class="faq" id="faq-service-providers">
+          <summary>ما مقدمو الخدمات المتوفرون على غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>يُدمج غرابالي ثلاثة أدوار في الطلب: <strong>الناقلون</strong> لنقل الماشية، <strong>الجزّارون</strong> للتحضير، و<strong>البيطريون</strong> للفحوصات الصحية والشهادات. كل مقدم خدمة موثَّق ومُقيَّم من العملاء السابقين. جميع مقدمي الخدمات يتلقّون أجورهم عبر نفس نظام الضمان — الجميع محمي.</p></div>
+        </details>
+        <details class="faq" id="faq-order-types">
+          <summary>ما أنواع الطلبات المختلفة؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>بشكل افتراضي، كل عنصر في سلتك هو <strong>طلب مستقل</strong> — لكل منه معرّف طلب ورمز تأكيد خاص، سواء كان حيواناً أو خدمة مستقلة كجزار أو بيطري أو توصيل. وعندما تريد كل شيء برمز واحد، يمكنك <strong>تجميع</strong> إعلان مع حتى 3 خدمات (بحد أقصى توصيل واحد + جزار واحد + بيطري واحد) في طلب واحد، والسحب لإعادة ترتيب تسلسل التنفيذ. فهناك إذاً طريقتان للطلب: مستقل افتراضياً، أو مجمّع عند اختيارك.</p></div>
+        </details>
+        <details class="faq" id="faq-order-tracking">
+          <summary>كيف يعمل تتبع الطلبات؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>كل طلب لديه متتبع تقدم في الوقت الفعلي داخل التطبيق. سترى كل مرحلة — من تقديم الطلب، لتأكيد البائع، التحضير، في الطريق، مُسلّم، ومكتمل. إشعارات فورية وتنبيهات داخل التطبيق تبقيك على اطلاع في كل مرحلة. للطلبات متعددة الأطراف، سترى تقدم كل طرف (بائع، توصيل، جزار) بشكل مستقل.</p></div>
+        </details>
+        <details class="faq" id="faq-book-butcher-only">
+          <summary>هل يمكنني حجز جزار بدون شراء ماشية من التطبيق؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>نعم! يمكنك حجز جزار أو سائق توصيل أو طبيب بيطري بمفرده — فهو ببساطة طلب مستقل، دون الحاجة لشراء حيوان. هذا مفيد إذا اشتريت ماشيتك من مكان آخر لكنك تحتاج خدمة احترافية. مقدم الخدمة يُدفع له عبر ضمان غرابالي لحمايتك.</p></div>
+        </details>
       </div>
-      <p class="gb gb-compliance">التحقق من الهوية (KYC) · مكافحة غسل الأموال (AML) · منع الاحتيال — على كل حساب، باستمرار.</p>
     </div>
   </section>
-
-  <!-- ===== البيع ===== -->
-  <section class="section">
+  <section class="section" id="cat-payments">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">البيع</span>
-        <h2 class="section-title">للبائعين</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="credit-card"></i></span>
+        <h2 class="faq-cat__title">المدفوعات والمغتربون</h2>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-become-verified-seller">
-          <button class="faq-item__question">كيف أحصل على التحقق كبائع؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>لتصبح بائعاً معتمداً، حمّل التطبيق وأنشئ حساباً. ثم أكمل عملية التحقق بتقديم هوية صالحة وصورة سيلفي. البائعون المعتمدون يحصلون على شارة في ملفهم الشخصي، مما يبني الثقة مع المشترين ويزيد ظهور إعلاناتهم.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-when-paid">
-          <button class="faq-item__question">متى أستلم الدفع؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p><strong>لا يُفرج عن أي مبلغ قبل أن يُدخل المشتري رمز التأكيد المكوّن من 6 أحرف.</strong> وبمجرد إدخاله، يُدفع لمقدمي الخدمات (الجزّارين، البيطريين، الناقلين) وتدخل حصة البائع في <strong>فترة حماية المشتري لمدة 24 ساعة</strong> — الفترة تنطبق على حصة البائع فقط، ولا يوجد أي دفع على مراحل قبل الرمز. إذا لم يُفتح نزاع خلال هذه الفترة، تُحرّر الأموال تلقائياً إلى محفظتك في غرابالي — لا يلزمك فعل شيء. بمجرد التحرير، تكون الأموال متاحة في محفظتك في غرابالي للتحويل الفوري إلى مستخدمين آخرين أو السحب الخارجي عبر Orange Money أو Moov Money أو Wave (من بين عدة مزودي mobile money آخرين). السحب البنكي متاح أيضاً.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-withdraw-earnings">
-          <button class="faq-item__question">كيف أسحب أرباحي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>محفظة غرابالي تدعم الإيداع بالبطاقة أو mobile money، تحرير أموال الضمان، والتحويلات الفورية من محفظة لمحفظة. السحب متاح عبر Orange Money وMoov Money وWave، ويُضاف المزيد من المزودين. السحب البنكي متاح أيضاً. جميع عمليات المحفظة تتطلب PIN الآمن، وتعتمد المحفظة على سجلات مالية قابلة للتدقيق وفحوص أرصدة غير قابلة للتلاعب لضمان دقة كل معاملة.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-seller-fees">
-          <button class="faq-item__question">ما الرسوم التي يتقاضاها غرابالي من البائعين؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>يتقاضى غرابالي رسوم منصة صغيرة من البائعين عند البيع الناجح، ومن مقدمي الخدمات عند إتمام المهمة. لا تكاليف مسبقة، لا رسوم إدراج. المشترون لا يدفعون أي رسوم أبداً. صفر بالمئة للمشترين، دائمًا. يدفع البائعون 5٪ — وأقل من ذلك فقط — ولا تُقتطع إلا بعد أن تستلم أموالك.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-withdrawal-limits">
-          <button class="faq-item__question">ما حدود السحب من المحفظة؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>تعتمد الحدود على حالة حسابك. كلما كان حسابك موثَّقاً أكثر وسجلّك أنظف، كانت حدودك أعلى.</p>
-            <div class="faq-withdrawal-scroll" role="region" aria-label="حدود السحب حسب حالة الحساب">
-            <table class="faq-withdrawal-table">
-              <thead>
-                <tr>
-                  <th scope="col" class="faq-withdrawal-table__col-text">الحالة</th>
-                  <th scope="col" class="faq-withdrawal-table__col-text">كيفية الوصول</th>
-                  <th scope="col" class="faq-withdrawal-table__amount">لكل عملية</th>
-                  <th scope="col" class="faq-withdrawal-table__amount">يومياً</th>
-                  <th scope="col" class="faq-withdrawal-table__amount">أسبوعياً</th>
-                  <th scope="col" class="faq-withdrawal-table__amount">شهرياً</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>فترة الانتظار</strong></td><td class="faq-withdrawal-table__col-text">أول 24 ساعة بعد إنشاء الحساب</td><td class="faq-withdrawal-table__amount">محجوب</td><td class="faq-withdrawal-table__amount">محجوب</td><td class="faq-withdrawal-table__amount">محجوب</td><td class="faq-withdrawal-table__amount">محجوب</td></tr>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>غير موثَّق</strong></td><td class="faq-withdrawal-table__col-text">حساب مُنشأ، التوثيق لم يتم</td><td class="faq-withdrawal-table__amount">100,000</td><td class="faq-withdrawal-table__amount">200,000</td><td class="faq-withdrawal-table__amount">600,000</td><td class="faq-withdrawal-table__amount">2,000,000</td></tr>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>موثَّق</strong></td><td class="faq-withdrawal-table__col-text">الهوية والصورة الذاتية مُتحقَّق منها</td><td class="faq-withdrawal-table__amount">2,000,000</td><td class="faq-withdrawal-table__amount">5,000,000</td><td class="faq-withdrawal-table__amount">20,000,000</td><td class="faq-withdrawal-table__amount">60,000,000</td></tr>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>Trusted</strong></td><td class="faq-withdrawal-table__col-text">موثَّق + 90 يوماً من السجل النظيف</td><td class="faq-withdrawal-table__amount">3,000,000</td><td class="faq-withdrawal-table__amount">8,000,000</td><td class="faq-withdrawal-table__amount">35,000,000</td><td class="faq-withdrawal-table__amount">120,000,000</td></tr>
-                <tr><td class="faq-withdrawal-table__col-text"><strong>Market Builder</strong></td><td class="faq-withdrawal-table__col-text">شارة Market Builder (15 إحالة) أو حالة شريك</td><td class="faq-withdrawal-table__amount">5,000,000</td><td class="faq-withdrawal-table__amount">15,000,000</td><td class="faq-withdrawal-table__amount">60,000,000</td><td class="faq-withdrawal-table__amount">200,000,000</td></tr>
-              </tbody>
-            </table>
-            </div>
-            <p style="margin-top:var(--space-md);">المبالغ بالـ XOF. <strong>الحد الأقصى المطلق لكل معاملة: 5,000,000 XOF</strong>، بصرف النظر عن الحالة (تنظيم BCEAO). إذا بلغت الحد قبل حدث كبير (عيد الأضحى، شراء جماعي…)، راسلنا قبل 24 ساعة — نرفعه مؤقتاً بعد التحقق.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-cooling-off">
-          <button class="faq-item__question">لماذا لا أستطيع السحب في يومي الأول؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>لسلامتك، تُحجَب جميع عمليات السحب خلال الـ 24 ساعة الأولى بعد إنشاء حسابك. هذه حماية ضد سرقة الحساب مباشرة بعد التسجيل. كل شيء آخر — التصفح، التفاوض، الدفع، البيع، استلام المدفوعات في محفظتك — يعمل بشكل طبيعي خلال هذه الـ 24 ساعة. السحب الخارج فقط ينتظر انتهاء الفترة.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-verify-value">
-          <button class="faq-item__question">ما الذي يغيّره توثيق حسابي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>الكثير. التوثيق يضاعف حدودك بحوالي 20 مرة — تنتقل من 200,000 XOF إلى 5,000,000 XOF يومياً للسحب. تحصل أيضاً على شارة توثيق على ملفك (تعزّز ثقة المشترين وترفع ظهور إعلاناتك)، وتفتح ميزات البائع المحترف (إعلانات غير محدودة، معاملات أكبر)، وتصبح مؤهلاً لحالة <strong>Trusted</strong> بعد 90 يوماً من التداول النظيف.</p>
-            <p>للتوثيق: <strong>الملف الشخصي ← أصبح بائعاً موثَّقاً</strong> ← ارفع هوية صالحة + صورة ذاتية. التحقق خلال 24-48 ساعة عمل.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-raise-limits">
-          <button class="faq-item__question">كيف أرفع حدودي أكثر؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>مع الوقت والسلوك المثالي، تتقدّم تلقائياً إلى <strong>Trusted</strong> ثم إلى <strong>Market Builder</strong>. لا حاجة للتقديم — نظامنا يرقّيك.</p>
-            <p><strong>للوصول إلى Trusted</strong> (8,000,000 XOF يومياً): حساب موثَّق + 90 يوماً من السجل + 10 عمليات سحب ناجحة على الأقل + صفر نزاعات محلولة ضدك في الـ 90 يوماً الماضية + 1,000,000 XOF على الأقل مسحوبة طوال العمر. تصل أيضاً إلى Trusted تلقائياً بشارة Champion (25 إحالة)، Ambassador Gold (6 إحالات من نفس الدور)، أو Local Breeder.</p>
-            <p><strong>للوصول إلى Market Builder</strong> (15,000,000 XOF يومياً): احصل على شارة <strong>Market Builder</strong> — 15 إحالة مؤهَّلة من نفس الدور (بائعون يحيلون بائعين، مقدمو خدمات يحيلون مقدمي خدمات…). إنها أعلى حالاتنا.</p>
-            <p>إذا كنت بحاجة إلى الانتقال بشكل أسرع لحدث محدد (عيد الأضحى، شراء جماعي…)، راسلنا — يمكن منح ترقية مؤقتة على أساس كل حالة على حدة بعد التحقق.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-hit-cap">
-          <button class="faq-item__question">بلغت حدّي — ماذا أفعل؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>ثلاثة خيارات: انتظر انتهاء الفترة، اطلب منا ترقية مؤقتة، أو تقدّم إلى حالة أعلى.</p>
-            <p><strong>إذا كان الأمر لمرة واحدة</strong> (مثلاً حدّك الشهري يُعاد ضبطه خلال 5 أيام): فقط انتظر. يُعاد ضبط حدّك تلقائياً عند منتصف الليل بتوقيت GMT.</p>
-            <p><strong>إذا احتجت الآن</strong>: راسلنا على WhatsApp <strong>+223 62 77 88 71</strong> بالمبلغ الذي تريد سحبه والسبب (بيع عيد الأضحى، شراء جماعي، طارئ عائلي…) ورقم هاتفك / حسابك الموثَّق. الرد خلال بضع ساعات، ليلاً أو نهاراً. إذا كان الطلب مشروعاً ومعقولاً، نرفع الحد فوراً.</p>
-            <p><strong>إذا كنت تبلغ الحد كثيراً</strong>: أنت على الأرجح مؤهَّل بالفعل لحالة <strong>Trusted</strong> أو ستكون قريباً. لا حاجة لإجراء — النظام يرقّيك تلقائياً عندما تستوفي الشروط.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-health-certificate-optional">
-          <button class="faq-item__question">هل يمكنني إعلان ماشية بدون شهادة صحية؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>نعم، الشهادة الصحية اختيارية لكنها موصى بها بشدة. الإعلانات ذات الشهادات الصحية المعتمدة تحصل على اهتمام أكبر من المشترين وتميل للبيع أسرع. نشجع جميع البائعين على التعاون مع الأطباء البيطريين المحليين للحصول على شهادات لماشيتهم.</p>
-          </div>
-        </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-buy-from-abroad">
+          <summary>هل يمكنني شراء ماشية لعائلتي من الخارج؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>بالتأكيد! غرابالي مصمم للمهجر. سواء كنت في باريس أو لندن أو نيويورك أو واشنطن العاصمة أو بروكسل أو مونتريال أو أي مكان آخر، يمكنك تصفح الماشية والتفاوض مع البائعين المحليين والدفع بحماية الضمان وتوصيل الحيوان لبيت عائلتك. مثالي للتباسكي والاحتفالات أو ببساطة رعاية أحبائك عن بعد.</p></div>
+        </details>
+        <details class="faq" id="faq-payment-methods">
+          <summary>كيف أدفع ثمن الماشية؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>غرابالي يدعم عدة طرق للدفع:</p>
+                      <p>• Mobile Money (LIVE): Orange Money وMoov Money وWave، ويُضاف المزيد من المزودين. متاح في مالي والسنغال وكوت ديفوار وبوركينا فاسو وبنين وتوغو والكاميرون.<br>
+                      • بطاقات الدفع (LIVE): Visa وMastercard عبر Stripe. تدفع بعملتك الخاصة بسعر يُثبَّت لحظة الدفع — دون رسوم تحويل داخل منطقة CFA أو باليورو، ومع رسم صغير يُعرض مسبقاً للعملات الأخرى.<br>
+                      • محفظة غرابالي (LIVE): شحن بالبطاقة أو mobile money وتحويلات فورية.<br>
+                      • نقداً: ادفع للبائع مباشرة عند التسليم — دون ضمان وبحماية محدودة. ننصح بطريقة محمية بالضمان (بطاقة أو موبايل موني أو محفظة) لأقصى أمان.</p></div>
+        </details>
+        <details class="faq" id="faq-mobile-money-providers">
+          <summary>ما مزودو mobile money الذين يعملون مع غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>غرابالي يدعم Orange Money وMoov Money وWave. ويتم إضافة مزودين ودول جديدة بشكل مستمر.</p></div>
+        </details>
+        <details class="faq" id="faq-cash-vs-escrow">
+          <summary>ما الفرق بين الدفع نقداً عند التسليم والضمان؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>مع وسائل الدفع المحمية بالضمان (البطاقة، mobile money، المحفظة)، تبقى أموالك محتجزة بأمان حتى تؤكد التسليم برمز التأكيد. بعد إدخال الرمز، تدخل حصة البائع في <strong>فترة حماية المشتري لمدة 24 ساعة</strong> — خلال هذه الـ 24 ساعة يمكنك فتح نزاع إذا كان هناك خطأ. مع الدفع نقداً عند التسليم، تدفع للبائع مباشرة عند استلام الماشية. النقد يوفر حماية أقل من المنصة؛ لذلك نوصي بوسائل الدفع المضمونة بالضمان لأقصى أمان.</p></div>
+        </details>
+        <details class="faq" id="faq-family-no-app">
+          <summary>هل يمكن لعائلتي استلام الماشية دون تنزيل التطبيق؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>نعم. لا تحتاج عائلتك إلى تنزيل غرابالي. أنت تقدم الطلب وتدفع وتتابع التوصيل من أي مكان. تُوصَّل الماشية مباشرة إلى منزل العائلة. يمكنك تنسيق وقت التوصيل لتكون على مكالمة WhatsApp عند الوصول — يفعل ذلك كثير من مشتري المهجر.</p></div>
+        </details>
+        <details class="faq" id="faq-eur-xof-rate">
+          <summary>ما سعر الصرف الذي تطبّقونه للمهجر؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>EUR ↔ XOF: <strong>سعر ثابت عند 655,957</strong> (التثبيت الرسمي لفرنك CFA)، دون أي زيادة من غرابالي. العملات الأخرى (USD, GBP, CAD…) تستخدم سعر Stripe في وقت الدفع؛ ترى دائماً مبلغ XOF الذي سيستلمه البائع <strong>قبل</strong> الدفع.</p></div>
+        </details>
+        <details class="faq" id="faq-mobile-money-failed">
+          <summary>دفع mobile money لم ينجح — هل المشكلة منكم أم من المشغّل؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>في الغالب يكون الرفض من جانب المشغّل (رصيد غير كافٍ، عدم تأكيد USSD، تجاوز الحد اليومي، انقطاع قصير). تحقّق من رصيدك عبر USSD، تحقّق من عدم بلوغ الحد، وأعد المحاولة في التطبيق. إذا فشل مجدداً، غيّر الطريقة (مشغّل آخر أو بطاقة). <strong>إذا تم خصم المبلغ ولم يؤكّد غرابالي</strong>، راسلنا فوراً على WhatsApp ‪+223 62 77 88 71‬ — هذه أولوية قصوى، رد خلال بضع ساعات، ليلاً أو نهاراً.</p></div>
+        </details>
+        <details class="faq" id="faq-when-eid">
+          <summary>متى أطلب لعيد الأضحى / Tabaski؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>لعيد هانئ (T = يوم العيد):</p>
+                      <p>• <strong>T - 4 أسابيع</strong>: اختر بائعك، تفاوض.<br>
+                      • <strong>T - 3 أسابيع</strong>: ادفع واحجز ماشيتك.<br>
+                      • <strong>T - 1 أسبوع</strong>: نسّق التسليم مع عائلتك.<br>
+                      • <strong>T - 3 إلى T - 1 يوم</strong>: التسليم إلى منزل العائلة.<br>
+                      • <strong>يوم T</strong>: أكّد بمكالمة + أدخل رمزك.</p>
+                      <p>أسبوع العيد، الطرق مزدحمة، الأسعار ترتفع، والناقلون مشبعون. الطلب في T - 3 أسابيع أرخص وأهدأ وأكثر موثوقية.</p>
+                      <p><em>تاريخ عيد الأضحى يتغيّر بحوالي 11 يوماً كل عام حسب رؤية الهلال. راجع التقويم الرسمي للسنة الحالية للتاريخ الدقيق.</em></p></div>
+        </details>
+        <details class="faq" id="faq-arrival-call">
+          <summary>هل يمكنني إجراء مكالمة WhatsApp عند وصول هديتي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>بالتأكيد. كثير من مشتري المهجر ينسقون توقيت التوصيل ليكونوا على مكالمة WhatsApp عندما تستلم عائلتهم الماشية. أصبحت واحدة من أكثر اللحظات العاطفية في استخدام غرابالي — رؤية فرحة أمك من آلاف الكيلومترات.</p></div>
+        </details>
+        <details class="faq" id="faq-currencies">
+          <summary>ما العملات التي يدعمها غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>تدفع دائماً بعملتك الخاصة، ويُدفع للبائع دائماً بعملته — وتتولى غرابالي التحويل. يُثبَّت السعر لحظة الدفع ويُعرض قبل التأكيد؛ ويُستخدم السعر المثبَّت نفسه لأي استرداد. داخل منطقة فرنك CFA (XOF/XAF) ولليورو، يتم الدفع بالسعر الرسمي الثابت دون رسوم تحويل. أما العملات الأخرى — مثل الدولار الأمريكي والجنيه الإسترليني والدولار الكندي — فيُطبَّق عليها رسم تحويل صغير يُعرض دائماً مسبقاً. الدفع بعملة مختلفة متاح حالياً عبر البطاقة ومحفظة غرابالي.</p></div>
+        </details>
+        <details class="faq" id="faq-paying-from-abroad">
+          <summary>أنا من المغتربين — كيف أدفع من الخارج؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>تدفع بعملتك الخاصة، ويُدفع للبائع بعملته — وتتولى غرابالي التحويل بينهما. يُثبَّت السعر لحظة الدفع ويُعرض عليك قبل التأكيد، ويُستخدم السعر المثبَّت نفسه عند أي استرداد. إذا دفعت باليورو، نطبّق السعر الرسمي الثابت (1 يورو = 655.957 فرنك CFA) دون رسوم تحويل. أما العملات الأخرى فيُطبَّق عليها رسم تحويل صغير، يُعرض دائماً مسبقاً. الدفع من الخارج متاح عبر البطاقة ومحفظة غرابالي.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== الأمان والثقة ===== -->
-  <section class="section section--alt">
+  <section class="section section--alt" id="cat-sellers">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">الأمان والثقة</span>
-        <h2 class="section-title">السلامة والأمان</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="shield"></i></span>
+        <h2 class="faq-cat__title">البائعون والضمان</h2>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-money-safe">
-          <button class="faq-item__question">هل أموالي آمنة مع غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>بالتأكيد. كل أموال الضمان محتجزة في حسابات آمنة ومنظمة — دفعتك لا تختلط أبداً بأموال تشغيل غرابالي. نستخدم تشفيراً قوياً، وضوابط صارمة لسلامة البيانات، ومراقبة شاملة. أموالك محمية بالهندسة، لا بالوعود.</p>
-            <p>تُعالج مدفوعات البطاقة عبر Stripe؛ لا نخزن أرقام البطاقات كاملة على خوادمنا. تُعالَج بيانات الدفع الحساسة بحماية طرف إلى طرف وفق معايير القطاع.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-confirmation-code">
-          <button class="faq-item__question">ما هو كود التأكيد وكيف يعمل؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>كل طلب في غرابالي يولّد كود تأكيد فريداً من 6 أحرف وأرقام يظهر فقط للمشتري. عند استلام الماشية (أو الخدمة)، يُدخل المشتري هذا الكود في التطبيق. <strong>لا يُفرج عن أي مبلغ قبل ذلك:</strong> إدخال الكود يدفع لمقدمي الخدمات ويبدأ <strong>فترة حماية المشتري 24 ساعة</strong> على حصة البائع (يمكنك فتح نزاع خلالها). رمز واحد يُفرج عن الطلب بأكمله — مستقلاً كان أو مجمّعاً — دون أي دفع على مراحل. لا يُشارك الكود مع البائع أو أي طرف — المشتري وحده من يمكنه إدخاله.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-seller-no-confirm">
-          <button class="faq-item__question">ماذا يحدث إذا لم يؤكد البائع طلبي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>البائعون ومقدمو الخدمات يوافقون مسبقاً على طلبك قبل الدفع، لذا الطلب يكون ملتزماً به عند الدفع. بعد التسليم، لديك نافذة حماية مشتري لمدة 24 ساعة لفتح نزاع إذا كان هناك خطأ. إذا لم تؤكد أو تعترض خلال تلك النافذة، تُحرر حصة البائع تلقائياً. هذه الحماية تعمل على جدول خادمنا — لا حاجة لأي إجراء منك إلا إذا أردت فتح نزاع.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-dispute">
-          <button class="faq-item__question">ماذا يحدث إذا كان هناك نزاع؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>إذا لم يتفق المشتري والبائع، يمكن لأي طرف فتح نزاع عبر التطبيق. فريق دعم غرابالي يراجع الأدلة (الصور والرسائل وتفاصيل الإعلان وسجل المحادثة). النزاعات تتطلب موافقة مسؤولين اثنين للحل — أي لا يمكن لشخص واحد اتخاذ قرار أحادي. أثناء النزاع، تبقى الأموال في الضمان. نهدف لحل جميع النزاعات بسرعة وعدالة.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-wallet-secured">
-          <button class="faq-item__question">كيف تُؤمّن محفظتي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>محفظة غرابالي محمية بـ PIN خاص تحدده أثناء التسجيل. يتم تشفير PIN بمعايير أمنية قوية (ولا يُخزن كنص صريح) وهو مطلوب لكل العمليات الحساسة مثل السحب. ولحماية إضافية نستخدم تحقق SMS للعمليات عالية القيمة، وحماية مدمجة ضد الاحتيال، والتحقق من الجهاز لمنع الوصول غير المصرح به.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-report-suspicious">
-          <button class="faq-item__question">كيف أبلّغ عن إعلان أو مستخدم مشبوه؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>يمكنك الإبلاغ عن أي إعلان أو مستخدم مباشرة في التطبيق بالضغط على زر الإبلاغ. يمكنك أيضاً التواصل مع فريق الدعم عبر صفحة اتصل بنا أو قنوات التواصل الاجتماعي. نأخذ جميع البلاغات بجدية ونحقق فوراً. نظام كشف الاحتيال لدينا يتضمن حدود سرعة وتسجيل شامل للأحداث للحفاظ على نزاهة السوق.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-escrow-secure">
-          <button class="faq-item__question">ما مدى أمان نظام الضمان فعلاً؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>كل معاملة محمية بتشفير قوي، وفحوص سلامة غير قابلة للتلاعب، ورموز تأكيد مشفرة، ووساطة نزاعات بموافقة يدوية، وحماية مدمجة ضد الاحتيال. هذا ليس وعداً — إنها هندستنا.</p>
-          </div>
-        </div>
-        <div class="faq-item" id="faq-can-read-messages">
-          <button class="faq-item__question">
-            هل يمكن لـ Garabaly قراءة رسائلي؟
-            <i data-feather="chevron-down"></i>
-          </button>
-          <div class="faq-item__answer">
-            <p>لا يقرأ Garabaly رسائلك بشكل روتيني. ومع ذلك، إذا قدم مستخدم بلاغاً، فقد يراجع فريق الإشراف المعين لدينا المحادثة للتحقيق. تبقى الرسائل المحذوفة مرئية للمشرفين لأغراض الأدلة — مثلاً لحل نزاع — طالما ظل حسابك قائماً، ثم تُحذف عند حذفك لحسابك. هذا يحمي المشترين والبائعين على حد سواء في حالات النزاع.</p>
-            <p>نصائح للتجارة الآمنة: افحص الحيوانات قبل الدفع، استخدم الدفع الآمن كلما أمكن، ولا تشارك أبداً رمز PIN أو كلمات المرور. لسلامتك، أبقِ محادثاتك على Garabaly — هذا يتيح لنا مساعدتك إذا حدث خطأ.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-delete-account">
-          <button class="faq-item__question">كيف أحذف حسابي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>اذهب إلى <strong>الملف الشخصي ← الإعدادات ← حذف حسابي</strong>. يطلب التطبيق رمز PIN كإجراء وقائي. إذا كان لديك أموال في المحفظة أو طلبات مفتوحة، يجب سحبها أو إنهاؤها أولاً. أكّد: يُوسَم الحساب للحذف ويُجعَل مجهول الهوية خلال 30 يوماً. يمكنك أيضاً مراسلتنا على <strong>support@garabaly.com</strong> بعنوان "طلب حذف الحساب" إذا لم تستطع فعل ذلك من التطبيق.</p>
-            <p>ما يُحفَظ: سجلات المعاملات المالية (الفواتير، السجلات المحاسبية)، مجهولة الهوية بالنسبة لهويتك — للوفاء بالالتزامات القانونية.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-data-access">
-          <button class="faq-item__question">كيف أحصل على نسخة من بياناتي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>لك الحق في الحصول على نسخة من بياناتك. راسلنا على <strong>support@garabaly.com</strong> من البريد المرتبط بحسابك (أو من رقم هاتف موثَّق) بعنوان "طلب الوصول إلى البيانات — [اسمك]". نرسل لك أرشيفاً (JSON + PDF قابل للقراءة) خلال 30 يوماً كحد أقصى، عادةً خلال 7-10 أيام.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-min-age">
-          <button class="faq-item__question">ما الحد الأدنى لسن استخدام غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>يجب أن يكون عمرك 18 عاماً على الأقل — وهو سن الرشد القانوني في أسواقنا — لاستخدام غرابالي. غرابالي منصّة لبيع وشراء الماشية والخدمات، واستخدامها يعني إبرام عقود شراء مُلزِمة وإجراء مدفوعات، وهو ما يتطلب الأهلية القانونية. بإنشائك حساباً فإنك تؤكد استيفاءك لهذا الشرط (راجع شروط الاستخدام). وإذا تبيّن أن حساباً يخص قاصراً، نغلقه ونعيد أي أموال إلى وليّ الأمر الشرعي بعد التحقق.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-verify-garabaly">
-          <button class="faq-item__question">كيف أتحقق أن رسالة تأتي فعلاً من غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>WhatsApp الرسمي: <strong>+223 62 77 88 71</strong>. البريد الرسمي: <strong>info@garabaly.com</strong> (وأي عنوان @garabaly.com). وسائل التواصل: ‪@GarabalyApp‬ على X / Twitter، صفحة Facebook الرسمية، و TikTok ‪@garabaly‬. لن نطلب منك <strong>أبداً</strong> رمز PIN، كلمة المرور، رمز التأكيد، أو الدفع خارج التطبيق. إذا اتصل بك أحد منتحلاً صفة غرابالي وطلب أياً من هذه، لا ترد وأبلغنا.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-code-locked">
-          <button class="faq-item__question">رمزي مقفل بعد عدة محاولات — كيف أفك القفل؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>لحمايتك، بعد عدة محاولات فاشلة يُقفَل رمزك مؤقتاً. راسلنا على WhatsApp <strong>+223 62 77 88 71</strong> برقم طلبك وصورة سيلفي تحمل ورقة مكتوب عليها هذا الرقم — هذا هو تحققنا من الهوية. نفك القفل خلال بضع ساعات.</p>
-          </div>
-        </div>
+      <div class="faq-tiers reveal">
+        <p class="faq-tiers__intro">كل حساب يُفحَص باستمرار. كلما زاد توثيق البائع، ارتفعت حدود سحبه.</p>
+        <div class="gb gb-tiers reveal" style="max-width: 1000px; margin: 0 auto;">
+                <div class="gb-tier">
+                  <p class="gb-tier__badge">غير موثّق</p>
+                  <p class="gb-tier__tag">للبداية</p>
+                  <ul class="gb-reqs"><li>البريد والهاتف</li><li>ملف أساسي</li></ul>
+                  <div class="gb-limits">
+                    <div class="gb-limit"><span>السحب · لكل عملية</span><span dir="ltr">FCFA 100 000</span></div>
+                    <div class="gb-limit"><span>السحب · لكل يوم</span><span dir="ltr">FCFA 200 000</span></div>
+                  </div>
+                </div>
+                <div class="gb-tier gb-tier--featured">
+                  <span class="gb-tier__ribbon">الأكثر شيوعاً</span>
+                  <p class="gb-tier__badge">موثّق</p>
+                  <p class="gb-tier__tag">وصول كامل إلى السوق</p>
+                  <ul class="gb-reqs"><li>بطاقة هوية</li><li>إثبات سكن</li><li>سيلفي التحقق</li></ul>
+                  <div class="gb-limits">
+                    <div class="gb-limit"><span>السحب · لكل عملية</span><span dir="ltr">FCFA 2 000 000</span></div>
+                    <div class="gb-limit"><span>السحب · لكل يوم</span><span dir="ltr">FCFA 5 000 000</span></div>
+                  </div>
+                </div>
+                <div class="gb-tier">
+                  <p class="gb-tier__badge">جدير بالثقة</p>
+                  <p class="gb-tier__tag">للشركات والتعاونيات</p>
+                  <ul class="gb-reqs"><li>السجل التجاري (RCCM)</li><li>عناية واجبة معزّزة</li><li>سجل على المنصة</li></ul>
+                  <div class="gb-limits">
+                    <div class="gb-limit"><span>السحب · لكل عملية</span><span dir="ltr">FCFA 3 000 000</span></div>
+                    <div class="gb-limit"><span>السحب · لكل يوم</span><span dir="ltr">FCFA 8 000 000</span></div>
+                  </div>
+                </div>
+              </div>
+        <p class="gb gb-compliance">التحقق من الهوية (KYC) · مكافحة غسل الأموال (AML) · منع الاحتيال — على كل حساب، باستمرار.</p>
+      </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-become-verified-seller">
+          <summary>كيف أحصل على التحقق كبائع؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>لتصبح بائعاً معتمداً، حمّل التطبيق وأنشئ حساباً. ثم أكمل عملية التحقق بتقديم هوية صالحة وصورة سيلفي. البائعون المعتمدون يحصلون على شارة في ملفهم الشخصي، مما يبني الثقة مع المشترين ويزيد ظهور إعلاناتهم.</p></div>
+        </details>
+        <details class="faq" id="faq-when-paid">
+          <summary>متى أستلم الدفع؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p><strong>لا يُفرج عن أي مبلغ قبل أن يُدخل المشتري رمز التأكيد المكوّن من 6 أحرف.</strong> وبمجرد إدخاله، يُدفع لمقدمي الخدمات (الجزّارين، البيطريين، الناقلين) وتدخل حصة البائع في <strong>فترة حماية المشتري لمدة 24 ساعة</strong> — الفترة تنطبق على حصة البائع فقط، ولا يوجد أي دفع على مراحل قبل الرمز. إذا لم يُفتح نزاع خلال هذه الفترة، تُحرّر الأموال تلقائياً إلى محفظتك في غرابالي — لا يلزمك فعل شيء. بمجرد التحرير، تكون الأموال متاحة في محفظتك في غرابالي للتحويل الفوري إلى مستخدمين آخرين أو السحب الخارجي عبر Orange Money أو Moov Money أو Wave (من بين عدة مزودي mobile money آخرين). السحب البنكي متاح أيضاً.</p></div>
+        </details>
+        <details class="faq" id="faq-withdraw-earnings">
+          <summary>كيف أسحب أرباحي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>محفظة غرابالي تدعم الإيداع بالبطاقة أو mobile money، تحرير أموال الضمان، والتحويلات الفورية من محفظة لمحفظة. السحب متاح عبر Orange Money وMoov Money وWave، ويُضاف المزيد من المزودين. السحب البنكي متاح أيضاً. جميع عمليات المحفظة تتطلب PIN الآمن، وتعتمد المحفظة على سجلات مالية قابلة للتدقيق وفحوص أرصدة غير قابلة للتلاعب لضمان دقة كل معاملة.</p></div>
+        </details>
+        <details class="faq" id="faq-seller-fees">
+          <summary>ما الرسوم التي يتقاضاها غرابالي من البائعين؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>يتقاضى غرابالي رسوم منصة صغيرة من البائعين عند البيع الناجح، ومن مقدمي الخدمات عند إتمام المهمة. لا تكاليف مسبقة، لا رسوم إدراج. المشترون لا يدفعون أي رسوم أبداً. صفر بالمئة للمشترين، دائمًا. يدفع البائعون 5٪ — وأقل من ذلك فقط — ولا تُقتطع إلا بعد أن تستلم أموالك.</p></div>
+        </details>
+        <details class="faq" id="faq-withdrawal-limits">
+          <summary>ما حدود السحب من المحفظة؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>تعتمد الحدود على حالة حسابك. كلما كان حسابك موثَّقاً أكثر وسجلّك أنظف، كانت حدودك أعلى.</p>
+                      <div class="faq-withdrawal-scroll" role="region" aria-label="حدود السحب حسب حالة الحساب">
+                      <table class="faq-withdrawal-table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="faq-withdrawal-table__col-text">الحالة</th>
+                            <th scope="col" class="faq-withdrawal-table__col-text">كيفية الوصول</th>
+                            <th scope="col" class="faq-withdrawal-table__amount">لكل عملية</th>
+                            <th scope="col" class="faq-withdrawal-table__amount">يومياً</th>
+                            <th scope="col" class="faq-withdrawal-table__amount">أسبوعياً</th>
+                            <th scope="col" class="faq-withdrawal-table__amount">شهرياً</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>فترة الانتظار</strong></td><td class="faq-withdrawal-table__col-text">أول 24 ساعة بعد إنشاء الحساب</td><td class="faq-withdrawal-table__amount">محجوب</td><td class="faq-withdrawal-table__amount">محجوب</td><td class="faq-withdrawal-table__amount">محجوب</td><td class="faq-withdrawal-table__amount">محجوب</td></tr>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>غير موثَّق</strong></td><td class="faq-withdrawal-table__col-text">حساب مُنشأ، التوثيق لم يتم</td><td class="faq-withdrawal-table__amount">100,000</td><td class="faq-withdrawal-table__amount">200,000</td><td class="faq-withdrawal-table__amount">600,000</td><td class="faq-withdrawal-table__amount">2,000,000</td></tr>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>موثَّق</strong></td><td class="faq-withdrawal-table__col-text">الهوية والصورة الذاتية مُتحقَّق منها</td><td class="faq-withdrawal-table__amount">2,000,000</td><td class="faq-withdrawal-table__amount">5,000,000</td><td class="faq-withdrawal-table__amount">20,000,000</td><td class="faq-withdrawal-table__amount">60,000,000</td></tr>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>Trusted</strong></td><td class="faq-withdrawal-table__col-text">موثَّق + 90 يوماً من السجل النظيف</td><td class="faq-withdrawal-table__amount">3,000,000</td><td class="faq-withdrawal-table__amount">8,000,000</td><td class="faq-withdrawal-table__amount">35,000,000</td><td class="faq-withdrawal-table__amount">120,000,000</td></tr>
+                          <tr><td class="faq-withdrawal-table__col-text"><strong>Market Builder</strong></td><td class="faq-withdrawal-table__col-text">شارة Market Builder (15 إحالة) أو حالة شريك</td><td class="faq-withdrawal-table__amount">5,000,000</td><td class="faq-withdrawal-table__amount">15,000,000</td><td class="faq-withdrawal-table__amount">60,000,000</td><td class="faq-withdrawal-table__amount">200,000,000</td></tr>
+                        </tbody>
+                      </table>
+                      </div>
+                      <p style="margin-top:var(--space-md);">المبالغ بالـ XOF. <strong>الحد الأقصى المطلق لكل معاملة: 5,000,000 XOF</strong>، بصرف النظر عن الحالة (تنظيم BCEAO). إذا بلغت الحد قبل حدث كبير (عيد الأضحى، شراء جماعي…)، راسلنا قبل 24 ساعة — نرفعه مؤقتاً بعد التحقق.</p></div>
+        </details>
+        <details class="faq" id="faq-cooling-off">
+          <summary>لماذا لا أستطيع السحب في يومي الأول؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>لسلامتك، تُحجَب جميع عمليات السحب خلال الـ 24 ساعة الأولى بعد إنشاء حسابك. هذه حماية ضد سرقة الحساب مباشرة بعد التسجيل. كل شيء آخر — التصفح، التفاوض، الدفع، البيع، استلام المدفوعات في محفظتك — يعمل بشكل طبيعي خلال هذه الـ 24 ساعة. السحب الخارج فقط ينتظر انتهاء الفترة.</p></div>
+        </details>
+        <details class="faq" id="faq-verify-value">
+          <summary>ما الذي يغيّره توثيق حسابي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>الكثير. التوثيق يضاعف حدودك بحوالي 20 مرة — تنتقل من 200,000 XOF إلى 5,000,000 XOF يومياً للسحب. تحصل أيضاً على شارة توثيق على ملفك (تعزّز ثقة المشترين وترفع ظهور إعلاناتك)، وتفتح ميزات البائع المحترف (إعلانات غير محدودة، معاملات أكبر)، وتصبح مؤهلاً لحالة <strong>Trusted</strong> بعد 90 يوماً من التداول النظيف.</p>
+                      <p>للتوثيق: <strong>الملف الشخصي ← أصبح بائعاً موثَّقاً</strong> ← ارفع هوية صالحة + صورة ذاتية. التحقق خلال 24-48 ساعة عمل.</p></div>
+        </details>
+        <details class="faq" id="faq-raise-limits">
+          <summary>كيف أرفع حدودي أكثر؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>مع الوقت والسلوك المثالي، تتقدّم تلقائياً إلى <strong>Trusted</strong> ثم إلى <strong>Market Builder</strong>. لا حاجة للتقديم — نظامنا يرقّيك.</p>
+                      <p><strong>للوصول إلى Trusted</strong> (8,000,000 XOF يومياً): حساب موثَّق + 90 يوماً من السجل + 10 عمليات سحب ناجحة على الأقل + صفر نزاعات محلولة ضدك في الـ 90 يوماً الماضية + 1,000,000 XOF على الأقل مسحوبة طوال العمر. تصل أيضاً إلى Trusted تلقائياً بشارة Champion (25 إحالة)، Ambassador Gold (6 إحالات من نفس الدور)، أو Local Breeder.</p>
+                      <p><strong>للوصول إلى Market Builder</strong> (15,000,000 XOF يومياً): احصل على شارة <strong>Market Builder</strong> — 15 إحالة مؤهَّلة من نفس الدور (بائعون يحيلون بائعين، مقدمو خدمات يحيلون مقدمي خدمات…). إنها أعلى حالاتنا.</p>
+                      <p>إذا كنت بحاجة إلى الانتقال بشكل أسرع لحدث محدد (عيد الأضحى، شراء جماعي…)، راسلنا — يمكن منح ترقية مؤقتة على أساس كل حالة على حدة بعد التحقق.</p></div>
+        </details>
+        <details class="faq" id="faq-hit-cap">
+          <summary>بلغت حدّي — ماذا أفعل؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>ثلاثة خيارات: انتظر انتهاء الفترة، اطلب منا ترقية مؤقتة، أو تقدّم إلى حالة أعلى.</p>
+                      <p><strong>إذا كان الأمر لمرة واحدة</strong> (مثلاً حدّك الشهري يُعاد ضبطه خلال 5 أيام): فقط انتظر. يُعاد ضبط حدّك تلقائياً عند منتصف الليل بتوقيت GMT.</p>
+                      <p><strong>إذا احتجت الآن</strong>: راسلنا على WhatsApp <strong>+223 62 77 88 71</strong> بالمبلغ الذي تريد سحبه والسبب (بيع عيد الأضحى، شراء جماعي، طارئ عائلي…) ورقم هاتفك / حسابك الموثَّق. الرد خلال بضع ساعات، ليلاً أو نهاراً. إذا كان الطلب مشروعاً ومعقولاً، نرفع الحد فوراً.</p>
+                      <p><strong>إذا كنت تبلغ الحد كثيراً</strong>: أنت على الأرجح مؤهَّل بالفعل لحالة <strong>Trusted</strong> أو ستكون قريباً. لا حاجة لإجراء — النظام يرقّيك تلقائياً عندما تستوفي الشروط.</p></div>
+        </details>
+        <details class="faq" id="faq-health-certificate-optional">
+          <summary>هل يمكنني إعلان ماشية بدون شهادة صحية؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>نعم، الشهادة الصحية اختيارية لكنها موصى بها بشدة. الإعلانات ذات الشهادات الصحية المعتمدة تحصل على اهتمام أكبر من المشترين وتميل للبيع أسرع. نشجع جميع البائعين على التعاون مع الأطباء البيطريين المحليين للحصول على شهادات لماشيتهم.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== الخدمات والطلبات ===== -->
-  <section class="section">
+  <section class="section" id="cat-security">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">الخدمات والطلبات</span>
-        <h2 class="section-title">مقدمو الخدمات وأنواع الطلبات</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="lock"></i></span>
+        <h2 class="faq-cat__title">الأمان والثقة</h2>
       </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item" id="faq-service-providers">
-          <button class="faq-item__question">ما مقدمو الخدمات المتوفرون على غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>يُدمج غرابالي ثلاثة أدوار في الطلب: <strong>الناقلون</strong> لنقل الماشية، <strong>الجزّارون</strong> للتحضير، و<strong>البيطريون</strong> للفحوصات الصحية والشهادات. كل مقدم خدمة موثَّق ومُقيَّم من العملاء السابقين. جميع مقدمي الخدمات يتلقّون أجورهم عبر نفس نظام الضمان — الجميع محمي.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-order-types">
-          <button class="faq-item__question">ما أنواع الطلبات المختلفة؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>بشكل افتراضي، كل عنصر في سلتك هو <strong>طلب مستقل</strong> — لكل منه معرّف طلب ورمز تأكيد خاص، سواء كان حيواناً أو خدمة مستقلة كجزار أو بيطري أو توصيل. وعندما تريد كل شيء برمز واحد، يمكنك <strong>تجميع</strong> إعلان مع حتى 3 خدمات (بحد أقصى توصيل واحد + جزار واحد + بيطري واحد) في طلب واحد، والسحب لإعادة ترتيب تسلسل التنفيذ. فهناك إذاً طريقتان للطلب: مستقل افتراضياً، أو مجمّع عند اختيارك.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-order-tracking">
-          <button class="faq-item__question">كيف يعمل تتبع الطلبات؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>كل طلب لديه متتبع تقدم في الوقت الفعلي داخل التطبيق. سترى كل مرحلة — من تقديم الطلب، لتأكيد البائع، التحضير، في الطريق، مُسلّم، ومكتمل. إشعارات فورية وتنبيهات داخل التطبيق تبقيك على اطلاع في كل مرحلة. للطلبات متعددة الأطراف، سترى تقدم كل طرف (بائع، توصيل، جزار) بشكل مستقل.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-book-butcher-only">
-          <button class="faq-item__question">هل يمكنني حجز جزار بدون شراء ماشية من التطبيق؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>نعم! يمكنك حجز جزار أو سائق توصيل أو طبيب بيطري بمفرده — فهو ببساطة طلب مستقل، دون الحاجة لشراء حيوان. هذا مفيد إذا اشتريت ماشيتك من مكان آخر لكنك تحتاج خدمة احترافية. مقدم الخدمة يُدفع له عبر ضمان غرابالي لحمايتك.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-currencies">
-          <button class="faq-item__question">ما العملات التي يدعمها غرابالي؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>تدفع دائماً بعملتك الخاصة، ويُدفع للبائع دائماً بعملته — وتتولى غرابالي التحويل. يُثبَّت السعر لحظة الدفع ويُعرض قبل التأكيد؛ ويُستخدم السعر المثبَّت نفسه لأي استرداد. داخل منطقة فرنك CFA (XOF/XAF) ولليورو، يتم الدفع بالسعر الرسمي الثابت دون رسوم تحويل. أما العملات الأخرى — مثل الدولار الأمريكي والجنيه الإسترليني والدولار الكندي — فيُطبَّق عليها رسم تحويل صغير يُعرض دائماً مسبقاً. الدفع بعملة مختلفة متاح حالياً عبر البطاقة ومحفظة غرابالي.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-paying-from-abroad">
-          <button class="faq-item__question">أنا من المغتربين — كيف أدفع من الخارج؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>تدفع بعملتك الخاصة، ويُدفع للبائع بعملته — وتتولى غرابالي التحويل بينهما. يُثبَّت السعر لحظة الدفع ويُعرض عليك قبل التأكيد، ويُستخدم السعر المثبَّت نفسه عند أي استرداد. إذا دفعت باليورو، نطبّق السعر الرسمي الثابت (1 يورو = 655.957 فرنك CFA) دون رسوم تحويل. أما العملات الأخرى فيُطبَّق عليها رسم تحويل صغير، يُعرض دائماً مسبقاً. الدفع من الخارج متاح عبر البطاقة ومحفظة غرابالي.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-voice-messages">
-          <button class="faq-item__question">هل يمكنني التحدث مع البائعين برسائل صوتية؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>نعم! محادثة غرابالي تدعم الرسائل النصية والتسجيلات الصوتية والصور والفيديو. يمكنك أيضاً مشاركة تفاصيل الإعلان مباشرة في المحادثة. الرسائل الصوتية شائعة جداً — تتيح للبائعين وصف ماشيتهم بأي لغة وللمشترين طرح أسئلة تفصيلية بشكل طبيعي. تُوصّل الرسائل في الوقت الفعلي مع طابور للرسائل أثناء عدم الاتصال حتى لا يضيع شيء.</p>
-          </div>
-        </div>
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-money-safe">
+          <summary>هل أموالي آمنة مع غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>بالتأكيد. كل أموال الضمان محتجزة في حسابات آمنة ومنظمة — دفعتك لا تختلط أبداً بأموال تشغيل غرابالي. نستخدم تشفيراً قوياً، وضوابط صارمة لسلامة البيانات، ومراقبة شاملة. أموالك محمية بالهندسة، لا بالوعود.</p>
+                      <p>تُعالج مدفوعات البطاقة عبر Stripe؛ لا نخزن أرقام البطاقات كاملة على خوادمنا. تُعالَج بيانات الدفع الحساسة بحماية طرف إلى طرف وفق معايير القطاع.</p></div>
+        </details>
+        <details class="faq" id="faq-confirmation-code">
+          <summary>ما هو كود التأكيد وكيف يعمل؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>كل طلب في غرابالي يولّد كود تأكيد فريداً من 6 أحرف وأرقام يظهر فقط للمشتري. عند استلام الماشية (أو الخدمة)، يُدخل المشتري هذا الكود في التطبيق. <strong>لا يُفرج عن أي مبلغ قبل ذلك:</strong> إدخال الكود يدفع لمقدمي الخدمات ويبدأ <strong>فترة حماية المشتري 24 ساعة</strong> على حصة البائع (يمكنك فتح نزاع خلالها). رمز واحد يُفرج عن الطلب بأكمله — مستقلاً كان أو مجمّعاً — دون أي دفع على مراحل. لا يُشارك الكود مع البائع أو أي طرف — المشتري وحده من يمكنه إدخاله.</p></div>
+        </details>
+        <details class="faq" id="faq-seller-no-confirm">
+          <summary>ماذا يحدث إذا لم يؤكد البائع طلبي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>البائعون ومقدمو الخدمات يوافقون مسبقاً على طلبك قبل الدفع، لذا الطلب يكون ملتزماً به عند الدفع. بعد التسليم، لديك نافذة حماية مشتري لمدة 24 ساعة لفتح نزاع إذا كان هناك خطأ. إذا لم تؤكد أو تعترض خلال تلك النافذة، تُحرر حصة البائع تلقائياً. هذه الحماية تعمل على جدول خادمنا — لا حاجة لأي إجراء منك إلا إذا أردت فتح نزاع.</p></div>
+        </details>
+        <details class="faq" id="faq-dispute">
+          <summary>ماذا يحدث إذا كان هناك نزاع؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>إذا لم يتفق المشتري والبائع، يمكن لأي طرف فتح نزاع عبر التطبيق. فريق دعم غرابالي يراجع الأدلة (الصور والرسائل وتفاصيل الإعلان وسجل المحادثة). النزاعات تتطلب موافقة مسؤولين اثنين للحل — أي لا يمكن لشخص واحد اتخاذ قرار أحادي. أثناء النزاع، تبقى الأموال في الضمان. نهدف لحل جميع النزاعات بسرعة وعدالة.</p></div>
+        </details>
+        <details class="faq" id="faq-wallet-secured">
+          <summary>كيف تُؤمّن محفظتي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>محفظة غرابالي محمية بـ PIN خاص تحدده أثناء التسجيل. يتم تشفير PIN بمعايير أمنية قوية (ولا يُخزن كنص صريح) وهو مطلوب لكل العمليات الحساسة مثل السحب. ولحماية إضافية نستخدم تحقق SMS للعمليات عالية القيمة، وحماية مدمجة ضد الاحتيال، والتحقق من الجهاز لمنع الوصول غير المصرح به.</p></div>
+        </details>
+        <details class="faq" id="faq-report-suspicious">
+          <summary>كيف أبلّغ عن إعلان أو مستخدم مشبوه؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>يمكنك الإبلاغ عن أي إعلان أو مستخدم مباشرة في التطبيق بالضغط على زر الإبلاغ. يمكنك أيضاً التواصل مع فريق الدعم عبر صفحة اتصل بنا أو قنوات التواصل الاجتماعي. نأخذ جميع البلاغات بجدية ونحقق فوراً. نظام كشف الاحتيال لدينا يتضمن حدود سرعة وتسجيل شامل للأحداث للحفاظ على نزاهة السوق.</p></div>
+        </details>
+        <details class="faq" id="faq-escrow-secure">
+          <summary>ما مدى أمان نظام الضمان فعلاً؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>كل معاملة محمية بتشفير قوي، وفحوص سلامة غير قابلة للتلاعب، ورموز تأكيد مشفرة، ووساطة نزاعات بموافقة يدوية، وحماية مدمجة ضد الاحتيال. هذا ليس وعداً — إنها هندستنا.</p></div>
+        </details>
+        <details class="faq" id="faq-can-read-messages">
+          <summary>هل يمكن لـ Garabaly قراءة رسائلي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>لا يقرأ Garabaly رسائلك بشكل روتيني. ومع ذلك، إذا قدم مستخدم بلاغاً، فقد يراجع فريق الإشراف المعين لدينا المحادثة للتحقيق. تبقى الرسائل المحذوفة مرئية للمشرفين لأغراض الأدلة — مثلاً لحل نزاع — طالما ظل حسابك قائماً، ثم تُحذف عند حذفك لحسابك. هذا يحمي المشترين والبائعين على حد سواء في حالات النزاع.</p>
+                      <p>نصائح للتجارة الآمنة: افحص الحيوانات قبل الدفع، استخدم الدفع الآمن كلما أمكن، ولا تشارك أبداً رمز PIN أو كلمات المرور. لسلامتك، أبقِ محادثاتك على Garabaly — هذا يتيح لنا مساعدتك إذا حدث خطأ.</p></div>
+        </details>
+        <details class="faq" id="faq-verify-garabaly">
+          <summary>كيف أتحقق أن رسالة تأتي فعلاً من غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>WhatsApp الرسمي: <strong>+223 62 77 88 71</strong>. البريد الرسمي: <strong>info@garabaly.com</strong> (وأي عنوان @garabaly.com). وسائل التواصل: ‪@GarabalyApp‬ على X / Twitter، صفحة Facebook الرسمية، و TikTok ‪@garabaly‬. لن نطلب منك <strong>أبداً</strong> رمز PIN، كلمة المرور، رمز التأكيد، أو الدفع خارج التطبيق. إذا اتصل بك أحد منتحلاً صفة غرابالي وطلب أياً من هذه، لا ترد وأبلغنا.</p></div>
+        </details>
+        <details class="faq" id="faq-code-locked">
+          <summary>رمزي مقفل بعد عدة محاولات — كيف أفك القفل؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>لحمايتك، بعد عدة محاولات فاشلة يُقفَل رمزك مؤقتاً. راسلنا على WhatsApp <strong>+223 62 77 88 71</strong> برقم طلبك وصورة سيلفي تحمل ورقة مكتوب عليها هذا الرقم — هذا هو تحققنا من الهوية. نفك القفل خلال بضع ساعات.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== الأسئلة الشائعة: Pioneers و Expo Go ===== -->
-  <section class="section section--alt">
+  <section class="section section--alt" id="cat-account">
     <div class="container">
-      <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Pioneers</span>
-        <h2 class="section-title">الوصول المبكر عبر Expo Go</h2>
+      <div class="faq-cat reveal">
+        <span class="faq-cat__icon"><i data-feather="user"></i></span>
+        <h2 class="faq-cat__title">الحساب والبيانات</h2>
       </div>
-      <div class="faq-list reveal">
-
-        <div class="faq-item" id="faq-pioneers-what">
-          <button class="faq-item__question">ما هي "Pioneers" و"Expo Go"؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>بينما يخضع غرابالي للمراجعة على Google Play وApp Store، يحصل أوائل مستخدمينا — <strong>Pioneers</strong> — على التطبيق عبر <strong>Expo Go</strong>، أداة تشغّل غرابالي على هاتفك من رمز QR أو رابط. إنه وصول مبكر مقصود وحصري — وحقيقي تماماً: حسابك ومحفظتك وطلباتك كلها مباشرة وتبقى معك عند إطلاق التطبيق في المتاجر.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-pioneers-start">
-          <button class="faq-item__question">كيف أبدأ؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>1. ادخل إلى <a href="https://www.garabaly.com/ar/get-the-app.html"><strong>garabaly.com</strong></a> واضغط على زر <strong>تحميل التطبيق</strong> — أو اذهب مباشرة إلى صفحة <a href="get-the-app.html">تحميل التطبيق</a>.<br>
-            2. ثبّت <strong>Expo Go</strong> على هاتفك (نوفّر رموز QR والروابط المباشرة لـ App Store و Google Play).<br>
-            3. امسح رمز QR الخاص بـ Garabaly — بكاميرا هاتفك على iPhone، أو بتطبيق Expo Go على Android — أو اضغط على الرابط المباشر "Open in Expo Go". الطريقتان تعملان على كلا النظامين.<br>
-            4. يفتح Garabaly داخل Expo Go. أنشئ حسابك كالمعتاد.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-pioneers-account-survives">
-          <button class="faq-item__question">هل يبقى حسابي على Expo Go عند إطلاق التطبيق على المتاجر؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>نعم. نسخة Expo Go ونسخة المتجر هي نفس المنتج تماماً على نفس الخوادم. حسابك، محفظتك، طلباتك، درجة سمعتك، تقييماتك — كل شيء يهاجر دون أي إجراء منك. فقط حمّل نسخة المتجر عند إطلاقها وسجّل الدخول بنفس بيانات الاعتماد.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-pioneers-store-launch-date">
-          <button class="faq-item__question">متى يُطلق التطبيق رسمياً على المتاجر؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>القرار يعود إلى Apple وGoogle. تم تقديم التطبيق في أبريل 2026 والمراجعة قائمة. بمجرد توفر أي جديد، نشاركه على Facebook وTikTok وWhatsApp. أثناء الانتظار، وصولك عبر Expo Go يعمل بالكامل.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" id="faq-pioneers-bug-report">
-          <button class="faq-item__question">وجدت خللاً — أين أرسله؟<i data-feather="chevron-down"></i></button>
-          <div class="faq-item__answer">
-            <p>شكراً 🙏 — Pioneer يبلّغ عن خلل هو ذهب بالنسبة لنا. أرسله على WhatsApp <strong>+223 62 77 88 71</strong> أو بالبريد الإلكتروني إلى <strong>support@garabaly.com</strong>: الشاشة التي حدث فيها (لقطة شاشة أو فيديو إن أمكن)، ما كنت تفعله قبل ذلك مباشرة، وموديل هاتفك ونظام التشغيل. سنبقيك على اطلاع بالإصلاح.</p>
-          </div>
-        </div>
-
+      <div class="faq-accordion reveal">
+        <details class="faq" id="faq-delete-account">
+          <summary>كيف أحذف حسابي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>اذهب إلى <strong>الملف الشخصي ← الإعدادات ← حذف حسابي</strong>. يطلب التطبيق رمز PIN كإجراء وقائي. إذا كان لديك أموال في المحفظة أو طلبات مفتوحة، يجب سحبها أو إنهاؤها أولاً. أكّد: يُوسَم الحساب للحذف ويُجعَل مجهول الهوية خلال 30 يوماً. يمكنك أيضاً مراسلتنا على <strong>support@garabaly.com</strong> بعنوان "طلب حذف الحساب" إذا لم تستطع فعل ذلك من التطبيق.</p>
+                      <p>ما يُحفَظ: سجلات المعاملات المالية (الفواتير، السجلات المحاسبية)، مجهولة الهوية بالنسبة لهويتك — للوفاء بالالتزامات القانونية.</p></div>
+        </details>
+        <details class="faq" id="faq-data-access">
+          <summary>كيف أحصل على نسخة من بياناتي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>لك الحق في الحصول على نسخة من بياناتك. راسلنا على <strong>support@garabaly.com</strong> من البريد المرتبط بحسابك (أو من رقم هاتف موثَّق) بعنوان "طلب الوصول إلى البيانات — [اسمك]". نرسل لك أرشيفاً (JSON + PDF قابل للقراءة) خلال 30 يوماً كحد أقصى، عادةً خلال 7-10 أيام.</p></div>
+        </details>
+        <details class="faq" id="faq-min-age">
+          <summary>ما الحد الأدنى لسن استخدام غرابالي؟<i data-feather="chevron-down" class="fc"></i></summary>
+          <div class="ans"><p>يجب أن يكون عمرك 18 عاماً على الأقل — وهو سن الرشد القانوني في أسواقنا — لاستخدام غرابالي. غرابالي منصّة لبيع وشراء الماشية والخدمات، واستخدامها يعني إبرام عقود شراء مُلزِمة وإجراء مدفوعات، وهو ما يتطلب الأهلية القانونية. بإنشائك حساباً فإنك تؤكد استيفاءك لهذا الشرط (راجع شروط الاستخدام). وإذا تبيّن أن حساباً يخص قاصراً، نغلقه ونعيد أي أموال إلى وليّ الأمر الشرعي بعد التحقق.</p></div>
+        </details>
       </div>
     </div>
   </section>
-
-  <!-- ===== لا يزال لديك أسئلة؟ ===== -->
   <section class="section">
     <div class="container text-center reveal">
       <h2 class="section-title">لا يزال لديك أسئلة؟</h2>
@@ -1133,7 +975,7 @@
     </div>
   </section>
 
-  <footer class="footer">
+<footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
@@ -1179,7 +1021,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=12"></script>
+  <script src="../js/main.js?v=13"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>
