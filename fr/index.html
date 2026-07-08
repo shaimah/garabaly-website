@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=15">
+<link rel="stylesheet" href="../css/styles.css?v=16">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -665,49 +665,131 @@
   <section class="section" id="categories">
     <div class="container">
       <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Trouvez le bon bétail</span>
-        <h2 class="section-title">Des milliers d'animaux, près de chez vous</h2>
+        <span class="section-eyebrow">Parcourir par catégorie</span>
+        <h2 class="section-title">Trouvez le bon bétail</h2>
         <p class="section-subtitle">
-          Parcourez par photo, négociez directement avec le vendeur, puis payez en séquestre. De vraies annonces, des vendeurs vérifiés, des prix visibles.
+          Des fêtes de mariage aux célébrations de la Tabaski, des baptêmes aux repas de tous les jours — découvrez du bétail dans toutes les grandes catégories.
         </p>
       </div>
 
-      <div class="gb reveal">
+      <div class="carousel-wrapper">
+        <div class="categories-grid">
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f404.svg" alt="Bovins" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Bovins</div>
+              <div class="category-card__count">Disponible</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f411.svg" alt="Ovins" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Ovins</div>
+              <div class="category-card__count">Disponible</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f410.svg" alt="Caprins" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Caprins</div>
+              <div class="category-card__count">Disponible</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f413.svg" alt="Volaille" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Volaille</div>
+              <div class="category-card__count">Disponible</div>
+            </div>
+          </div>
+          <div class="category-card reveal">
+            <div class="category-card__bg"></div>
+            <div class="category-card__content">
+              <div class="category-card__icon"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f42a.svg" alt="Chameaux" width="64" height="64" loading="lazy"></div>
+              <div class="category-card__name">Chameaux</div>
+              <div class="category-card__count">Disponible</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== §3.11 Carrousel d'annonces réelles ===== -->
+      <div class="gb reveal" style="margin-top: var(--space-3xl);">
+        <div class="section-header text-center" style="margin-bottom: var(--space-lg);">
+          <span class="section-eyebrow">Annonces en direct</span>
+          <h2 class="section-title">Des milliers d'animaux, près de chez vous</h2>
+          <p class="section-subtitle">
+            Parcourez par photo, négociez directement avec le vendeur, puis payez en séquestre. De vraies annonces, des vendeurs vérifiés, des prix visibles.
+          </p>
+        </div>
         <div class="gb-search"><i data-feather="search"></i><span>Rechercher un mouton pour Tabaski…</span></div>
-        <div class="gb-grid" style="max-width: 1080px; margin: 0 auto;">
+        <div class="scroll-hint"><span>Glissez pour explorer</span><i data-feather="arrow-right"></i></div>
+        <div class="gb-listings-carousel">
           <div class="gb-listing">
             <div class="gb-listing__media">
-              <img src="../assets/images/hero-herder-1024.jpg" alt="Mouton Bali sur Garabaly" loading="lazy" decoding="async">
-              <span class="gb-listing__verif"><i data-feather="check"></i> Vendeur vérifié</span>
+              <img src="../assets/images/listings/mouton-bali-bali-60kg.jpg" alt="Mouton Bali-Bali, ~60 kg, sur Garabaly à Bamako" loading="lazy" decoding="async">
+              <span class="gb-listing__star"><i data-feather="star"></i></span>
               <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
             <div class="gb-listing__body">
-              <p class="gb-listing__title">Mouton Bali · mâle, prêt pour la Tabaski</p>
-              <p class="gb-listing__price">FCFA 130 000</p>
-              <div class="gb-listing__meta"><span>📍 Bamako · Moussa Dicko</span><span class="gb-listing__rating">★ 4,8</span></div>
+              <p class="gb-listing__title">Mouton Bali-Bali mâle 60 kg environ</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 250 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller"><i data-feather="check-circle"></i> Alamissa Dicko</p>
             </div>
           </div>
           <div class="gb-listing">
             <div class="gb-listing__media">
-              <img src="../assets/images/hero-banner-1280.jpg" alt="Zébu sahélien sur Garabaly" loading="lazy" decoding="async">
-              <span class="gb-listing__verif"><i data-feather="check"></i> Vendeur vérifié</span>
+              <img src="../assets/images/listings/bali-bali-pur-350.jpg" alt="Bali bali pur sur Garabaly à Bamako" loading="lazy" decoding="async">
               <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
             <div class="gb-listing__body">
-              <p class="gb-listing__title">Zébu sahélien · robuste</p>
-              <p class="gb-listing__price">FCFA 450 000</p>
-              <div class="gb-listing__meta"><span>📍 Ségou · Fatou Traoré</span><span class="gb-listing__rating">★ 4,9</span></div>
+              <p class="gb-listing__title">Bali bali pur</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 350 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller gb-listing__seller--muted">Ousmane Dicko</p>
             </div>
           </div>
           <div class="gb-listing">
             <div class="gb-listing__media">
-              <img src="../assets/images/herder-portrait-1024.jpg" alt="Chèvres rousses sur Garabaly" loading="lazy" decoding="async">
+              <img src="../assets/images/listings/belier-235.jpg" alt="Bélier sur Garabaly à Bamako" loading="lazy" decoding="async">
+              <span class="gb-listing__star"><i data-feather="star"></i></span>
               <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
             <div class="gb-listing__body">
-              <p class="gb-listing__title">Chèvres rousses · paire</p>
-              <p class="gb-listing__price">FCFA 60 000</p>
-              <div class="gb-listing__meta"><span>📍 Sikasso · Awa Coulibaly</span><span class="gb-listing__rating">★ 4,7</span></div>
+              <p class="gb-listing__title">Bélier</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 235 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller"><i data-feather="check-circle"></i> Abdoulaye Bagayoko</p>
+            </div>
+          </div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/listings/mouton-sahelien-35-40kg.jpg" alt="Mouton sahélien, 35-40 kg, sur Garabaly à Bamako" loading="lazy" decoding="async">
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">Mouton sahélien mâle 35-40 kg</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 175 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller"><i data-feather="check-circle"></i> Abdoulkader Zakaria Maiga</p>
+            </div>
+          </div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/listings/belier-bali-blanc-60kg.jpg" alt="Bélier Bali-Bali blanc cornes longues, 60 kg, sur Garabaly à Bamako" loading="lazy" decoding="async">
+              <span class="gb-listing__star"><i data-feather="star"></i></span>
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">Bélier Bali-Bali blanc cornes longues 60 kg</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 150 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako</span></div>
+              <p class="gb-listing__seller gb-listing__seller--muted">Abba Champion</p>
             </div>
           </div>
         </div>
