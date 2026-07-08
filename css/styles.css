@@ -2461,18 +2461,29 @@ html.js-ready .reveal.visible {
 @media (max-width: 900px) { .gb-why { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .gb-why { grid-template-columns: 1fr; } }
 
-/* ===== R2-2: 6-step flow cards (on the shared card system) ===== */
-.gb-flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 14px; text-align: start; margin-top: var(--space-xl); }
-.gb-flow__card { position: relative; background: var(--surface); border: 1px solid var(--gb-hairline); border-radius: 13px; padding: 18px 16px 16px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
-.gb-flow__card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,121,65,.10); border-color: rgba(200,121,65,.28); }
-.gb-flow__num { position: absolute; top: 12px; inset-inline-end: 12px; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: #FFFFFF; font-size: var(--fs-small); font-weight: 700; display: grid; place-items: center; }
-.gb-flow__icon { width: 34px; height: 34px; border-radius: 9px; background: var(--gb-cream); color: var(--primary); display: grid; place-items: center; margin-bottom: 10px; }
-.gb-flow__icon svg, .gb-flow__icon i { width: 19px; height: 19px; }
-.gb-flow__title { font-size: var(--fs-body); font-weight: 600; margin: 0 0 4px; }
-.gb-flow__desc { font-size: var(--fs-small); line-height: 1.5; color: var(--gb-muted); margin: 0; }
-.gb-flow__card--gold { border-top: 2px solid var(--gold, #E8B854); }
-.gb-flow__card--gold .gb-flow__num { background: var(--gold, #E8B854); color: #2C1810; }
-.gb-flow__card--gold .gb-flow__icon { background: rgba(232, 184, 84, 0.18); color: #B8860B; }
+/* ===== R2-2 / R2-7: step-card grid. Scoped to .gb.gb-flow so it beats the
+   §3.12 drag-list, which uses a bare .gb-flow (defined later in the file). ===== */
+.gb.gb-flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 14px; text-align: start; margin-top: var(--space-xl); max-width: none; }
+.gb.gb-flow .gb-flow__card { position: relative; background: var(--surface); border: 1px solid var(--gb-hairline); border-radius: 13px; padding: 18px 16px 16px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.gb.gb-flow .gb-flow__card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(200,121,65,.10); border-color: rgba(200,121,65,.28); }
+.gb.gb-flow .gb-flow__num { position: absolute; top: 12px; inset-inline-end: 12px; width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: #FFFFFF; font-size: var(--fs-small); font-weight: 700; display: grid; place-items: center; }
+.gb.gb-flow .gb-flow__icon { width: 34px; height: 34px; border-radius: 9px; background: var(--gb-cream); color: var(--primary); display: grid; place-items: center; margin-bottom: 10px; }
+.gb.gb-flow .gb-flow__icon svg, .gb.gb-flow .gb-flow__icon i { width: 19px; height: 19px; }
+.gb.gb-flow .gb-flow__title { font-size: var(--fs-body); font-weight: 600; margin: 0 0 4px; }
+.gb.gb-flow .gb-flow__desc { font-size: var(--fs-small); line-height: 1.5; color: var(--gb-muted); margin: 0; }
+.gb.gb-flow .gb-flow__card--gold { border-top: 2px solid var(--gold, #E8B854); }
+.gb.gb-flow .gb-flow__card--gold .gb-flow__num { background: var(--gold, #E8B854); color: #2C1810; }
+.gb.gb-flow .gb-flow__card--gold .gb-flow__icon { background: rgba(232, 184, 84, 0.18); color: #B8860B; }
+
+/* ===== R2-8: escrow-benefit callout (per how-to section) ===== */
+.gb-benefits { background: #FBF3E6; border: 1px solid var(--gb-hairline); border-radius: 16px; padding: var(--space-xl); margin-top: var(--space-2xl); text-align: start; }
+:root[data-theme="dark"] .gb-benefits { background: rgba(232, 184, 84, 0.08); }
+.gb-benefits__title { font-size: var(--fs-h3); font-weight: 700; text-align: center; margin: 0 0 var(--space-lg); color: var(--text-primary); }
+.gb-benefits__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.gb-benefit { background: var(--surface); border: 1px solid var(--gb-hairline); border-radius: 12px; padding: 14px 16px; }
+.gb-benefit__h { font-size: var(--fs-body); font-weight: 600; margin: 0 0 4px; color: var(--primary); }
+.gb-benefit__p { font-size: var(--fs-small); line-height: 1.5; color: var(--gb-muted); margin: 0; }
+.gb-benefits__quote { background: #2C1810; color: #FAF3E8; border-radius: 12px; padding: 16px 20px; margin: var(--space-lg) 0 0; font-style: italic; text-align: center; font-size: var(--fs-body-lg); line-height: 1.5; }
 
 /* Numbered step row (§3.3 diaspora) */
 .gb-nsteps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-lg); text-align: start; }
