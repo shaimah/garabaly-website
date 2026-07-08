@@ -117,8 +117,62 @@
     </div>
   </section>
 
+  <!-- ===== §3.15 Vitrine de l'application ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="gb reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-2xl);">
+          <span class="section-eyebrow">L'application</span>
+          <h2 class="section-title">Garabaly en action.</h2>
+          <p class="section-subtitle">
+            Parcourez le bétail, négociez à la voix, payez en séquestre et suivez la livraison jusqu'à votre porte — tout depuis votre téléphone. Touchez un écran pour le voir en action.
+          </p>
+        </div>
+        <div class="gb-phones">
+          <div class="gb-phone">
+            <div class="gb-phone__frame">
+              <span class="gb-phone__notch"></span>
+              <div class="gb-video" data-video="negotiation">
+                <div class="gb-video__fallback">Négociez à la voix</div>
+                <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+                <video preload="none" playsinline poster="../assets/video/negotiation-poster.jpg" data-src="../assets/video/demo-negotiation.mp4"></video>
+              </div>
+            </div>
+            <p class="gb-phone__sub">Convenez d'un prix, dans votre langue</p>
+          </div>
+          <div class="gb-phone">
+            <div class="gb-phone__frame">
+              <span class="gb-phone__notch"></span>
+              <div class="gb-video" data-video="place-order">
+                <div class="gb-video__fallback">Passez commande</div>
+                <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+                <video preload="none" playsinline data-src="../assets/video/demo-place-order.mp4"></video>
+              </div>
+            </div>
+            <p class="gb-phone__sub">Chacun confirme avant que vous payiez</p>
+          </div>
+          <div class="gb-phone">
+            <div class="gb-phone__frame">
+              <span class="gb-phone__notch"></span>
+              <div class="gb-video" data-video="track-order">
+                <div class="gb-video__fallback">Suivez jusqu'à la porte</div>
+                <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+                <video preload="none" playsinline data-src="../assets/video/demo-track-order.mp4"></video>
+              </div>
+            </div>
+            <p class="gb-phone__sub">Suivez chaque étape en temps réel</p>
+          </div>
+        </div>
+        <div class="gb-app-cta">
+          <a href="#get-started" class="btn btn--primary reveal">Aperçu dans Expo Go</a>
+          <p class="gb-app-cta__note"><i data-feather="info"></i> Fonctionne dans Expo Go — aucun store requis. Applications natives App Store et Google Play bientôt disponibles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== ÉTAPE 1 : TÉLÉCHARGER EXPO GO ===== -->
-  <section class="section section--qr-glass">
+  <section class="section section--qr-glass" id="get-started">
     <div class="container">
       <div class="section-header text-center reveal">
         <span class="section-eyebrow">Étape 1</span>

@@ -3992,3 +3992,16 @@ textarea:focus-visible,select:focus-visible,summary:focus-visible{
 .gb-tier__pct { font-size: 2rem; font-weight: 800; color: var(--gb-tier); line-height: 1; }
 .gb-tier__detail { font-size: 0.82rem; color: var(--text-secondary); margin-top: 6px; }
 .gb-tier__dur { display: inline-block; margin-top: 12px; font-size: 0.74rem; font-weight: 700; color: var(--text-secondary); background: var(--surface-elevated); border-radius: 20px; padding: 4px 12px; }
+
+/* §3.15 Get-the-app phone showcase */
+.gb-phones { display: grid; gap: var(--space-2xl) var(--space-xl); justify-items: center; grid-template-columns: 1fr; max-width: 960px; margin: 0 auto; }
+@media (min-width: 720px) { .gb-phones { grid-template-columns: repeat(3, 1fr); } }
+.gb-phone { width: 100%; max-width: 250px; }
+.gb-phone__frame { position: relative; border-radius: 36px; border: 10px solid #16181c; background: #16181c; box-shadow: var(--shadow-lg); overflow: hidden; }
+.gb-phone__notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 88px; height: 19px; background: #16181c; border-radius: 0 0 14px 14px; z-index: 6; }
+.gb-phone .gb-video { max-width: none; width: 100%; border-radius: 26px; box-shadow: none; }
+.gb-phone__label { text-align: center; margin: var(--space-md) 0 2px; font-weight: 600; color: var(--text-primary); }
+.gb-phone__sub { text-align: center; font-size: 0.82rem; color: var(--gb-muted); }
+.gb-app-cta { text-align: center; margin-top: var(--space-2xl); }
+.gb-app-cta__note { margin-top: var(--space-md); font-size: 0.82rem; color: var(--gb-muted); display: inline-flex; align-items: center; gap: 7px; }
+.gb-app-cta__note svg { width: 15px; height: 15px; color: var(--gb-vet); flex: 0 0 auto; }
