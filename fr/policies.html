@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=18">
+  <link rel="stylesheet" href="../css/styles.css?v=19">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -460,9 +460,9 @@
         </div>
 
         <div class="policy-block">
-          <h3>2. Le cycle de vie du séquestre par partie et par étape</h3>
+          <h3>2. Le cycle de vie du séquestre (allocation par partie)</h3>
           <p>
-            Chaque transaction Garabaly suit un processus de séquestre par partie et par étape. Les vendeurs pré-approuvent avant le paiement, donc le paiement n'est possible qu'une fois l'accord accepté. Après la livraison, l'acheteur dispose d'une <strong>fenêtre de contestation de 24 heures</strong> pour soulever des problèmes avant que la part du vendeur soit libérée ; les prestataires sont payés immédiatement à l'achèvement de leur part de la commande.
+            Chaque transaction Garabaly suit un processus de séquestre avec allocation par partie. Les vendeurs pré-approuvent avant le paiement, donc le paiement n'est possible qu'une fois l'accord accepté. Rien n'est versé tant que l'acheteur n'a pas saisi son code de confirmation. Dès qu'il le saisit, les prestataires sont payés et la part du vendeur entre dans une <strong>fenêtre de contestation de 24 heures</strong> avant d'être libérée. Un seul code libère toute la commande — indépendante ou groupée — sans versement par étape.
           </p>
 
           <div class="escrow-stages">
@@ -478,7 +478,7 @@
               <div class="escrow-stage__number">2</div>
               <div class="escrow-stage__content">
                 <h4>En cours de libération</h4>
-                <p>La livraison est en cours ou terminée. Les prestataires (s'ils ont été réservés) sont payés immédiatement à l'achèvement de leurs prestations. La part du vendeur reste en séquestre pendant la <strong>fenêtre de contestation de 24 heures de l'acheteur</strong> après livraison. L'acheteur peut saisir son code de confirmation pour confirmer sa satisfaction ou ouvrir un litige dans les 24 heures.</p>
+                <p>La livraison est en cours ou terminée et l'acheteur a saisi son code de confirmation — rien n'est versé avant cette saisie. Dès que le code est saisi, les prestataires (s'ils ont été réservés) sont payés, et la part du vendeur reste en séquestre pendant la <strong>fenêtre de contestation de 24 heures de l'acheteur</strong> après livraison, durant laquelle l'acheteur peut ouvrir un litige.</p>
               </div>
             </div>
 
@@ -516,7 +516,7 @@
             Après la livraison, l'acheteur dispose d'une <strong>fenêtre de contestation de 24 heures</strong> pour inspecter le bétail ou la prestation et soit confirmer sa satisfaction (en saisissant le code de confirmation), soit ouvrir un litige :
           </p>
           <ul>
-            <li>La part du vendeur des fonds en séquestre est retenue pendant cette période de 24 heures. Les prestataires sont payés immédiatement à l'achèvement de leur part de la commande.</li>
+            <li>La part du vendeur des fonds en séquestre est retenue pendant cette période de 24 heures. Les prestataires sont payés au moment où l'acheteur saisit son code de confirmation — jamais avant, et sans versement par étape.</li>
             <li>Si l'acheteur saisit le code de confirmation, la part du vendeur est libérée immédiatement.</li>
             <li>Si l'acheteur ouvre un litige dans les 24 heures, les fonds restent bloqués jusqu'à résolution du litige.</li>
             <li>Si 24 heures s'écoulent sans litige et sans saisie du code de confirmation, Garabaly peut libérer la part du vendeur selon les règles de la plateforme.</li>
@@ -550,7 +550,7 @@
         <div class="policy-block">
           <h3>7. Politique de remboursement et de litige</h3>
           <p>
-            <strong>Fenêtre de contestation de l'acheteur :</strong> Les acheteurs disposent d'une fenêtre de 24 heures après la livraison pour contester <strong>uniquement la part du vendeur</strong>. Les paiements aux prestataires sont libérés <strong>immédiatement</strong> à l'achèvement et ne sont <strong>pas</strong> soumis à la fenêtre de 24 heures. Si le vendeur ou un prestataire ne confirme pas avant le paiement, aucun fonds n'est débité. Étapes du séquestre : <strong>Financé</strong> → <strong>En cours de libération</strong> → <strong>Libéré</strong> → <strong>Contesté / Remboursé</strong>.
+            <strong>Fenêtre de contestation de l'acheteur :</strong> Les acheteurs disposent d'une fenêtre de 24 heures après la livraison pour contester <strong>uniquement la part du vendeur</strong>. Rien n'est versé tant que l'acheteur n'a pas saisi son code de confirmation ; les paiements aux prestataires sont libérés au moment de la saisie du code (jamais avant, et sans versement par étape) et ne sont <strong>pas</strong> soumis à la fenêtre de 24 heures, qui s'applique uniquement à la part du vendeur. Si le vendeur ou un prestataire ne confirme pas avant le paiement, aucun fonds n'est débité. Étapes du séquestre : <strong>Financé</strong> → <strong>En cours de libération</strong> → <strong>Libéré</strong> → <strong>Contesté / Remboursé</strong>.
           </p>
           <h4>7.1 Ouvrir un litige</h4>
           <p>

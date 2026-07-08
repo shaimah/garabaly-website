@@ -67,7 +67,7 @@
 
   <!-- Styles -->
     <link rel="preload" as="image" type="image/avif" imagesrcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="css/styles.css?v=18">
+<link rel="stylesheet" href="css/styles.css?v=19">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -204,8 +204,8 @@
           <div class="hero__stat-label">Livestock Traded Annually (OECD)</div>
         </div>
         <div class="hero__stat">
-          <div class="hero__stat-value" data-count="860000" data-suffix="+">860K+</div>
-          <div class="hero__stat-label">Sheep for Tabaski in Senegal (APS 2026)</div>
+          <div class="hero__stat-value" data-count="1035042" data-suffix="+">1M+</div>
+          <div class="hero__stat-label">Sheep Registered for Tabaski 2026 · Senegal (Min. of Agriculture)</div>
         </div>
         <div class="hero__stat">
           <div class="hero__stat-value" data-count="0" data-suffix="">0</div>
@@ -263,90 +263,72 @@
         </p>
       </div>
 
-      <div class="scroll-hint">
-        <span>Swipe to explore</span>
-        <i data-feather="arrow-right"></i>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="shield"></i>
+      <div class="gb gb-why reveal">
+        <!-- Heroes (top row): each opens onto a real artifact -->
+        <div class="gb-wcard gb-wcard--hero">
+          <div class="gb-wcard__body">
+            <div class="gb-wcard__icon"><i data-feather="shield"></i></div>
+            <h3 class="gb-wcard__title">Escrow protection</h3>
+            <p class="gb-wcard__desc">Your money is protected until you enter your code.</p>
           </div>
-          <h3 class="feature-card__title">Escrow Protection</h3>
-          <p class="feature-card__desc">
-            Your money stays locked until the cow is in your compound. Period. 0% for buyers, always. Sellers pay 5% — and only ever less — charged only once you've been paid. Per-party staged escrow, with every payment checked and protected from start to finish. Your confirmation code is private and encrypted — only you can release the money. Seller payment held for 24-hour dispute window — service providers paid immediately. Security you can verify — not just words.
-          </p>
+          <div class="gb-wcard__door">
+            <span class="gb-wcard__hint">Order tracker</span>
+            <a class="gb-wcard__link" href="how-it-works.html#escrow-lifecycle">See →</a>
+          </div>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="message-circle"></i>
+        <div class="gb-wcard gb-wcard--hero">
+          <div class="gb-wcard__body">
+            <div class="gb-wcard__icon"><i data-feather="mic"></i></div>
+            <h3 class="gb-wcard__title">Chat & voice negotiation</h3>
+            <p class="gb-wcard__desc">Negotiate in your language, by voice.</p>
           </div>
-          <h3 class="feature-card__title">Real-Time Chat & Negotiation</h3>
-          <p class="feature-card__desc">
-            Real-time messaging built in — text, voice messages, photos, and video. Negotiate prices directly, share listing details in-chat, and see read receipts. Price is a conversation, not a label.
-          </p>
+          <div class="gb-wcard__door">
+            <span class="gb-wcard__hint">Live demo</span>
+            <a class="gb-wcard__link" href="#negotiation">Demo →</a>
+          </div>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="globe"></i>
+        <div class="gb-wcard gb-wcard--hero">
+          <div class="gb-wcard__body">
+            <div class="gb-wcard__icon"><i data-feather="map-pin"></i></div>
+            <h3 class="gb-wcard__title">Real-time tracking</h3>
+            <p class="gb-wcard__desc">Every step, every party visible.</p>
           </div>
-          <h3 class="feature-card__title">Multi-Currency & Diaspora</h3>
-          <p class="feature-card__desc">
-            Pay from Paris in euros. Pay from New York in dollars. Your family in Bamako receives the ram in CFA. Card payments support 135+ currencies via Stripe. Mobile money handles local transactions natively — Orange Money, Moov Money, Wave among several others. Fixed XOF-EUR rate (655.957) protects against forex volatility.
-          </p>
+          <div class="gb-wcard__door">
+            <span class="gb-wcard__hint">Live demo</span>
+            <a class="gb-wcard__link" href="how-it-works.html#escrow-lifecycle">Demo →</a>
+          </div>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="map-pin"></i>
+        <div class="gb-wcard gb-wcard--hero">
+          <div class="gb-wcard__body">
+            <div class="gb-wcard__icon"><i data-feather="credit-card"></i></div>
+            <h3 class="gb-wcard__title">Wallet & mobile money</h3>
+            <p class="gb-wcard__desc">Deposit, pay, transfer, withdraw.</p>
           </div>
-          <h3 class="feature-card__title">Real-Time Order Tracking</h3>
-          <p class="feature-card__desc">
-            Track your order through every stage — from confirmation to preparation, delivery, and receipt. Live status updates via push notifications and in-app alerts. Always know where your livestock is.
-          </p>
+          <div class="gb-wcard__door">
+            <span class="gb-wcard__hint">Wallet</span>
+            <a class="gb-wcard__link" href="#wallet">Open →</a>
+          </div>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="mic"></i>
-          </div>
-          <h3 class="feature-card__title">Voice Descriptions & Reviews</h3>
-          <p class="feature-card__desc">
-            Mali's adult literacy rate is ~31% (UNESCO/World Bank, 2020). Voice isn't a feature — it's a necessity. Sellers describe their livestock the way they always have: by speaking. Buyers leave voice reviews. No typing required. Communication without barriers.
-          </p>
+        <!-- Clean cards (bottom row): support, no mockups -->
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="globe"></i></div>
+          <h3 class="gb-wcard__title">Multi-currency & diaspora</h3>
+          <p class="gb-wcard__desc">Pay from anywhere; family receives in CFA.</p>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="credit-card"></i>
-          </div>
-          <h3 class="feature-card__title">Digital Wallet & Mobile Money <span class="status-pill status-pill--live">LIVE</span></h3>
-          <p class="feature-card__desc">
-            A full-featured wallet with secure PIN protection, transaction history, and wallet-to-wallet transfers. Deposit funds via card or mobile money. Pay with Orange Money, Moov Money, Wave among several others — available in Mali, Senegal, Côte d'Ivoire, Burkina Faso, Benin, Togo, and Cameroun. Bank withdrawal is also available.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="message-square"></i></div>
+          <h3 class="gb-wcard__title">Voice descriptions & reviews</h3>
+          <p class="gb-wcard__desc">Describe and review by speaking — no typing.</p>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="users"></i>
-          </div>
-          <h3 class="feature-card__title">Service Provider Network</h3>
-          <p class="feature-card__desc">
-            Book verified butchers, delivery drivers, and veterinarians directly in the app. Each service provider has ratings, reviews, and secure payment through the same escrow system.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="users"></i></div>
+          <h3 class="gb-wcard__title">Provider network</h3>
+          <p class="gb-wcard__desc">Verified butchers, vets, and transporters.</p>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="type"></i>
-          </div>
-          <h3 class="feature-card__title">Multilingual App</h3>
-          <p class="feature-card__desc">
-            Full interface in French, English, and Arabic (with right-to-left support). Specialized livestock vocabulary and locale-aware formatting. Voice descriptions and reviews in any language — Bambara, Mooré, Hausa, Fulfulde, Wolof, and more.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="type"></i></div>
+          <h3 class="gb-wcard__title">Multilingual app</h3>
+          <p class="gb-wcard__desc">French, English, Arabic — with right-to-left.</p>
         </div>
       </div>
     </div>
@@ -548,7 +530,7 @@
           <div class="step__number">6</div>
           <h3 class="step__title">Confirm with Code</h3>
           <p class="step__desc">
-            Use your unique 6-character confirmation code to verify delivery. Service providers are paid immediately. The seller's payment is held for a 24-hour buyer protection window.
+            Use your unique 6-character confirmation code to verify delivery. Nothing is released until you enter it — then the service providers are paid and the seller's share enters a 24-hour buyer-protection window.
           </p>
         </div>
       </div>
@@ -585,29 +567,29 @@
       </div>
       <div class="gb reveal" style="margin-top: var(--space-2xl);">
         <p style="text-align:center; max-width:660px; margin:0 auto var(--space-xl); color: var(--text-secondary);">
-          <strong>For sellers &amp; providers:</strong> your commission drops as you refer peers. The standard 5% service fee shrinks with each active referral, and every new one resets the clock at your tier.
+          <strong>5% only — never more, with a 2% floor.</strong> That's the durable promise. For sellers &amp; providers, the commission can drop further for a limited time as you refer peers: each active referral lowers your rate at your tier, and every new one resets the clock.
         </p>
         <div class="gb-tiers">
           <div class="gb-tier gb-tier--bronze">
             <span class="gb-tier__badge"><i data-feather="award"></i></span>
             <div class="gb-tier__name">Bronze</div>
-            <div class="gb-tier__reqs">from 1 referral</div>
-            <div class="gb-tier__pct" dir="ltr">−2%</div>
-            <div class="gb-tier__detail">Commission <span dir="ltr">5% → 3%</span></div>
+            <div class="gb-tier__reqs">3 referrals</div>
+            <div class="gb-tier__pct" dir="ltr">−1%</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5% → 4%</span></div>
             <span class="gb-tier__dur">30 days</span>
           </div>
           <div class="gb-tier gb-tier--silver">
             <span class="gb-tier__badge"><i data-feather="award"></i></span>
             <div class="gb-tier__name">Silver</div>
-            <div class="gb-tier__reqs">from 3 referrals</div>
-            <div class="gb-tier__pct" dir="ltr">−2.5%</div>
-            <div class="gb-tier__detail">Commission <span dir="ltr">5% → 2.5%</span></div>
+            <div class="gb-tier__reqs">6 referrals</div>
+            <div class="gb-tier__pct" dir="ltr">−2%</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5% → 3%</span></div>
             <span class="gb-tier__dur">45 days</span>
           </div>
           <div class="gb-tier gb-tier--gold">
             <span class="gb-tier__badge"><i data-feather="award"></i></span>
             <div class="gb-tier__name">Gold</div>
-            <div class="gb-tier__reqs">from 6 referrals</div>
+            <div class="gb-tier__reqs">12 referrals</div>
             <div class="gb-tier__pct" dir="ltr">−3%</div>
             <div class="gb-tier__detail">Commission <span dir="ltr">5% → 2%</span></div>
             <span class="gb-tier__dur">60 days</span>
@@ -622,7 +604,7 @@
           <span class="gb-ladder__arrow">→</span>
           <div class="gb-ladder__step gb-ladder__step--confiance"><span class="gb-ladder__badge"><i data-feather="shield"></i></span><span class="gb-ladder__name">Trusted</span><span class="gb-ladder__req">higher caps</span></div>
         </div>
-        <p class="gb gb-strip" style="margin-top: var(--space-xl);">A discount on the 5% seller commission — <strong>never below the 2% floor</strong>. Same-role only: sellers refer sellers, providers refer providers. Buyers who invite earn wallet bonus credit instead.</p>
+        <p class="gb gb-strip" style="margin-top: var(--space-xl);">Time-limited reductions on the 5% seller commission — <strong>never below the 2% floor</strong>. Same-role only: sellers refer sellers, providers refer providers. Buyers who invite earn wallet bonus credit instead. Terms apply.</p>
         <div class="btn-group" style="justify-content:center; margin-top: var(--space-xl);">
           <a href="https://wa.me/?text=Découvre%20Garabaly%20—%20la%20marketplace%20de%20confiance%20pour%20le%20bétail.%20https://www.garabaly.com/get-the-app.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Share via WhatsApp</a>
           <a href="/get-the-app.html" class="btn btn--secondary">Get the App to Refer</a>
@@ -698,7 +680,7 @@
           <span class="section-eyebrow">Your Money is Safe</span>
           <h2 class="section-title">Escrow Protection<br>for Every Transaction</h2>
           <p class="section-subtitle">
-            In traditional livestock trading, sending money to a stranger is a leap of faith. Garabaly eliminates that risk with per-party staged escrow, encrypted transactions, and fraud detection. One escrow hold, per-party allocation — each provider gets paid as their step is completed.
+            In traditional livestock trading, sending money to a stranger is a leap of faith. Garabaly eliminates that risk with per-party escrow, encrypted transactions, and fraud detection. One escrow hold: nothing is released until you enter your code — then the providers are paid and the seller's share enters a 24-hour buyer-protection window.
           </p>
           <p><a href="faq.html" class="inline-faq-link">Have questions about how escrow works? -> See our FAQ</a></p>
           <div class="trust-features">
@@ -717,7 +699,7 @@
               </div>
               <div class="trust-feature__text">
                 <h4>24-Hour Buyer Protection Window</h4>
-                <p>After you receive the livestock and confirm with your code, the seller's payment is held for 24 hours. During this window, you can open a dispute if something is wrong. Service providers (butcher, vet, delivery) get paid immediately — the 24-hour window applies only to the seller's share.</p>
+                <p>Nothing is released until you enter your code. The moment you do, the service providers (butcher, vet, delivery) are paid and the seller's payment enters a 24-hour window — during which you can open a dispute if something is wrong. The 24-hour window applies only to the seller's share.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -1156,8 +1138,8 @@
           <div class="stat-item__label">Remittances to Africa (World Bank 2024)</div>
         </div>
         <div class="stat-item">
-          <div class="stat-item__value" data-count="860000" data-suffix="+">860K+</div>
-          <div class="stat-item__label">Sheep for Tabaski in Senegal (APS 2026)</div>
+          <div class="stat-item__value" data-count="1035042" data-suffix="+">1M+</div>
+          <div class="stat-item__label">Sheep Registered for Tabaski 2026 · Senegal (Min. of Agriculture)</div>
         </div>
         <div class="stat-item">
           <div class="stat-item__value" data-count="517000000">517M</div>

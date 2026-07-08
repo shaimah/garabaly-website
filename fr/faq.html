@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=18">
+  <link rel="stylesheet" href="../css/styles.css?v=19">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -106,7 +106,7 @@
       "name": "Comment fonctionne la protection par séquestre ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Garabaly utilise un séquestre par étapes avec allocation par partie. Quand tu paies, ton argent est conservé en sécurité. À la livraison, tu saisis ton code de confirmation à 6 caractères : les prestataires (boucher, vétérinaire, livreur) sont payés immédiatement. La part du vendeur entre alors dans une fenêtre de protection acheteur de 24 heures — pendant ces 24 h, tu peux ouvrir un litige si quelque chose ne va pas. Sinon, la part du vendeur est libérée automatiquement à la fin des 24 h, sans rien faire de ta part. En cas de litige, toutes les parts non encore libérées sont conservées et notre équipe (deux personnes valident ensemble) tranche."
+        "text": "Garabaly utilise un séquestre avec allocation par partie. Quand tu paies, ton argent est conservé en sécurité. Rien n'est versé tant que tu n'as pas saisi ton code de confirmation à 6 caractères à la livraison. Dès que tu le saisis, les prestataires (boucher, vétérinaire, livreur) sont payés et la part du vendeur entre dans une fenêtre de protection acheteur de 24 heures — pendant ces 24 h, tu peux ouvrir un litige si quelque chose ne va pas. Sinon, la part du vendeur est libérée automatiquement à la fin des 24 h, sans rien faire de ta part. En cas de litige, toutes les parts non encore libérées sont conservées et notre équipe (deux personnes valident ensemble) tranche."
       }
     },
     {
@@ -218,7 +218,7 @@
       "name": "Quand est-ce que je reçois le paiement ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Quand l'acheteur saisit ton code de confirmation à 6 caractères, ton paiement entre dans une fenêtre de protection acheteur de 24 heures. Si aucun litige n'est ouvert pendant cette fenêtre, les fonds sont libérés automatiquement vers ton Portefeuille Garabaly — tu n'as rien à faire. Les prestataires (bouchers, vétérinaires, livreurs) sont payés immédiatement à l'achèvement de leur tâche ; la fenêtre de 24 h s'applique uniquement à la part du vendeur. Une fois libérés, les fonds sont disponibles dans ton Portefeuille Garabaly pour transfert instantané vers d'autres utilisateurs ou retrait externe via Orange Money, Moov Money ou Wave, d'autres fournisseurs en cours d'ajout. Le retrait bancaire est également disponible."
+        "text": "Rien n'est versé tant que l'acheteur n'a pas saisi ton code de confirmation à 6 caractères. Dès qu'il le saisit, les prestataires (bouchers, vétérinaires, livreurs) sont payés et ta part de vendeur entre dans une fenêtre de protection acheteur de 24 heures — la fenêtre s'applique uniquement à la part du vendeur, jamais aux prestataires, et il n'y a aucun versement par étape avant le code. Si aucun litige n'est ouvert pendant cette fenêtre, les fonds sont libérés automatiquement vers ton Portefeuille Garabaly — tu n'as rien à faire. Une fois libérés, les fonds sont disponibles dans ton Portefeuille Garabaly pour transfert instantané vers d'autres utilisateurs ou retrait externe via Orange Money, Moov Money ou Wave, d'autres fournisseurs en cours d'ajout. Le retrait bancaire est également disponible."
       }
     },
     {
@@ -298,7 +298,7 @@
       "name": "Qu'est-ce que le code de confirmation ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Chaque commande Garabaly génère un code de confirmation alphanumérique unique de 6 caractères visible uniquement par l'acheteur. Quand le bétail (ou le service) est livré, l'acheteur saisit ce code directement dans l'app. La saisie du code paie les prestataires immédiatement et ouvre une fenêtre de protection acheteur de 24 heures sur la part du vendeur (tu peux ouvrir un litige pendant cette fenêtre). Le code ne doit jamais être partagé avec le vendeur ou un tiers — seul l'acheteur peut le saisir."
+        "text": "Chaque commande Garabaly génère un code de confirmation alphanumérique unique de 6 caractères visible uniquement par l'acheteur. Quand le bétail (ou le service) est livré, l'acheteur saisit ce code directement dans l'app. Rien n'est versé avant : la saisie du code paie les prestataires et ouvre une fenêtre de protection acheteur de 24 heures sur la part du vendeur (tu peux ouvrir un litige pendant cette fenêtre). Un seul code libère toute la commande — indépendante ou groupée — sans versement par étape. Le code ne doit jamais être partagé avec le vendeur ou un tiers — seul l'acheteur peut le saisir."
       }
     },
     {
@@ -643,7 +643,7 @@
         <div class="faq-item" id="faq-escrow">
           <button class="faq-item__question">Comment fonctionne la protection par séquestre ?<i data-feather="chevron-down"></i></button>
           <div class="faq-item__answer">
-            <p>Garabaly utilise un séquestre par étapes avec allocation par partie. Quand tu paies, ton argent est conservé en sécurité. À la livraison, tu saisis ton code de confirmation à 6 caractères : les prestataires (boucher, vétérinaire, livreur) sont payés <strong>immédiatement</strong>. La part du vendeur entre alors dans une <strong>fenêtre de protection acheteur de 24 heures</strong> — pendant ces 24 h, tu peux ouvrir un litige si quelque chose ne va pas. Sinon, la part du vendeur est libérée automatiquement à la fin des 24 h, sans rien faire de ta part. En cas de litige, toutes les parts non encore libérées sont conservées et notre équipe (deux personnes valident ensemble) tranche.</p>
+            <p>Garabaly utilise un séquestre avec allocation par partie. Quand tu paies, ton argent est conservé en sécurité. <strong>Rien n'est versé tant que tu n'as pas saisi ton code de confirmation à 6 caractères</strong> à la livraison. Dès que tu le saisis, les prestataires (boucher, vétérinaire, livreur) sont payés et la part du vendeur entre dans une <strong>fenêtre de protection acheteur de 24 heures</strong> — pendant ces 24 h, tu peux ouvrir un litige si quelque chose ne va pas. Sinon, la part du vendeur est libérée automatiquement à la fin des 24 h, sans rien faire de ta part. En cas de litige, toutes les parts non encore libérées sont conservées et notre équipe (deux personnes valident ensemble) tranche.</p>
           </div>
         </div>
         <div class="faq-item" id="faq-animal-not-as-described">
@@ -792,7 +792,7 @@
         <div class="faq-item" id="faq-when-paid">
           <button class="faq-item__question">Quand est-ce que je reçois le paiement ?<i data-feather="chevron-down"></i></button>
           <div class="faq-item__answer">
-            <p>Quand l'acheteur saisit ton code de confirmation à 6 caractères, ton paiement entre dans une <strong>fenêtre de protection acheteur de 24 heures</strong>. Si aucun litige n'est ouvert pendant cette fenêtre, les fonds sont libérés automatiquement vers ton Portefeuille Garabaly — tu n'as rien à faire. Les prestataires (bouchers, vétérinaires, livreurs) sont payés <strong>immédiatement</strong> à l'achèvement de leur tâche ; la fenêtre de 24 h s'applique uniquement à la part du vendeur. Une fois libérés, les fonds sont disponibles dans ton Portefeuille Garabaly pour transfert instantané vers d'autres utilisateurs ou retrait externe via Orange Money, Moov Money ou Wave, d'autres fournisseurs en cours d'ajout. Le retrait bancaire est également disponible.</p>
+            <p><strong>Rien n'est versé tant que l'acheteur n'a pas saisi ton code de confirmation à 6 caractères.</strong> Dès qu'il le saisit, les prestataires (bouchers, vétérinaires, livreurs) sont payés et ta part de vendeur entre dans une <strong>fenêtre de protection acheteur de 24 heures</strong> — la fenêtre s'applique uniquement à la part du vendeur, et il n'y a aucun versement par étape avant le code. Si aucun litige n'est ouvert pendant cette fenêtre, les fonds sont libérés automatiquement vers ton Portefeuille Garabaly — tu n'as rien à faire. Une fois libérés, les fonds sont disponibles dans ton Portefeuille Garabaly pour transfert instantané vers d'autres utilisateurs ou retrait externe via Orange Money, Moov Money ou Wave, d'autres fournisseurs en cours d'ajout. Le retrait bancaire est également disponible.</p>
           </div>
         </div>
         <div class="faq-item" id="faq-withdraw-earnings">
@@ -894,7 +894,7 @@
         <div class="faq-item" id="faq-confirmation-code">
           <button class="faq-item__question">Qu'est-ce que le code de confirmation ?<i data-feather="chevron-down"></i></button>
           <div class="faq-item__answer">
-            <p>Chaque commande Garabaly génère un code de confirmation alphanumérique unique de 6 caractères visible uniquement par l'acheteur. Quand le bétail (ou le service) est livré, l'acheteur saisit ce code directement dans l'app. La saisie du code paie les prestataires <strong>immédiatement</strong> et ouvre une <strong>fenêtre de protection acheteur de 24 heures</strong> sur la part du vendeur (tu peux ouvrir un litige pendant cette fenêtre). Le code ne doit jamais être partagé avec le vendeur ou un tiers — seul l'acheteur peut le saisir.</p>
+            <p>Chaque commande Garabaly génère un code de confirmation alphanumérique unique de 6 caractères visible uniquement par l'acheteur. Quand le bétail (ou le service) est livré, l'acheteur saisit ce code directement dans l'app. <strong>Rien n'est versé avant :</strong> la saisie du code paie les prestataires et ouvre une <strong>fenêtre de protection acheteur de 24 heures</strong> sur la part du vendeur (tu peux ouvrir un litige pendant cette fenêtre). Un seul code libère toute la commande — indépendante ou groupée — sans versement par étape. Le code ne doit jamais être partagé avec le vendeur ou un tiers — seul l'acheteur peut le saisir.</p>
           </div>
         </div>
         <div class="faq-item" id="faq-seller-no-confirm">

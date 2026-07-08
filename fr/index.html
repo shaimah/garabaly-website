@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=18">
+<link rel="stylesheet" href="../css/styles.css?v=19">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,8 +187,8 @@
           <div class="hero__stat-label">Bétail échangé annuellement (OCDE)</div>
         </div>
         <div class="hero__stat">
-          <div class="hero__stat-value" data-count="860000" data-suffix="+">860K+</div>
-          <div class="hero__stat-label">Moutons pour la Tabaski au Sénégal (APS 2026)</div>
+          <div class="hero__stat-value" data-count="1035042" data-suffix="+">1M+</div>
+          <div class="hero__stat-label">Moutons recensés pour la Tabaski 2026 · Sénégal (Min. de l'Agriculture)</div>
         </div>
         <div class="hero__stat">
           <div class="hero__stat-value" data-count="0" data-suffix="">0</div>
@@ -243,74 +243,72 @@
         </p>
       </div>
 
-      <div class="scroll-hint">
-        <span>Glissez pour explorer</span>
-        <i data-feather="arrow-right"></i>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="shield"></i></div>
-          <h3 class="feature-card__title">Protection par séquestre</h3>
-          <p class="feature-card__desc">
-            Votre argent reste bloqué jusqu'à ce que l'animal soit dans votre enclos. Point final. 0 % pour les acheteurs, toujours. Les vendeurs paient 5 % — et jamais davantage — prélevés uniquement une fois que vous avez été payé. Séquestre par étapes : chaque paiement est vérifié et protégé du début à la fin. Votre code de confirmation est privé et chiffré — vous seul pouvez libérer l'argent. Le paiement du vendeur est retenu pendant une fenêtre de contestation de 24 heures — les prestataires sont payés immédiatement. Une sécurité que vous pouvez vérifier.
-          </p>
+      <div class="gb gb-why reveal">
+        <!-- Héros (rangée du haut) : chacun ouvre sur un vrai artefact -->
+        <div class="gb-wcard gb-wcard--hero">
+          <div class="gb-wcard__body">
+            <div class="gb-wcard__icon"><i data-feather="shield"></i></div>
+            <h3 class="gb-wcard__title">Protection par séquestre</h3>
+            <p class="gb-wcard__desc">Votre argent est protégé jusqu'à votre code.</p>
+          </div>
+          <div class="gb-wcard__door">
+            <span class="gb-wcard__hint">Suivi de commande</span>
+            <a class="gb-wcard__link" href="how-it-works.html#escrow-lifecycle">Voir →</a>
+          </div>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="message-circle"></i></div>
-          <h3 class="feature-card__title">Chat et négociation en temps réel</h3>
-          <p class="feature-card__desc">
-            Messagerie intégrée — texte, messages vocaux, photos et vidéo. Négociez les prix directement, partagez les détails des annonces dans le chat. Le prix est une conversation, pas une étiquette.
-          </p>
+        <div class="gb-wcard gb-wcard--hero">
+          <div class="gb-wcard__body">
+            <div class="gb-wcard__icon"><i data-feather="mic"></i></div>
+            <h3 class="gb-wcard__title">Chat & négociation à la voix</h3>
+            <p class="gb-wcard__desc">Négociez dans votre langue, par la voix.</p>
+          </div>
+          <div class="gb-wcard__door">
+            <span class="gb-wcard__hint">Démo en direct</span>
+            <a class="gb-wcard__link" href="#negotiation">Démo →</a>
+          </div>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="globe"></i></div>
-          <h3 class="feature-card__title">Multi-devises et diaspora</h3>
-          <p class="feature-card__desc">
-            Payez de Paris en euros. De New York en dollars. Votre famille a Bamako recoit le belier en CFA. Les paiements par carte supportent 135+ devises via Stripe. Le mobile money gere les transactions locales nativement — Orange Money, Moov Money, Wave parmi plusieurs autres. Le taux fixe XOF-EUR (655,957) protege contre la volatilite.
-          </p>
+        <div class="gb-wcard gb-wcard--hero">
+          <div class="gb-wcard__body">
+            <div class="gb-wcard__icon"><i data-feather="map-pin"></i></div>
+            <h3 class="gb-wcard__title">Suivi en temps réel</h3>
+            <p class="gb-wcard__desc">Chaque étape, chaque partie visible.</p>
+          </div>
+          <div class="gb-wcard__door">
+            <span class="gb-wcard__hint">Démo en direct</span>
+            <a class="gb-wcard__link" href="how-it-works.html#escrow-lifecycle">Démo →</a>
+          </div>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="map-pin"></i></div>
-          <h3 class="feature-card__title">Suivi de commande en temps réel</h3>
-          <p class="feature-card__desc">
-            Suivez votre commande à chaque étape — de la confirmation à la préparation, livraison et réception. Notifications push et alertes in-app. Sachez toujours où est votre bétail.
-          </p>
+        <div class="gb-wcard gb-wcard--hero">
+          <div class="gb-wcard__body">
+            <div class="gb-wcard__icon"><i data-feather="credit-card"></i></div>
+            <h3 class="gb-wcard__title">Portefeuille & mobile money</h3>
+            <p class="gb-wcard__desc">Déposez, payez, transférez, retirez.</p>
+          </div>
+          <div class="gb-wcard__door">
+            <span class="gb-wcard__hint">Portefeuille</span>
+            <a class="gb-wcard__link" href="#wallet">Ouvrir →</a>
+          </div>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="mic"></i></div>
-          <h3 class="feature-card__title">Descriptions et avis vocaux</h3>
-          <p class="feature-card__desc">
-            Le taux d'alphabétisation adulte au Mali est d'environ 31 % (UNESCO/Banque mondiale, 2020). La voix n'est pas une fonctionnalité — c'est une nécessité. Les vendeurs décrivent leur bétail en parlant. Les acheteurs laissent des avis vocaux. Aucune saisie requise.
-          </p>
+        <!-- Cartes simples (rangée du bas) : elles soutiennent, sans maquette -->
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="globe"></i></div>
+          <h3 class="gb-wcard__title">Multi-devises & diaspora</h3>
+          <p class="gb-wcard__desc">Payez depuis n'importe où ; la famille reçoit en CFA.</p>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="credit-card"></i></div>
-          <h3 class="feature-card__title">Portefeuille numerique et mobile money <span class="status-pill status-pill--live">LIVE</span></h3>
-          <p class="feature-card__desc">
-            Un portefeuille complet avec code PIN securise, historique des transactions et transferts de portefeuille a portefeuille. Deposez des fonds par carte ou mobile money. Payez avec Orange Money, Moov Money, Wave parmi plusieurs autres — disponible au Mali, Senegal, Cote d'Ivoire, Burkina Faso, Benin, Togo et Cameroun. Retrait bancaire disponible.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="message-square"></i></div>
+          <h3 class="gb-wcard__title">Descriptions & avis vocaux</h3>
+          <p class="gb-wcard__desc">Décrivez et évaluez à la voix — sans saisie.</p>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="users"></i></div>
-          <h3 class="feature-card__title">Réseau de prestataires</h3>
-          <p class="feature-card__desc">
-            Réservez des bouchers, livreurs et vétérinaires vérifiés directement dans l'application. Chaque prestataire est noté, évalué et payé via le même système de séquestre.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="users"></i></div>
+          <h3 class="gb-wcard__title">Réseau de prestataires</h3>
+          <p class="gb-wcard__desc">Bouchers, vétérinaires et transporteurs vérifiés.</p>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon"><i data-feather="type"></i></div>
-          <h3 class="feature-card__title">Application multilingue</h3>
-          <p class="feature-card__desc">
-            Interface complète en français, anglais et arabe (avec support droite-à-gauche). Vocabulaire spécialisé du bétail. Descriptions et avis vocaux dans toute langue — bambara, mooré, haoussa, fulfulde, wolof et plus.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="type"></i></div>
+          <h3 class="gb-wcard__title">Application multilingue</h3>
+          <p class="gb-wcard__desc">Français, anglais, arabe — avec droite-à-gauche.</p>
         </div>
       </div>
     </div>
@@ -329,29 +327,29 @@
       </div>
       <div class="gb reveal" style="margin-top: var(--space-2xl);">
         <p style="text-align:center; max-width:660px; margin:0 auto var(--space-xl); color: var(--text-secondary);">
-          <strong>Pour les vendeurs et prestataires :</strong> votre commission baisse à mesure que vous parrainez vos pairs. Les frais de service standard de 5 % diminuent à chaque parrainage actif, et chaque nouveau relance le compteur à votre palier.
+          <strong>5 % seulement, jamais plus · plancher de 2 %.</strong> C'est la promesse durable. Pour les vendeurs et prestataires, la commission peut baisser davantage, pour une durée limitée, à mesure que vous parrainez vos pairs : chaque parrainage actif réduit votre taux à votre palier, et chaque nouveau relance le compteur.
         </p>
         <div class="gb-tiers">
           <div class="gb-tier gb-tier--bronze">
             <span class="gb-tier__badge"><i data-feather="award"></i></span>
             <div class="gb-tier__name">Bronze</div>
-            <div class="gb-tier__reqs">dès 1 parrainage</div>
-            <div class="gb-tier__pct" dir="ltr">−2 %</div>
-            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 3 %</span></div>
+            <div class="gb-tier__reqs">3 parrainages</div>
+            <div class="gb-tier__pct" dir="ltr">−1 %</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 4 %</span></div>
             <span class="gb-tier__dur">30 jours</span>
           </div>
           <div class="gb-tier gb-tier--silver">
             <span class="gb-tier__badge"><i data-feather="award"></i></span>
             <div class="gb-tier__name">Argent</div>
-            <div class="gb-tier__reqs">dès 3 parrainages</div>
-            <div class="gb-tier__pct" dir="ltr">−2,5 %</div>
-            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 2,5 %</span></div>
+            <div class="gb-tier__reqs">6 parrainages</div>
+            <div class="gb-tier__pct" dir="ltr">−2 %</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 3 %</span></div>
             <span class="gb-tier__dur">45 jours</span>
           </div>
           <div class="gb-tier gb-tier--gold">
             <span class="gb-tier__badge"><i data-feather="award"></i></span>
             <div class="gb-tier__name">Or</div>
-            <div class="gb-tier__reqs">dès 6 parrainages</div>
+            <div class="gb-tier__reqs">12 parrainages</div>
             <div class="gb-tier__pct" dir="ltr">−3 %</div>
             <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 2 %</span></div>
             <span class="gb-tier__dur">60 jours</span>
@@ -366,7 +364,7 @@
           <span class="gb-ladder__arrow">→</span>
           <div class="gb-ladder__step gb-ladder__step--confiance"><span class="gb-ladder__badge"><i data-feather="shield"></i></span><span class="gb-ladder__name">De confiance</span><span class="gb-ladder__req">plafonds ↑</span></div>
         </div>
-        <p class="gb gb-strip" style="margin-top: var(--space-xl);">Réduction sur la commission vendeur de 5 %, <strong>jamais sous le plancher de 2 %</strong>. Même rôle uniquement : les vendeurs parrainent des vendeurs, les prestataires des prestataires. Les acheteurs qui invitent gagnent plutôt du crédit dans leur portefeuille.</p>
+        <p class="gb gb-strip" style="margin-top: var(--space-xl);"><strong>Réductions temporaires</strong> sur la commission vendeur de 5 %, <strong>jamais sous le plancher de 2 %</strong>. Même rôle uniquement : les vendeurs parrainent des vendeurs, les prestataires des prestataires. Les acheteurs qui invitent gagnent plutôt du crédit dans leur portefeuille. Conditions applicables.</p>
         <div class="btn-group" style="justify-content:center; margin-top: var(--space-xl);">
           <a href="https://wa.me/?text=Découvre%20Garabaly%20—%20la%20marketplace%20de%20confiance%20pour%20le%20bétail.%20https://www.garabaly.com/get-the-app.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Partager via WhatsApp</a>
           <a href="/fr/get-the-app.html" class="btn btn--secondary">Obtenir l'app pour parrainer</a>
@@ -565,7 +563,7 @@
         <div class="step reveal">
           <div class="step__number">6</div>
           <h3 class="step__title">Confirmer avec le code</h3>
-          <p class="step__desc">Utilisez votre code unique de 6 caractères pour vérifier la livraison. Les prestataires sont payés immédiatement. Le paiement du vendeur est retenu pendant une fenêtre de protection acheteur de 24 heures.</p>
+          <p class="step__desc">Utilisez votre code unique de 6 caractères pour vérifier la livraison. Rien n'est versé tant que vous ne l'avez pas saisi — ensuite les prestataires sont payés et la part du vendeur entre dans une fenêtre de protection acheteur de 24 heures.</p>
         </div>
       </div>
 
@@ -623,7 +621,7 @@
           <span class="section-eyebrow">Votre argent est en sécurité</span>
           <h2 class="section-title">Protection par séquestre<br>pour chaque transaction</h2>
           <p class="section-subtitle">
-            Dans le commerce traditionnel du bétail, envoyer de l'argent à un inconnu est un acte de foi. Garabaly élimine ce risque grâce à un séquestre par étapes avec allocation par partie, des transactions chiffrées et la détection de fraude. Un seul blocage en séquestre, allocation par partie — chaque prestataire est payé dès que son étape est terminée.
+            Dans le commerce traditionnel du bétail, envoyer de l'argent à un inconnu est un acte de foi. Garabaly élimine ce risque grâce à un séquestre avec allocation par partie, des transactions chiffrées et la détection de fraude. Un seul blocage en séquestre : rien n'est versé tant que vous n'avez pas saisi votre code — que la commande soit indépendante ou groupée. Dès que vous le saisissez, les prestataires sont payés et la part du vendeur entre dans une fenêtre de contestation acheteur de 24 heures.
           </p>
           <p><a href="faq.html" class="inline-faq-link">Des questions sur le séquestre ? → Voir notre FAQ</a></p>
           <div class="trust-features">
@@ -638,7 +636,7 @@
               <div class="trust-feature__icon"><i data-feather="clock"></i></div>
               <div class="trust-feature__text">
                 <h4>Fenêtre de protection acheteur 24h</h4>
-                <p>Après réception du bétail et confirmation avec votre code, le paiement du vendeur est retenu pendant 24 heures. Pendant cette fenêtre, vous pouvez ouvrir un litige. Les prestataires (boucher, vétérinaire, livreur) sont payés immédiatement — la fenêtre de 24h s'applique uniquement à la part du vendeur.</p>
+                <p>Rien n'est versé tant que vous n'avez pas saisi votre code. Dès que vous le saisissez, les prestataires (boucher, vétérinaire, livreur) sont payés et le paiement du vendeur entre dans une fenêtre de 24 heures pendant laquelle vous pouvez ouvrir un litige — la fenêtre de 24h s'applique uniquement à la part du vendeur.</p>
               </div>
             </div>
             <div class="trust-feature">
@@ -1056,8 +1054,8 @@
           <div class="stat-item__label">Transferts vers l'Afrique (Banque mondiale 2024)</div>
         </div>
         <div class="stat-item">
-          <div class="stat-item__value" data-count="860000" data-suffix="+">860K+</div>
-          <div class="stat-item__label">Moutons pour la Tabaski au Senegal (APS 2026)</div>
+          <div class="stat-item__value" data-count="1035042" data-suffix="+">1M+</div>
+          <div class="stat-item__label">Moutons recensés pour la Tabaski 2026 · Sénégal (Min. de l'Agriculture)</div>
         </div>
         <div class="stat-item">
           <div class="stat-item__value" data-count="517000000">517M</div>

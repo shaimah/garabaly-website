@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css?v=18">
+  <link rel="stylesheet" href="css/styles.css?v=19">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -460,9 +460,9 @@
         </div>
 
         <div class="policy-block">
-          <h3>2. The Per-Party Staged Escrow Lifecycle</h3>
+          <h3>2. The Per-Party Escrow Lifecycle</h3>
           <p>
-            Every Garabaly transaction follows a per-party staged escrow process. Sellers pre-approve before checkout, so payment is only possible once the deal is accepted. After delivery, the buyer has a <strong>24-hour dispute window</strong> to raise issues before the seller's share is released; service providers are paid immediately upon completion of their part of the order.
+            Every Garabaly transaction follows a per-party escrow process. Sellers pre-approve before checkout, so payment is only possible once the deal is accepted. Nothing is released until the buyer enters their confirmation code. The moment the buyer enters it, the service providers are paid and the seller's share enters a <strong>24-hour dispute window</strong> before it is released. One code releases the whole order — independent or bundled — with no per-step payout.
           </p>
 
           <div class="escrow-stages">
@@ -478,7 +478,7 @@
               <div class="escrow-stage__number">2</div>
               <div class="escrow-stage__content">
                 <h4>Releasing</h4>
-                <p>Delivery is in progress or completed. Service providers (if booked) are paid immediately upon completion of their services. The seller's share remains in escrow during the <strong>24-hour buyer dispute window</strong> after delivery. The buyer may enter their confirmation code to confirm satisfaction or file a dispute within 24 hours.</p>
+                <p>Delivery is in progress or completed and the buyer has entered their confirmation code — nothing is released before that. Once the code is entered, the service providers (if booked) are paid, and the seller's share remains in escrow during the <strong>24-hour buyer dispute window</strong> after delivery, during which the buyer may file a dispute.</p>
               </div>
             </div>
 
@@ -516,7 +516,7 @@
             After delivery, the buyer has a <strong>24-hour dispute window</strong> to inspect the livestock or service and either confirm satisfaction (by entering the confirmation code) or file a dispute:
           </p>
           <ul>
-            <li>The seller's share of escrowed funds is held for this 24-hour period. Service providers are paid immediately upon completion of their part of the order.</li>
+            <li>The seller's share of escrowed funds is held for this 24-hour period. Service providers are paid the moment the buyer enters their confirmation code — never before, and with no per-step payout.</li>
             <li>If the buyer enters the confirmation code, the seller's share is released immediately.</li>
             <li>If the buyer files a dispute within 24 hours, funds remain locked until the dispute is resolved.</li>
             <li>If 24 hours pass with no dispute and no confirmation code entered, Garabaly may release the seller's share according to platform rules.</li>
@@ -550,7 +550,7 @@
         <div class="policy-block">
           <h3>7. Refund & Dispute Policy</h3>
           <p>
-            <strong>Buyer dispute window:</strong> Buyers have a 24-hour window after delivery to dispute the <strong>seller portion only</strong>. Service provider payments are released <strong>immediately</strong> upon completion and are <strong>not</strong> subject to the 24-hour window. If the seller or any service provider does not confirm pre-checkout, no funds are captured. Escrow stages: <strong>Funded</strong> → <strong>Releasing</strong> → <strong>Released</strong> → <strong>Disputed/Refunded</strong>.
+            <strong>Buyer dispute window:</strong> Buyers have a 24-hour window after delivery to dispute the <strong>seller portion only</strong>. Nothing is released before the buyer enters their confirmation code; service-provider payments are released the moment the code is entered (never before, with no per-step payout) and are <strong>not</strong> subject to the 24-hour window, which applies to the seller share only. If the seller or any service provider does not confirm pre-checkout, no funds are captured. Escrow stages: <strong>Funded</strong> → <strong>Releasing</strong> → <strong>Released</strong> → <strong>Disputed/Refunded</strong>.
           </p>
           <h4>7.1 Filing a Dispute</h4>
           <p>
