@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=11">
+<link rel="stylesheet" href="../css/styles.css?v=12">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -393,6 +393,86 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- ===== §3.10 Négociation à la voix ===== -->
+      <div class="gb gb-neg reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-2xl);">
+          <span class="section-eyebrow">La négociation, à la voix</span>
+          <h2 class="section-title">Négociez librement.<br>Nous sécurisons le paiement.</h2>
+          <p class="section-subtitle">
+            Discutez par la voix ou par écrit, dans votre langue. Garabaly ne fixe jamais le prix — vous vous mettez d'accord, le vendeur ajuste au montant convenu, et vous validez avant que l'argent ne parte en séquestre.
+          </p>
+        </div>
+
+        <div class="gb-neg__grid">
+          <!-- Fil de discussion -->
+          <div class="gb-chat">
+            <div class="gb-chat__head">
+              <div class="gb-chat__avatar"><i data-feather="user"></i></div>
+              <div class="gb-chat__who">
+                <div class="gb-chat__name">Amadou Diallo <span class="gb-chat__badge">VENDEUR</span></div>
+                <div class="gb-chat__status">En ligne</div>
+              </div>
+              <i data-feather="phone" style="color: var(--gb-muted); width: 18px; height: 18px;"></i>
+            </div>
+            <div class="gb-chat__body">
+              <div class="gb-ref">
+                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+                <div><small>À propos de cette annonce</small><strong>Bélier Bali · <span dir="ltr">FCFA 152 000</span></strong></div>
+              </div>
+              <div class="gb-bubble gb-bubble--them">Bienvenue ! C'est un très bon bélier, bien nourri et prêt pour la Tabaski.</div>
+              <div class="gb-bubble gb-bubble--me">
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:12</span></div>
+              </div>
+              <div class="gb-bubble gb-bubble--them">
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:08</span></div>
+              </div>
+              <div class="gb-bubble gb-bubble--me">Pouvez-vous faire <span dir="ltr">FCFA 135 000</span> ?</div>
+              <div class="gb-bubble gb-bubble--them">D'accord, comme convenu. Je modifie le prix maintenant.</div>
+            </div>
+            <div class="gb-chat__input">
+              Message…
+              <span class="gb-mic"><i data-feather="mic"></i></span>
+            </div>
+          </div>
+
+          <!-- Colonne droite : vidéo + proposition de prix -->
+          <div class="gb-neg__col">
+            <div class="gb-video" data-video="negotiation">
+              <div class="gb-video__fallback">Voir une vraie négociation, à la voix</div>
+              <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+              <div class="gb-video__cap">Négocier un prix · 0:32</div>
+              <video preload="none" playsinline data-src="../assets/video/demo-negotiation.mp4"></video>
+            </div>
+
+            <div class="gb-proposal">
+              <div class="gb-proposal__head">Le vendeur a modifié le prix</div>
+              <div class="gb-ref" style="margin-bottom: var(--space-sm);">
+                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+                <div><small>Bélier Bali</small><strong>Demande de commande</strong></div>
+              </div>
+              <div class="gb-proposal__prices">
+                <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
+                <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
+              </div>
+              <p class="gb-proposal__reason">Raison : comme convenu</p>
+              <div class="gb-proposal__actions">
+                <span class="gb-btn gb-btn--accept">Accepter</span>
+                <span class="gb-btn gb-btn--refuse">Refuser</span>
+              </div>
+              <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> Paiement sécurisé — protégé par séquestre</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gb-flowstrip">
+          <span><b>1</b> Vous convenez d'un prix</span> →
+          <span><b>2</b> Vous soumettez la demande</span> →
+          <span><b>3</b> Le vendeur ajuste le prix</span> →
+          <span><b>4</b> Vous validez</span> →
+          <span class="gb-flowstrip__end">séquestre</span>
         </div>
       </div>
     </div>
@@ -888,7 +968,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=7"></script>
+  <script src="../js/main.js?v=8"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

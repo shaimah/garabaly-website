@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=11">
+<link rel="stylesheet" href="../css/styles.css?v=12">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -393,6 +393,86 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- ===== §3.10 التفاوض بالصوت ===== -->
+      <div class="gb gb-neg reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-2xl);">
+          <span class="section-eyebrow">التفاوض، بالصوت</span>
+          <h2 class="section-title">فاوِض بحرّية.<br>ونحن نؤمّن الدفع.</h2>
+          <p class="section-subtitle">
+            تحدّث بالصوت أو كتابةً، بلغتك. Garabaly لا تحدّد السعر أبداً — تتّفقان على السعر، ثم يعدّله البائع إلى المبلغ المتّفَق عليه، وتوافق أنت قبل أن ينتقل المال إلى الضمان.
+          </p>
+        </div>
+
+        <div class="gb-neg__grid">
+          <!-- خيط المحادثة -->
+          <div class="gb-chat">
+            <div class="gb-chat__head">
+              <div class="gb-chat__avatar"><i data-feather="user"></i></div>
+              <div class="gb-chat__who">
+                <div class="gb-chat__name">أمادو ديالو <span class="gb-chat__badge">بائع</span></div>
+                <div class="gb-chat__status">متصل</div>
+              </div>
+              <i data-feather="phone" style="color: var(--gb-muted); width: 18px; height: 18px;"></i>
+            </div>
+            <div class="gb-chat__body">
+              <div class="gb-ref">
+                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+                <div><small>بشأن هذا الإعلان</small><strong>كبش بالي · <span dir="ltr">FCFA 152 000</span></strong></div>
+              </div>
+              <div class="gb-bubble gb-bubble--them">مرحباً! إنه كبش ممتاز، حسن التغذية وجاهز لعيد الأضحى.</div>
+              <div class="gb-bubble gb-bubble--me">
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:12</span></div>
+              </div>
+              <div class="gb-bubble gb-bubble--them">
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:08</span></div>
+              </div>
+              <div class="gb-bubble gb-bubble--me">هل يمكنك أن تجعله <span dir="ltr">FCFA 135 000</span>؟</div>
+              <div class="gb-bubble gb-bubble--them">حسناً، كما اتفقنا. سأعدّل السعر الآن.</div>
+            </div>
+            <div class="gb-chat__input">
+              رسالة…
+              <span class="gb-mic"><i data-feather="mic"></i></span>
+            </div>
+          </div>
+
+          <!-- العمود الأيسر: فيديو + اقتراح السعر -->
+          <div class="gb-neg__col">
+            <div class="gb-video" data-video="negotiation">
+              <div class="gb-video__fallback">شاهد تفاوضاً حقيقياً، بالصوت</div>
+              <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+              <div class="gb-video__cap">التفاوض على السعر · <span dir="ltr">0:32</span></div>
+              <video preload="none" playsinline data-src="../assets/video/demo-negotiation.mp4"></video>
+            </div>
+
+            <div class="gb-proposal">
+              <div class="gb-proposal__head">عدّل البائع السعر</div>
+              <div class="gb-ref" style="margin-bottom: var(--space-sm);">
+                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+                <div><small>كبش بالي</small><strong>طلب شراء</strong></div>
+              </div>
+              <div class="gb-proposal__prices">
+                <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
+                <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
+              </div>
+              <p class="gb-proposal__reason">السبب: كما اتفقنا</p>
+              <div class="gb-proposal__actions">
+                <span class="gb-btn gb-btn--accept">قبول</span>
+                <span class="gb-btn gb-btn--refuse">رفض</span>
+              </div>
+              <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> دفع آمن — محمي بالضمان</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gb-flowstrip">
+          <span><b>1</b> تتّفقان على السعر</span> ←
+          <span><b>2</b> ترسل الطلب</span> ←
+          <span><b>3</b> يعدّل البائع السعر</span> ←
+          <span><b>4</b> توافق</span> ←
+          <span class="gb-flowstrip__end">الضمان</span>
         </div>
       </div>
     </div>
@@ -885,7 +965,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=7"></script>
+  <script src="../js/main.js?v=8"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

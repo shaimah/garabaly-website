@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLangSwitcher();
   initFloatingMobileCta();
   initRevolutionQr();
+  initLazyVideo();
   initTracking();
 });
 
@@ -490,4 +491,22 @@ function initRevolutionQr() {
     });
   }, { threshold: 0.4 });
   io.observe(el);
+}
+
+/* --- §4.1 Lazy inline demo video: load the file + play on first tap --- */
+function initLazyVideo() {
+  document.querySelectorAll('.gb-video').forEach(function (box) {
+    box.addEventListener('click', function () {
+      if (box.classList.contains('is-playing')) return;
+      const video = box.querySelector('video');
+      if (!video) return;
+      const src = video.getAttribute('data-src');
+      if (src && !video.getAttribute('src')) video.setAttribute('src', src);
+      box.classList.add('is-playing');
+      video.setAttribute('controls', '');
+      const p = video.play();
+      if (p && typeof p.catch === 'function') p.catch(function () {});
+      track('demo_video_play', { id: box.getAttribute('data-video') || '' });
+    });
+  });
 }
