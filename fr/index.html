@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#2D2D2D">
   <title>Garabaly - Marché du Bétail en Ligne | Afrique de l'Ouest</title>
   <meta name="description" content="Garabaly : Votre bétail. Votre argent. Votre confiance. Marché sécurisé — séquestre, mobile money (Orange, Wave, Moov), messagerie vocale. Mali, Sénégal, Burkina Faso, Côte d'Ivoire.">
-  <meta name="keywords" content="marché bétail, vendre bétail, acheter mouton, commerce bétail, plateforme élevage, bétail Sénégal, bétail Mali, Tabaski, escrow, mobile money, Afrique de l'Ouest">
+  <meta name="keywords" content="marché bétail, vendre bétail, acheter mouton, commerce bétail, plateforme élevage, bétail Sénégal, bétail Mali, Tabaski, séquestre, mobile money, Afrique de l'Ouest">
   <link rel="canonical" href="https://www.garabaly.com/fr/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Garabaly">
@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=10">
+<link rel="stylesheet" href="../css/styles.css?v=14">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -327,9 +327,47 @@
         <div class="feature-card reveal"><h3 class="feature-card__title">2. Invitez des vendeurs</h3><p class="feature-card__desc">Aidez un eleveur a rejoindre la plateforme. Quand il realise sa premiere vente, vous gagnez un bonus.</p></div>
         <div class="feature-card reveal"><h3 class="feature-card__title">3. Invitez des prestataires</h3><p class="feature-card__desc">Vous connaissez un boucher, un veterinaire ou un livreur ? Connectez-les au reseau Garabaly.</p></div>
       </div>
-      <div class="reveal" style="margin-top: var(--space-xl);">
-        <p><strong>Ce que vous obtenez :</strong> 2 000 XOF de crédit bonus par parrainage réussi, 500 XOF de bonus de bienvenue par nouvelle invitation, et des réductions de frais à mesure que vous progressez (Bronze 5+, Argent 15+, Or 30+ parrainages).</p>
-        <div class="btn-group" style="margin-top: var(--space-md);">
+      <div class="gb reveal" style="margin-top: var(--space-2xl);">
+        <p style="text-align:center; max-width:660px; margin:0 auto var(--space-xl); color: var(--text-secondary);">
+          <strong>Pour les vendeurs et prestataires :</strong> votre commission baisse à mesure que vous parrainez vos pairs. Les frais de service standard de 5 % diminuent à chaque parrainage actif, et chaque nouveau relance le compteur à votre palier.
+        </p>
+        <div class="gb-tiers">
+          <div class="gb-tier gb-tier--bronze">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">Bronze</div>
+            <div class="gb-tier__reqs">dès 1 parrainage</div>
+            <div class="gb-tier__pct" dir="ltr">−2 %</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 3 %</span></div>
+            <span class="gb-tier__dur">30 jours</span>
+          </div>
+          <div class="gb-tier gb-tier--silver">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">Argent</div>
+            <div class="gb-tier__reqs">dès 3 parrainages</div>
+            <div class="gb-tier__pct" dir="ltr">−2,5 %</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 2,5 %</span></div>
+            <span class="gb-tier__dur">45 jours</span>
+          </div>
+          <div class="gb-tier gb-tier--gold">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">Or</div>
+            <div class="gb-tier__reqs">dès 6 parrainages</div>
+            <div class="gb-tier__pct" dir="ltr">−3 %</div>
+            <div class="gb-tier__detail">Commission <span dir="ltr">5 % → 2 %</span></div>
+            <span class="gb-tier__dur">60 jours</span>
+          </div>
+        </div>
+        <div class="gb-ladder">
+          <div class="gb-ladder__step gb-ladder__step--parrain"><span class="gb-ladder__badge"><i data-feather="user-plus"></i></span><span class="gb-ladder__name">Parrain</span><span class="gb-ladder__req">3 parrainages</span></div>
+          <span class="gb-ladder__arrow">→</span>
+          <div class="gb-ladder__step gb-ladder__step--ambassadeur"><span class="gb-ladder__badge"><i data-feather="award"></i></span><span class="gb-ladder__name">Ambassadeur</span><span class="gb-ladder__req">10 parrainages</span></div>
+          <span class="gb-ladder__arrow">→</span>
+          <div class="gb-ladder__step gb-ladder__step--champion"><span class="gb-ladder__badge"><i data-feather="star"></i></span><span class="gb-ladder__name">Champion</span><span class="gb-ladder__req">25 parrainages</span></div>
+          <span class="gb-ladder__arrow">→</span>
+          <div class="gb-ladder__step gb-ladder__step--confiance"><span class="gb-ladder__badge"><i data-feather="shield"></i></span><span class="gb-ladder__name">De confiance</span><span class="gb-ladder__req">plafonds ↑</span></div>
+        </div>
+        <p class="gb gb-strip" style="margin-top: var(--space-xl);">Réduction sur la commission vendeur de 5 %, <strong>jamais sous le plancher de 2 %</strong>. Même rôle uniquement : les vendeurs parrainent des vendeurs, les prestataires des prestataires. Les acheteurs qui invitent gagnent plutôt du crédit dans leur portefeuille.</p>
+        <div class="btn-group" style="justify-content:center; margin-top: var(--space-xl);">
           <a href="https://wa.me/?text=Découvre%20Garabaly%20—%20la%20marketplace%20de%20confiance%20pour%20le%20bétail.%20https://www.garabaly.com/get-the-app.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Partager via WhatsApp</a>
           <a href="/fr/get-the-app.html" class="btn btn--secondary">Obtenir l'app pour parrainer</a>
         </div>
@@ -393,6 +431,91 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- ===== §3.10 Négociation à la voix ===== -->
+      <div class="gb gb-neg reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-2xl);">
+          <span class="section-eyebrow">La négociation, à la voix</span>
+          <h2 class="section-title">Négociez librement.<br>Nous sécurisons le paiement.</h2>
+          <p class="section-subtitle">
+            Discutez par la voix ou par écrit, dans votre langue. Garabaly ne fixe jamais le prix — vous vous mettez d'accord, le vendeur ajuste au montant convenu, et vous validez avant que l'argent ne parte en séquestre.
+          </p>
+        </div>
+
+        <div class="gb-neg__grid">
+          <!-- Fil de discussion -->
+          <div class="gb-chat">
+            <div class="gb-chat__head">
+              <div class="gb-chat__avatar"><i data-feather="user"></i></div>
+              <div class="gb-chat__who">
+                <div class="gb-chat__name">Amadou Diallo <span class="gb-chat__badge">VENDEUR</span></div>
+                <div class="gb-chat__status">En ligne</div>
+              </div>
+              <i data-feather="phone" style="color: var(--gb-muted); width: 18px; height: 18px;"></i>
+            </div>
+            <div class="gb-chat__body">
+              <div class="gb-ref">
+                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+                <div><small>Concernant cette annonce</small><strong>Mouton Bali · <span dir="ltr">FCFA 152 000</span></strong></div>
+              </div>
+              <div class="gb-safety">
+                <span class="gb-safety__ic"><i data-feather="shield"></i></span>
+                <span>Pour votre sécurité, gardez vos échanges sur Garabaly et inspectez les animaux avant de payer. En cas de signalement, les modérateurs peuvent consulter la conversation.</span>
+                <span class="gb-safety__x"><i data-feather="x"></i></span>
+              </div>
+              <div class="gb-bubble gb-bubble--them">Bienvenue ! C'est un très bon bélier, bien nourri et prêt pour la Tabaski.</div>
+              <div class="gb-bubble gb-bubble--me">
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:12</span></div>
+              </div>
+              <div class="gb-bubble gb-bubble--them">
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:08</span></div>
+              </div>
+              <div class="gb-bubble gb-bubble--me">Pouvez-vous faire <span dir="ltr">FCFA 135 000</span> ?</div>
+              <div class="gb-bubble gb-bubble--them">D'accord, comme convenu. Je modifie le prix maintenant.</div>
+            </div>
+            <div class="gb-chat__input">
+              Message…
+              <span class="gb-mic"><i data-feather="mic"></i></span>
+            </div>
+          </div>
+
+          <!-- Colonne droite : vidéo + proposition de prix -->
+          <div class="gb-neg__col">
+            <div class="gb-video" data-video="negotiation">
+              <div class="gb-video__fallback">Voir une vraie négociation, à la voix</div>
+              <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+              <div class="gb-video__cap">Négocier un prix · 0:32</div>
+              <video preload="none" playsinline poster="../assets/video/negotiation-poster.jpg" data-src="../assets/video/demo-negotiation.mp4"></video>
+            </div>
+
+            <div class="gb-proposal">
+              <div class="gb-proposal__head">Le vendeur a modifié le prix</div>
+              <div class="gb-ref" style="margin-bottom: var(--space-sm);">
+                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+                <div><small>Mouton Bali</small><strong>Demande de commande</strong></div>
+              </div>
+              <div class="gb-proposal__prices">
+                <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
+                <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
+              </div>
+              <p class="gb-proposal__reason">Raison : comme convenu</p>
+              <div class="gb-proposal__actions">
+                <span class="gb-btn gb-btn--accept">Accepter</span>
+                <span class="gb-btn gb-btn--refuse">Refuser</span>
+              </div>
+              <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> Paiement sécurisé — protégé par séquestre</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gb-flowstrip">
+          <span><b>1</b> Vous convenez d'un prix</span> →
+          <span><b>2</b> Vous soumettez la demande</span> →
+          <span><b>3</b> Le vendeur ajuste le prix</span> →
+          <span><b>4</b> Vous validez</span> →
+          <span class="gb-flowstrip__end">séquestre</span>
         </div>
       </div>
     </div>
@@ -467,7 +590,7 @@
       <div class="gb reveal" style="max-width: 420px; margin: 0 auto;">
         <div class="gb-wallet">
           <img class="gb-wallet__watermark" src="../assets/images/logo.svg" alt="" aria-hidden="true">
-          <div class="gb-wallet__top"><span class="gb-wallet__badge">✓ Vérifié escrow</span><i data-feather="eye"></i></div>
+          <div class="gb-wallet__top"><span class="gb-wallet__badge">✓ Vérifié séquestre</span><i data-feather="eye"></i></div>
           <p class="gb-wallet__label">Portefeuille Garabaly</p>
           <p class="gb-wallet__balance" dir="ltr">FCFA 796 930</p>
           <p class="gb-wallet__sub">Fonds retirables</p>
@@ -543,67 +666,49 @@
   <section class="section" id="categories">
     <div class="container">
       <div class="section-header text-center reveal">
-        <span class="section-eyebrow">Parcourir par catégorie</span>
-        <h2 class="section-title">Trouvez le bon bétail</h2>
+        <span class="section-eyebrow">Trouvez le bon bétail</span>
+        <h2 class="section-title">Des milliers d'animaux, près de chez vous</h2>
         <p class="section-subtitle">
-          Des festins de mariage aux célébrations de la Tabaski, des baptêmes aux repas quotidiens — découvrez le bétail dans toutes les catégories.
+          Parcourez par photo, négociez directement avec le vendeur, puis payez en séquestre. De vraies annonces, des vendeurs vérifiés, des prix visibles.
         </p>
       </div>
 
-      <div class="carousel-wrapper">
-        <div class="categories-grid">
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f404.svg" alt="Bovin" width="64" height="64">
-              </div>
-              <div class="category-card__name">Bovins</div>
-              <div class="category-card__count">Disponible</div>
+      <div class="gb reveal">
+        <div class="gb-search"><i data-feather="search"></i><span>Rechercher un mouton pour Tabaski…</span></div>
+        <div class="gb-grid" style="max-width: 1080px; margin: 0 auto;">
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/hero-herder-1024.jpg" alt="Mouton Bali sur Garabaly" loading="lazy" decoding="async">
+              <span class="gb-listing__verif"><i data-feather="check"></i> Vendeur vérifié</span>
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">Mouton Bali · mâle, prêt pour la Tabaski</p>
+              <p class="gb-listing__price">FCFA 130 000</p>
+              <div class="gb-listing__meta"><span>📍 Bamako · Moussa Dicko</span><span class="gb-listing__rating">★ 4,8</span></div>
             </div>
           </div>
-
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f411.svg" alt="Mouton" width="64" height="64">
-              </div>
-              <div class="category-card__name">Ovins</div>
-              <div class="category-card__count">Disponible</div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/hero-banner-1280.jpg" alt="Zébu sahélien sur Garabaly" loading="lazy" decoding="async">
+              <span class="gb-listing__verif"><i data-feather="check"></i> Vendeur vérifié</span>
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">Zébu sahélien · robuste</p>
+              <p class="gb-listing__price">FCFA 450 000</p>
+              <div class="gb-listing__meta"><span>📍 Ségou · Fatou Traoré</span><span class="gb-listing__rating">★ 4,9</span></div>
             </div>
           </div>
-
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f410.svg" alt="Chèvre" width="64" height="64">
-              </div>
-              <div class="category-card__name">Caprins</div>
-              <div class="category-card__count">Disponible</div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/herder-portrait-1024.jpg" alt="Chèvres rousses sur Garabaly" loading="lazy" decoding="async">
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
-          </div>
-
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f413.svg" alt="Volaille" width="64" height="64">
-              </div>
-              <div class="category-card__name">Volaille</div>
-              <div class="category-card__count">Disponible</div>
-            </div>
-          </div>
-
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f42a.svg" alt="Chameau" width="64" height="64">
-              </div>
-              <div class="category-card__name">Chameaux</div>
-              <div class="category-card__count">Disponible</div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">Chèvres rousses · paire</p>
+              <p class="gb-listing__price">FCFA 60 000</p>
+              <div class="gb-listing__meta"><span>📍 Sikasso · Awa Coulibaly</span><span class="gb-listing__rating">★ 4,7</span></div>
             </div>
           </div>
         </div>
@@ -618,7 +723,7 @@
         <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
           <span class="section-eyebrow">Pour la diaspora</span>
           <h2 class="section-title">Envoyez un mouton à la maison — sans rappeler trois fois pour vérifier.</h2>
-          <p class="section-subtitle">De Paris à Bamako, votre paiement reste gelé en escrow jusqu'à ce qu'un proche reçoive la commande. Vous suivez chaque étape depuis votre téléphone.</p>
+          <p class="section-subtitle">De Paris à Bamako, votre paiement reste gelé en séquestre jusqu'à ce qu'un proche reçoive la commande. Vous suivez chaque étape depuis votre téléphone.</p>
         </div>
         <div class="gb-endpoints">
           <span class="gb-endpoint">Paris<small>Diaspora</small></span>
@@ -628,7 +733,7 @@
         <p class="gb-endpoints-note">Aussi depuis Londres, New York, Bruxelles, Montréal…</p>
         <div class="gb-nsteps" style="max-width: 960px; margin: 0 auto;">
           <div class="gb-nstep"><p class="gb-nstep__n">01</p><h3>Vous payez par carte</h3><p>Depuis n'importe quel pays. La devise locale est convertie automatiquement.</p></div>
-          <div class="gb-nstep"><p class="gb-nstep__n">02</p><h3>Les fonds sont gelés</h3><p>L'escrow protège l'argent jusqu'à la réception. Le vendeur ne touche rien avant.</p></div>
+          <div class="gb-nstep"><p class="gb-nstep__n">02</p><h3>Les fonds sont gelés</h3><p>Le séquestre protège l'argent jusqu'à la réception. Le vendeur ne touche rien avant.</p></div>
           <div class="gb-nstep gb-nstep--green"><p class="gb-nstep__n">03</p><h3>Livraison confirmée</h3><p>Le proche reçoit, entre le code, et les fonds sont versés. Vous êtes prévenu.</p></div>
         </div>
       </div>
@@ -906,7 +1011,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=7"></script>
+  <script src="../js/main.js?v=8"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

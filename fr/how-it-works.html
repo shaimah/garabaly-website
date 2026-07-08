@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=10">
+  <link rel="stylesheet" href="../css/styles.css?v=14">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -208,6 +208,12 @@
           </div>
         </div>
       </div>
+      <div class="gb-video" data-video="place-order" style="margin: var(--space-2xl) auto 0;">
+        <div class="gb-video__fallback">Passez commande, étape par étape</div>
+        <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+        <div class="gb-video__cap">Voyez-le dans l'appli · touchez pour lire</div>
+        <video preload="none" playsinline poster="../assets/video/place-order-poster.jpg" data-src="../assets/video/demo-place-order.mp4"></video>
+      </div>
     </div>
   </section>
 
@@ -282,7 +288,7 @@
           <span class="section-eyebrow">Le cœur de Garabaly</span>
           <h2 class="section-title">Vous suivez chaque étape.<br>Vous libérez les fonds.</h2>
           <p class="section-subtitle">
-            Dès votre paiement, les fonds sont gelés en escrow. Le vendeur ne reçoit rien tant que vous n'avez pas confirmé la réception — avec votre code à 6 caractères, que vous seul détenez.
+            Dès votre paiement, les fonds sont gelés en séquestre. Le vendeur ne reçoit rien tant que vous n'avez pas confirmé la réception — avec votre code à 6 caractères, que vous seul détenez.
           </p>
         </div>
         <div class="gb-order-card">
@@ -305,7 +311,13 @@
           </ol>
           <div class="gb-code-row"><span>Entrez votre code pour libérer les fonds</span><code class="gb-code">FLNTH9</code></div>
         </div>
-        <p class="gb-strip"><strong>Escrow de bout en bout</strong> · Chaque partie visible · Un code, à vous seul</p>
+        <p class="gb-strip"><strong>Séquestre de bout en bout</strong> · Chaque partie visible · Un code, à vous seul</p>
+        <div class="gb-video" data-video="track-order" style="margin-top: var(--space-2xl);">
+          <div class="gb-video__fallback">Suivez votre commande, en direct</div>
+          <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+          <div class="gb-video__cap">Voyez-le dans l'appli · touchez pour lire</div>
+          <video preload="none" playsinline poster="../assets/video/track-order-poster.jpg" data-src="../assets/video/demo-track-order.mp4"></video>
+        </div>
       </div>
     </div>
   </section>
@@ -371,7 +383,7 @@
           <ul class="gb-icard__mini"><li>Livraison · Boucher · Vétérinaire</li><li>1 animal + jusqu'à 3 services (1 de chaque)</li></ul>
         </div>
       </div>
-      <p class="gb gb-strip" style="margin-top: var(--space-lg);">Vous choisissez au panier — groupez ou laissez séparé. Toujours protégé par escrow.</p>
+      <p class="gb gb-strip" style="margin-top: var(--space-lg);">Vous choisissez au panier — groupez ou laissez séparé. Toujours protégé par séquestre.</p>
 
       <div class="gb" style="margin-top: var(--space-3xl);">
         <div class="section-header text-center reveal" style="margin-bottom: var(--space-xl);">
@@ -383,10 +395,53 @@
           <div class="gb-bitem"><div class="gb-bitem__icon"><i data-feather="feather"></i></div><div class="gb-bitem__text"><p class="gb-bitem__label">Bovin — Zébu sahélien</p><p class="gb-bitem__sub">Vendeur : Fatou Traoré ✓ vérifié</p></div><span class="gb-bitem__price">FCFA 450 000</span></div>
           <div class="gb-bitem"><div class="gb-bitem__icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4H5a1 1 0 0 0-1 1v3a4 4 0 0 0 8 0V5a1 1 0 0 0-1-1h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></div><div class="gb-bitem__text"><p class="gb-bitem__label">Service vétérinaire</p><p class="gb-bitem__sub">Dr. Diallo · contrôle santé avant départ</p></div><span class="gb-bitem__price">FCFA 25 000</span></div>
           <div class="gb-bitem"><div class="gb-bitem__icon"><i data-feather="truck"></i></div><div class="gb-bitem__text"><p class="gb-bitem__label">Livraison</p><p class="gb-bitem__sub">porte-à-porte · suivi en direct</p></div><span class="gb-bitem__price">FCFA 40 000</span></div>
-          <div class="gb-bundle__total"><span>Total protégé par escrow</span><span>FCFA 515 000</span></div>
+          <div class="gb-bundle__total"><span>Total protégé par séquestre</span><span>FCFA 515 000</span></div>
           <div class="gb-bundle__meta"><span>Livraison estimée sous 24 heures</span><span>·</span><code>ORD-7K2MNP4T-8Q3V</code><span>·</span><span>Code • • • • • •</span></div>
         </div>
         <p class="gb gb-strip" style="margin-top: var(--space-lg);"><strong>Une commande · Trois prestataires visibles · Un seul code, à vous seul</strong></p>
+      </div>
+
+      <!-- ===== §3.12 Organisation du flux ===== -->
+      <div class="gb reveal" style="margin-top: var(--space-3xl);">
+        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
+          <span class="section-eyebrow">Organisation du flux</span>
+          <h2 class="section-title">Vous fixez l'ordre.<br>Le vendeur passe toujours en premier.</h2>
+          <p class="section-subtitle">
+            Dans une commande groupée, vous organisez vous-même la séquence des étapes — glissez pour réordonner. Le vendeur est toujours verrouillé en premier ; vous décidez du reste. Chaque prestataire agit à son tour et n'est payé qu'une fois sa propre étape confirmée.
+          </p>
+        </div>
+        <div class="gb-flow">
+          <div class="gb-flow__row gb-flow__row--seller">
+            <span class="gb-flow__lock"><i data-feather="lock"></i></span>
+            <span class="gb-flow__ic"><i data-feather="user"></i></span>
+            <div class="gb-flow__txt"><strong>Vendeur — Mouton Bali</strong><small>Prépare l'animal</small></div>
+            <span class="gb-flow__locknote">Toujours 1<sup>er</sup></span>
+            <span class="gb-flow__num">1</span>
+          </div>
+          <div class="gb-flow__row gb-flow__row--vet">
+            <span class="gb-flow__grip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.4"/><circle cx="15" cy="6" r="1.4"/><circle cx="9" cy="12" r="1.4"/><circle cx="15" cy="12" r="1.4"/><circle cx="9" cy="18" r="1.4"/><circle cx="15" cy="18" r="1.4"/></svg></span>
+            <span class="gb-flow__ic"><i data-feather="activity"></i></span>
+            <div class="gb-flow__txt"><strong>Vétérinaire — contrôle santé</strong><small>Inspection &amp; certificat</small></div>
+            <span class="gb-flow__num">2</span>
+          </div>
+          <div class="gb-flow__row gb-flow__row--butcher">
+            <span class="gb-flow__grip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.4"/><circle cx="15" cy="6" r="1.4"/><circle cx="9" cy="12" r="1.4"/><circle cx="15" cy="12" r="1.4"/><circle cx="9" cy="18" r="1.4"/><circle cx="15" cy="18" r="1.4"/></svg></span>
+            <span class="gb-flow__ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
+            <div class="gb-flow__txt"><strong>Boucher — préparation halal</strong><small>Selon vos consignes</small></div>
+            <span class="gb-flow__num">3</span>
+          </div>
+          <div class="gb-flow__row gb-flow__row--delivery">
+            <span class="gb-flow__grip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.4"/><circle cx="15" cy="6" r="1.4"/><circle cx="9" cy="12" r="1.4"/><circle cx="15" cy="12" r="1.4"/><circle cx="9" cy="18" r="1.4"/><circle cx="15" cy="18" r="1.4"/></svg></span>
+            <span class="gb-flow__ic"><i data-feather="truck"></i></span>
+            <div class="gb-flow__txt"><strong>Livraison — jusqu'à votre porte</strong><small>Sous 24 heures</small></div>
+            <span class="gb-flow__num">4</span>
+          </div>
+        </div>
+        <p class="gb-flow__hint"><i data-feather="move"></i> Maintenez et faites glisser les cartes pour changer l'ordre — le vendeur reste toujours verrouillé en premier.</p>
+        <div class="gb-flowbtns">
+          <span class="gb-flowbtns__save">Enregistrer le flux</span>
+          <span class="gb-flowbtns__cancel">Annuler le regroupement</span>
+        </div>
       </div>
     </div>
   </section>
@@ -398,7 +453,7 @@
         <span class="section-eyebrow">Écosystème complet</span>
         <h2 class="section-title">Plus qu'une marketplace — un écosystème</h2>
         <p class="section-subtitle">
-          Au-delà de la marketplace, Garabaly vous connecte à un réseau grandissant de prestataires vérifiés — pour qu'une seule commande couvre l'animal et tout ce qui l'entoure, protégée par escrow de bout en bout.
+          Au-delà de la marketplace, Garabaly vous connecte à un réseau grandissant de prestataires vérifiés — pour qu'une seule commande couvre l'animal et tout ce qui l'entoure, protégée par séquestre de bout en bout.
         </p>
       </div>
       <div class="gb" style="max-width: 1000px; margin: 0 auto;">
@@ -409,7 +464,7 @@
             <p>Contrôle santé et certification de l'animal avant le départ.</p>
           </div>
           <div class="gb-icard reveal">
-            <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor" aria-hidden="true"><path d="M2.8 19.2c-.5-.5-.5-1.1 0-1.6L15.4 5a4.6 4.6 0 0 1 3.4-1.4c.7 0 1 .8.5 1.3L6.1 18.1a4 4 0 0 1-2.4 1.2c-.35.05-.65-.05-.9-.1z"/><rect x="16.3" y="16" width="6.4" height="2.5" rx="1.25" transform="rotate(45 16.3 16)"/></svg></div>
+            <div class="gb-icard__icon"><svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></div>
             <h3>Bouchers halal</h3>
             <p>Abattage halal et découpe selon le type d'animal et vos consignes.</p>
           </div>
@@ -419,7 +474,47 @@
             <p>Livraison porte-à-porte, suivie en direct jusqu'à vous.</p>
           </div>
         </div>
-        <p class="gb-strip" style="margin-top: var(--space-xl);"><strong>Chaque prestataire est vérifié</strong> — vous validez l'ensemble avec un seul code, protégé par escrow de bout en bout.</p>
+        <p class="gb-strip" style="margin-top: var(--space-xl);"><strong>Chaque prestataire est vérifié</strong> — vous validez l'ensemble avec un seul code, protégé par séquestre de bout en bout.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== §3.13 Tableau de bord prestataire ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="gb reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-xl);">
+          <span class="section-eyebrow">Pour les prestataires</span>
+          <h2 class="section-title">Vétérinaires, bouchers, transporteurs :<br>recevez des demandes, gagnez plus.</h2>
+          <p class="section-subtitle">
+            Rejoignez le réseau Garabaly. Recevez des demandes près de chez vous, acceptez en un geste, et soyez payé via séquestre à la fin de chaque prestation.
+          </p>
+        </div>
+        <div class="gb-dash">
+          <div class="gb-dash__head">
+            <div class="gb-dash__who">
+              <span class="gb-dash__avatar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></span>
+              <div>
+                <strong>Bonjour, Moussa <span class="gb-dash__verif"><i data-feather="check"></i> Vérifié</span></strong>
+                <small><span class="gb-dash__role"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg> Boucher</span></small>
+              </div>
+            </div>
+          </div>
+          <div class="gb-dash__banner"><i data-feather="bell"></i> Nouvelle demande</div>
+          <div class="gb-dash__job">
+            <div class="gb-dash__jobtop">
+              <span class="gb-dash__rolepill"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg> Boucher</span>
+              <span class="gb-dash__jobprice" dir="ltr">FCFA 15 000</span>
+            </div>
+            <p class="gb-dash__jobmeta"><strong>Awa Coulibaly</strong> · <span dir="ltr">+223 •• •• •• ••</span><br>Aujourd'hui · 14:30 · Abattage halal — mouton</p>
+            <div class="gb-dash__actions">
+              <span class="gb-btn gb-btn--refuse">Refuser</span>
+              <span class="gb-btn gb-btn--accept">Accepter</span>
+            </div>
+          </div>
+          <div class="gb-dash__inprog">Travaux en cours (4)</div>
+        </div>
+        <p class="gb gb-strip" style="margin-top: var(--space-lg);">Payé via séquestre à la fin de chaque prestation — aucune course, aucun risque d'espèces.</p>
       </div>
     </div>
   </section>
@@ -503,7 +598,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=7"></script>
+  <script src="../js/main.js?v=8"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>

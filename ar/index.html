@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=10">
+<link rel="stylesheet" href="../css/styles.css?v=14">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -327,9 +327,47 @@
         <div class="feature-card reveal"><h3 class="feature-card__title">2) ادعُ البائعين</h3><p class="feature-card__desc">عندما يُتم البائع أول عملية بيع تحصل على بونص.</p></div>
         <div class="feature-card reveal"><h3 class="feature-card__title">3) ادعُ مقدمي الخدمات</h3><p class="feature-card__desc">اعرف جزاراً أو طبيباً بيطرياً أو سائق توصيل؟ ضمه إلى شبكة غرابالي.</p></div>
       </div>
-      <div class="reveal" style="margin-top: var(--space-xl);">
-        <p><strong>ما تحصل عليه:</strong> 2,000 فرنك XOF رصيد إضافي عن كل إحالة ناجحة، و500 فرنك XOF مكافأة ترحيب عن كل دعوة جديدة، وتخفيضات على الرسوم كلما تقدّمت (برونزي 5+، فضي 15+، ذهبي 30+ إحالة).</p>
-        <div class="btn-group" style="margin-top: var(--space-md);">
+      <div class="gb reveal" style="margin-top: var(--space-2xl);">
+        <p style="text-align:center; max-width:660px; margin:0 auto var(--space-xl); color: var(--text-secondary);">
+          <strong>للبائعين ومقدّمي الخدمات:</strong> تنخفض عمولتك كلما أحلت زملاءك. تتقلّص رسوم الخدمة القياسية 5% مع كل إحالة نشطة، وكل إحالة جديدة تعيد ضبط المؤقّت على مستواك.
+        </p>
+        <div class="gb-tiers">
+          <div class="gb-tier gb-tier--bronze">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">برونزي</div>
+            <div class="gb-tier__reqs">من <span dir="ltr">1</span> إحالة</div>
+            <div class="gb-tier__pct" dir="ltr">−2%</div>
+            <div class="gb-tier__detail">العمولة <span dir="ltr">5% → 3%</span></div>
+            <span class="gb-tier__dur">30 يوماً</span>
+          </div>
+          <div class="gb-tier gb-tier--silver">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">فضّي</div>
+            <div class="gb-tier__reqs">من <span dir="ltr">3</span> إحالات</div>
+            <div class="gb-tier__pct" dir="ltr">−2.5%</div>
+            <div class="gb-tier__detail">العمولة <span dir="ltr">5% → 2.5%</span></div>
+            <span class="gb-tier__dur">45 يوماً</span>
+          </div>
+          <div class="gb-tier gb-tier--gold">
+            <span class="gb-tier__badge"><i data-feather="award"></i></span>
+            <div class="gb-tier__name">ذهبي</div>
+            <div class="gb-tier__reqs">من <span dir="ltr">6</span> إحالات</div>
+            <div class="gb-tier__pct" dir="ltr">−3%</div>
+            <div class="gb-tier__detail">العمولة <span dir="ltr">5% → 2%</span></div>
+            <span class="gb-tier__dur">60 يوماً</span>
+          </div>
+        </div>
+        <div class="gb-ladder">
+          <div class="gb-ladder__step gb-ladder__step--parrain"><span class="gb-ladder__badge"><i data-feather="user-plus"></i></span><span class="gb-ladder__name">راعٍ</span><span class="gb-ladder__req"><span dir="ltr">3</span> إحالات</span></div>
+          <span class="gb-ladder__arrow">←</span>
+          <div class="gb-ladder__step gb-ladder__step--ambassadeur"><span class="gb-ladder__badge"><i data-feather="award"></i></span><span class="gb-ladder__name">سفير</span><span class="gb-ladder__req"><span dir="ltr">10</span> إحالات</span></div>
+          <span class="gb-ladder__arrow">←</span>
+          <div class="gb-ladder__step gb-ladder__step--champion"><span class="gb-ladder__badge"><i data-feather="star"></i></span><span class="gb-ladder__name">بطل</span><span class="gb-ladder__req"><span dir="ltr">25</span> إحالة</span></div>
+          <span class="gb-ladder__arrow">←</span>
+          <div class="gb-ladder__step gb-ladder__step--confiance"><span class="gb-ladder__badge"><i data-feather="shield"></i></span><span class="gb-ladder__name">موثوق</span><span class="gb-ladder__req">حدود أعلى</span></div>
+        </div>
+        <p class="gb gb-strip" style="margin-top: var(--space-xl);">تخفيض على عمولة البائع البالغة 5%، <strong>ولا تقلّ أبداً عن الحدّ الأدنى 2%</strong>. نفس الدور فقط: البائعون يُحيلون بائعين، ومقدّمو الخدمات يُحيلون مقدّمي خدمات. أما المشترون الذين يدعون فيكسبون رصيداً في محفظتهم.</p>
+        <div class="btn-group" style="justify-content:center; margin-top: var(--space-xl);">
           <a href="https://wa.me/?text=اكتشف%20غرابالي%20—%20سوق%20الثقة%20لتجارة%20الماشية.%20https://www.garabaly.com/get-the-app.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary">المشاركة عبر WhatsApp</a>
           <a href="/ar/get-the-app.html" class="btn btn--secondary">احصل على التطبيق للإحالة</a>
         </div>
@@ -393,6 +431,91 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- ===== §3.10 التفاوض بالصوت ===== -->
+      <div class="gb gb-neg reveal">
+        <div class="section-header text-center" style="margin-bottom: var(--space-2xl);">
+          <span class="section-eyebrow">التفاوض، بالصوت</span>
+          <h2 class="section-title">فاوِض بحرّية.<br>ونحن نؤمّن الدفع.</h2>
+          <p class="section-subtitle">
+            تحدّث بالصوت أو كتابةً، بلغتك. Garabaly لا تحدّد السعر أبداً — تتّفقان على السعر، ثم يعدّله البائع إلى المبلغ المتّفَق عليه، وتوافق أنت قبل أن ينتقل المال إلى الضمان.
+          </p>
+        </div>
+
+        <div class="gb-neg__grid">
+          <!-- خيط المحادثة -->
+          <div class="gb-chat">
+            <div class="gb-chat__head">
+              <div class="gb-chat__avatar"><i data-feather="user"></i></div>
+              <div class="gb-chat__who">
+                <div class="gb-chat__name">أمادو ديالو <span class="gb-chat__badge">بائع</span></div>
+                <div class="gb-chat__status">متصل</div>
+              </div>
+              <i data-feather="phone" style="color: var(--gb-muted); width: 18px; height: 18px;"></i>
+            </div>
+            <div class="gb-chat__body">
+              <div class="gb-ref">
+                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+                <div><small>بشأن هذا الإعلان</small><strong>كبش بالي · <span dir="ltr">FCFA 152 000</span></strong></div>
+              </div>
+              <div class="gb-safety">
+                <span class="gb-safety__ic"><i data-feather="shield"></i></span>
+                <span>من أجل سلامتك، أبقِ مراسلاتك داخل Garabaly وافحص الحيوانات قبل الدفع. عند الإبلاغ، يمكن للمشرفين الاطّلاع على المحادثة.</span>
+                <span class="gb-safety__x"><i data-feather="x"></i></span>
+              </div>
+              <div class="gb-bubble gb-bubble--them">مرحباً! إنه كبش ممتاز، حسن التغذية وجاهز لعيد الأضحى.</div>
+              <div class="gb-bubble gb-bubble--me">
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:12</span></div>
+              </div>
+              <div class="gb-bubble gb-bubble--them">
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:08</span></div>
+              </div>
+              <div class="gb-bubble gb-bubble--me">هل يمكنك أن تجعله <span dir="ltr">FCFA 135 000</span>؟</div>
+              <div class="gb-bubble gb-bubble--them">حسناً، كما اتفقنا. سأعدّل السعر الآن.</div>
+            </div>
+            <div class="gb-chat__input">
+              رسالة…
+              <span class="gb-mic"><i data-feather="mic"></i></span>
+            </div>
+          </div>
+
+          <!-- العمود الأيسر: فيديو + اقتراح السعر -->
+          <div class="gb-neg__col">
+            <div class="gb-video" data-video="negotiation">
+              <div class="gb-video__fallback">شاهد تفاوضاً حقيقياً، بالصوت</div>
+              <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+              <div class="gb-video__cap">التفاوض على السعر · <span dir="ltr">0:32</span></div>
+              <video preload="none" playsinline poster="../assets/video/negotiation-poster.jpg" data-src="../assets/video/demo-negotiation.mp4"></video>
+            </div>
+
+            <div class="gb-proposal">
+              <div class="gb-proposal__head">عدّل البائع السعر</div>
+              <div class="gb-ref" style="margin-bottom: var(--space-sm);">
+                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+                <div><small>كبش بالي</small><strong>طلب شراء</strong></div>
+              </div>
+              <div class="gb-proposal__prices">
+                <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
+                <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
+              </div>
+              <p class="gb-proposal__reason">السبب: كما اتفقنا</p>
+              <div class="gb-proposal__actions">
+                <span class="gb-btn gb-btn--accept">قبول</span>
+                <span class="gb-btn gb-btn--refuse">رفض</span>
+              </div>
+              <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> دفع آمن — محمي بالضمان</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gb-flowstrip">
+          <span><b>1</b> تتّفقان على السعر</span> ←
+          <span><b>2</b> ترسل الطلب</span> ←
+          <span><b>3</b> يعدّل البائع السعر</span> ←
+          <span><b>4</b> توافق</span> ←
+          <span class="gb-flowstrip__end">الضمان</span>
         </div>
       </div>
     </div>
@@ -543,67 +666,49 @@
   <section class="section" id="categories">
     <div class="container">
       <div class="section-header text-center reveal">
-        <span class="section-eyebrow">تصفح حسب الفئة</span>
-        <h2 class="section-title">جد الماشية المناسبة</h2>
+        <span class="section-eyebrow">جد الماشية المناسبة</span>
+        <h2 class="section-title">آلاف الحيوانات، بالقرب منك</h2>
         <p class="section-subtitle">
-          من كباش التباسكي والأعراس وحفلات التسمية المرغوبة إلى الأبقار القوية — اكتشف الماشية في جميع الفئات.
+          تصفّح بالصور، فاوض البائع مباشرة، ثم ادفع في الضمان. إعلانات حقيقية، بائعون موثّقون، وأسعار ظاهرة.
         </p>
       </div>
 
-      <div class="carousel-wrapper">
-        <div class="categories-grid">
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f404.svg" alt="أبقار" width="64" height="64">
-              </div>
-              <div class="category-card__name">أبقار</div>
-              <div class="category-card__count">متاح الآن</div>
+      <div class="gb reveal">
+        <div class="gb-search"><i data-feather="search"></i><span>ابحث عن كبش للتباسكي…</span></div>
+        <div class="gb-grid" style="max-width: 1080px; margin: 0 auto;">
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/hero-herder-1024.jpg" alt="كبش بالي على غرابالي" loading="lazy" decoding="async">
+              <span class="gb-listing__verif"><i data-feather="check"></i> بائع موثّق</span>
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">كبش بالي · ذكر، جاهز للتباسكي</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 130 000</p>
+              <div class="gb-listing__meta"><span>📍 باماكو · موسى ديكو</span><span class="gb-listing__rating" dir="ltr">★ 4.8</span></div>
             </div>
           </div>
-
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f411.svg" alt="أغنام" width="64" height="64">
-              </div>
-              <div class="category-card__name">أغنام</div>
-              <div class="category-card__count">متاح الآن</div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/hero-banner-1280.jpg" alt="زيبو ساحلي على غرابالي" loading="lazy" decoding="async">
+              <span class="gb-listing__verif"><i data-feather="check"></i> بائع موثّق</span>
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
+            </div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">زيبو ساحلي · قوي</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 450 000</p>
+              <div class="gb-listing__meta"><span>📍 سيغو · فاتو تراوري</span><span class="gb-listing__rating" dir="ltr">★ 4.9</span></div>
             </div>
           </div>
-
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f410.svg" alt="ماعز" width="64" height="64">
-              </div>
-              <div class="category-card__name">ماعز</div>
-              <div class="category-card__count">متاح الآن</div>
+          <div class="gb-listing">
+            <div class="gb-listing__media">
+              <img src="../assets/images/herder-portrait-1024.jpg" alt="معزتان حمراوان على غرابالي" loading="lazy" decoding="async">
+              <span class="gb-listing__fav"><i data-feather="heart"></i></span>
             </div>
-          </div>
-
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f413.svg" alt="دواجن" width="64" height="64">
-              </div>
-              <div class="category-card__name">دواجن</div>
-              <div class="category-card__count">متاح الآن</div>
-            </div>
-          </div>
-
-          <div class="category-card reveal">
-            <div class="category-card__bg"></div>
-            <div class="category-card__content">
-              <div class="category-card__icon">
-                <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f42a.svg" alt="إبل" width="64" height="64">
-              </div>
-              <div class="category-card__name">إبل</div>
-              <div class="category-card__count">متاح الآن</div>
+            <div class="gb-listing__body">
+              <p class="gb-listing__title">معزتان حمراوان · زوج</p>
+              <p class="gb-listing__price" dir="ltr">FCFA 60 000</p>
+              <div class="gb-listing__meta"><span>📍 سيكاسو · آوا كوليبالي</span><span class="gb-listing__rating" dir="ltr">★ 4.7</span></div>
             </div>
           </div>
         </div>
@@ -903,7 +1008,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=7"></script>
+  <script src="../js/main.js?v=8"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>
