@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css?v=23">
+  <link rel="stylesheet" href="css/styles.css?v=26">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -105,145 +105,170 @@
   </div>
 
   <!-- ===== PAGE HEADER ===== -->
+  <!-- ===== HERO (editorial) ===== -->
   <section class="page-header">
-    <div class="container page-header__content">
-      <div class="page-header__breadcrumb">
-        <a href="index.html">Home</a>
-        <i data-feather="chevron-right" style="width:14px;height:14px;"></i>
-        <span>About</span>
+    <div class="container">
+      <div class="ab-hero reveal">
+        <span class="section-eyebrow">About Garabaly</span>
+        <h1>Our Story</h1>
+        <p class="ab-hero__lead">Everyone said digitizing West African livestock trade was impossible. The markets are too informal. The herders don't use apps. The trust can't be replicated.</p>
+        <p class="ab-hero__punch">They were wrong.</p>
+        <div class="ab-chips">
+          <span class="ab-chip">Bamako, Mali</span>
+          <span class="ab-chip">West Africa · Sahel · diaspora</span>
+          <span class="ab-chip ab-chip--green">RCCM · March 2026</span>
+        </div>
       </div>
-      <h1>Our Story</h1>
-      <p>Everyone said digitizing West African livestock trade was impossible. The markets are too informal. The herders don't use apps. The trust can't be replicated. They were wrong.</p>
     </div>
   </section>
 
   <!-- ===== MISSION ===== -->
   <section class="section">
     <div class="container">
-      <div class="image-text-row">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="assets/images/marketplace-480.avif 480w, assets/images/marketplace-768.avif 768w, assets/images/marketplace-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="assets/images/marketplace-480.webp 480w, assets/images/marketplace-768.webp 768w, assets/images/marketplace-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <img src="assets/images/marketplace-1024.jpg" alt="Buyer and seller negotiating at a West African livestock market" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Our Mission</span>
+        <h2 class="section-title">The Trust Layer That Never Existed</h2>
+      </div>
+      <div class="gb ab-grid reveal">
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="shield"></i></div>
+          <h3 class="gb-wcard__title">Every payment, protected</h3>
+          <p class="gb-wcard__desc">By escrow, until you confirm.</p>
         </div>
-        <div class="reveal">
-          <span class="section-eyebrow">Our Mission</span>
-          <h2 class="section-title">The Trust Layer<br>That Never Existed</h2>
-          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
-            Livestock is the backbone of West Africa's economy and culture. Millions of families depend on it for their livelihood, and millions more rely on it for celebrations — Tabaski, weddings, naming ceremonies, and everyday meals. Yet every transaction has always required a leap of faith.
-          </p>
-          <p class="section-subtitle">
-            Garabaly is building the trust layer that Africa's livestock trade never had — a marketplace where every payment is escrow-protected, every negotiation happens as a conversation, and every trader's reputation follows them from the market to the phone and back.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="mic"></i></div>
+          <h3 class="gb-wcard__title">Every negotiation, a conversation</h3>
+          <p class="gb-wcard__desc">Not a checkout button.</p>
+        </div>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="award"></i></div>
+          <h3 class="gb-wcard__title">Every reputation, following you</h3>
+          <p class="gb-wcard__desc">From the market to the phone, and back.</p>
         </div>
       </div>
+      <details class="gb-more reveal"><summary>Read more <span class="chev">▾</span></summary>
+        <p>Livestock is the backbone of West Africa's economy and culture. Millions of families depend on it for their livelihood, and millions more rely on it for celebrations — Tabaski, weddings, naming ceremonies, and everyday meals. Yet every transaction has always required a leap of faith.</p>
+        <p>Garabaly is building the trust layer that Africa's livestock trade never had — a marketplace where every payment is escrow-protected, every negotiation happens as a conversation, and every trader's reputation follows them from the market to the phone and back.</p>
+      </details>
     </div>
   </section>
 
   <!-- ===== THE PROBLEM ===== -->
   <section class="section section--alt">
     <div class="container">
-      <div class="image-text-row image-text-row--reverse">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="assets/images/delivery-480.avif 480w, assets/images/delivery-768.avif 768w, assets/images/delivery-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="assets/images/delivery-480.webp 480w, assets/images/delivery-768.webp 768w, assets/images/delivery-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <img src="assets/images/delivery-1024.jpg" alt="Livestock delivery in West Africa" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">The Problem</span>
+        <h2 class="section-title">Why Traditional Trading No Longer Suffices</h2>
+      </div>
+      <div class="gb ab-contrast reveal">
+        <div class="ab-col ab-col--old">
+          <p class="ab-col__h">Traditional trade</p>
+          <div class="ab-li ab-li--x"><i data-feather="x"></i><span>Travel long distances to inspect</span></div>
+          <div class="ab-li ab-li--x"><i data-feather="x"></i><span>Cash means no protection against fraud</span></div>
+          <div class="ab-li ab-li--x"><i data-feather="x"></i><span>Middlemen add cost without value</span></div>
+          <div class="ab-li ab-li--x"><i data-feather="x"></i><span>No way to verify an animal's health</span></div>
+          <div class="ab-li ab-li--x"><i data-feather="x"></i><span>The diaspora has no way to buy from abroad</span></div>
         </div>
-        <div class="reveal">
-          <span class="section-eyebrow">The Problem</span>
-          <h2 class="section-title">Why Traditional Livestock<br>Trading Falls Short</h2>
-          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            In West Africa's livestock trade, buyers often need to travel hundreds of kilometers to inspect animals. Cash transactions leave no protection against fraud. Middlemen add costs without adding value. And there's no reliable way to verify an animal's health before purchase.
-          </p>
-          <p class="section-subtitle">
-            Meanwhile, the diaspora — millions of West Africans living abroad — have no way to buy livestock for their families back home for celebrations. These inefficiencies cost farmers their livelihoods and cost buyers their hard-earned money. Garabaly exists to change this.
-          </p>
+        <div class="ab-col ab-col--new">
+          <p class="ab-col__h">With Garabaly</p>
+          <div class="ab-li ab-li--ok"><i data-feather="check"></i><span>Browse and negotiate remotely, by voice</span></div>
+          <div class="ab-li ab-li--ok"><i data-feather="check"></i><span>Escrow, paid only at your confirmation</span></div>
+          <div class="ab-li ab-li--ok"><i data-feather="check"></i><span>Direct sellers with verified reputations</span></div>
+          <div class="ab-li ab-li--ok"><i data-feather="check"></i><span>Optional veterinary inspection</span></div>
+          <div class="ab-li ab-li--ok"><i data-feather="check"></i><span>The diaspora buys and tracks from anywhere</span></div>
         </div>
       </div>
+      <details class="gb-more reveal"><summary>Read more <span class="chev">▾</span></summary>
+        <p>In West Africa's livestock trade, buyers often need to travel long distances to inspect animals. Cash transactions leave no protection against fraud. Middlemen add costs without adding value. And there's no reliable way to verify an animal's health before purchase.</p>
+        <p>Meanwhile, the diaspora — millions of West Africans living abroad — have no way to buy livestock for their families back home for celebrations. These inefficiencies cost farmers their livelihoods and cost buyers their hard-earned money. Garabaly exists to change this.</p>
+      </details>
     </div>
   </section>
 
-  <!-- ===== CULTURE-FIRST ===== -->
+  <!-- ===== APPROACH ===== -->
   <section class="section">
     <div class="container">
-      <div class="image-text-row">
-        <div class="image-showcase reveal">
+      <div class="ab-split reveal">
+        <div>
+          <span class="section-eyebrow">Our Approach</span>
+          <h2 class="section-title">"Add to Cart" Doesn't Exist in a Sahelian Market</h2>
+          <p class="section-subtitle">Every transaction is a relationship. We didn't skip the negotiation — we digitized it.</p>
+        </div>
+        <div class="ab-split__media">
           <picture>
-            <source type="image/avif" srcset="assets/images/herder-portrait-480.avif 480w, assets/images/herder-portrait-768.avif 768w, assets/images/herder-portrait-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="assets/images/herder-portrait-480.webp 480w, assets/images/herder-portrait-768.webp 768w, assets/images/herder-portrait-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
+            <source type="image/avif" srcset="assets/images/herder-portrait-480.avif 480w, assets/images/herder-portrait-768.avif 768w, assets/images/herder-portrait-1024.avif 1024w" sizes="(max-width: 860px) 100vw, 440px">
+            <source type="image/webp" srcset="assets/images/herder-portrait-480.webp 480w, assets/images/herder-portrait-768.webp 768w, assets/images/herder-portrait-1024.webp 1024w" sizes="(max-width: 860px) 100vw, 440px">
             <img src="assets/images/herder-portrait-1024.jpg" alt="Fulani herder with cattle in the Sahel at golden hour" width="1024" height="1536" loading="lazy" decoding="async">
           </picture>
         </div>
-        <div class="reveal">
-          <span class="section-eyebrow">Our Approach</span>
-          <h2 class="section-title">"Add to Cart" Doesn't Exist<br>in a Sahelian Market</h2>
-          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
-            Every transaction in West Africa is a relationship. You greet. You ask about the family. You inspect. You offer. They counter. You agree. That's not friction — that's culture.
-          </p>
-          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
-            Garabaly doesn't skip the negotiation. We digitized it. Because you can't digitize a marketplace without respecting how it actually works. Trust isn't built with a checkout button.
-          </p>
-          <p class="section-subtitle">
-            In West Africa, around two-thirds of livestock crosses at least one border before reaching its final buyer. This isn't e-commerce. It's relationships spanning thousands of kilometers. We built for that reality.
-          </p>
-        </div>
       </div>
+      <div class="ab-beats reveal">
+        <span class="ab-beat">Greet</span><span class="ab-beat__arrow">→</span>
+        <span class="ab-beat">Inspect</span><span class="ab-beat__arrow">→</span>
+        <span class="ab-beat">Offer</span><span class="ab-beat__arrow">→</span>
+        <span class="ab-beat ab-beat--green">Agree</span>
+      </div>
+      <div class="ab-stat reveal">
+        <div class="ab-stat__num">≈⅔</div>
+        <p class="ab-stat__txt">of livestock crosses <strong>at least one border</strong> before reaching its buyer. These aren't clicks — they're relationships spanning thousands of kilometers. (CILSS / OECD)</p>
+      </div>
+      <details class="gb-more reveal"><summary>Read more <span class="chev">▾</span></summary>
+        <p>Every transaction in West Africa is a relationship. You greet. You ask about the family. You inspect. You offer. They counter. You agree. That's not friction — that's culture.</p>
+        <p>Garabaly doesn't skip the negotiation. We digitized it. Because you can't digitize a marketplace without respecting how it actually works. Trust isn't built with a checkout button.</p>
+        <p>In West Africa, around two-thirds of livestock crosses at least one border before reaching its final buyer. This isn't e-commerce. It's relationships spanning thousands of kilometers. We built for that reality.</p>
+      </details>
     </div>
   </section>
 
-  <!-- ===== FOUNDER ===== -->
+  <!-- ===== FOUNDER (centerpiece — locked zone, full prose preserved verbatim) ===== -->
   <section class="section" id="founder">
-    <div class="container founder-layout">
-      <div class="founder-hero reveal">
-        <div class="image-showcase founder-showcase">
-          <picture>
-            <source type="image/avif" srcset="assets/images/founder-moctar-kane-480.avif 480w, assets/images/founder-moctar-kane-768.avif 768w, assets/images/founder-moctar-kane-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 420px">
-            <source type="image/webp" srcset="assets/images/founder-moctar-kane-480.webp 480w, assets/images/founder-moctar-kane-768.webp 768w, assets/images/founder-moctar-kane-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 420px">
-            <img src="assets/images/founder-moctar-kane-1024.jpg" alt="Moctar Kané, Founder of Garabaly, at a livestock market in Mali" width="1024" height="1024" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <p class="founder-credibility">RCCM · Bamako · March 2026</p>
-      </div>
-
-      <div class="founder-main reveal">
-        <div class="founder-intro">
+    <div class="container">
+      <div class="section-header text-center reveal">
         <span class="section-eyebrow">The Founder</span>
-        <h2 class="section-title">Moctar Kané</h2>
-        <div class="founder-role-pills">
-          <span class="founder-role-pill">Herder</span>
-          <span class="founder-role-pill">Butcher</span>
-          <span class="founder-role-pill">Buyer</span>
-          <span class="founder-role-pill">Diaspora</span>
+      </div>
+      <div class="gb ab-founder reveal">
+        <div class="ab-founder__head">
+          <img class="ab-founder__portrait" src="assets/images/founder-moctar-kane-480.webp" alt="Moctar Kané, Founder of Garabaly" width="92" height="92" loading="lazy" decoding="async">
+          <div>
+            <p class="ab-founder__name">Moctar Kané</p>
+            <p class="ab-founder__tag">I didn't study the livestock market. <strong>I lived it — from all four sides.</strong></p>
+          </div>
         </div>
+        <div class="ab-grid">
+          <div class="gb-wcard">
+            <div class="gb-wcard__icon"><i data-feather="sunrise"></i></div>
+            <h3 class="gb-wcard__title">Herder</h3>
+            <p class="gb-wcard__desc">I grew up in the villages, lived with herders — and knew the fear of the journey home, money in your pocket.</p>
+          </div>
+          <div class="gb-wcard">
+            <div class="gb-wcard__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.62,2C23.97,7.61 12.47,20.15 12.47,20.15L9.6,17.28L4.91,22L2.77,19.86L20.62,2Z"/></svg></div>
+            <h3 class="gb-wcard__title">Butcher</h3>
+            <p class="gb-wcard__desc">I was a butcher as a schoolboy: the weight of the knife, Tabaski from sunrise to sunset.</p>
+          </div>
+          <div class="gb-wcard">
+            <div class="gb-wcard__icon"><i data-feather="shopping-bag"></i></div>
+            <h3 class="gb-wcard__title">Buyer</h3>
+            <p class="gb-wcard__desc">I was sent to find the right animal at the right price — waiting under the sun, coming home empty-handed.</p>
+          </div>
+          <div class="gb-wcard">
+            <div class="gb-wcard__icon"><i data-feather="send"></i></div>
+            <h3 class="gb-wcard__title">Diaspora</h3>
+            <p class="gb-wcard__desc">Now far away: sending a ram without being there, calling three times "is it done?".</p>
+          </div>
         </div>
-        <div class="founder-prose">
-          <p class="section-subtitle">I grew up in rural Mali. Not in Bamako — in the villages. Kenenkoun. Bouramabougou. Every week, I accompanied families to the weekly market. I lived with herders. I helped maintain their herds. I saw what it costs to walk for days to reach a market fair — and I know the fear of the journey home, when you've sold and all your money is in your pocket, on a road where everyone knows it.</p>
-          <p class="section-subtitle">When I was in school, I worked as a butcher to make a living. I know the weight of a knife, the precision of the cut, the difference between clean work and sloppy work. I know that during Tabaski, a butcher works from sunrise to sunset and every family depends on him. And I also know that the rest of the year, that same butcher waits — because there's no way to be known beyond his neighbourhood.</p>
-          <p class="section-subtitle">I was also sent to find livestock — long trips, across multiple markets, looking for the right animal at the right price. I've known the wait under the sun, the markets where nothing is good enough, coming back empty-handed, and the relief when you finally find one and the price holds.</p>
-          <p class="section-subtitle">Today, I live in the diaspora. And like millions of others, when Tabaski comes, when there's a baptism, a wedding, a funeral — I want to send a ram to my family. From far away. Without being there. Calling three times to ask: "Is it done? Was it a good one?"</p>
-        </div>
-        <div class="founder-pivot">
-          <p class="founder-pivot-line">I've been a herder. I've been a butcher. I've been a buyer. I am diaspora.</p>
-          <blockquote class="founder-callout">
-            <p>Garabaly wasn't born in an office. It was born from all of this.</p>
-          </blockquote>
-        </div>
-        <div class="founder-prose">
-          <p class="section-subtitle">In March 2026, I registered Garabaly in Bamako at Mali's Trade and Movable Credit Register (RCCM). With that registration, we integrated mobile money services and built the foundations of a real company, by the book.</p>
-          <p class="section-subtitle">My commitment is simple: every feature on Garabaly is tested by real sellers in real markets. Every CFA franc is protected by escrow. And every decision is made by someone who has lived on both sides of the market.</p>
-        </div>
-        <div class="founder-footer">
-        <div class="founder-pull-quote founder-pull-quote--band">
-          <p><em>Built here, for here.</em></p>
-        </div>
-        <a href="https://www.linkedin.com/in/moctarkane/" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">
-          <i data-feather="linkedin"></i>
-          Learn more on LinkedIn
-        </a>
+        <p class="ab-band">"Garabaly wasn't born in an office. It was born from all of this."</p>
+        <details class="gb-more"><summary>Read my full story <span class="chev">▾</span></summary>
+          <p>I grew up in rural Mali. Not in Bamako — in the villages. Kenenkoun. Bouramabougou. Every week, I accompanied families to the weekly market. I lived with herders. I helped maintain their herds. I saw what it costs to walk for days to reach a market fair — and I know the fear of the journey home, when you've sold and all your money is in your pocket, on a road where everyone knows it.</p>
+          <p>When I was in school, I worked as a butcher to make a living. I know the weight of a knife, the precision of the cut, the difference between clean work and sloppy work. I know that during Tabaski, a butcher works from sunrise to sunset and every family depends on him. And I also know that the rest of the year, that same butcher waits — because there's no way to be known beyond his neighbourhood.</p>
+          <p>I was also sent to find livestock — long trips, across multiple markets, looking for the right animal at the right price. I've known the wait under the sun, the markets where nothing is good enough, coming back empty-handed, and the relief when you finally find one and the price holds.</p>
+          <p>Today, I live in the diaspora. And like millions of others, when Tabaski comes, when there's a baptism, a wedding, a funeral — I want to send a ram to my family. From far away. Without being there. Calling three times to ask: "Is it done? Was it a good one?"</p>
+          <p>I've been a herder. I've been a butcher. I've been a buyer. I am diaspora. Garabaly wasn't born in an office. It was born from all of this.</p>
+          <p>In March 2026, I registered Garabaly in Bamako at Mali's Trade and Movable Credit Register (RCCM). With that registration, we integrated mobile money services and built the foundations of a real company, by the book.</p>
+          <p>My commitment is simple: every feature on Garabaly is tested by real sellers in real markets. Every CFA franc is protected by escrow. And every decision is made by someone who has lived on both sides of the market. Built here, for here.</p>
+        </details>
+        <div class="ab-chips" style="margin-top: var(--space-lg);">
+          <span class="ab-chip ab-chip--green">RCCM · Bamako · March 2026</span>
+          <a href="https://www.linkedin.com/in/moctarkane/" class="ab-chip" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
         </div>
       </div>
     </div>
@@ -256,76 +281,37 @@
       <div class="section-header text-center reveal">
         <span class="section-eyebrow">What Drives Us</span>
         <h2 class="section-title">Our Core Values</h2>
-        <p class="section-subtitle">
-          Every decision we make is guided by these principles.
-        </p>
       </div>
-
-      <div class="values-grid">
-        <div class="value-card reveal">
-          <div class="value-card__icon" style="color: var(--primary);">
-            <i data-feather="users" style="width:40px;height:40px;"></i>
-          </div>
-          <h3 class="value-card__title">Trust First</h3>
-          <p class="value-card__desc">
-            Every feature we build starts with the question: "Does this make the transaction more trustworthy?" Our escrow system is the foundation.
-          </p>
-          <button class="value-card__read-more" onclick="toggleValueCard(this)">Read more</button>
+      <div class="gb ab-grid reveal">
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="shield"></i></div>
+          <h3 class="gb-wcard__title">Trust first</h3>
+          <p class="gb-wcard__desc">Every feature starts with one question: does this make the transaction more trustworthy?</p>
         </div>
-
-        <div class="value-card reveal">
-          <div class="value-card__icon" style="color: var(--primary);">
-            <i data-feather="globe" style="width:40px;height:40px;"></i>
-          </div>
-          <h3 class="value-card__title">Locally Rooted, Globally Connected</h3>
-          <p class="value-card__desc">
-            Full interface in French, English, and Arabic with native RTL support — not an afterthought. Specialized livestock vocabulary: Bovin, Ovin, Caprin. Payment terms in local context: 'Paiement sécurisé (Escrow)'. Voice descriptions and reviews in any language — Bambara, Mooré, Hausa, Fulfulde, Wolof, and more. Because in West Africa, voice is how business gets done.
-          </p>
-          <button class="value-card__read-more" onclick="toggleValueCard(this)">Read more</button>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="globe"></i></div>
+          <h3 class="gb-wcard__title">Locally rooted, globally connected</h3>
+          <p class="gb-wcard__desc">Full interface in French, English and Arabic (RTL) — voice reviews in any language.</p>
         </div>
-
-        <div class="value-card reveal">
-          <div class="value-card__icon" style="color: var(--primary);">
-            <i data-feather="shield" style="width:40px;height:40px;"></i>
-          </div>
-          <h3 class="value-card__title">Security You Can Verify</h3>
-          <p class="value-card__desc">
-            Escrow that holds your money safely until you confirm. Every payment is checked and recorded, so nothing slips through. Your PIN and confirmation code are encrypted and never shared. Dispute mediation with manual approval. Built-in fraud prevention and brute-force protection. Nothing is released until you enter your code — then the service providers are paid and the seller's share enters a 24-hour buyer-dispute window. This isn't a promise — it's our architecture.
-          </p>
-          <button class="value-card__read-more" onclick="toggleValueCard(this)">Read more</button>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="check-circle"></i></div>
+          <h3 class="gb-wcard__title">Security you can verify</h3>
+          <p class="gb-wcard__desc">Escrow holds your money until you enter your confirmation code — nothing before it.</p>
         </div>
-
-        <div class="value-card reveal">
-          <div class="value-card__icon" style="color: var(--primary);">
-            <i data-feather="smartphone" style="width:40px;height:40px;"></i>
-          </div>
-          <h3 class="value-card__title">Mobile-First Design</h3>
-          <p class="value-card__desc">
-            Most of our users access Garabaly from their smartphones. We design for mobile first, with low bandwidth usage and intuitive interfaces.
-          </p>
-          <button class="value-card__read-more" onclick="toggleValueCard(this)">Read more</button>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="smartphone"></i></div>
+          <h3 class="gb-wcard__title">Mobile-first design</h3>
+          <p class="gb-wcard__desc">Built for smartphones first — low-bandwidth and intuitive.</p>
         </div>
-
-        <div class="value-card reveal">
-          <div class="value-card__icon" style="color: var(--primary);">
-            <i data-feather="activity" style="width:40px;height:40px;"></i>
-          </div>
-          <h3 class="value-card__title">Animal Welfare</h3>
-          <p class="value-card__desc">
-            We partner with veterinarians to encourage health certification. Healthy livestock benefits everyone in the supply chain.
-          </p>
-          <button class="value-card__read-more" onclick="toggleValueCard(this)">Read more</button>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="activity"></i></div>
+          <h3 class="gb-wcard__title">Animal welfare</h3>
+          <p class="gb-wcard__desc">We partner with vets to encourage health certification before the sale.</p>
         </div>
-
-        <div class="value-card reveal">
-          <div class="value-card__icon" style="color: var(--primary);">
-            <i data-feather="dollar-sign" style="width:40px;height:40px;"></i>
-          </div>
-          <h3 class="value-card__title">Financial Inclusion</h3>
-          <p class="value-card__desc">
-            A full digital wallet with auditable financial records, escrow balances, card deposits, and wallet-to-wallet transfers. Mobile money payments via Orange Money, Moov Money, Wave among several others — LIVE. Bank withdrawal is also available. Bringing millions of traders into the digital economy.
-          </p>
-          <button class="value-card__read-more" onclick="toggleValueCard(this)">Read more</button>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="credit-card"></i></div>
+          <h3 class="gb-wcard__title">Financial inclusion</h3>
+          <p class="gb-wcard__desc">A full wallet — deposits, transfers, mobile money — bringing traders into the digital economy.</p>
         </div>
       </div>
     </div>
@@ -339,22 +325,22 @@
         <h2 class="section-title">Growing Across West Africa</h2>
       </div>
 
-      <div class="stats-bar reveal">
-        <div class="stat-item">
-          <div class="stat-item__value" data-count="96400000000" data-prefix="$">$96.4B</div>
-          <div class="stat-item__label">Remittances to Africa (World Bank 2024)</div>
+      <div class="ab-metrics reveal">
+        <div class="ab-metric">
+          <div class="ab-metric__num" data-count="96400000000" data-prefix="$">$96.4B</div>
+          <div class="ab-metric__label">Remittances to Africa (World Bank 2024)</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-item__value" data-count="1035042" data-suffix="+">1M+</div>
-          <div class="stat-item__label">Sheep Registered for Tabaski 2026 · Senegal (Min. of Agriculture)</div>
+        <div class="ab-metric">
+          <div class="ab-metric__num" data-count="1035042" data-suffix="+">1M+</div>
+          <div class="ab-metric__label">Sheep registered · Tabaski 2026 · Senegal (Min. of Agriculture)</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-item__value" data-count="517000000">517M</div>
-          <div class="stat-item__label">Mobile Money Accounts in West Africa (GSMA 2026)</div>
+        <div class="ab-metric">
+          <div class="ab-metric__num" data-count="517000000">517M</div>
+          <div class="ab-metric__label">Mobile Money accounts · West Africa (GSMA 2026)</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-item__value" data-count="0" data-suffix="">0</div>
-          <div class="stat-item__label">Dedicated Livestock Marketplaces Before Garabaly</div>
+        <div class="ab-metric ab-metric--dark">
+          <div class="ab-metric__num" data-count="0" data-suffix="">0</div>
+          <div class="ab-metric__label">Dedicated livestock marketplaces before Garabaly — we're the first.</div>
         </div>
       </div>
     </div>
@@ -363,25 +349,22 @@
   <!-- ===== DIASPORA ===== -->
   <section class="section section--alt">
     <div class="container">
-      <div class="image-text-row image-text-row--reverse">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="assets/images/diaspora-480.avif 480w, assets/images/diaspora-768.avif 768w, assets/images/diaspora-1024.avif 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <source type="image/webp" srcset="assets/images/diaspora-480.webp 480w, assets/images/diaspora-768.webp 768w, assets/images/diaspora-1024.webp 1024w" sizes="(max-width: 768px) 100vw, 600px">
-            <img src="assets/images/diaspora-1024.jpg" alt="Diaspora user buying livestock via phone for family back home" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="reveal">
-          <span class="section-eyebrow">For the Diaspora</span>
-          <h2 class="section-title">The Distance Disappears.<br>The Love Arrives.</h2>
-          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
-            Millions of West Africans live abroad in Paris, London, New York, Washington DC, Brussels, and Montreal. They want to send livestock home for Tabaski, weddings, naming ceremonies, funerals, or simply to care for their families.
-          </p>
-          <p class="section-subtitle">
-            Garabaly makes this possible — browse verified livestock from anywhere in the world, negotiate with local sellers, pay in your currency (EUR, USD, GBP, and 135+ currencies via Stripe) with escrow protection, and have it delivered right to your family's compound. Real-time order tracking means you know exactly when the joy arrives.
-          </p>
-        </div>
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">For the Diaspora</span>
+        <h2 class="section-title">The Distance Disappears. The Love Arrives.</h2>
       </div>
+      <div class="gb reveal">
+        <div class="gb-endpoints" data-corridor data-corridors='[{"from":"Madrid","fl":"Diaspora","to":"Dakar","tl":"Family · Senegal"},{"from":"Paris","fl":"Diaspora","to":"Bamako","tl":"Family · Mali"},{"from":"Rome","fl":"Diaspora","to":"Ouagadougou","tl":"Family · Burkina Faso"},{"from":"Abidjan","fl":"Regional","to":"Niamey","tl":"Family · Niger"}]'>
+          <span class="gb-endpoint"><b class="gb-endpoint__city">Madrid</b><small>Diaspora</small></span>
+          <span class="gb-endpoints__arrow">→</span>
+          <span class="gb-endpoint"><b class="gb-endpoint__city">Dakar</b><small>Family · Senegal</small></span>
+        </div>
+        <p class="gb-endpoints-note">Also from London, New York, Brussels, Montreal…</p>
+      </div>
+      <details class="gb-more reveal"><summary>Read more <span class="chev">▾</span></summary>
+        <p>Millions of West Africans live abroad in Paris, London, New York, Washington DC, Brussels, and Montreal. They want to send livestock home for Tabaski, weddings, naming ceremonies, funerals, or simply to care for their families.</p>
+        <p>Garabaly makes this possible — browse verified livestock from anywhere in the world, negotiate with local sellers, pay in your currency (EUR, USD, GBP, and 135+ currencies via Stripe) with escrow protection, and have it delivered right to your family's compound. Real-time order tracking means you know exactly when the joy arrives.</p>
+      </details>
     </div>
   </section>
 
@@ -391,50 +374,28 @@
       <div class="section-header text-center reveal">
         <span class="section-eyebrow">Built to Scale</span>
         <h2 class="section-title">Technology That Earns Trust</h2>
-        <p class="section-subtitle">
-          Behind Garabaly's simple interface is infrastructure built for security, speed, and scale.
-        </p>
+        <p class="section-subtitle">Behind a simple interface, infrastructure built for security, speed and scale.</p>
       </div>
-
-      <div class="features-grid" style="max-width: 1200px; margin: 0 auto;">
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="lock"></i>
-          </div>
-          <h3 class="feature-card__title">Encrypted Escrow Engine</h3>
-          <p class="feature-card__desc">
-            Per-party staged escrow that protects every payment, keeps an exact record of every franc, and releases money only when the deal is done. One escrow hold, per-party allocation. Seller's share is held for a 24-hour dispute window after buyer confirmation. Service providers receive immediate payment upon completion. Every CFA franc is accounted for with mathematical precision.
-          </p>
+      <div class="gb ab-grid reveal">
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="shield"></i></div>
+          <h3 class="gb-wcard__title">Encrypted escrow engine</h3>
+          <p class="gb-wcard__desc">Every payment protected, every franc traced, released at your code.</p>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="zap"></i>
-          </div>
-          <h3 class="feature-card__title">Real-Time Communication</h3>
-          <p class="feature-card__desc">
-            Real-time chat with offline queuing, read receipts, typing indicators, voice messages, and shared listing cards. Communication that works even on low bandwidth.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="message-square"></i></div>
+          <h3 class="gb-wcard__title">Real-time communication</h3>
+          <p class="gb-wcard__desc">Chat, voice, offline queue — even on low bandwidth.</p>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="bell"></i>
-          </div>
-          <h3 class="feature-card__title">Smart Notifications</h3>
-          <p class="feature-card__desc">
-            Dual delivery system with push notifications and in-app alerts. Deep linking takes you directly to orders, chats, or wallet — never miss an important update.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="bell"></i></div>
+          <h3 class="gb-wcard__title">Smart notifications</h3>
+          <p class="gb-wcard__desc">Push and in-app alerts, deep-linked to your orders and wallet.</p>
         </div>
-
-        <div class="feature-card reveal">
-          <div class="feature-card__icon">
-            <i data-feather="shield"></i>
-          </div>
-          <h3 class="feature-card__title">Fraud Prevention</h3>
-          <p class="feature-card__desc">
-            Built-in fraud prevention, device verification, encrypted PINs, SMS verification, and comprehensive security monitoring. Protection at every layer.
-          </p>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="lock"></i></div>
+          <h3 class="gb-wcard__title">Fraud prevention</h3>
+          <p class="gb-wcard__desc">Device verification, encrypted confirmation code, security monitoring.</p>
         </div>
       </div>
     </div>
@@ -443,33 +404,37 @@
   <!-- ===== VISION ===== -->
   <section class="section section--alt">
     <div class="container">
-      <div class="image-text-row">
-        <div class="image-showcase reveal">
-          <picture>
-            <source type="image/avif" srcset="assets/images/hero-herder-480.avif 480w, assets/images/hero-herder-768.avif 768w, assets/images/hero-herder-1024.avif 1024w" sizes="100vw">
-            <source type="image/webp" srcset="assets/images/hero-herder-480.webp 480w, assets/images/hero-herder-768.webp 768w, assets/images/hero-herder-1024.webp 1024w" sizes="100vw">
-            <img src="assets/images/hero-herder-1024.jpg" alt="Herder with cattle at sunset in the Sahel" width="1024" height="1536" loading="lazy" decoding="async">
-          </picture>
+      <div class="section-header text-center reveal">
+        <span class="section-eyebrow">Our Vision</span>
+        <h2 class="section-title">No Fear. No Blindness. No Waiting.</h2>
+      </div>
+      <div class="gb ab-grid reveal">
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="sunrise"></i></div>
+          <h3 class="gb-wcard__title">No fear</h3>
+          <p class="gb-wcard__desc">No herder sells in fear.</p>
         </div>
-        <div class="reveal">
-          <span class="section-eyebrow">Our Vision</span>
-          <h2 class="section-title">No Fear. No Blindness.<br>No Waiting.</h2>
-          <p class="section-motto">Your livestock. Your money. Your trust.</p>
-          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
-            We see a continent where no herder sells in fear, no buyer pays blind, and no family waits without proof.
-          </p>
-          <p class="section-subtitle" style="margin-bottom: var(--space-lg);">
-            Livestock commerce in West Africa exceeds $1 billion annually. Across the Sahel and coastal West Africa, livestock underpins the livelihoods, celebrations, and food security of hundreds of millions of people — including some 20 million pastoralists (World Bank, 2024). Yet the infrastructure connecting herders to buyers, rural supply to urban demand, and diaspora capital to local markets has never existed. We started in Mali and we are expanding across the region because the gap is undeniable and the demand is already here.
-          </p>
-          <p class="section-subtitle" style="margin-bottom: var(--space-xl);">
-            We're not replacing how trade works. We're making it trustworthy.
-          </p>
-          <a href="contact.html" class="btn btn--primary">
-            <i data-feather="message-circle"></i>
-            Get in Touch
-          </a>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="eye"></i></div>
+          <h3 class="gb-wcard__title">No blindness</h3>
+          <p class="gb-wcard__desc">No buyer pays blind.</p>
+        </div>
+        <div class="gb-wcard">
+          <div class="gb-wcard__icon"><i data-feather="send"></i></div>
+          <h3 class="gb-wcard__title">No waiting</h3>
+          <p class="gb-wcard__desc">No family waits without proof.</p>
         </div>
       </div>
+      <div class="ab-stat reveal">
+        <div class="ab-stat__num">$1B+</div>
+        <p class="ab-stat__txt">of livestock commerce in West Africa every year, supporting some <strong>20 million pastoralists</strong> (World Bank, 2024). The infrastructure connecting them has never existed. We're building it.</p>
+      </div>
+      <p class="ab-band ab-band--motto">Your livestock. Your money. Your trust.</p>
+      <details class="gb-more reveal"><summary>Read more <span class="chev">▾</span></summary>
+        <p>We see a continent where no herder sells in fear, no buyer pays blind, and no family waits without proof.</p>
+        <p>Livestock commerce in West Africa exceeds $1 billion annually. Across the Sahel and coastal West Africa, livestock underpins the livelihoods, celebrations, and food security of hundreds of millions of people — including some 20 million pastoralists (World Bank, 2024). Yet the infrastructure connecting herders to buyers, rural supply to urban demand, and diaspora capital to local markets has never existed. We started in Mali and we are expanding across the region because the gap is undeniable and the demand is already here.</p>
+        <p>We're not replacing how trade works. We're making it trustworthy.</p>
+      </details>
     </div>
   </section>
 
@@ -477,16 +442,14 @@
   <section class="section cta-section" id="download">
     <div class="container">
       <div class="cta-content reveal">
-        <h2 class="section-title" style="color: #FFF;">
-          Join the Movement
-        </h2>
-        <p>
-          Be part of the revolution in West African livestock commerce. Download Garabaly and start trading with confidence today.
-        </p>
+        <div style="color: var(--gold, #E8B854); margin-bottom: var(--space-sm);"><i data-feather="zap" style="width:38px;height:38px;"></i></div>
+        <h2 class="section-title" style="color: #FFF;">Join the Movement</h2>
+        <p>Buyers, sellers, providers, diaspora — livestock trade is entering a new era.</p>
         <a href="get-the-app.html" class="btn btn--primary btn--lg" style="margin-top: var(--space-lg);">
           <i data-feather="smartphone"></i>
-          Get the App
+          Download the App
         </a>
+        <p style="margin-top: var(--space-md); font-size: var(--fs-small); opacity: 0.82;">Preview via Expo Go · coming soon to the App Store and Google Play</p>
       </div>
     </div>
   </section>
