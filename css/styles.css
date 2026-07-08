@@ -2497,10 +2497,10 @@ html.js-ready .reveal.visible {
 .gb-more p { margin-top: 12px; color: var(--text-secondary); line-height: 1.7; font-size: var(--fs-body); }
 [dir="rtl"] .gb-more > summary { flex-direction: row; }
 
-/* editorial hero */
+/* editorial hero — scoped under .ab-hero to beat .page-header p */
 .ab-hero { text-align: center; max-width: 760px; margin: 0 auto; }
-.ab-hero__lead { font-size: var(--fs-body-lg); color: var(--text-secondary); line-height: 1.7; margin: var(--space-md) auto var(--space-sm); }
-.ab-hero__punch { font-size: var(--fs-display); font-weight: 700; color: var(--primary); margin: 0 0 var(--space-lg); }
+.ab-hero .ab-hero__lead { font-size: var(--fs-body-lg); color: rgba(255, 255, 255, 0.74); line-height: 1.7; margin: var(--space-md) auto var(--space-md); max-width: 640px; }
+.ab-hero .ab-hero__punch { font-size: clamp(2.2rem, 5.5vw, 3.2rem); font-weight: 800; color: #E8A05E; line-height: 1.1; margin: var(--space-sm) 0 var(--space-xl); }
 .ab-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .ab-chip { font-size: var(--fs-small); font-weight: 500; border: 1px solid var(--gb-hairline); border-radius: 20px; padding: 5px 12px; color: var(--gb-muted); background: var(--surface); }
 .ab-chip--green { color: var(--success); border-color: var(--success); background: var(--gb-green-fill); }
@@ -2511,7 +2511,11 @@ html.js-ready .reveal.visible {
 /* contrast columns (problem) */
 .ab-contrast { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; text-align: start; margin-top: var(--space-lg); }
 .ab-col { background: var(--surface); border: 1px solid var(--gb-hairline); border-radius: 14px; padding: 18px; }
-.ab-col--old { background: var(--gb-cream); }
+/* fixed cream card -> force dark text so it reads in both themes */
+.ab-col--old { background: #FBF3E6; border-color: #EADBC4; }
+.ab-col--old .ab-col__h { color: #2C1810; }
+.ab-col--old .ab-li { color: #5B4636; }
+.ab-col--old .ab-li--x i { color: #A6866B; }
 .ab-col--new { border-top: 2px solid var(--gold, #E8B854); }
 .ab-col__h { font-size: var(--fs-body); font-weight: 700; margin: 0 0 12px; }
 .ab-li { display: flex; align-items: flex-start; gap: 8px; font-size: var(--fs-small); color: var(--text-secondary); line-height: 1.5; margin-bottom: 8px; }
@@ -2526,16 +2530,17 @@ html.js-ready .reveal.visible {
 .ab-beat__arrow { color: var(--primary); font-weight: 700; }
 [dir="rtl"] .ab-beat__arrow { transform: scaleX(-1); display: inline-block; }
 
-/* big stat card */
-.ab-stat { background: var(--gb-cream); border: 1px solid var(--gb-hairline); border-radius: 16px; padding: var(--space-lg); text-align: center; max-width: 640px; margin: var(--space-lg) auto 0; }
-.ab-stat__num { font-size: var(--fs-display); font-weight: 700; color: var(--primary); line-height: 1; }
-.ab-stat__txt { font-size: var(--fs-small); color: var(--text-secondary); line-height: 1.6; margin: 8px 0 0; }
+/* big stat card — fixed cream + dark text (reads in both themes) */
+.ab-stat { background: #FBF3E6; border: 1px solid #EADBC4; border-radius: 16px; padding: var(--space-lg); text-align: center; max-width: 640px; margin: var(--space-lg) auto 0; }
+.ab-stat__num { font-size: var(--fs-display); font-weight: 800; color: #C87941; line-height: 1; }
+.ab-stat__txt { font-size: var(--fs-small); color: #5B4636; line-height: 1.6; margin: 8px 0 0; }
+.ab-stat__txt strong { color: #2C1810; }
 
-/* asymmetric split (the one atmospheric image) */
+/* asymmetric split (the one atmospheric image) — keep the head in frame */
 .ab-split { display: grid; grid-template-columns: 1fr; gap: var(--space-xl); align-items: center; }
 @media (min-width: 860px) { .ab-split { grid-template-columns: 1.25fr 1fr; } }
 .ab-split__media { border-radius: 16px; overflow: hidden; max-height: 340px; }
-.ab-split__media img { width: 100%; height: 100%; max-height: 340px; object-fit: cover; display: block; }
+.ab-split__media img { width: 100%; height: 100%; max-height: 340px; object-fit: cover; object-position: center 18%; display: block; }
 
 /* founder centerpiece */
 .ab-founder { max-width: 720px; margin: 0 auto; text-align: start; }
