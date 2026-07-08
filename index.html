@@ -67,7 +67,7 @@
 
   <!-- Styles -->
     <link rel="preload" as="image" type="image/avif" imagesrcset="assets/images/hero-banner-480.avif 480w, assets/images/hero-banner-768.avif 768w, assets/images/hero-banner-1280.avif 1280w, assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="css/styles.css?v=14">
+<link rel="stylesheet" href="css/styles.css?v=15">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -448,33 +448,32 @@
             </div>
           </div>
 
-          <!-- Right column: video + price proposal -->
-          <div class="gb-neg__col">
-            <div class="gb-video" data-video="negotiation">
-              <div class="gb-video__fallback">See a real negotiation, by voice</div>
-              <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
-              <div class="gb-video__cap">Negotiating a price · 0:32</div>
-              <video preload="none" playsinline poster="assets/video/negotiation-poster.jpg" data-src="assets/video/demo-negotiation.mp4"></video>
-            </div>
-
-            <div class="gb-proposal">
-              <div class="gb-proposal__head">The seller adjusted the price</div>
-              <div class="gb-ref" style="margin-bottom: var(--space-sm);">
-                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
-                <div><small>Bali Ram</small><strong>Order request</strong></div>
-              </div>
-              <div class="gb-proposal__prices">
-                <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
-                <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
-              </div>
-              <p class="gb-proposal__reason">Reason: As we discussed</p>
-              <div class="gb-proposal__actions">
-                <span class="gb-btn gb-btn--accept">Accept</span>
-                <span class="gb-btn gb-btn--refuse">Decline</span>
-              </div>
-              <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> Secure payment — held in escrow</p>
-            </div>
+          <!-- Video phone -->
+          <div class="gb-video" data-video="negotiation">
+            <div class="gb-video__fallback">See a real negotiation, by voice</div>
+            <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <div class="gb-video__cap">Negotiating a price · 0:32</div>
+            <video preload="none" playsinline poster="assets/video/negotiation-poster.jpg" data-src="assets/video/demo-negotiation.mp4"></video>
           </div>
+        </div>
+
+        <!-- Seller adjusted the price — centered below the two phones -->
+        <div class="gb-proposal gb-neg__proposal">
+          <div class="gb-proposal__head">The seller adjusted the price</div>
+          <div class="gb-ref" style="margin-bottom: var(--space-sm);">
+            <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+            <div><small>Bali Ram</small><strong>Order request</strong></div>
+          </div>
+          <div class="gb-proposal__prices">
+            <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
+            <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
+          </div>
+          <p class="gb-proposal__reason">Reason: As we discussed</p>
+          <div class="gb-proposal__actions">
+            <span class="gb-btn gb-btn--accept">Accept</span>
+            <span class="gb-btn gb-btn--refuse">Decline</span>
+          </div>
+          <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> Secure payment — held in escrow</p>
         </div>
 
         <div class="gb-flowstrip">

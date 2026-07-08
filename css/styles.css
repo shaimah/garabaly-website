@@ -3915,7 +3915,8 @@ textarea:focus-visible,select:focus-visible,summary:focus-visible{
 .gb-neg { margin-top: var(--space-3xl); }
 .gb-neg__grid { display: grid; gap: var(--space-xl); align-items: start; justify-items: center; }
 .gb-neg__col { display: flex; flex-direction: column; gap: var(--space-xl); width: 100%; align-items: center; }
-@media (min-width: 900px) { .gb-neg__grid { grid-template-columns: 1fr 1fr; } }
+.gb-neg__proposal { margin-top: var(--space-2xl); }
+@media (min-width: 900px) { .gb-neg__grid { grid-template-columns: 1fr 1fr; align-items: stretch; } .gb-neg__grid > .gb-chat, .gb-neg__grid > .gb-video { justify-self: center; } }
 
 /* §3.12 Bundle flow arrangement */
 .gb-flow { max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }

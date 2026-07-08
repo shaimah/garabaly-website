@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=14">
+<link rel="stylesheet" href="../css/styles.css?v=15">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -481,33 +481,32 @@
             </div>
           </div>
 
-          <!-- العمود الأيسر: فيديو + اقتراح السعر -->
-          <div class="gb-neg__col">
-            <div class="gb-video" data-video="negotiation">
-              <div class="gb-video__fallback">شاهد تفاوضاً حقيقياً، بالصوت</div>
-              <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
-              <div class="gb-video__cap">التفاوض على السعر · <span dir="ltr">0:32</span></div>
-              <video preload="none" playsinline poster="../assets/video/negotiation-poster.jpg" data-src="../assets/video/demo-negotiation.mp4"></video>
-            </div>
-
-            <div class="gb-proposal">
-              <div class="gb-proposal__head">عدّل البائع السعر</div>
-              <div class="gb-ref" style="margin-bottom: var(--space-sm);">
-                <div class="gb-ref__thumb"><i data-feather="image"></i></div>
-                <div><small>كبش بالي</small><strong>طلب شراء</strong></div>
-              </div>
-              <div class="gb-proposal__prices">
-                <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
-                <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
-              </div>
-              <p class="gb-proposal__reason">السبب: كما اتفقنا</p>
-              <div class="gb-proposal__actions">
-                <span class="gb-btn gb-btn--accept">قبول</span>
-                <span class="gb-btn gb-btn--refuse">رفض</span>
-              </div>
-              <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> دفع آمن — محمي بالضمان</p>
-            </div>
+          <!-- هاتف الفيديو -->
+          <div class="gb-video" data-video="negotiation">
+            <div class="gb-video__fallback">شاهد تفاوضاً حقيقياً، بالصوت</div>
+            <div class="gb-video__play"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></div>
+            <div class="gb-video__cap">التفاوض على السعر · <span dir="ltr">0:32</span></div>
+            <video preload="none" playsinline poster="../assets/video/negotiation-poster.jpg" data-src="../assets/video/demo-negotiation.mp4"></video>
           </div>
+        </div>
+
+        <!-- عدّل البائع السعر — في المنتصف أسفل الهاتفين -->
+        <div class="gb-proposal gb-neg__proposal">
+          <div class="gb-proposal__head">عدّل البائع السعر</div>
+          <div class="gb-ref" style="margin-bottom: var(--space-sm);">
+            <div class="gb-ref__thumb"><i data-feather="image"></i></div>
+            <div><small>كبش بالي</small><strong>طلب شراء</strong></div>
+          </div>
+          <div class="gb-proposal__prices">
+            <span class="gb-proposal__old" dir="ltr">FCFA 152 000</span>
+            <span class="gb-proposal__new" dir="ltr">FCFA 135 000</span>
+          </div>
+          <p class="gb-proposal__reason">السبب: كما اتفقنا</p>
+          <div class="gb-proposal__actions">
+            <span class="gb-btn gb-btn--accept">قبول</span>
+            <span class="gb-btn gb-btn--refuse">رفض</span>
+          </div>
+          <p class="gb-proposal__note"><i data-feather="shield" style="width:15px;height:15px;"></i> دفع آمن — محمي بالضمان</p>
         </div>
 
         <div class="gb-flowstrip">
