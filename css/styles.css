@@ -4005,3 +4005,9 @@ textarea:focus-visible,select:focus-visible,summary:focus-visible{
 .gb-app-cta { text-align: center; margin-top: var(--space-2xl); }
 .gb-app-cta__note { margin-top: var(--space-md); font-size: 0.82rem; color: var(--gb-muted); display: inline-flex; align-items: center; gap: 7px; }
 .gb-app-cta__note svg { width: 15px; height: 15px; color: var(--gb-vet); flex: 0 0 auto; }
+
+/* §4.2 TikTok follow band */
+.gb-tikband { text-align: center; max-width: 620px; margin: 0 auto; }
+.gb-tikband__ic { width: 58px; height: 58px; border-radius: 16px; background: #16181c; color: #fff; display: inline-grid; place-items: center; margin-bottom: var(--space-md); box-shadow: var(--shadow-md); }
+.gb-tikband__ic svg { width: 28px; height: 28px; }
+.gb-tikband .btn { margin-top: var(--space-lg); }
