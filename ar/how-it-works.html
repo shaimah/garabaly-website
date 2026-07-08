@@ -30,7 +30,7 @@
   <link rel="preload" href="/assets/fonts/cairo-400-arabic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <link rel="stylesheet" href="../css/styles.css?v=22">
+  <link rel="stylesheet" href="../css/styles.css?v=23">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -121,86 +121,71 @@
         </p>
       </div>
 
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">1</div>
-          <div class="timeline-item__content">
-            <h3>حمّل وسجّل</h3>
-            <p>غرابالي متاح بشكل مبدئي عبر Expo Go بينما التطبيق قيد المراجعة في App Store وGoogle Play. ثبّت Expo Go، وامسح رمز غرابالي من صفحة تحميل التطبيق، وأنشئ حسابك برقم هاتفك — ينتقل كل شيء تلقائياً عند إطلاق التطبيق في المتاجر.</p>
-          </div>
+      <!-- R2-8: encart bénéfice séquestre — المشتري -->
+      <div class="gb gb-benefits reveal">
+        <h3 class="gb-benefits__title">ادفع بثقة، حتى عن بُعد.</h3>
+        <div class="gb-benefits__grid">
+          <div class="gb-benefit"><p class="gb-benefit__h">أموال محمية</p><p class="gb-benefit__p">البائع لا يتلقى شيئاً حتى تؤكّد الاستلام.</p></div>
+          <div class="gb-benefit"><p class="gb-benefit__h">أنت تفحص أولاً</p><p class="gb-benefit__p">استلم وافحص الماشية. توافق فقط إذا كان كل شيء مطابقاً.</p></div>
+          <div class="gb-benefit"><p class="gb-benefit__h">محمي عند النزاع</p><p class="gb-benefit__p">مشكلة؟ نافذة حماية 24 ساعة — تبقى الأموال محمية حتى الحل.</p></div>
         </div>
+        <p class="gb-benefits__quote">«إرسال المال لغريب كان عمل إيمان. مع الضمان، صار يقيناً.»</p>
+      </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">2</div>
-          <div class="timeline-item__content">
-            <h3>تصفح واستكشف</h3>
-            <p>استكشف آلاف إعلانات الماشية المعتمدة. صفِّ حسب البائع، الخدمات، السعر، المنطقة، الدولة، المميّزة، العروض، المعتمَد، والجاهز للعيد. كل إعلان يتضمن صوراً ومواصفات تفصيلية وغالباً أوصاف صوتية بالعامية المحلية.</p>
-          </div>
+      <div class="gb gb-flow reveal">
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">1</span>
+          <div class="gb-flow__icon"><i data-feather="download"></i></div>
+          <h3 class="gb-flow__title">حمّل وسجّل</h3>
+          <p class="gb-flow__desc">احصل على التطبيق عبر Expo Go وسجّل برقم هاتفك.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">3</div>
-          <div class="timeline-item__content">
-            <h3>تحدث وتفاوض</h3>
-            <p>هذا ما يميز غرابالي. ابدأ محادثة مع البائع — اسأل عن الحيوان، اطلب صوراً أو فيديو إضافية، وتفاوض على السعر. في غرب أفريقيا، السعر محادثة وليس ملصقاً. غرابالي يحترم ذلك. توصلوا لاتفاق، ثم انتقلوا للدفع.</p>
-            <p style="margin-top: var(--space-md); font-weight: 700; font-style: italic; color: var(--primary);">
-              "السعر محادثة، وليس ملصقاً. هذا ليس عائقاً — إنها ثقافة."
-            </p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">2</span>
+          <div class="gb-flow__icon"><i data-feather="search"></i></div>
+          <h3 class="gb-flow__title">تصفّح واكتشف</h3>
+          <p class="gb-flow__desc">صفِّ حسب البائع، السعر، المنطقة، الدولة، المعتمَد، العروض، العيد.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">4</div>
-          <div class="timeline-item__content">
-            <h3>راجع البائع والمعلومات الصحية</h3>
-            <p>تحقق من حالة التحقق من البائع وتقييماته ومراجعات المشترين السابقين. إذا كان البائع قد أرفق شهادة صحية من طبيب بيطري، راجعها قبل الالتزام. يمكنك أيضاً طلب فحص بيطري عبر شبكة مقدمي الخدمات لدى غرابالي.</p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">3</span>
+          <div class="gb-flow__icon"><i data-feather="mic"></i></div>
+          <h3 class="gb-flow__title">تحدّث وتفاوض</h3>
+          <p class="gb-flow__desc">تحدّث مع البائع بالصوت واتّفق على السعر. كما في السوق.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">5</div>
-          <div class="timeline-item__content">
-            <h3>أضف خدمات اختيارية</h3>
-            <p>تحتاج جزاراً أو سائق توصيل أو فحص بيطري؟ أضف مقدمي خدمات معتمدين لطلبك مباشرة في التطبيق. كل مقدم خدمة لديه تقييمات ومراجعات ويُدفع له عبر نفس نظام الضمان — فأنت محمي في كل جزء من الطلب.</p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">4</span>
+          <div class="gb-flow__icon"><i data-feather="check-circle"></i></div>
+          <h3 class="gb-flow__title">راجِع البائع والصحة</h3>
+          <p class="gb-flow__desc">تحقّق من التوثيق والتقييمات والشهادة الصحية من الطبيب البيطري.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">6</div>
-          <div class="timeline-item__content">
-            <h3>ادفع بحماية الضمان</h3>
-            <p>عندما يكون الطلب معتمداً مسبقاً من البائع ومقدمي الخدمات، اضغط "اشترِ بالضمان". دفعتك محتجزة بأمان لدى غرابالي — حجز ضمان واحد، تخصيص لكل طرف. ادفع بالبطاقة (Visa، Mastercard) عبر Stripe. دعم العملات المتعددة يعني أن مشتري المهجر يمكنهم الدفع بالـ EUR أو USD أو GBP أو أي من 135+ عملة مدعومة من Stripe. mobile money أصبح LIVE عبر Orange Money وMoov Money وWave وغيرها.</p>
-            <p style="margin-top: var(--space-md); font-weight: 700; font-style: italic; color: var(--primary);">
-              "أموالك آمنة حتى تصل البقرة لبيتك. نقطة."
-            </p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">5</span>
+          <div class="gb-flow__icon"><i data-feather="layers"></i></div>
+          <h3 class="gb-flow__title">أضف خدمات · كوّن طلبك</h3>
+          <p class="gb-flow__desc">أضف جزاراً أو طبيباً بيطرياً أو توصيلاً — حتى 3 خدمات.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">7</div>
-          <div class="timeline-item__content">
-            <h3>تتبع طلبك في الوقت الفعلي</h3>
-            <p>الطلب معتمد مسبقاً من البائع ومقدمي الخدمات قبل الدفع. بعد الدفع، تتبع طلبك عبر كل مرحلة: مؤكد، قيد التحضير، في الطريق، ومُسلّم. إشعارات فورية وتحديثات داخل التطبيق تبقيك على اطلاع في كل خطوة.</p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">6</span>
+          <div class="gb-flow__icon"><i data-feather="shield"></i></div>
+          <h3 class="gb-flow__title">ادفع بالضمان</h3>
+          <p class="gb-flow__desc">بطاقة أو mobile money أو محفظة. لا يُدفع شيء قبل رمزك.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">8</div>
-          <div class="timeline-item__content">
-            <h3>استلم وافحص</h3>
-            <p>البائع يرتب التوصيل أو تلتقون في مكان متفق عليه. افحص الماشية للتأكد من مطابقتها للإعلان. خذ وقتك — حماية الضمان تمنحك راحة البال.</p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">7</span>
+          <div class="gb-flow__icon"><i data-feather="map-pin"></i></div>
+          <h3 class="gb-flow__title">تابِع لحظياً</h3>
+          <p class="gb-flow__desc">تابع كل مرحلة: مؤكّد، تحضير، نقل، تسليم.</p>
         </div>
-
-        <div class="timeline-item timeline-item--climax reveal">
-          <div class="timeline-item__marker">9</div>
-          <div class="timeline-item__content">
-            <h3>أكّد بكود التأكيد الخاص بك</h3>
-            <p>كل طلب يولّد كوداً فريداً من 6 أحرف وأرقام. الكود مشفّر بمعايير أمنية قوية مع حماية مدمجة ضد محاولات التخمين. كود التأكيد هو مفتاحك — لا تُدخله إلا بعد استلام وفحص الماشية بالكامل.</p>
-            <p style="margin-top: var(--space-md); font-weight: 700; font-style: italic; color: var(--primary);">
-              "كود واحد. ستة أحرف. إطلاق فوري. ثقة مُوصَّلة."
-            </p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">8</span>
+          <div class="gb-flow__icon"><i data-feather="eye"></i></div>
+          <h3 class="gb-flow__title">استلم وافحص</h3>
+          <p class="gb-flow__desc">استلم وافحص الماشية. خذ وقتك — أنت محمي.</p>
+        </div>
+        <div class="gb-flow__card gb-flow__card--gold">
+          <span class="gb-flow__num">9</span>
+          <div class="gb-flow__icon"><i data-feather="key"></i></div>
+          <h3 class="gb-flow__title">أكِّد برمزك</h3>
+          <p class="gb-flow__desc">رمزك المكوّن من 6 أحرف يُطلق الطلب بأكمله. أنت وحدك تُحرّر الأموال.</p>
         </div>
       </div>
       <div class="gb-video" data-video="place-order" style="margin: var(--space-2xl) auto 0;">
@@ -223,53 +208,53 @@
         </p>
       </div>
 
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">1</div>
-          <div class="timeline-item__content">
-            <h3>احصل على التحقق</h3>
-            <p>احصل على التطبيق عبر معاينة Expo Go (راجع صفحة تحميل التطبيق) وأنشئ حساب بائع. أكمل التحقق من الهوية للحصول على شارة "بائع معتمد". هذا يبني الثقة مع المشترين ويزيد ظهور إعلاناتك.</p>
-          </div>
+      <!-- R2-8: encart bénéfice séquestre — البائع -->
+      <div class="gb gb-benefits reveal">
+        <h3 class="gb-benefits__title">المشتري في الضمان مشترٍ جادّ.</h3>
+        <div class="gb-benefits__grid">
+          <div class="gb-benefit"><p class="gb-benefit__h">مشترٍ ملتزم</p><p class="gb-benefit__p">المال مُودَع ومؤمَّن سلفاً. لا مزيد من المشترين الذين يختفون.</p></div>
+          <div class="gb-benefit"><p class="gb-benefit__h">بيع مؤكّد</p><p class="gb-benefit__p">تُحضّر وتُسلّم وأنت تعلم أن البيع نهائي.</p></div>
+          <div class="gb-benefit"><p class="gb-benefit__h">دفع مضمون</p><p class="gb-benefit__p">بمجرد أن يؤكّد المشتري، دفعتك مضمونة — تُحرَّر بعد نافذة حماية 24 ساعة.</p></div>
         </div>
+        <p class="gb-benefits__quote">«في السوق، يَعِدون بالدفع «غداً». هنا، المال مُودَع سلفاً — مؤمَّن، ويُحرَّر بعد التأكيد.»</p>
+      </div>
 
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">2</div>
-          <div class="timeline-item__content">
-            <h3>أنشئ إعلانك</h3>
-            <p>اضغط زر "+" لإنشاء إعلان. أضف صوراً أو فيديوهات متعددة لماشيتك، واملأ التفاصيل (السلالة، العمر، الوزن، السعر)، وسجّل اختيارياً وصفاً صوتياً بلغتك. حمّل شهادة صحية إن توفرت.</p>
-          </div>
+      <div class="gb gb-flow reveal">
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">1</span>
+          <div class="gb-flow__icon"><i data-feather="user-check"></i></div>
+          <h3 class="gb-flow__title">احصل على التحقق</h3>
+          <p class="gb-flow__desc">سجّل، وثّق هويتك، واحصل على شارة البائع المعتمد.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">3</div>
-          <div class="timeline-item__content">
-            <h3>تفاوض مع المشترين</h3>
-            <p>عندما يهتم مشترٍ، سيراسلك مباشرة. أجب عن أسئلتهم، شارك صوراً أو فيديوهات إضافية، وتفاوض على السعر — تماماً كما في السوق الفعلي. غرابالي يمنحك الأدوات للتواصل بشكل طبيعي.</p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">2</span>
+          <div class="gb-flow__icon"><i data-feather="camera"></i></div>
+          <h3 class="gb-flow__title">أنشئ إعلانك</h3>
+          <p class="gb-flow__desc">صور وتفاصيل ووصف صوتي بلغتك.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">4</div>
-          <div class="timeline-item__content">
-            <h3>معتمد مسبقاً قبل الدفع</h3>
-            <p>عندما يهتم مشترٍ ويضيف طلبك للسلة، راجع الطلب وقبله قبل أن يدفع. لا يدفع المشتري إلا عندما تؤكد أنت (ومقدمو الخدمات إن وُجدوا) — معتمد مسبقاً قبل الدفع. هذا يحمي الجميع.</p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">3</span>
+          <div class="gb-flow__icon"><i data-feather="mic"></i></div>
+          <h3 class="gb-flow__title">تفاوض مع المشترين</h3>
+          <p class="gb-flow__desc">المشترون يراسلونك مباشرة. تفاوض على السعر، كما في السوق.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">5</div>
-          <div class="timeline-item__content">
-            <h3>رتّب التوصيل</h3>
-            <p>نسّق مع المشتري بشأن التوصيل أو الاستلام. غرابالي يربطك بسائقي توصيل معتمدين مباشرة في التطبيق — هم جزء من نفس الطلب المحمي بالضمان، فالجميع يحصل على أجره.</p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">4</span>
+          <div class="gb-flow__icon"><i data-feather="check-circle"></i></div>
+          <h3 class="gb-flow__title">معتمد مسبقاً قبل الدفع</h3>
+          <p class="gb-flow__desc">تراجع وتقبل الطلب قبل أن يتمكن المشتري من الدفع.</p>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-item__marker">6</div>
-          <div class="timeline-item__content">
-            <h3>احصل على أموالك فوراً عبر كود التأكيد</h3>
-            <p>يُدخل المشتري كود التأكيد الفريد من 6 أحرف في التطبيق بعد الاستلام والفحص. لا يُفرج عن أي مبلغ قبل إدخاله. وبمجرد إدخاله، يُدفع لمقدمي الخدمات وتدخل حصة البائع في نافذة حماية المشتري لمدة 24 ساعة — النافذة تنطبق على حصة البائع فقط. إذا لم يُرفع نزاع، تُحرر الأموال تلقائياً إلى محفظة غرابالي. الأموال في محفظتك يمكن تحويلها لمستخدمين آخرين. السحب الخارجي عبر mobile money أصبح LIVE (Orange Money وMoov Money وWave وغيرها). السحب البنكي متاح أيضاً.</p>
-          </div>
+        <div class="gb-flow__card">
+          <span class="gb-flow__num">5</span>
+          <div class="gb-flow__icon"><i data-feather="truck"></i></div>
+          <h3 class="gb-flow__title">رتّب التوصيل</h3>
+          <p class="gb-flow__desc">نسّق الاستلام أو أضف سائق توصيل معتمداً في التطبيق.</p>
+        </div>
+        <div class="gb-flow__card gb-flow__card--gold">
+          <span class="gb-flow__num">6</span>
+          <div class="gb-flow__icon"><i data-feather="key"></i></div>
+          <h3 class="gb-flow__title">احصل على أموالك بالرمز</h3>
+          <p class="gb-flow__desc">لا يُفرج عن أي مبلغ قبل رمز المشتري. عند إدخاله، يُدفع لمقدمي الخدمات فوراً؛ وتُحرَّر حصتك بعد نافذة حماية 24 ساعة، إلى محفظتك.</p>
         </div>
       </div>
     </div>
