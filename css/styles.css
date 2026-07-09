@@ -4061,7 +4061,7 @@ textarea:focus-visible,select:focus-visible,summary:focus-visible{
 /* R2-4: search field is an illustrative doorway to the app (no live search) */
 a.gb-search { text-decoration: none; margin-bottom: var(--space-sm); cursor: pointer; transition: border-color .2s ease; }
 a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
-.gb-search__ph { min-height: 1em; }
+.gb-search__ph { flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: clip; line-height: 1.5; min-height: 1.5em; }
 .gb-search__note { text-align: center; color: var(--gb-muted); font-size: var(--fs-caption); margin: 0 auto var(--space-xl); }
 /* R2-3: rotating diaspora corridor — fade on swap */
 /* corridor: carousel-style slide-advance (labels never overlap during a change) */
