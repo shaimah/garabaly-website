@@ -4204,8 +4204,10 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 .gb-tier--active { box-shadow: 0 0 0 2px var(--gb-tier), var(--shadow-md); }
 .gb-tier__flag { position: absolute; top: -11px; inset-inline-start: 50%; transform: translateX(-50%); background: var(--gb-tier); color: #fff; font-size: var(--fs-caption); font-weight: 700; border-radius: 20px; padding: 3px 12px; white-space: nowrap; }
 [dir="rtl"] .gb-tier__flag { transform: translateX(50%); }
-.gb-tier__badge { width: 46px; height: 46px; border-radius: 50%; margin: 4px auto 10px; display: grid; place-items: center; color: #fff; background: var(--gb-tier); }
-.gb-tier__badge svg { width: 23px; height: 23px; }
+/* circular icon badge — scoped to the coloured home tiers so it doesn't hijack
+   the FAQ/verification trust-tier TEXT badge (which would go white/invisible) */
+.gb-tier--bronze > .gb-tier__badge, .gb-tier--silver > .gb-tier__badge, .gb-tier--gold > .gb-tier__badge { width: 46px; height: 46px; border-radius: 50%; margin: 4px auto 10px; display: grid; place-items: center; color: #fff; background: var(--gb-tier); }
+.gb-tier--bronze > .gb-tier__badge svg, .gb-tier--silver > .gb-tier__badge svg, .gb-tier--gold > .gb-tier__badge svg { width: 23px; height: 23px; }
 .gb-tier__name { font-weight: 700; color: var(--text-primary); }
 .gb-tier__reqs { font-size: var(--fs-small); color: var(--gb-muted); margin-bottom: 12px; }
 .gb-tier__pct { font-size: var(--fs-display); font-weight: 800; color: var(--gb-tier); line-height: 1; }
@@ -4429,6 +4431,14 @@ html.js-ready .gb-proposal.reveal:not(.visible) .gb-proposal__new { opacity: 0; 
 /* ⑤ diaspora corridor: dashed flight-path between endpoints + a plane that travels it */
 .gb-endpoints { position: relative; }
 .gb-corridor-track { position: relative; flex: 0 0 auto; width: 170px; max-width: 42%; height: 16px; align-self: center; }
+/* mobile: give the endpoints room so long names (Ouagadougou / Burkina Faso) don't crop */
+@media (max-width: 560px) {
+  .gb-endpoints { gap: 10px; padding: var(--space-md); }
+  .gb-corridor-track { width: 54px; }
+  .gb-endpoint { white-space: normal; min-width: 0; }
+  .gb-endpoint__city { font-size: var(--fs-body); }
+  .gb-endpoint small { font-size: var(--fs-caption); }
+}
 .gb-corridor-track::before { content: ""; position: absolute; inset-inline: 2px; top: 50%; border-top: 2px dashed rgba(200, 121, 65, 0.42); }
 .gb-corridor-track::after { content: ""; position: absolute; top: 50%; inset-inline-end: 0; transform: translateY(-50%); width: 0; height: 0; border-block: 4px solid transparent; border-inline-start: 6px solid var(--primary); border-inline-end: 0; }
 [dir="rtl"] .gb-corridor-track::after { transform: translateY(-50%) scaleX(-1); }
