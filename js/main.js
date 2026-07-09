@@ -338,21 +338,29 @@ function initCountUp() {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           var el = entry.target;
-          var revealParent = el.closest('.reveal');
 
-          // Hero stats start one after another (2s apart) for a staged cascade.
+          // Hero stats: each stat stays hidden, then reveals AND starts counting
+          // on its turn — 2s apart — so you never see the final figure early.
+          var heroStat = el.closest('.hero__stat');
           var heroWrap = el.closest('.hero__stats');
-          var extra = heroWrap ? Array.prototype.indexOf.call(heroWrap.querySelectorAll('[data-count]'), el) * 2000 : 0;
+          if (heroWrap && heroStat) {
+            var idx = Array.prototype.indexOf.call(heroWrap.querySelectorAll('[data-count]'), el);
+            var stat = heroStat, node = el;
+            setTimeout(function() { stat.classList.add('is-in'); animateCount(node); }, idx * 2000);
+            observer.unobserve(el);
+            return;
+          }
 
+          var revealParent = el.closest('.reveal');
           if (revealParent && !revealParent.classList.contains('visible')) {
             var check = setInterval(function() {
               if (revealParent.classList.contains('visible')) {
                 clearInterval(check);
-                setTimeout(function() { animateCount(el); }, 150 + extra);
+                setTimeout(function() { animateCount(el); }, 150);
               }
             }, 50);
           } else {
-            setTimeout(function() { animateCount(el); }, extra);
+            animateCount(el);
           }
 
           observer.unobserve(el);
