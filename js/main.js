@@ -290,7 +290,7 @@ function initCountUp() {
     var target = parseFloat(el.getAttribute('data-count'));
     var suffix = el.getAttribute('data-suffix') || '';
     var prefix = el.getAttribute('data-prefix') || '';
-    var duration = 2200; // ease-out cubic — clearly incremental
+    var duration = 2800; // ease-out cubic — clearly incremental
 
     // Reduced motion: render the final figure immediately (spec ② fallback)
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -340,15 +340,19 @@ function initCountUp() {
           var el = entry.target;
           var revealParent = el.closest('.reveal');
 
+          // Hero stats start one after another (2s apart) for a staged cascade.
+          var heroWrap = el.closest('.hero__stats');
+          var extra = heroWrap ? Array.prototype.indexOf.call(heroWrap.querySelectorAll('[data-count]'), el) * 2000 : 0;
+
           if (revealParent && !revealParent.classList.contains('visible')) {
             var check = setInterval(function() {
               if (revealParent.classList.contains('visible')) {
                 clearInterval(check);
-                setTimeout(function() { animateCount(el); }, 150);
+                setTimeout(function() { animateCount(el); }, 150 + extra);
               }
             }, 50);
           } else {
-            animateCount(el);
+            setTimeout(function() { animateCount(el); }, extra);
           }
 
           observer.unobserve(el);
