@@ -128,15 +128,14 @@ function initScrollReveal() {
     }
   );
 
-  // Card grids: stagger direct children ~75ms apart (spec ①).
-  // Excludes grids whose children already have their own reveal animation
-  // (.ab-beats beat-strip, referral ladder).
-  const gridSelector = '.ab-grid, .gb-nsteps, .faq-toc, .ab-metrics, .gb-tiers, .gb.gb-flow';
+  // Card/step grids: reveal direct children one after another (spec ①/⑤).
+  const gridSelector = '.ab-grid, .gb-nsteps, .faq-toc, .ab-metrics, .gb-tiers, .gb.gb-flow, .gb-ladder, .gb-flowstrip, .hero__stats';
   elements.forEach((el) => {
     if (el.matches(gridSelector)) {
       el.classList.add('reveal--stagger');
+      const step = el.matches('.hero__stats') ? 0.22 : 0.09;
       [...el.children].forEach((child, i) => {
-        child.style.transitionDelay = `${Math.min(i * 0.075, 0.6)}s`;
+        child.style.transitionDelay = `${Math.min(i * step, 0.9)}s`;
       });
     }
     observer.observe(el);
@@ -334,15 +333,19 @@ function initCountUp() {
           var el = entry.target;
           var revealParent = el.closest('.reveal');
 
+          // Hero stats count one after another as they reveal (spec ②)
+          var heroWrap = el.closest('.hero__stats');
+          var extra = heroWrap ? Array.prototype.indexOf.call(heroWrap.querySelectorAll('[data-count]'), el) * 320 : 0;
+
           if (revealParent && !revealParent.classList.contains('visible')) {
             var check = setInterval(function() {
               if (revealParent.classList.contains('visible')) {
                 clearInterval(check);
-                setTimeout(function() { animateCount(el); }, 150);
+                setTimeout(function() { animateCount(el); }, 150 + extra);
               }
             }, 50);
           } else {
-            animateCount(el);
+            setTimeout(function() { animateCount(el); }, extra);
           }
 
           observer.unobserve(el);

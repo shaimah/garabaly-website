@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/fonts.css?v=1">
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="preload" as="image" type="image/avif" imagesrcset="../assets/images/hero-banner-480.avif 480w, ../assets/images/hero-banner-768.avif 768w, ../assets/images/hero-banner-1280.avif 1280w, ../assets/images/hero-banner-1536.avif 1536w" imagesizes="100vw">
-<link rel="stylesheet" href="../css/styles.css?v=35">
+<link rel="stylesheet" href="../css/styles.css?v=36">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -181,7 +181,7 @@
           Comment ça marche
         </a>
       </div>
-      <div class="hero__stats">
+      <div class="hero__stats reveal">
         <div class="hero__stat">
           <div class="hero__stat-value" data-count="1000000000" data-suffix="+" data-prefix="$">$1B+</div>
           <div class="hero__stat-label">Bétail échangé annuellement (OCDE)</div>
@@ -363,7 +363,7 @@
             <span class="gb-tier__dur">60 jours</span>
           </div>
         </div>
-        <div class="gb-ladder">
+        <div class="gb-ladder reveal">
           <div class="gb-ladder__step gb-ladder__step--parrain"><span class="gb-ladder__badge"><i data-feather="user-plus"></i></span><span class="gb-ladder__name">Parrain</span><span class="gb-ladder__req">3 parrainages</span></div>
           <span class="gb-ladder__arrow">→</span>
           <div class="gb-ladder__step gb-ladder__step--ambassadeur"><span class="gb-ladder__badge"><i data-feather="award"></i></span><span class="gb-ladder__name">Ambassadeur</span><span class="gb-ladder__req">10 parrainages</span></div>
@@ -457,7 +457,7 @@
               <div class="gb-chat__avatar"><i data-feather="user"></i></div>
               <div class="gb-chat__who">
                 <div class="gb-chat__name">Amadou Diallo <span class="gb-chat__badge">VENDEUR</span></div>
-                <div class="gb-chat__status">En ligne</div>
+                <div class="gb-chat__status gb-chat__status--typing"><span class="gb-typing"><span class="gb-typing__dots"><i></i><i></i><i></i></span><span class="gb-typing__label">en train d’écrire…</span></span></div>
               </div>
               <i data-feather="phone" style="color: var(--gb-muted); width: 18px; height: 18px;"></i>
             </div>
@@ -473,14 +473,13 @@
               </div>
               <div class="gb-bubble gb-bubble--them">Bienvenue ! C'est un très bon bélier, bien nourri et prêt pour la Tabaski.</div>
               <div class="gb-bubble gb-bubble--me">
-                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:12</span></div>
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"><i style="--h:38%"></i><i style="--h:60%"></i><i style="--h:85%"></i><i style="--h:50%"></i><i style="--h:95%"></i><i style="--h:70%"></i><i style="--h:45%"></i><i style="--h:80%"></i><i style="--h:55%"></i><i style="--h:100%"></i><i style="--h:65%"></i><i style="--h:40%"></i><i style="--h:90%"></i><i style="--h:60%"></i><i style="--h:75%"></i><i style="--h:50%"></i></span><span class="gb-voice__dur" dir="ltr">0:12</span></div>
               </div>
               <div class="gb-bubble gb-bubble--them">
-                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"></span><span class="gb-voice__dur" dir="ltr">0:08</span></div>
+                <div class="gb-voice"><span class="gb-voice__play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="gb-voice__wave"><i style="--h:38%"></i><i style="--h:60%"></i><i style="--h:85%"></i><i style="--h:50%"></i><i style="--h:95%"></i><i style="--h:70%"></i><i style="--h:45%"></i><i style="--h:80%"></i><i style="--h:55%"></i><i style="--h:100%"></i><i style="--h:65%"></i><i style="--h:40%"></i><i style="--h:90%"></i><i style="--h:60%"></i><i style="--h:75%"></i><i style="--h:50%"></i></span><span class="gb-voice__dur" dir="ltr">0:08</span></div>
               </div>
               <div class="gb-bubble gb-bubble--me">Pouvez-vous faire <span dir="ltr">FCFA 135 000</span> ?</div>
               <div class="gb-bubble gb-bubble--them">D'accord, comme convenu. Je modifie le prix maintenant.</div>
-              <div class="gb-bubble gb-bubble--them" aria-hidden="true"><span class="gb-typing"><span class="gb-typing__dots"><i></i><i></i><i></i></span><span class="gb-typing__label">en train d’écrire…</span></span></div>
             </div>
             <div class="gb-chat__input">
               Message…
@@ -498,7 +497,7 @@
         </div>
 
         <!-- Le vendeur a modifié le prix — centré sous les deux téléphones -->
-        <div class="gb-proposal gb-neg__proposal">
+        <div class="gb-proposal gb-neg__proposal reveal">
           <div class="gb-proposal__head">Le vendeur a modifié le prix</div>
           <div class="gb-ref" style="margin-bottom: var(--space-sm);">
             <div class="gb-ref__thumb"><i data-feather="image"></i></div>
@@ -891,11 +890,11 @@
         </div>
         <div class="gb-endpoints" data-corridor data-corridors='[{"from":"Madrid","fl":"Diaspora","to":"Dakar","tl":"La famille · Sénégal"},{"from":"Paris","fl":"Diaspora","to":"Bamako","tl":"La famille · Mali"},{"from":"Rome","fl":"Diaspora","to":"Ouagadougou","tl":"La famille · Burkina Faso"},{"from":"Abidjan","fl":"Régional","to":"Niamey","tl":"La famille · Niger"}]'>
           <span class="gb-endpoint"><b class="gb-endpoint__city">Madrid</b><small>Diaspora</small></span>
-          <span class="gb-corridor-track" aria-hidden="true"><i data-feather="send" class="gb-corridor-plane"></i></span>
+          <span class="gb-corridor-track" aria-hidden="true"><svg class="gb-corridor-plane" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21,16v-2l-8,-5V3.5C13,2.67 12.33,2 11.5,2 10.67,2 10,2.67 10,3.5V9l-8,5v2l8,-2.5V19l-2,1.5V22l3.5,-1 3.5,1v-1.5L13,19v-5.5L21,16Z"/></svg></span>
           <span class="gb-endpoint"><b class="gb-endpoint__city">Dakar</b><small>La famille · Sénégal</small></span>
         </div>
         <p class="gb-endpoints-note">Aussi depuis Londres, New York, Bruxelles, Montréal…</p>
-        <div class="gb-nsteps" style="max-width: 960px; margin: 0 auto;">
+        <div class="gb-nsteps reveal" style="max-width: 960px; margin: 0 auto;">
           <div class="gb-nstep"><p class="gb-nstep__n">01</p><h3>Vous payez par carte</h3><p>Depuis n'importe quel pays. La devise locale est convertie automatiquement.</p></div>
           <div class="gb-nstep"><p class="gb-nstep__n">02</p><h3>Les fonds sont protégés</h3><p>Le séquestre protège l'argent jusqu'à la réception. Le vendeur ne touche rien avant.</p></div>
           <div class="gb-nstep gb-nstep--green"><p class="gb-nstep__n">03</p><h3>Livraison confirmée</h3><p>Le proche reçoit, entre le code, et les fonds sont versés. Vous êtes prévenu.</p></div>
@@ -1175,7 +1174,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=14"></script>
+  <script src="../js/main.js?v=15"></script>
   <script>if(typeof feather!=="undefined")feather.replace();</script>
 </body>
 </html>
