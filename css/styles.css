@@ -4064,7 +4064,13 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 .gb-search__ph { min-height: 1em; }
 .gb-search__note { text-align: center; color: var(--gb-muted); font-size: var(--fs-caption); margin: 0 auto var(--space-xl); }
 /* R2-3: rotating diaspora corridor — fade on swap */
-.gb-endpoints[data-corridor] .gb-endpoint { transition: opacity .35s ease; }
+/* corridor: carousel-style slide-advance (labels never overlap during a change) */
+.gb-endpoints[data-corridor] .gb-endpoint { transition: opacity .32s ease, transform .32s ease; }
+.gb-endpoints.is-changing .gb-endpoint { opacity: 0; transform: translateX(-16px); }
+.gb-endpoints.is-entering .gb-endpoint { opacity: 0; transform: translateX(16px); transition: none; }
+[dir="rtl"] .gb-endpoints.is-changing .gb-endpoint { transform: translateX(16px); }
+[dir="rtl"] .gb-endpoints.is-entering .gb-endpoint { transform: translateX(-16px); }
+/* keep the old class working if referenced anywhere */
 .gb-endpoints.is-fading .gb-endpoint { opacity: 0; }
 
 /* Chat / negotiation (§3.10) */
@@ -4320,8 +4326,8 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 
 /* ⑨ card hover-lift (desktop; only cards without an existing lift) */
 @media (hover: hover) {
-  .gb-nstep, .gb-tier, .gb-listing, .gb-icard, .ab-metric { transition: transform 0.16s ease, box-shadow 0.16s ease; }
-  .gb-nstep:hover, .gb-tier:hover, .gb-listing:hover, .gb-icard:hover, .ab-metric:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .gb-nstep, .gb-tier, .gb-icard, .ab-metric { transition: transform 0.16s ease, box-shadow 0.16s ease; }
+  .gb-nstep:hover, .gb-tier:hover, .gb-icard:hover, .ab-metric:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 }
 
 /* ⑩ button press */
