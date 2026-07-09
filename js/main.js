@@ -34,7 +34,7 @@ function initHeader() {
   if (!header) return;
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 30) {
       header.classList.add('header--scrolled');
       header.classList.remove('header--transparent');
     } else {
@@ -52,6 +52,16 @@ function initHeader() {
   } else {
     // Inner pages - always scrolled style
     header.classList.add('header--scrolled');
+  }
+
+  // Motion spec ⑭: shrink the nav after 30px of scroll (all pages).
+  // Pure class toggle; CSS handles padding/wordmark/backdrop, reduced-motion skips it.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const handleShrink = () => {
+      header.classList.toggle('header--shrink', window.scrollY > 30);
+    };
+    window.addEventListener('scroll', handleShrink, { passive: true });
+    handleShrink();
   }
 }
 
@@ -105,21 +115,36 @@ function initScrollReveal() {
 
   const observer = new IntersectionObserver(
     (entries) => {
+      // Cascade elements that enter the viewport together (~90ms apart) so a
+      // section reveals sequentially rather than all at once. Grids with
+      // .reveal--stagger sequence their own children, so leave those alone.
+      let batch = 0;
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          if (!entry.target.classList.contains('reveal--stagger')) {
+            entry.target.style.transitionDelay = Math.min(batch * 0.09, 0.6) + 's';
+            batch++;
+          }
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.05,
+      threshold: 0.12,
       rootMargin: '0px 0px -20px 0px',
     }
   );
 
-  elements.forEach((el, index) => {
-    el.style.transitionDelay = `${index * 0.05}s`;
+  // Card/step grids: reveal direct children one after another (spec ①/⑤).
+  const gridSelector = '.ab-grid, .gb-nsteps, .faq-toc, .ab-metrics, .gb-tiers, .gb.gb-flow, .gb-ladder, .gb-flowstrip';
+  elements.forEach((el) => {
+    if (el.matches(gridSelector)) {
+      el.classList.add('reveal--stagger');
+      [...el.children].forEach((child, i) => {
+        child.style.transitionDelay = `${Math.min(i * 0.09, 0.7)}s`;
+      });
+    }
     observer.observe(el);
   });
 }
@@ -265,7 +290,13 @@ function initCountUp() {
     var target = parseFloat(el.getAttribute('data-count'));
     var suffix = el.getAttribute('data-suffix') || '';
     var prefix = el.getAttribute('data-prefix') || '';
-    var duration = 4500;
+    var duration = 2200; // ease-out cubic — clearly incremental
+
+    // Reduced motion: render the final figure immediately (spec ② fallback)
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = prefix + formatNumber(target) + suffix;
+      return;
+    }
 
     // For target 0, just display immediately
     if (target === 0) {
@@ -298,7 +329,7 @@ function initCountUp() {
       }
 
       requestAnimationFrame(updateCount);
-    }, 300);
+    }, 120);
   }
 
   // Single IntersectionObserver for all stat values
@@ -313,7 +344,7 @@ function initCountUp() {
             var check = setInterval(function() {
               if (revealParent.classList.contains('visible')) {
                 clearInterval(check);
-                setTimeout(function() { animateCount(el); }, 500);
+                setTimeout(function() { animateCount(el); }, 150);
               }
             }, 50);
           } else {
@@ -324,7 +355,7 @@ function initCountUp() {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.3 }
   );
 
   statValues.forEach(function(el) { observer.observe(el); });
@@ -407,6 +438,9 @@ function initScenariosMarquee() {
   cards.forEach((c) => track.appendChild(c));
 
   const firstSet = Array.from(track.children);
+  // The marquee is an always-visible unit — reveal the originals now so they
+  // never sit invisible inside the animated track (was causing gaps).
+  firstSet.forEach((card) => { card.classList.remove('reveal'); card.classList.add('visible'); });
   firstSet.forEach((card) => {
     const copy = card.cloneNode(true);
     copy.classList.remove('reveal');
@@ -648,16 +682,26 @@ function initDiasporaCorridor() {
   const labels = el.querySelectorAll('.gb-endpoint small');
   if (cities.length < 2 || labels.length < 2) return;
   let i = 0;
-  setInterval(function () {
+  function advance() {
     i = (i + 1) % data.length;
-    el.classList.add('is-fading');
+    el.classList.add('is-changing');            // slide current labels out + fade
     setTimeout(function () {
       const c = data[i];
       cities[0].textContent = c.from; labels[0].textContent = c.fl;
       cities[1].textContent = c.to;   labels[1].textContent = c.tl;
-      el.classList.remove('is-fading');
-    }, 350);
-  }, 2800);
+      el.classList.remove('is-changing');
+      el.classList.add('is-entering');           // place new labels at the entry side, invisible
+      void el.offsetWidth;                        // force reflow (no transition)
+      el.classList.remove('is-entering');         // slide the new labels into place
+    }, 320);
+  }
+  // Advance like a carousel each time the plane completes a lap; timer fallback.
+  const plane = el.querySelector('.gb-corridor-plane');
+  if (plane && typeof plane.getAnimations === 'function' && plane.getAnimations().length) {
+    plane.addEventListener('animationiteration', advance);
+  } else {
+    setInterval(advance, 2800);
+  }
 }
 
 /* --- R2-4: illustrative typewriter placeholder for the (app-only) search. Static fallback if reduced-motion --- */
