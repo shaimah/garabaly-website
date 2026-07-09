@@ -4283,12 +4283,28 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 @keyframes gb-wave { 0%, 100% { transform: scaleY(0.7); opacity: 0.45; } 50% { transform: scaleY(1); opacity: 0.65; } }
 @keyframes gb-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes gb-plane { 0% { inset-inline-start: 8%; opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { inset-inline-start: 88%; opacity: 0; } }
+@keyframes gb-node-in { from { transform: scale(0); } to { transform: scale(1); } }
+@keyframes gb-line-draw { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 
 /* ⑦ active-step halo (escrow / order tracker) */
 .gb-tracker li[data-state="active"] .dot { animation: gb-halo 1.8s ease-in-out infinite; }
 
-/* ⑧ live pulse-dot (only animates dots that already exist inside a live label) */
+/* ⑧ live pulse-dot — the green dot on live labels emits a soft pulsing ring */
+.gb-pill--live::before { animation: gb-halo 2.2s ease-out infinite; }
+.status-pill--live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: currentColor; margin-inline-end: 6px; vertical-align: middle; animation: gb-halo 2.2s ease-out infinite; }
 .gb-pill--live .dot, .status-pill--live .dot, .dot--live { animation: gb-livepulse 2.2s ease-out infinite; }
+
+/* ③ timeline connector draw + numbered-node pop-in (on reveal) */
+.reveal.visible .gb-flow__num, .reveal.visible .gb-nstep__n, .reveal.visible .gb-tracker .dot { animation: gb-node-in 0.4s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
+.reveal.visible .gb-flow__card:nth-child(2) .gb-flow__num, .reveal.visible .gb-nstep:nth-child(2) .gb-nstep__n, .reveal.visible .gb-tracker li:nth-child(2) .dot { animation-delay: 0.15s; }
+.reveal.visible .gb-flow__card:nth-child(3) .gb-flow__num, .reveal.visible .gb-nstep:nth-child(3) .gb-nstep__n, .reveal.visible .gb-tracker li:nth-child(3) .dot { animation-delay: 0.3s; }
+.reveal.visible .gb-flow__card:nth-child(4) .gb-flow__num, .reveal.visible .gb-nstep:nth-child(4) .gb-nstep__n, .reveal.visible .gb-tracker li:nth-child(4) .dot { animation-delay: 0.45s; }
+.reveal.visible .gb-flow__card:nth-child(5) .gb-flow__num, .reveal.visible .gb-tracker li:nth-child(5) .dot { animation-delay: 0.6s; }
+.reveal.visible .gb-flow__card:nth-child(6) .gb-flow__num { animation-delay: 0.75s; }
+.reveal.visible .gb-tracker li::before { transform-origin: top; animation: gb-line-draw 1.3s ease both; }
+.reveal.visible .gb-tracker li:nth-child(2)::before { animation-delay: 0.15s; }
+.reveal.visible .gb-tracker li:nth-child(3)::before { animation-delay: 0.3s; }
+.reveal.visible .gb-tracker li:nth-child(4)::before { animation-delay: 0.45s; }
 
 /* ⑨ card hover-lift (desktop; only cards without an existing lift) */
 @media (hover: hover) {
@@ -4375,7 +4391,10 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 @media (prefers-reduced-motion: reduce) {
   html.js-ready .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
   .gb-tracker li[data-state="active"] .dot,
+  .gb-pill--live::before, .status-pill--live::before,
   .gb-pill--live .dot, .status-pill--live .dot, .dot--live,
+  .reveal.visible .gb-flow__num, .reveal.visible .gb-nstep__n, .reveal.visible .gb-tracker .dot,
+  .reveal.visible .gb-tracker li::before,
   .gb-voice__wave,
   .reveal.visible .gb-ladder__step,
   .ab-beats.visible .ab-beat, .ab-beats.visible .ab-beat__arrow,
