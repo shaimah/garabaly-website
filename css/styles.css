@@ -2356,13 +2356,24 @@ section[id^="cat-"] { scroll-margin-top: 80px; }
 .reveal {
   opacity: 1;
   transform: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 /* Only hide-then-reveal once JS is ready to animate */
 html.js-ready .reveal {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(16px);
+}
+
+/* spec ①: card grids reveal their children staggered (delays set inline by JS) */
+html.js-ready .reveal--stagger > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+html.js-ready .reveal--stagger.visible > * {
+  opacity: 1;
+  transform: none;
 }
 
 html.js-ready .reveal.visible {
@@ -4296,20 +4307,20 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 
 /* ③ timeline connector draw + numbered-node pop-in (on reveal) */
 .reveal.visible .gb-flow__num, .reveal.visible .gb-nstep__n, .reveal.visible .gb-tracker .dot { animation: gb-node-in 0.4s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
-.reveal.visible .gb-flow__card:nth-child(2) .gb-flow__num, .reveal.visible .gb-nstep:nth-child(2) .gb-nstep__n, .reveal.visible .gb-tracker li:nth-child(2) .dot { animation-delay: 0.15s; }
-.reveal.visible .gb-flow__card:nth-child(3) .gb-flow__num, .reveal.visible .gb-nstep:nth-child(3) .gb-nstep__n, .reveal.visible .gb-tracker li:nth-child(3) .dot { animation-delay: 0.3s; }
-.reveal.visible .gb-flow__card:nth-child(4) .gb-flow__num, .reveal.visible .gb-nstep:nth-child(4) .gb-nstep__n, .reveal.visible .gb-tracker li:nth-child(4) .dot { animation-delay: 0.45s; }
-.reveal.visible .gb-flow__card:nth-child(5) .gb-flow__num, .reveal.visible .gb-tracker li:nth-child(5) .dot { animation-delay: 0.6s; }
-.reveal.visible .gb-flow__card:nth-child(6) .gb-flow__num { animation-delay: 0.75s; }
+.reveal.visible .gb-flow__card:nth-child(2) .gb-flow__num, .reveal.visible .gb-nstep:nth-child(2) .gb-nstep__n, .reveal.visible .gb-tracker li:nth-child(2) .dot { animation-delay: 0.33s; }
+.reveal.visible .gb-flow__card:nth-child(3) .gb-flow__num, .reveal.visible .gb-nstep:nth-child(3) .gb-nstep__n, .reveal.visible .gb-tracker li:nth-child(3) .dot { animation-delay: 0.66s; }
+.reveal.visible .gb-flow__card:nth-child(4) .gb-flow__num, .reveal.visible .gb-nstep:nth-child(4) .gb-nstep__n, .reveal.visible .gb-tracker li:nth-child(4) .dot { animation-delay: 0.99s; }
+.reveal.visible .gb-flow__card:nth-child(5) .gb-flow__num, .reveal.visible .gb-tracker li:nth-child(5) .dot { animation-delay: 1.32s; }
+.reveal.visible .gb-flow__card:nth-child(6) .gb-flow__num { animation-delay: 1.65s; }
 .reveal.visible .gb-tracker li::before { transform-origin: top; animation: gb-line-draw 1.3s ease both; }
-.reveal.visible .gb-tracker li:nth-child(2)::before { animation-delay: 0.15s; }
-.reveal.visible .gb-tracker li:nth-child(3)::before { animation-delay: 0.3s; }
-.reveal.visible .gb-tracker li:nth-child(4)::before { animation-delay: 0.45s; }
+.reveal.visible .gb-tracker li:nth-child(2)::before { animation-delay: 0.33s; }
+.reveal.visible .gb-tracker li:nth-child(3)::before { animation-delay: 0.66s; }
+.reveal.visible .gb-tracker li:nth-child(4)::before { animation-delay: 0.99s; }
 
 /* ⑨ card hover-lift (desktop; only cards without an existing lift) */
 @media (hover: hover) {
-  .gb-nstep, .gb-tier, .gb-listing { transition: transform 0.16s ease, box-shadow 0.16s ease; }
-  .gb-nstep:hover, .gb-tier:hover, .gb-listing:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .gb-nstep, .gb-tier, .gb-listing, .gb-icard, .ab-metric { transition: transform 0.16s ease, box-shadow 0.16s ease; }
+  .gb-nstep:hover, .gb-tier:hover, .gb-listing:hover, .gb-icard:hover, .ab-metric:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 }
 
 /* ⑩ button press */
@@ -4393,9 +4404,28 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 .gb-corridor-plane, .gb-corridor-plane svg { width: 14px; height: 14px; display: block; }
 [dir="rtl"] .gb-corridor-plane { animation-direction: reverse; transform: scaleX(-1); }
 
+/* ⑭ sticky-nav shrink after 30px scroll (class set by JS; skipped under reduced-motion) */
+.header, .header__inner, .header__logo-text, .header__logo img { transition: all 0.25s ease; }
+.header--shrink { height: 58px; background: rgba(250, 243, 232, 0.88); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); box-shadow: 0 1px 0 var(--gb-hairline); }
+.header--shrink .header__logo-text { font-size: calc(var(--fs-h2) * 0.88); }
+.header--shrink .header__logo img { width: 34px; height: 34px; }
+.header--shrink.header--transparent .header__logo-text,
+.header--shrink.header--transparent .header__nav-link { color: var(--text-primary); }
+[data-theme="dark"] .header--shrink { background: rgba(26, 20, 16, 0.88); box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08); }
+
+/* ⑯ typing indicator — three bouncing dots ("en train d'écrire…") */
+@keyframes gb-typing { 0%, 60%, 100% { transform: none; } 30% { transform: translateY(-4px); } }
+.gb-typing { display: inline-flex; align-items: center; gap: 8px; }
+.gb-typing__dots { display: inline-flex; gap: 3px; }
+.gb-typing__dots i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: 0.6; animation: gb-typing 1.2s ease-in-out infinite; }
+.gb-typing__dots i:nth-child(2) { animation-delay: 0.2s; }
+.gb-typing__dots i:nth-child(3) { animation-delay: 0.4s; }
+.gb-typing__label { font-size: var(--fs-caption); font-style: italic; opacity: 0.75; }
+
 /* ---- reduced-motion: fall back to the current static state everywhere ---- */
 @media (prefers-reduced-motion: reduce) {
-  html.js-ready .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  html.js-ready .reveal, html.js-ready .reveal--stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .gb-typing__dots i { animation: none !important; }
   .gb-tracker li[data-state="active"] .dot,
   .gb-pill--live::before, .status-pill--live::before,
   .gb-pill--live .dot, .status-pill--live .dot, .dot--live,

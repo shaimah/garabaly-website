@@ -34,7 +34,7 @@ function initHeader() {
   if (!header) return;
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 30) {
       header.classList.add('header--scrolled');
       header.classList.remove('header--transparent');
     } else {
@@ -52,6 +52,16 @@ function initHeader() {
   } else {
     // Inner pages - always scrolled style
     header.classList.add('header--scrolled');
+  }
+
+  // Motion spec ⑭: shrink the nav after 30px of scroll (all pages).
+  // Pure class toggle; CSS handles padding/wordmark/backdrop, reduced-motion skips it.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const handleShrink = () => {
+      header.classList.toggle('header--shrink', window.scrollY > 30);
+    };
+    window.addEventListener('scroll', handleShrink, { passive: true });
+    handleShrink();
   }
 }
 
@@ -113,13 +123,22 @@ function initScrollReveal() {
       });
     },
     {
-      threshold: 0.05,
+      threshold: 0.12,
       rootMargin: '0px 0px -20px 0px',
     }
   );
 
-  elements.forEach((el, index) => {
-    el.style.transitionDelay = `${index * 0.05}s`;
+  // Card grids: stagger direct children ~75ms apart (spec ①).
+  // Excludes grids whose children already have their own reveal animation
+  // (.ab-beats beat-strip, referral ladder).
+  const gridSelector = '.ab-grid, .gb-nsteps, .faq-toc, .ab-metrics, .gb-tiers, .gb.gb-flow';
+  elements.forEach((el) => {
+    if (el.matches(gridSelector)) {
+      el.classList.add('reveal--stagger');
+      [...el.children].forEach((child, i) => {
+        child.style.transitionDelay = `${Math.min(i * 0.075, 0.6)}s`;
+      });
+    }
     observer.observe(el);
   });
 }
@@ -265,7 +284,13 @@ function initCountUp() {
     var target = parseFloat(el.getAttribute('data-count'));
     var suffix = el.getAttribute('data-suffix') || '';
     var prefix = el.getAttribute('data-prefix') || '';
-    var duration = 4500;
+    var duration = 1200; // spec ②: ease-out cubic ~1.2s
+
+    // Reduced motion: render the final figure immediately (spec ② fallback)
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = prefix + formatNumber(target) + suffix;
+      return;
+    }
 
     // For target 0, just display immediately
     if (target === 0) {
@@ -298,7 +323,7 @@ function initCountUp() {
       }
 
       requestAnimationFrame(updateCount);
-    }, 300);
+    }, 120);
   }
 
   // Single IntersectionObserver for all stat values
@@ -313,7 +338,7 @@ function initCountUp() {
             var check = setInterval(function() {
               if (revealParent.classList.contains('visible')) {
                 clearInterval(check);
-                setTimeout(function() { animateCount(el); }, 500);
+                setTimeout(function() { animateCount(el); }, 150);
               }
             }, 50);
           } else {
@@ -324,7 +349,7 @@ function initCountUp() {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.5 }
   );
 
   statValues.forEach(function(el) { observer.observe(el); });
