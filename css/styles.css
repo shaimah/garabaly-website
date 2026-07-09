@@ -2646,7 +2646,7 @@ html.js-ready .reveal.visible {
 .gb-nstep h3 { font: var(--font-h3); margin: 6px 0 4px; }
 .gb-nstep p { color: var(--text-secondary); font-size: var(--fs-body); margin: 0; }
 .gb-endpoints { display: flex; align-items: center; justify-content: center; gap: var(--space-lg); flex-wrap: wrap; background: var(--surface); border: 1px solid var(--gb-hairline); border-radius: 14px; padding: var(--space-md) var(--space-lg); max-width: 640px; margin: 0 auto var(--space-sm); }
-.gb-endpoint { font-weight: 600; color: var(--text-primary); text-align: center; white-space: nowrap; flex: 0 0 auto; min-width: 92px; }
+.gb-endpoint { font-weight: 600; color: var(--text-primary); text-align: center; white-space: nowrap; flex: 1 1 0; min-width: 0; }
 .gb-endpoint small { display: block; font-weight: 400; color: var(--gb-muted); font-size: var(--fs-small); }
 .gb-endpoints__arrow { color: var(--primary); font-weight: 700; font-size: var(--fs-h3); }
 [dir="rtl"] .gb-endpoints__arrow { transform: scaleX(-1); }
@@ -4342,12 +4342,9 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
   .gb-video:hover .gb-video__play, .gb-voice:hover .gb-voice__play, .gb-tikcard:hover .gb-tikcard__play { transform: scale(1.14); }
 }
 
-/* ⑮ marquee governance — pause on hover + edge-fade (motion-on state only) */
-.scenarios-carousel--marquee:not(.scenarios-carousel--reduced-motion):hover .scenarios-carousel__track { animation-play-state: paused; }
-.scenarios-carousel--marquee:not(.scenarios-carousel--reduced-motion) .scenarios-carousel__marquee {
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-}
+/* ⑮ marquee governance: pause-on-hover already exists (line ~1233); the edge-fade
+   mask was removed — masking the GPU-composited animated track froze/blanked it
+   on some GPUs. */
 
 /* ⑯ voice-note waveform — per-bar equalizer + typing indicator */
 @keyframes gb-eq { 0%, 100% { transform: scaleY(0.35); } 50% { transform: scaleY(1); } }
@@ -4376,14 +4373,15 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 
 /* ④ price-change proposal — old price struck through (draws in), new price pops */
 @keyframes gb-strike { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-@keyframes gb-price-pop { 0% { opacity: 0; transform: scale(0.72); } 60% { opacity: 1; } 100% { transform: none; } }
-.gb-proposal__old { position: relative; }
-.gb-proposal__old::after { content: ""; position: absolute; left: 0; right: 0; top: 52%; height: 1.5px; background: currentColor; transform: scaleX(1); transform-origin: left; }
+@keyframes gb-price-pop { 0% { opacity: 0; transform: translateY(6px) scale(0.7); } 55% { opacity: 1; transform: scale(1.16); } 100% { transform: none; } }
+@keyframes gb-price-glow { 0%, 100% { text-shadow: none; } 50% { text-shadow: 0 0 12px rgba(200, 121, 65, 0.55); } }
+.gb-proposal__old { position: relative; transition: color 0.4s ease; }
+.gb-proposal__old::after { content: ""; position: absolute; left: -2px; right: -2px; top: 52%; height: 2px; background: currentColor; transform: scaleX(1); transform-origin: left; }
 html.js-ready .gb-proposal__old { text-decoration: none; }
 html.js-ready .gb-proposal.reveal:not(.visible) .gb-proposal__old::after { transform: scaleX(0); }
 html.js-ready .gb-proposal.reveal:not(.visible) .gb-proposal__new { opacity: 0; }
-.gb-proposal.reveal.visible .gb-proposal__old::after { animation: gb-strike 0.5s ease 0.35s both; }
-.gb-proposal.reveal.visible .gb-proposal__new { animation: gb-price-pop 0.55s cubic-bezier(0.3, 1.4, 0.5, 1) 0.55s both; }
+.gb-proposal.reveal.visible .gb-proposal__old::after { animation: gb-strike 0.7s ease 0.6s both; }
+.gb-proposal.reveal.visible .gb-proposal__new { animation: gb-price-pop 0.75s cubic-bezier(0.3, 1.4, 0.5, 1) 1.35s both, gb-price-glow 2.6s ease-in-out 2.2s infinite; }
 
 /* ⑰ referral badge-ladder now reveals sequentially via .reveal--stagger (JS) */
 
@@ -4424,7 +4422,7 @@ html.js-ready .gb-proposal.reveal:not(.visible) .gb-proposal__new { opacity: 0; 
 
 /* ⑤ diaspora corridor: dashed flight-path between endpoints + a plane that travels it */
 .gb-endpoints { position: relative; }
-.gb-corridor-track { position: relative; flex: 1 1 auto; min-width: 44px; max-width: 240px; height: 16px; align-self: center; }
+.gb-corridor-track { position: relative; flex: 0 0 auto; width: 170px; max-width: 42%; height: 16px; align-self: center; }
 .gb-corridor-track::before { content: ""; position: absolute; inset-inline: 2px; top: 50%; border-top: 2px dashed rgba(200, 121, 65, 0.42); }
 .gb-corridor-track::after { content: ""; position: absolute; top: 50%; inset-inline-end: 0; transform: translateY(-50%); width: 0; height: 0; border-block: 4px solid transparent; border-inline-start: 6px solid var(--primary); border-inline-end: 0; }
 [dir="rtl"] .gb-corridor-track::after { transform: translateY(-50%) scaleX(-1); }
@@ -4449,6 +4447,8 @@ html.js-ready .gb-proposal.reveal:not(.visible) .gb-proposal__new { opacity: 0; 
 .gb-typing__dots i:nth-child(2) { animation-delay: 0.2s; }
 .gb-typing__dots i:nth-child(3) { animation-delay: 0.4s; }
 .gb-typing__label { font-size: var(--fs-caption); font-style: italic; opacity: 0.75; }
+.gb-bubble--typing { width: fit-content; padding: 12px 16px; }
+.gb-bubble--typing .gb-typing__dots i { width: 6px; height: 6px; opacity: 0.7; }
 
 /* ---- reduced-motion: fall back to the current static state everywhere ---- */
 @media (prefers-reduced-motion: reduce) {

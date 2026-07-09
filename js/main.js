@@ -129,13 +129,12 @@ function initScrollReveal() {
   );
 
   // Card/step grids: reveal direct children one after another (spec ①/⑤).
-  const gridSelector = '.ab-grid, .gb-nsteps, .faq-toc, .ab-metrics, .gb-tiers, .gb.gb-flow, .gb-ladder, .gb-flowstrip, .hero__stats';
+  const gridSelector = '.ab-grid, .gb-nsteps, .faq-toc, .ab-metrics, .gb-tiers, .gb.gb-flow, .gb-ladder, .gb-flowstrip';
   elements.forEach((el) => {
     if (el.matches(gridSelector)) {
       el.classList.add('reveal--stagger');
-      const step = el.matches('.hero__stats') ? 0.22 : 0.09;
       [...el.children].forEach((child, i) => {
-        child.style.transitionDelay = `${Math.min(i * step, 0.9)}s`;
+        child.style.transitionDelay = `${Math.min(i * 0.09, 0.7)}s`;
       });
     }
     observer.observe(el);
@@ -283,7 +282,7 @@ function initCountUp() {
     var target = parseFloat(el.getAttribute('data-count'));
     var suffix = el.getAttribute('data-suffix') || '';
     var prefix = el.getAttribute('data-prefix') || '';
-    var duration = 1200; // spec ②: ease-out cubic ~1.2s
+    var duration = 1500; // ease-out cubic — clearly incremental
 
     // Reduced motion: render the final figure immediately (spec ② fallback)
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -333,26 +332,22 @@ function initCountUp() {
           var el = entry.target;
           var revealParent = el.closest('.reveal');
 
-          // Hero stats count one after another as they reveal (spec ②)
-          var heroWrap = el.closest('.hero__stats');
-          var extra = heroWrap ? Array.prototype.indexOf.call(heroWrap.querySelectorAll('[data-count]'), el) * 320 : 0;
-
           if (revealParent && !revealParent.classList.contains('visible')) {
             var check = setInterval(function() {
               if (revealParent.classList.contains('visible')) {
                 clearInterval(check);
-                setTimeout(function() { animateCount(el); }, 150 + extra);
+                setTimeout(function() { animateCount(el); }, 150);
               }
             }, 50);
           } else {
-            setTimeout(function() { animateCount(el); }, extra);
+            animateCount(el);
           }
 
           observer.unobserve(el);
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.3 }
   );
 
   statValues.forEach(function(el) { observer.observe(el); });
