@@ -4315,11 +4315,11 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 /* ⑩ button press */
 .btn:active { transform: scale(0.97); }
 
-/* ⑪ link underline slide-in (footer links) */
-.footer__column a { position: relative; }
-.footer__column a::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 100%; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 0.22s ease; }
-.footer__column a:hover::after { transform: scaleX(1); }
-[dir="rtl"] .footer__column a::after { transform-origin: right; }
+/* ⑪ link underline slide-in (inline legal links — flex items, so the bar fits the text) */
+.footer__bottom-links a { position: relative; }
+.footer__bottom-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 0.22s ease; }
+.footer__bottom-links a:hover::after { transform: scaleX(1); }
+[dir="rtl"] .footer__bottom-links a::after { transform-origin: right; }
 
 /* ⑫ accordion / read-more content reveal on open */
 .faq[open] .ans, .gb-more[open] > *:not(summary) { animation: gb-reveal-soft 0.3s ease; }
@@ -4348,11 +4348,12 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 .reveal.visible .gb-ladder__step:nth-child(4) { animation-delay: 0.5s; }
 .reveal.visible .gb-ladder__step:nth-child(5) { animation-delay: 0.65s; }
 
-/* ⑱ doorway / CTA arrow nudge */
+/* ⑱ doorway / CTA arrow nudge (Feather arrows + wrapped literal "→/←" CTA arrows) */
+.gb-cta-arrow { display: inline-block; }
 @media (hover: hover) {
-  .feather-arrow-right, .feather-arrow-up-right { transition: transform 0.18s ease; }
-  .btn:hover .feather-arrow-right, a:hover > .feather-arrow-right, .btn:hover .feather-arrow-up-right, a:hover > .feather-arrow-up-right { transform: translateX(4px); }
-  [dir="rtl"] .btn:hover .feather-arrow-right, [dir="rtl"] a:hover > .feather-arrow-right { transform: translateX(-4px); }
+  .feather-arrow-right, .feather-arrow-up-right, .gb-cta-arrow { transition: transform 0.18s ease; }
+  .btn:hover .feather-arrow-right, a:hover > .feather-arrow-right, .btn:hover .feather-arrow-up-right, a:hover > .feather-arrow-up-right, .gb-wcard__link:hover .gb-cta-arrow { transform: translateX(4px); }
+  [dir="rtl"] .btn:hover .feather-arrow-right, [dir="rtl"] a:hover > .feather-arrow-right, [dir="rtl"] .gb-wcard__link:hover .gb-cta-arrow { transform: translateX(-4px); }
 }
 
 /* ⑲ About approche beat-strip — reveal one after another */
@@ -4384,8 +4385,8 @@ a.gb-search:hover { border-color: rgba(200, 121, 65, 0.4); }
 
 /* ⑤ diaspora corridor plane */
 .gb-endpoints { position: relative; }
-.gb-corridor-plane { position: absolute; top: 50%; inset-inline-start: 8%; margin-top: -8px; width: 16px; height: 16px; color: var(--primary); pointer-events: none; animation: gb-plane 2.8s ease-in-out infinite; }
-.gb-corridor-plane, .gb-corridor-plane svg { width: 16px; height: 16px; display: block; }
+.gb-corridor-plane { position: absolute; top: 6px; inset-inline-start: 8%; width: 13px; height: 13px; color: var(--primary); opacity: 0.85; pointer-events: none; animation: gb-plane 2.8s ease-in-out infinite; }
+.gb-corridor-plane, .gb-corridor-plane svg { width: 13px; height: 13px; display: block; }
 
 /* ---- reduced-motion: fall back to the current static state everywhere ---- */
 @media (prefers-reduced-motion: reduce) {
