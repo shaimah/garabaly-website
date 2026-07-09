@@ -1748,7 +1748,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
 .faq-tools-section { padding-top: var(--space-xl); }
 
 /* live search */
-.faq-search { position: relative; max-width: 640px; margin: 0 auto var(--space-2xl); }
+.faq-search { position: relative; z-index: 30; max-width: 640px; margin: 0 auto var(--space-2xl); }
 .faq-search__icon { position: absolute; top: 50%; left: 16px; transform: translateY(-50%); width: 18px; height: 18px; color: var(--gb-muted); pointer-events: none; }
 .faq-search__input { width: 100%; padding: 14px 16px 14px 44px; font-size: var(--fs-body); font-family: inherit; color: var(--text-primary); background: var(--surface); border: 1px solid var(--gb-hairline); border-radius: 999px; transition: border-color var(--transition-fast), box-shadow var(--transition-fast); }
 .faq-search__input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(200, 121, 65, 0.15); }
