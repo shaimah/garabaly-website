@@ -506,6 +506,25 @@ function initListingsMarquee() {
   root.appendChild(marquee);
   root.classList.add('scenarios-carousel--marquee');
 
+  // Lazy-loading is unreliable inside a translateX-animated track — cards can
+  // show the placeholder ("locked") or pop in mid-loop. Eager-load every image
+  // (originals + clones) just before the carousel comes into view.
+  const preloadImgs = () => {
+    track.querySelectorAll('img').forEach((img) => {
+      img.loading = 'eager';
+      const src = img.getAttribute('src');
+      if (src) { const pre = new Image(); pre.src = src; }
+    });
+  };
+  if ('IntersectionObserver' in window) {
+    const preloadIO = new IntersectionObserver((entries, obs) => {
+      if (entries.some((e) => e.isIntersecting)) { preloadImgs(); obs.disconnect(); }
+    }, { rootMargin: '400px 0px' });
+    preloadIO.observe(root);
+  } else {
+    preloadImgs();
+  }
+
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     root.classList.add('scenarios-carousel--reduced-motion');
     return;
