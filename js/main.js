@@ -131,8 +131,11 @@ function initScrollReveal() {
       });
     },
     {
-      threshold: 0.12,
-      rootMargin: '0px 0px -20px 0px',
+      // threshold 0 (not a fraction of area) so tall sections — e.g. the
+      // multi-thousand-px policy pages — reveal as soon as their top enters,
+      // instead of never reaching 12% on short viewports.
+      threshold: 0,
+      rootMargin: '0px 0px -80px 0px',
     }
   );
 
