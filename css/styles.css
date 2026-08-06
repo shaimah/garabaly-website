@@ -2596,14 +2596,25 @@ html.js-ready .reveal.visible {
 .ab-chip { font-size: var(--fs-small); font-weight: 500; border: 1px solid var(--gb-hairline); border-radius: 20px; padding: 5px 12px; color: var(--gb-muted); background: var(--surface); }
 .ab-chip--green { color: var(--success); border-color: var(--success); background: var(--gb-green-fill); }
 
+/* LinkedIn glyph beside the founder name */
+.ab-founder__namerow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ab-founder__linkedin { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 8px; border: 1px solid var(--gb-hairline); color: var(--primary); transition: background var(--transition-fast), border-color var(--transition-fast); }
+.ab-founder__linkedin:hover { background: var(--bg-alt); border-color: var(--primary); }
+.ab-founder__linkedin svg { width: 17px; height: 17px; }
+
 /* ===== Verified business band (About founder/company block) ===== */
 .gb-verified { max-width: 640px; margin: var(--space-lg) auto 0; background: var(--surface); border: 1px solid var(--gb-hairline); border-radius: 16px; padding: 24px 24px 20px; text-align: left; }
 .gb-verified__head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
 .gb-verified__badge { flex: none; width: 40px; height: 40px; border-radius: 10px; background: #F1F6F1; border: 1px solid #CFE2D3; display: flex; align-items: center; justify-content: center; color: var(--success); }
 .gb-verified__badge svg { width: 22px; height: 22px; }
 .gb-verified__title { margin: 0; font-size: var(--fs-h3); font-weight: 700; line-height: 1.25; color: var(--text-primary); }
-.gb-verified__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
-.gb-verified__card { background: #F1F6F1; border: 1px solid #CFE2D3; border-radius: 12px; padding: 16px 18px; }
+/* Two cards side by side; subgrid keeps their three rows (label / number / Verify)
+   aligned across both cards even when one label wraps to more lines than the other. */
+.gb-verified__grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; column-gap: 14px; row-gap: 0; }
+.gb-verified__card { background: #F1F6F1; border: 1px solid #CFE2D3; border-radius: 12px; padding: 16px 18px; min-width: 0; display: grid; grid-template-rows: subgrid; grid-row: span 3; align-content: start; }
+/* Stack to one column below ~680px so the two cards are only side-by-side when the
+   full-length RCCM number still fits on ONE line (needs ~632px); phones/small tablets stack. */
+@media (max-width: 680px) { .gb-verified__grid { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 14px; } .gb-verified__card { display: block; } }
 .gb-verified__label { display: flex; align-items: center; gap: 9px; color: var(--success); font-size: var(--fs-small); font-weight: 600; margin-bottom: 8px; }
 .gb-verified__label svg { width: 18px; height: 18px; flex: none; }
 .gb-verified__num { font-family: 'SFMono-Regular', ui-monospace, 'Roboto Mono', Menlo, monospace; font-size: 1.0625rem; font-weight: 500; color: var(--text-primary); letter-spacing: .01em; margin-bottom: 12px; }
