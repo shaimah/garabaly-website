@@ -2627,6 +2627,48 @@ html.js-ready .reveal.visible {
 [data-theme="dark"] .gb-verified__num { color: #2C1810; }
 [data-theme="dark"] .gb-verified__link { color: #C87941; }
 
+/* ===== Store badges (official localised lockups, one fixed size everywhere) ===== */
+.gb-store-badges { display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.gb-badge { display: inline-block; line-height: 0; transition: transform var(--transition-fast), opacity var(--transition-fast); }
+.gb-badge:hover { opacity: .9; transform: translateY(-1px); }
+.gb-badge img { height: 71px; width: auto; display: block; }   /* SAME height everywhere; all six lockups are edge-to-edge, so one height matches Apple + Google */
+/* Footer: smaller badges, kept on one line and aligned with the brand column. */
+.footer__brand .gb-store-badges { justify-content: flex-start; flex-wrap: nowrap; gap: 10px; }
+.footer__brand .gb-badge img { height: 36px; }
+[dir="rtl"] .footer__brand .gb-store-badges { justify-content: flex-end; }
+
+/* ===== Download / desktop-QR block ===== */
+.gb-dl-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: var(--gb-green-fill); border: 1px solid #CFE2D3; color: var(--success); font-size: 12.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; letter-spacing: .02em; }
+.gb-dl-eyebrow svg { width: 15px; height: 15px; }
+.gb-dl-qr { display: flex; align-items: center; gap: 16px; justify-content: center; background: var(--surface); border: 1px solid var(--gb-hairline); border-radius: 14px; padding: 16px 20px; max-width: 440px; margin: 0 auto; text-align: left; }
+.gb-dl-qr img { width: 96px; height: 96px; flex: none; border: 1px solid var(--gb-hairline); border-radius: 10px; }
+.gb-dl-chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.gb-dl-chip { font-size: 12.5px; color: var(--text-secondary); border: 1px solid var(--gb-hairline); background: var(--surface); border-radius: 999px; padding: 5px 12px; }
+/* Centered download hero: the page-header paragraphs are width-capped, so also give them auto
+   side-margins (the pill row, intro and motto) — otherwise their box anchors left and their
+   centered text sits off-centre against the full-width h1/badges. */
+.page-header__content[style*="text-align: center"] > p { margin-left: auto; margin-right: auto; }
+
+/* "Available now" pill — launch micro-animation (get-the-app hero) */
+.gb-live{position:relative;animation:gbLiveEnter .62s cubic-bezier(.22,1,.36,1) both}
+.gb-live__ck{position:relative;width:15px;height:15px;flex:none;border-radius:50%;background:var(--success);display:grid;place-items:center;animation:gbLivePop .52s .3s cubic-bezier(.34,1.55,.64,1) both}
+.gb-live__ck svg{width:10px;height:10px}
+.gb-live__ck::before,.gb-live__ck::after{content:"";position:absolute;inset:0;border-radius:50%}
+.gb-live__ck::before{animation:gbLiveBloom .8s .72s ease-out forwards}
+.gb-live__ck::after{animation:gbLivePulse 2.8s 1.6s ease-in-out infinite} /* resting "live" pulse — delete this line for fully still */
+.gb-live__tick{stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:15;stroke-dashoffset:15;animation:gbLiveDraw .34s .56s ease forwards}
+.gb-live__txt{display:inline-block;animation:gbLiveReveal .46s .2s both ease}
+.gb-live__sheenwrap{position:absolute;inset:0;border-radius:999px;overflow:hidden;pointer-events:none}
+.gb-live__sheen{position:absolute;top:0;left:-60%;width:42%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);animation:gbLiveSheen .72s .9s ease-in-out forwards}
+@keyframes gbLiveEnter{0%{opacity:0;transform:translateY(9px) scale(.955)}100%{opacity:1;transform:none}}
+@keyframes gbLiveReveal{0%{opacity:0;transform:translateX(-5px)}100%{opacity:1;transform:none}}
+@keyframes gbLivePop{0%{transform:scale(0)}70%{transform:scale(1.13)}100%{transform:scale(1)}}
+@keyframes gbLiveDraw{to{stroke-dashoffset:0}}
+@keyframes gbLiveBloom{0%{box-shadow:0 0 0 0 rgba(45,122,74,.42)}100%{box-shadow:0 0 0 8px rgba(45,122,74,0)}}
+@keyframes gbLiveSheen{0%{left:-60%}100%{left:135%}}
+@keyframes gbLivePulse{0%,100%{box-shadow:0 0 0 0 rgba(45,122,74,0)}50%{box-shadow:0 0 0 4px rgba(45,122,74,.13)}}
+@media (prefers-reduced-motion:reduce){.gb-live,.gb-live *,.gb-live__ck::before,.gb-live__ck::after{animation:none !important}.gb-live__tick{stroke-dashoffset:0}}
+
 /* generic card grid (reuses .gb-wcard) */
 .ab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; text-align: start; margin-top: var(--space-lg); }
 
