@@ -698,6 +698,7 @@ h3, .h3 { font: var(--font-h3); color: var(--text-primary); }
   gap: var(--space-3xl);
   margin-top: var(--space-3xl);
   justify-content: center;
+  align-items: flex-start; /* top-align numbers so uneven label lengths don't shift them */
 }
 /* when staged (JS), the block itself no longer fades as a unit — each stat does */
 .hero__stats:not(.hero__stats--staged) {
@@ -725,6 +726,8 @@ html.js-ready .hero__stats--staged .hero__stat.is-in {
 
 .hero__stat {
   text-align: center;
+  flex: 1 1 0; /* equal-width columns so a long label doesn't skew the row off-centre */
+  min-width: 0; /* allow the label to wrap within its column instead of widening it */
 }
 
 .hero__stat-value {
