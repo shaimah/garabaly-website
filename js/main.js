@@ -619,7 +619,7 @@ function initFloatingMobileCta() {
   try { if (sessionStorage.getItem('garabaly-appbar-dismissed')) return; } catch (e) {}
   const path = window.location.pathname;
   const L = path.includes('/fr/') ? { t: "L'appli Garabaly, séquestre inclus", c: "Télécharger l'appli" }
-          : path.includes('/ar/') ? { t: 'تطبيق غرابالي مع الضمان', c: 'حمّل التطبيق' }
+          : path.includes('/ar/') ? { t: 'تطبيق غارابالي، بحساب ضمان مدمج', c: 'حمّل التطبيق' }
           : { t: 'Get Garabaly — escrow built in', c: 'Get the App' };
   const bar = document.createElement('div');
   bar.className = 'app-bar';

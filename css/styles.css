@@ -4622,3 +4622,9 @@ html.js-ready .gb-proposal.reveal:not(.visible) .gb-proposal__new { opacity: 0; 
   .stats-bar .stat-item__label { overflow-wrap: anywhere; }
   .footer__bottom-links { flex-wrap: wrap; justify-content: center; row-gap: var(--space-sm); }
 }
+
+/* --- Pack B fix round (2026-10-06): FAQ tier cards fit 760–899 px (additive) --- */
+@media (max-width: 899px) {
+  .faq-tiers .gb-tiers > .gb-tier { min-width: 0; }
+  .faq-tiers .gb-limit { flex-wrap: wrap; justify-content: center; column-gap: var(--space-sm); }
+}
