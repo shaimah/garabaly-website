@@ -270,20 +270,25 @@ function initCountUp() {
   if (!statValues.length) return;
 
   // Format a number with K / M / B contractions
+  // Pack D: French pages use French units and decimal comma ("1 Md", "517 M", "1,5 k"), with a no-break space.
+  var isFr = /^fr/i.test(document.documentElement.lang || '');
+  function unit(v, en, fr) {
+    return isFr ? v.replace('.', ',') + '\u00a0' + fr : v + en;
+  }
   function formatNumber(n) {
     if (n >= 1e9) {
       var v = n / 1e9;
-      return (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, '')) + 'B';
+      return unit(v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, ''), 'B', 'Md');
     }
     if (n >= 1e6) {
       var v = n / 1e6;
-      return (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, '')) + 'M';
+      return unit(v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, ''), 'M', 'M');
     }
     if (n >= 1e3) {
       var v = n / 1e3;
-      return (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, '')) + 'K';
+      return unit(v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, ''), 'K', 'k');
     }
-    return Math.floor(n).toLocaleString();
+    return Math.floor(n).toLocaleString(isFr ? 'fr-FR' : undefined);
   }
 
   function animateCount(el) {

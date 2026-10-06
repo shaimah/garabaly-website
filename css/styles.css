@@ -4628,3 +4628,25 @@ html.js-ready .gb-proposal.reveal:not(.visible) .gb-proposal__new { opacity: 0; 
   .faq-tiers .gb-tiers > .gb-tier { min-width: 0; }
   .faq-tiers .gb-limit { flex-wrap: wrap; justify-content: center; column-gap: var(--space-sm); }
 }
+
+/* --- Pack D (2026-10): key figures, identity line, stats, orphan grids, RTL bullets (additive) --- */
+.gb-pricing__grid--figs { grid-template-columns: repeat(4, 1fr); }
+.gb-pricing__fig { display: block; font-size: clamp(2.25rem, 4vw, 3rem); font-weight: 800; line-height: 1; letter-spacing: -0.02em; color: #C87941; margin-bottom: 12px; font-variant-numeric: tabular-nums; }
+.gb-pricing__fig--green { color: #3E7C52; }
+.gb-pricing__fig--ink { color: #2C1810; }
+.gb-pricing__grid--figs .gb-pricing__card h3 { font-size: var(--fs-body); font-weight: 700; line-height: 1.35; margin: 0 0 6px; }
+[dir="rtl"] .gb-pricing__fig { direction: ltr; unicode-bidi: isolate; text-align: right; }
+@media (max-width: 900px) { .gb-pricing__grid--figs { grid-template-columns: repeat(2, 1fr); } }
+.ab-hero .ab-hero__identity { font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #E8B854; margin: var(--space-sm) auto 0; }
+[dir="rtl"] .ab-hero .ab-hero__identity { letter-spacing: 0; }
+.gb-diaspora-stat { margin: var(--space-lg) auto var(--space-xl); }
+[dir="rtl"] .ab-stat__num { direction: ltr; unicode-bidi: isolate; }
+@media (min-width: 600px) { .gb.gb-flow.gb-flow--3col { grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin-inline: auto; } }
+@media (min-width: 900px) { .ab-grid.ab-grid--3col { grid-template-columns: repeat(3, 1fr); } }
+[dir="rtl"] .policy-block ul li { padding-left: 0; padding-right: var(--space-lg); }
+[dir="rtl"] .policy-block ul li::before { left: auto; right: 0; }
+@media (max-width: 520px) {
+  .gb-pricing__grid--figs { grid-template-columns: 1fr; gap: 10px; }
+  .gb-pricing__grid--figs .gb-pricing__card { display: grid; grid-template-columns: 76px 1fr; column-gap: 14px; align-items: start; padding: var(--space-md); }
+  .gb-pricing__grid--figs .gb-pricing__fig { grid-row: span 2; margin: 0; font-size: 2.25rem; }
+}
