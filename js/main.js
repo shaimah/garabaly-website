@@ -270,20 +270,25 @@ function initCountUp() {
   if (!statValues.length) return;
 
   // Format a number with K / M / B contractions
+  // Pack D: French pages use French units and decimal comma ("1 Md", "517 M", "1,5 k"), with a no-break space.
+  var isFr = /^fr/i.test(document.documentElement.lang || '');
+  function unit(v, en, fr) {
+    return isFr ? v.replace('.', ',') + '\u00a0' + fr : v + en;
+  }
   function formatNumber(n) {
     if (n >= 1e9) {
       var v = n / 1e9;
-      return (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, '')) + 'B';
+      return unit(v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, ''), 'B', 'Md');
     }
     if (n >= 1e6) {
       var v = n / 1e6;
-      return (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, '')) + 'M';
+      return unit(v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, ''), 'M', 'M');
     }
     if (n >= 1e3) {
       var v = n / 1e3;
-      return (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, '')) + 'K';
+      return unit(v % 1 === 0 ? v.toFixed(0) : v.toFixed(1).replace(/\.0$/, ''), 'K', 'k');
     }
-    return Math.floor(n).toLocaleString();
+    return Math.floor(n).toLocaleString(isFr ? 'fr-FR' : undefined);
   }
 
   function animateCount(el) {
@@ -619,7 +624,7 @@ function initFloatingMobileCta() {
   try { if (sessionStorage.getItem('garabaly-appbar-dismissed')) return; } catch (e) {}
   const path = window.location.pathname;
   const L = path.includes('/fr/') ? { t: "L'appli Garabaly, séquestre inclus", c: "Télécharger l'appli" }
-          : path.includes('/ar/') ? { t: 'تطبيق غرابالي مع الضمان', c: 'حمّل التطبيق' }
+          : path.includes('/ar/') ? { t: 'تطبيق غارابالي، بحساب ضمان مدمج', c: 'حمّل التطبيق' }
           : { t: 'Get Garabaly — escrow built in', c: 'Get the App' };
   const bar = document.createElement('div');
   bar.className = 'app-bar';
