@@ -466,3 +466,47 @@ html.nomotion .imp .jl__bar i{transition:none}
 .imp .pmore{margin:34px auto 0;max-width:900px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;padding:16px 22px;border-radius:16px;background:var(--surface);border:1px dashed rgba(200,121,65,.45);color:var(--ink2);text-decoration:none;font-size:.95rem}
 .imp .pmore b{color:var(--primary);white-space:nowrap}
 .imp .pmore:hover{border-style:solid}
+
+/* --- Matrix: "Our translation" line under EN/AR quotes (founder ruling 14 Oct 2026) --- */
+.imp .mquote .mtr{margin-top:6px;font-style:italic}
+
+/* --- Arabic (dir="rtl"): the reading order, the rail, timelines, borders and arrows mirror;
+       the dot map, the hero network, the phone screens and numbers do not --- */
+[dir="rtl"] .imp{--font:var(--font-family)}
+[dir="rtl"] .imp,[dir="rtl"] .imp *{letter-spacing:0!important}
+[dir="rtl"] .imp svg{direction:ltr}
+[dir="rtl"] .imp svg text{font-family:var(--font-family)}
+[dir="rtl"] .imp .scr{direction:ltr}
+[dir="rtl"] .imp [data-icount]{direction:ltr;unicode-bidi:isolate}
+[dir="rtl"] .imp .rail{left:auto;right:22px}
+[dir="rtl"] .imp .rail a span{transform:translateX(4px)}
+[dir="rtl"] .imp .rail a:hover span,[dir="rtl"] .imp .rail a.on span{transform:none}
+[dir="rtl"] .imp .progress,[dir="rtl"] .imp .chap__l,[dir="rtl"] .imp .card::before,[dir="rtl"] .imp .rbar i{transform-origin:right}
+[dir="rtl"] .imp .share{margin-left:0;margin-right:auto}
+[dir="rtl"] .imp .center .share{margin-right:0}
+[dir="rtl"] .imp .imp-btn:hover .arr{transform:translateX(-4px)}
+/* the hero network is not mirrored, so in RTL the text sits over it: the overlay is darker on the text side */
+[dir="rtl"] .imp .imp-hero::after{background:linear-gradient(270deg,rgba(44,24,16,.94) 0%,rgba(44,24,16,.88) 45%,rgba(44,24,16,.55) 70%,rgba(44,24,16,.35) 100%)}
+[dir="rtl"] .imp .hero__cap{right:auto;left:32px}
+[dir="rtl"] .imp .hero__cap span{right:auto;left:0;text-align:left}
+@media(max-width:700px){[dir="rtl"] .imp .hero__cap{left:16px;right:16px}
+[dir="rtl"] .imp .hero__cap span{left:auto;right:0;text-align:right}}
+[dir="rtl"] .imp .ctabs i,[dir="rtl"] .imp .seg i{left:auto;right:4px}
+[dir="rtl"] .imp .tl{padding-left:0;padding-right:34px}
+[dir="rtl"] .imp .tl::before,[dir="rtl"] .imp .tl__fill{left:auto;right:8px}
+[dir="rtl"] .imp .tl__i::before{left:auto;right:-34px}
+[dir="rtl"] .imp .voice,[dir="rtl"] .imp .mquote{border-left:0;border-right:4px solid var(--secondary)}
+[dir="rtl"] .imp .link{transform:translateX(10px)}
+[dir="rtl"] .imp .link.on{transform:none}
+[dir="rtl"] .imp .pill,[dir="rtl"] .imp .irow,[dir="rtl"] .imp .pdf,[dir="rtl"] .imp .mx tbody th{text-align:right}
+[dir="rtl"] .imp .pill.now{border-left:1px solid var(--nline);border-right:3px solid var(--primary)}
+[dir="rtl"] .imp .blk li,[dir="rtl"] .imp .jl__tier li{padding-left:0;padding-right:18px}
+[dir="rtl"] .imp .jl__tier li{padding-right:16px}
+[dir="rtl"] .imp .blk li::before{left:auto;right:1px}
+[dir="rtl"] .imp .blk.m li::before,[dir="rtl"] .imp .jl__tier li::before{left:auto;right:0}
+[dir="rtl"] .imp .jl__now{border-left:0;padding-left:0;border-right:2px solid var(--secondary);padding-right:11px}
+[dir="rtl"] .imp .jl__badge{margin-right:0;margin-left:6px}
+[dir="rtl"] .imp .jl::before{right:auto;left:-120px}
+[dir="rtl"] .imp .pdf{padding:14px 14px 14px 20px}
+[dir="rtl"] .imp .sources ol{padding-left:0;padding-right:22px}
+[dir="rtl"] .imp .legend i{margin-right:0;margin-left:6px}

@@ -718,7 +718,11 @@
             b.classList.add('sel');
             b.setAttribute('aria-pressed', 'true');
             quote.textContent = '';
-            [['b', '', q[0]], ['span', 'qt', q[1]], ['small', '', q[2]]].forEach(function (x) {
+            /* EN/AR quote our own translation of a French text: the page says so under the quote. */
+            var lines = [['b', '', q[0]], ['span', 'qt', q[1]]];
+            if (T.matrix.translationNote) lines.push(['small', 'mtr', T.matrix.translationNote]);
+            lines.push(['small', '', q[2]]);
+            lines.forEach(function (x) {
               var n = document.createElement(x[0]);
               if (x[1]) n.className = x[1];
               n.textContent = x[2];
