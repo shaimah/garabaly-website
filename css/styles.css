@@ -4650,3 +4650,27 @@ html.js-ready .gb-proposal.reveal:not(.visible) .gb-proposal__new { opacity: 0; 
   .gb-pricing__grid--figs .gb-pricing__card { display: grid; grid-template-columns: 76px 1fr; column-gap: 14px; align-items: start; padding: var(--space-md); }
   .gb-pricing__grid--figs .gb-pricing__fig { grid-row: span 2; margin: 0; font-size: 2.25rem; }
 }
+
+/* FAQ: Notre impact category (2026-10-13) */
+.faq-toc__card--wide { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 16px; background: var(--gradient-dark); border-color: transparent; }
+.faq-toc__card--wide .faq-toc__body { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.faq-toc__card--wide .faq-toc__name { color: #fff; }
+.faq-toc__card--wide .faq-toc__count { color: rgba(255,255,255,.6); }
+.faq-toc__card--wide .faq-toc__desc { color: rgba(255,255,255,.72); }
+.faq-toc__card--wide .faq-toc__icon { background: rgba(232,184,84,.16); color: var(--secondary, #E8B854); }
+.faq-toc__go { font-size: var(--fs-small); font-weight: 700; color: #E8B854; white-space: nowrap; }
+@media (max-width: 520px) { .faq-toc__card--wide { flex-direction: column; align-items: flex-start; } }
+.faq-cat__more { max-width: 760px; margin: var(--space-lg) auto 0; text-align: center; }
+
+/* Header: burger below BP (2026-10-14, founder ruling)
+   BP = 1139px: the widest one-line fit measured was FR 1099px (Impact page, transparent header);
+   EN 982px, AR 966px; plus 40px. Between 769px and 1138px the six links fold into the burger,
+   while the language switcher and the header CTA stay visible. 768px and below is unchanged. */
+@media (min-width: 769px) and (max-width: 1138px) {
+  .header__nav-links { display: none; }
+  .mobile-toggle { display: flex; }
+}
+/* Open menu: keep the close button and the wordmark visible on the transparent header, all widths */
+.header .mobile-toggle.active span { background: var(--text-primary); }
+.header:has(.mobile-toggle.active) .header__logo-text { color: var(--text-primary); }
+.header:has(.mobile-toggle.active) .header__actions > :not(.mobile-toggle) { visibility: hidden; }
