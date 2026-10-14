@@ -132,6 +132,9 @@
     var hero = $('hero'), F = $('field'), W = 1600, Hh = 900, timers = [];
     function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
     function rnd(a) { var x = Math.sin(a * 99.13) * 43758.5453; return x - Math.floor(x); }
+    /* RTL: the network is decorative, so it mirrors (x -> W - x) to sit opposite the text, as in FR/EN.
+       Everything is computed in FR coordinates (same seeds, same pairs, same order); only the drawn x changes. */
+    function X(x) { return RTL ? W - x : x; }
 
     /* Headline: one span per word, revealed in turn. */
     (function () {
@@ -169,6 +172,7 @@
       timers.forEach(clearTimeout); timers = [];
       F.textContent = '';
       F.setAttribute('viewBox', '0 0 ' + W + ' ' + Hh);
+      if (RTL) F.setAttribute('preserveAspectRatio', 'xMinYMid slice'); /* mirror of the page's xMaxYMid */
       var defs = el('defs', {}, F);
       var hg = el('linearGradient', { id: 'hg', x1: 0, x2: 1 }, defs);
       el('stop', { offset: 0, 'stop-color': '#C87941' }, hg);
@@ -177,15 +181,15 @@
       el('stop', { offset: 0, 'stop-color': '#E8B854', 'stop-opacity': '.55' }, glow);
       el('stop', { offset: 1, 'stop-color': '#E8B854', 'stop-opacity': 0 }, glow);
 
-      var market = el('circle', { cx: 1120, cy: 450, r: 150, fill: 'rgba(232,184,84,.05)', stroke: 'rgba(232,184,84,.4)', 'stroke-width': 1.5, 'stroke-dasharray': '5 8' }, F);
+      var market = el('circle', { cx: X(1120), cy: 450, r: 150, fill: 'rgba(232,184,84,.05)', stroke: 'rgba(232,184,84,.4)', 'stroke-width': 1.5, 'stroke-dasharray': '5 8' }, F);
       market.style.transition = 'opacity 1.2s';
       var gThreads = el('g', {}, F), gPoints = el('g', {}, F), pts = [];
       /* The point field starts at y = 215: nothing sits under the fixed header. */
       for (var i = 0; i < 46; i++) {
         var ex = 860 + rnd(i + 1) * 700, ey = 215 + rnd(i + 7) * 620, ang = rnd(i + 3) * 6.283, rr = rnd(i + 5) * 130;
         var sx = 1120 + Math.cos(ang) * rr, sy = 450 + Math.sin(ang) * rr * 0.9, seller = i % 3 === 0;
-        var c = el('circle', { cx: ex, cy: ey, r: seller ? 6 : 4, fill: seller ? '#E8B854' : 'rgba(249,246,242,.75)' }, gPoints);
-        c.style.transform = 'translate(' + (sx - ex) + 'px,' + (sy - ey) + 'px)';
+        var c = el('circle', { cx: X(ex), cy: ey, r: seller ? 6 : 4, fill: seller ? '#E8B854' : 'rgba(249,246,242,.75)' }, gPoints);
+        c.style.transform = 'translate(' + (X(sx) - X(ex)) + 'px,' + (sy - ey) + 'px)';
         c.style.transition = 'none';
         pts.push({ c: c, x: ex, y: ey, s: seller });
       }
@@ -205,14 +209,14 @@
       var paths = pairs.map(function (pr, k) {
         var a = pr[0], b = pr[1], dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy), sg = k % 2 ? 1 : -1;
         var mx = (a.x + b.x) / 2 - dy / L * 0.14 * L * sg, my = (a.y + b.y) / 2 + dx / L * 0.14 * L * sg;
-        var p = el('path', { d: 'M' + a.x + ' ' + a.y + ' Q' + mx + ' ' + my + ' ' + b.x + ' ' + b.y, fill: 'none', stroke: 'url(#hg)', 'stroke-width': b.dia ? 2.5 : 1.8, 'stroke-linecap': 'round' }, gThreads);
+        var p = el('path', { d: 'M' + X(a.x) + ' ' + a.y + ' Q' + X(mx) + ' ' + my + ' ' + X(b.x) + ' ' + b.y, fill: 'none', stroke: 'url(#hg)', 'stroke-width': b.dia ? 2.5 : 1.8, 'stroke-linecap': 'round' }, gThreads);
         var len = p.getTotalLength();
         p.style.strokeDasharray = len;
         p.style.strokeDashoffset = len;
         p._end = b;
         return p;
       });
-      var label = el('text', { x: W - 30, y: 182, 'text-anchor': 'end', 'font-size': 14, 'font-weight': 700, 'letter-spacing': 3, fill: 'rgba(249,246,242,.6)', 'font-family': 'Inter' }, F);
+      var label = el('text', { x: RTL ? 30 : W - 30, y: 182, 'text-anchor': RTL ? 'start' : 'end', 'font-size': 14, 'font-weight': 700, 'letter-spacing': 3, fill: 'rgba(249,246,242,.6)', 'font-family': 'Inter' }, F);
       label.textContent = T.hero.diaspora;
       label.style.opacity = 0;
       label.style.transition = 'opacity .8s';
@@ -220,9 +224,9 @@
       function mark(p, instant) {
         if (p._end.dia) return;
         var e = p._end, m = el('g', {}, gThreads);
-        el('circle', { cx: e.x, cy: e.y, r: 26, fill: 'url(#glow)' }, m);
-        el('circle', { cx: e.x, cy: e.y, r: 10, fill: '#2C1810', stroke: '#E8B854', 'stroke-width': 1.6 }, m);
-        el('path', { d: 'M' + (e.x - 4.5) + ' ' + e.y + ' l3.2 3.2 l5.5 -6.5', fill: 'none', stroke: '#E8B854', 'stroke-width': 2, 'stroke-linecap': 'round' }, m);
+        el('circle', { cx: X(e.x), cy: e.y, r: 26, fill: 'url(#glow)' }, m);
+        el('circle', { cx: X(e.x), cy: e.y, r: 10, fill: '#2C1810', stroke: '#E8B854', 'stroke-width': 1.6 }, m);
+        el('path', { d: 'M' + (X(e.x) - 4.5) + ' ' + e.y + ' l3.2 3.2 l5.5 -6.5', fill: 'none', stroke: '#E8B854', 'stroke-width': 2, 'stroke-linecap': 'round' }, m);
         m.style.transformBox = 'fill-box';
         m.style.transformOrigin = 'center';
         if (instant) return;

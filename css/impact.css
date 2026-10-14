@@ -485,8 +485,8 @@ html.nomotion .imp .jl__bar i{transition:none}
 [dir="rtl"] .imp .share{margin-left:0;margin-right:auto}
 [dir="rtl"] .imp .center .share{margin-right:0}
 [dir="rtl"] .imp .imp-btn:hover .arr{transform:translateX(-4px)}
-/* the hero network is not mirrored, so in RTL the text sits over it: the overlay is darker on the text side */
-[dir="rtl"] .imp .imp-hero::after{background:linear-gradient(270deg,rgba(44,24,16,.94) 0%,rgba(44,24,16,.88) 45%,rgba(44,24,16,.55) 70%,rgba(44,24,16,.35) 100%)}
+/* the hero network mirrors in RTL (impact.js), so the text-side gradient mirrors with it: same stops as FR/EN */
+[dir="rtl"] .imp .imp-hero::after{background:linear-gradient(225deg,rgba(44,24,16,.92) 0%,rgba(44,24,16,.70) 35%,rgba(60,32,16,.20) 65%,rgba(44,24,16,.35) 100%)}
 [dir="rtl"] .imp .hero__cap{right:auto;left:32px}
 [dir="rtl"] .imp .hero__cap span{right:auto;left:0;text-align:left}
 @media(max-width:700px){[dir="rtl"] .imp .hero__cap{left:16px;right:16px}
