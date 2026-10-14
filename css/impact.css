@@ -510,3 +510,4 @@ html.nomotion .imp .jl__bar i{transition:none}
 [dir="rtl"] .imp .pdf{padding:14px 14px 14px 20px}
 [dir="rtl"] .imp .sources ol{padding-left:0;padding-right:22px}
 [dir="rtl"] .imp .legend i{margin-right:0;margin-left:6px}
+[dir="rtl"] .imp .mx thead small,[dir="rtl"] .imp .vcard b{unicode-bidi:plaintext}
